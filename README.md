@@ -10,16 +10,16 @@ Lastly, RepeatFS provides Virtual Dynamic Files (VDFs).  These VDFs automaticall
 INSTALLATION
 --
 **Dependencies**
+* Python 3
 * FUSE 3
 * libfuse
-* Python 3
 * GraphViz
 
-Dependencies are available in all popular system package managers.  Libfuse, Python 3, and GraphViz are also available within Anaconda (you may be able to find a channel with FUSE available as well):
+Dependencies are available in all popular system package managers.  Python 3, Libfuse, and GraphViz are also available within Anaconda (you may be able to find a channel with FUSE available as well):
 
-* Debian/Ubuntu: `sudo apt install fuse3 libfuse-3-3 python3 graphviz`
-* RHEL/Fedora: `sudo yum install fuse fuse-libs python3 graphviz`
-* Anaconda: `conda install -c conda-forge libfuse python=3 graphviz`
+* Debian/Ubuntu: `sudo apt install python3 fuse3 libfuse-3-3 graphviz`
+* RHEL/Fedora: `sudo yum install python3 fuse fuse-libs graphviz`
+* Anaconda: `conda install -c conda-forge python=3 libfuse graphviz`
 
 After the dependencies have been installed, RepeatFS can be installed from PyPI using pip:
 
