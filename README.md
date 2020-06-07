@@ -34,7 +34,7 @@ RepeatFS functions as a transparent layer between you and your files, recording 
 Mount and monitor a directory:
 
 ```
-repeatfs.py mount <Directory to monitor> <RepeatFS mount directory>
+repeatfs.py mount <directory to monitor> <RepeatFS mount directory>
 ```
 
 Stop monitoring a directory:
@@ -54,5 +54,8 @@ Path to a file's provenance - this is a VDF, and is populated automatically when
 Replicate a file (replication destination must be within an active RepeatFS mount:
 
 ```
-repeatfs.py replicate -r <Replication destination> <provenance file>
+repeatfs.py replicate -r <replication destination> <provenance file>
 ```
+
+EXAMPLES
+--
