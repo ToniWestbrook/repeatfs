@@ -31,13 +31,13 @@ USAGE
 --
 RepeatFS functions as a transparent layer between you and your files, recording all IO activity. In order to use RepeatFS, you'll mount the target directory (and all subdirectories/files) you want to monitor.  Then, anytime you wish to access any files within the monitored directory, you'll instead use the path to the RepeatFS mount.
 
-*Mount and monitor a directory*:
+**Mount and monitor a directory**:
 
 ```
 repeatfs.py mount <directory to monitor> <RepeatFS mount directory>
 ```
 
-Stop monitoring a directory:
+**Stop monitoring a directory**:
 
 ```
 umount <RepeatFS mount directory>
@@ -45,17 +45,24 @@ umount <RepeatFS mount directory>
 
 The most powerful feature of RepeatFS is the ability to record provenance and replicate the creation of the file on a different system.  To ensure all operations are successfully recorded, be sure to perform the entirety of your analysis using a RepeatFS mount. 
 
-Path to a file's provenance - this is a VDF, and is populated automatically when accessed, and may be copied to any location.  Note the plus sign next to the file name below - all VDFs are available using a plus sign next to the filename:
+**Path to a file's provenance record** - this is a VDF, and is populated automatically when accessed, and may be copied to any location.  Note the plus sign next to the file name below - all VDFs are available using a plus sign next to the filename:
 
 ```
 <RepeatFS mount directory>/<any sub directories>/<file name>+/<file name>.provenance.json
 ```
 
-Replicate a file (replication destination must be within an active RepeatFS mount:
+**Replicate a file** (replication destination must be within an active RepeatFS mount:
 
 ```
 repeatfs.py replicate -r <replication destination> <provenance file>
 ```
+
+**Path to a file's provenance graph** - like the provenance record, this is also a VDF.  RepeatFS visualizes provenance by generating an HTML file that can be vieweed in any browser:
+```
+<RepeatFS mount directory>/<any sub directories>/<file name>+/<file name>.provenance.html
+```
+
+
 
 EXAMPLES
 --
