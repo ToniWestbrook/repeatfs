@@ -1,7 +1,7 @@
 # RepeatFS
 RepeatFS: a file system providing reproducibility through provenance and automation
 
-RepeatFS is a Python, FUSE-based file system with the goal of promoting scientific informatics reproducibility by recording all file and IO operations.  This provenance record can then be exported and used to replicate the original file on other systems.  During replication, RepeatFS will verify that all software versions, command line parameters, and other relevant attributes match, and will report out any deviation from the original record.  While other provenance software often involves learning scripting languages or migrating your workflow to their platform, RepeatFS operates invisibily at the file system level, and is compatible with virtually all Linux/MacOS command-line software.
+RepeatFS is a Python, FUSE-based file system with the goal of promoting scientific informatics reproducibility by recording all file and IO operations.  This provenance record can then be exported and used to replicate the original file on other systems.  During replication, RepeatFS will verify that all software versions, command line parameters, and other relevant attributes match, and will report out any deviation from the original record.  While other provenance software often involves learning scripting languages or migrating your workflow to a confined platform, RepeatFS operates invisibily at the file system level, and is compatible with virtually all Linux/MacOS command-line software.
 
 In addition to replication and verification, RepeatFS also provides provenance visualization.  For any file, it is capable of generating a webpage visualizing the complete provenance history, including all programs that wrote to that file, all files read by those programs, all programs that wrote to those programs, etc.
 
@@ -10,3 +10,16 @@ Lastly, RepeatFS provides Virtual Dynamic Files (VDFs).  These VDFs automaticall
 INSTALLATION
 --
 **Dependencies**
+* FUSE 3
+* libfuse
+* Python 3
+* GraphViz
+
+Dependencies are available in all popular system package managers.  Libfuse, Python 3, and GraphViz are also available within Anaconda (you may be able to find a channel with FUSE available as well):
+
+* Debian/Ubuntu: `sudo apt install fuse3 libfuse-3-3 python3 graphviz`
+* RHEL/Fedora: `sudo yum install fuse fuse-libs python3 graphviz`
+* Anaconda: `conda install -c conda-forge libfuse python=3 graphviz`
+
+After the dependencies have been installed, RepeatFS can be installed from PyPI using pip:
+
