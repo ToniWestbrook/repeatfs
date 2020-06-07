@@ -31,7 +31,7 @@ USAGE
 --
 RepeatFS functions as a transparent layer between you and your files, recording all IO activity. In order to use RepeatFS, you'll mount the target directory (and all subdirectories/files) you want to monitor.  Then, anytime you wish to access any files within the monitored directory, you'll instead use the path to the RepeatFS mount.
 
-Mount and monitor a directory:
+*Mount and monitor a directory*:
 
 ```
 repeatfs.py mount <directory to monitor> <RepeatFS mount directory>
