@@ -8,7 +8,7 @@ setuptools.setup(
     version='0.9.1',
     author='Anthony Westbrook',
     author_email='anthony.westbrook@unh.edu',
-    packages=setuptools=['repeatfs'],
+    packages=['repeatfs'],
     scripts=['repeatfs.py'],
     url='http://github.com/ToniWestbrook/repeatfs',
     license='LICENSE',
