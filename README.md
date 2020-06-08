@@ -10,9 +10,8 @@ Lastly, RepeatFS provides Virtual Dynamic Files (VDFs).  These VDFs automaticall
 INSTALLATION
 --
 **Dependencies**
-* Python 3
-* FUSE 3
-* libfuse
+* Python 3 (and pip)
+* FUSE 3 (and libfuse)
 * GraphViz
 
 Dependencies are available in all popular system package managers.  Python 3, Libfuse, and GraphViz are also available within Anaconda (you may be able to find a channel with FUSE available as well):
