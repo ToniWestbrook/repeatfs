@@ -1,13 +1,12 @@
-#! /usr/bin/env python3
+#!/usr/bin/env python3
 
 #
-#   RepeatFS: A file system for reproducibility and automation
+#   RepeatFS: A file system providing reproducibility through provenance and automation
 #
 #   SPDX-FileCopyrightText: 2020  Anthony Westbrook, University of New Hampshire <anthony.westbrook@unh.edu>
 #
 #   SPDX-License-Identifier: GPL-3.0-only WITH LicenseRef-repeatfs-graphviz-linking-source-exception 
 #
-
 
 import argparse
 import os
@@ -44,12 +43,13 @@ def parse_args():
         "mount": ["target", "mount", "-c", "-f"],
         "generate": ["-c"],
         "replicate": ["provenance", "-r", "-c", "-l", "-e", "--stdout", "--stderr"],
-        "shutdown": ["-m", "-c"]}
+        "shutdown": ["-m", "-c"],
+        "version": []}
 
     # Parse commands arguments
     argparser = argparse.ArgumentParser(formatter_class=argparse.RawTextHelpFormatter)
     command_help = ["mount\t\tMount a directory under RepeatFS", "replicate\t\tReplicate RepeatFS provenance", "generate\t\tGenerate a config template"]
-    argparser.add_argument("command", choices=["mount", "replicate", "shutdown", "generate"], metavar="command", help="\n".join(command_help))
+    argparser.add_argument("command", choices=["mount", "replicate", "shutdown", "generate", "version"], metavar="command", help="\n".join(command_help))
     argparser.add_argument("options", nargs=argparse.REMAINDER, help="Command options")
     arguments = argparser.parse_args()
 
@@ -66,6 +66,11 @@ def main():
     """ Main entry """
     # Parse arguments
     arguments = parse_args()
+
+    # Report version
+    if arguments.command == "version":
+        print("Program: RepeatFS\nVersion: {}\nContact: Toni Westbrook (UNH) <anthony.westbrook@unh.edu>".format(Core.VERSION))
+        sys.exit(0)
 
     # Generate configuration if requested, otherwise read configuration
     if arguments.command == "generate":
@@ -95,7 +100,6 @@ def main():
     # Shutdown RepeatFS
     if arguments.command == "shutdown":
         repeatfs.client.shutdown(arguments.mount_path, configuration)
-
 
 if __name__ == '__main__':
     main()

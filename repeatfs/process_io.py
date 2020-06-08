@@ -12,6 +12,7 @@
 import io
 import operator
 import os
+import shlex
 import stat
 import subprocess
 import threading
@@ -142,7 +143,7 @@ class ProcessIO():
             # Start execution
             stdout_dev = subprocess.PIPE if output == "stdout" else subprocess.DEVNULL
             stderr_dev = subprocess.PIPE if output == "stderr" else subprocess.DEVNULL
-            self.process = subprocess.Popen(command.split(' '), bufsize=sys_config["block_size"], stdout=stdout_dev, stderr=stderr_dev)
+            self.process = subprocess.Popen(shlex.split(command), bufsize=sys_config["block_size"], stdout=stdout_dev, stderr=stderr_dev)
             self.pid_auth[self.process.pid] = True
 
             # Standard streams are pass-through to a file ReadBuffer
@@ -180,7 +181,6 @@ class ProcessIO():
         current_pid = pid
 
         while current_pid > 1:
-            print("Lineage checking {} against {}".format(current_pid, self.process.pid))
             # Check if current PID in lineage is the owner
             if current_pid == self.process.pid:
                 self.pid_auth[pid] = True
@@ -209,7 +209,6 @@ class ProcessIO():
 
         # If context pid isn't recorded in authorization rules, check and update
         if context_pid not in self.pid_auth:
-            print("context pid check, {} not in auth".format(context_pid))
             self.check_lineage(context_pid)
 
         return self.pid_auth[context_pid]

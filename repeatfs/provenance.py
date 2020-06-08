@@ -613,7 +613,6 @@ class Provenance:
         """ Get full paths for contained CWD """
         cwd_term = os.path.join(cwd, "")
         mount_term = os.path.join(mount, "")
-        print("{} starts with {}".format(cwd_term, mount_term))
 
         if not cwd_term.startswith(mount_term):
             return None
@@ -635,7 +634,6 @@ class Provenance:
 
             while len(remaining) > 0:
                 file_id, read_process_id, read_stop = remaining.pop()
-                print("CURRENT FILE: {} {} {}".format(file_id, read_process_id, read_stop))
 
                 # Add file if not already present
                 if file_id not in ret_graph["file"]:
@@ -713,21 +711,7 @@ class Provenance:
                                     # Participating parent with fork
                                     ret_graph["fork"][self._get_graph_id((child_id, lineage_row), "fork")] = self._get_graph_vals((child_id, lineage_row), "fork")
 
-                                # Queue indirect read of CWD TODO: THIS DOESNT WORK, MOVE OVER DURING RECORDING PROCESS
-                                #cwd_paths = self._get_cwd_paths(lineage_row)
-                                #print("Process {} with cwd {}".format(lineage_row["cmd"], cwd_paths))
-                                #if cwd_paths:
-                                #    cwd_cursor = self.db_connection.cursor()
-                                #    statement = ("SELECT * FROM file_last WHERE path=?")
-                                #    cwd_cursor.execute(statement, (cwd_paths["abs_real"], ))
-                                #    cwd_row = cwd_cursor.fetchone()
-
-                                #    if cwd_row:
-                                #        print("Row found: {} {}".format(cwd_row["path"], cwd_row["fcreate"]))
-                                #        remaining.appendleft((self._get_graph_id(cwd_row, "file"), lineage_id, lineage_row["pstart"]))
-
                                 # Note as child participating process for parents
-                                print("Setting child_id to {}".format(lineage_id))
                                 child_id = lineage_id
 
                             else:
@@ -772,7 +756,6 @@ class Provenance:
         for process_id, entry in graph["process"].items():
             root, mount = mount_lookup[entry["mid"]]
             cwd_paths = self._get_cwd_paths(entry["cwd"], root, mount)
-            print("CWD rewrite: {} {}".format(entry["cmd"], entry["cwd"]))
 
             # Modify fields
             entry["cwd"] = {"orig": entry["cwd"], "abs_real": "", "rel_mount": "", "rel_collapsed": ""}
@@ -803,10 +786,8 @@ class Provenance:
             entry["paths"]["rel_mount"] = os.path.relpath(entry["paths"]["abs_real"], common_mount)
             entry["paths"]["rel_collapsed"] = os.path.relpath(entry["paths"]["abs_real"], common_collapsed)
 
-        print("common mount: {}".format(common_mount))
         for entry in graph["process"].values():
             if entry["cwd"]["abs_real"]:
-                print("CWD REWRITE {} {}".format(entry["cmd"], entry["cwd"]["abs_real"]))
                 entry["cwd"]["rel_mount"] = os.path.relpath(entry["cwd"]["abs_real"], common_mount)
                 entry["cwd"]["rel_collapsed"] = os.path.relpath(entry["cwd"]["abs_real"], common_collapsed)
 

@@ -431,8 +431,8 @@ class RenderGraphviz(RenderBase):
         js = []
         svg = pygraphviz.AGraph(directed=True, splines="ortho", ranksep=".7", fontsize="20", pad="0.5")
         svg.node_attr["fontsize"] = "12"
-        self._add_elements(graph, svg, js, expand_procs=[("turing", "1584642896.43", "30702")])
-        #self._add_elements(graph, svg, js)
+        # self._add_elements(graph, svg, js, expand_procs=[("turing", "1585344631.4", "23501")])
+        self._add_elements(graph, svg, js)
 
         # Save to disk
         svg.layout(prog='dot')

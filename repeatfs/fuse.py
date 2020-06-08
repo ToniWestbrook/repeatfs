@@ -106,11 +106,11 @@ class Fuse(fuse.Operations):
         self.core.log("CALL: truncate ({0}, {1})".format(path, length), self.core.LOG_CALL)
         return self.core.truncate(path, length, info)
 
-    # TODO: Remove this sync
+    # TODO: Verify this sync
     def flush(self, path, info):
         self.core.log("CALL: flush ({0}, {1})".format(path, info.fh), self.core.LOG_CALL)
         return self.core.sync(path, info)
-        return 0
+        # return 0
 
     def release(self, path, info):
         self.core.log("CALL: release ({0}, {1})".format(path, info.fh), self.core.LOG_CALL)

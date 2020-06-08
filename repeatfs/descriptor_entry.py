@@ -17,6 +17,7 @@ from repeatfs.file_entry import FileEntry
 class DescriptorEntry:
     """ Provides file descriptor information """
     _desc_lookup = dict()
+    _file_lookup = dict()
     _pipe_lookup = dict()
     _idx = 1
     _lock = threading.RLock()
@@ -42,6 +43,23 @@ class DescriptorEntry:
 
         return desc_entry
 
+    @classmethod
+    def rename(cls, old_abs, new_virt, core):
+        """ Update existing descriptors with new path information """
+        with DescriptorEntry._lock:
+            if old_abs not in cls._file_lookup:
+                return
+
+            file_entry = FileEntry(new_virt, core)
+            cls._file_lookup.setdefault(file_entry.paths["abs_real"], set())
+
+            # Update any open descriptors with new path info
+            for desc_id in cls._file_lookup[old_abs]:
+                cls.get(desc_id).file_entry = file_entry
+                cls._file_lookup[file_entry.paths["abs_real"]].add(desc_id)
+
+            del cls._file_lookup[old_abs]
+
     def __init__(self, file_entry, flags, core):
         self.core = core
         self.file_entry = file_entry
@@ -59,6 +77,7 @@ class DescriptorEntry:
             self.id = DescriptorEntry._idx
             DescriptorEntry._idx += 1
             DescriptorEntry._desc_lookup[self.id] = self
+            DescriptorEntry._file_lookup.setdefault(file_entry.paths["abs_real"], set()).add(self.id)
 
     def __enter__(self):
         """ Allow with block for temporary descriptors """
@@ -73,6 +92,10 @@ class DescriptorEntry:
             self.id, self.file_entry, self.flags, self.open_pid, self.fs_descriptor)
 
     def remove(self):
-        """ Remove descriptor from descriptor lookup """
-        with self._lock:
-            del self._desc_lookup[self.id]
+        """ Remove descriptor from descriptor and file lookups """
+        with DescriptorEntry._lock:
+            DescriptorEntry._file_lookup[self.file_entry.paths["abs_real"]].remove(self.id)
+            if not DescriptorEntry._file_lookup[self.file_entry.paths["abs_real"]]:
+                del DescriptorEntry._file_lookup[self.file_entry.paths["abs_real"]]
+
+            del DescriptorEntry._desc_lookup[self.id]

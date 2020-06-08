@@ -28,6 +28,7 @@ class Core:
     """ Implements core RepeatFS FS functionality """
     LOG_OUTPUT, LOG_CALL, LOG_DEBUG = range(3)
     LOG_MAX = LOG_DEBUG
+    VERSION = "0.9.1"
 
     log_lock = threading.RLock()
 
@@ -424,6 +425,9 @@ class Core:
         if new_entry.provenance:
             self.provenance.register_op_write(new_entry, Provenance.OP_MOVE, create=True)
 
+        # Update active descriptors
+        DescriptorEntry.rename(old_entry.paths["abs_real"], new_entry.paths["abs_virt"], self)
+
         return err
 
     def update_time(self, path, times):
@@ -488,7 +492,7 @@ class Core:
 
     def read(self, path, length, offset, info):
         """ Perform file read operation """
-        print("READ {} ({}):{}:{}".format(info.fh, path, offset, length))
+        self.log("READ {} ({}):{}:{}".format(info.fh, path, offset, length), self.LOG_DEBUG)
         desc_entry = DescriptorEntry.get(info.fh)
 
         # Register provenance
@@ -515,7 +519,7 @@ class Core:
 
     def write(self, path, buf, offset, info):
         """ Perform file write operation """
-        print("WRITE {}:{}:{}".format(info.fh, offset, len(buf)))
+        self.log("WRITE {}:{}:{}".format(info.fh, offset, len(buf)), self.LOG_DEBUG)
         desc_entry = DescriptorEntry.get(info.fh)
 
         # Register provenance

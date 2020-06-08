@@ -124,8 +124,7 @@ class API:
                     if cmd_info:
                         if cmd_info[1]:
                             # Full API command
-                            print("pid {} received command".format(os.getpid()))
-                            #threading.Thread(target=cmd_info[0], args=(self, )).start()
+                            # threading.Thread(target=cmd_info[0], args=(self, )).start()
                             Process(target=cmd_info[0], args=(self, )).start()
                         else:
                             # Simple API command
@@ -139,7 +138,6 @@ class API:
                 except Exception as e:
                     self.respond(status="error", message=e)
 
-            print("pid {} done with command".format(os.getpid()))
             return len(buf)
 
     def respond(self, status="", message="", extended={}, final=True):

@@ -254,7 +254,7 @@ class Replication:
         for prov_idx in range(len(provenance)):
             for child_id in provenance[prov_idx]["process"]:
                 child_process = provenance[prov_idx]["process"][child_id]
-                if proc_ids[prov_idx]  == (child_process["phost"], str(child_process["parent_start"]), str(child_process["parent_pid"])):
+                if proc_ids[prov_idx] == (child_process["phost"], str(child_process["parent_start"]), str(child_process["parent_pid"])):
                     children[prov_idx].append(child_id)
 
             children[prov_idx] = sorted(children[prov_idx])
@@ -270,7 +270,7 @@ class Replication:
             child_orig_proc = provenance[0]["process"][child_orig_id]
             child_repl_proc = provenance[1]["process"][child_repl_id]
 
-            if child_orig_proc["cmd"] != child_repl_proc["cmd"]:
+            if child_orig_proc["exe"].split(os.sep)[-1] != child_repl_proc["exe"].split(os.sep)[-1]:
                 return None
 
             child_map.append((child_orig_id, child_repl_proc))
