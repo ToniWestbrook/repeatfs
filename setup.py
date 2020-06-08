@@ -9,7 +9,7 @@ setuptools.setup(
     author='Anthony Westbrook',
     author_email='anthony.westbrook@unh.edu',
     packages=setuptools.find_packages(),
-    scripts=['repeatfs/repeatfs.py'],
+    scripts=['repeatfs.py'],
     url='http://github.com/ToniWestbrook/repeatfs',
     license='LICENSE',
     description='File system providing reproducibility through provenance and automation',
