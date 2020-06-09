@@ -129,5 +129,19 @@ This will list each command that will be run, in order.  It will also list ID(s)
 [turing|1591669123.5|2175] tar -cvf results.tar headers.txt count.txt
 ```
 
-USING VIRTUAL DYNAMIC FILES
+VIRTUAL DYNAMIC FILES
 --
+Provenance and replication are only a part of RepeatFS's capabilities.  RepeatFS can also automate commonly performed tasks using VDFs. VDFs are special files that represent the output of some operation, such as converting file formats, extracting text, indexing a reference, etc.  Whenver RepeatFS detects a file that is a valid input for one of these types of operations, it will also show a corresponding output file.  When this output file is accessed (opened, copied, read), RepeatFS will automatically run the program necessary to perform the action, and populate the output file in realtime.  These VDFs look and act just like normal files, though they are stored in memory.  VDFs may be converted into normal files simply by copying them to another directory.
+
+VDFs are configured within the RepeatFS configuration file as follows:
+
+```
+# Comments start with #
+# The following entry creates a VDF that shows a corresponding FASTA for any FASTQ.
+# Accessing the FASTA will automatically run seqtk
+
+[entry]                   # Each VDF entry starts with [entry]
+match=\.fastq$            # This regular expression controls which files are valid input
+ext=.fasta                # This extension will be appended to the end of the VDF
+cmd=seqtk seq -A {input}  # This is the command that will be run when accessing the VDF
+```
