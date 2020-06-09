@@ -17,13 +17,13 @@ INSTALLATION
 Dependencies are available in all popular system package managers.  Python 3, Libfuse, and GraphViz are also available within Anaconda (you may be able to find a channel with FUSE available as well):
 
 * Debian/Ubuntu: `sudo apt install python3 python3-pip fuse3 libfuse3-3 graphviz libgraphviz-dev`
-* RHEL/Fedora: `sudo yum install python3 python3-pip fuse fuse-libs graphviz`
+* RHEL/Fedora: `sudo yum install python3 python3-pip fuse fuse-libs graphviz graphviz-devel`
 * Anaconda: `conda install -c conda-forge python=3 pip libfuse graphviz`
 
 After the dependencies have been installed, RepeatFS can be installed from PyPI using pip:
 
 ```
-TO BE COMPLETED
+pip3 install repeatfs
 ```
 
 USAGE
@@ -33,7 +33,7 @@ RepeatFS functions as a transparent layer between you and your files, recording 
 **Mount and monitor a directory**:
 
 ```
-repeatfs.py mount <directory to monitor> <RepeatFS mount directory>
+repeatfs mount <directory to monitor> <RepeatFS mount directory>
 ```
 
 **Stop monitoring a directory**:
@@ -53,7 +53,7 @@ The most powerful feature of RepeatFS is the ability to record provenance and re
 **Replicate a file** (replication destination must be within an active RepeatFS mount:
 
 ```
-repeatfs.py replicate -r <replication destination> <provenance file>
+repeatfs replicate -r <replication destination> <provenance file>
 ```
 
 **Path to a file's provenance graph** - like the provenance record, this is also a VDF.  RepeatFS visualizes provenance by generating an HTML file that can be vieweed in any browser:
