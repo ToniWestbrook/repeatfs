@@ -41,7 +41,7 @@ repeatfs mount <directory to monitor> <RepeatFS mount directory>
 **Stop monitoring a directory**:
 
 ```
-umount <RepeatFS mount directory>
+fusermount -u <RepeatFS mount directory>
 ```
 
 The most powerful feature of RepeatFS is the ability to record provenance and replicate the creation of the file on a different system.  To ensure all operations are successfully recorded, be sure to perform the entirety of your analysis using a RepeatFS mount. 
