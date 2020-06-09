@@ -33,6 +33,7 @@ def parse_args():
         "provenance": {"type": str, "help": "provenance file to replicate"},
         "-c": {"dest": "config_path", "default": config_dir, "help": "config and database directory"},
         "-f": {"dest": "foreground", "action": "store_true", "help": "keep daemon in foreground"},
+        "-a": {"dest": "access", "action": "store_true", "help": "allow other accounts to access your mount"},
         "-r": {"dest": "replication_path", "type": str, "default": "./", "help": "replication directory"},
         "-m": {"dest": "mount_path", "type": str, "default": "./", "help": "mount directory"},
         "-l": {"dest": "list_cmds", "action": "store_true", "help": "list replication commands"},
@@ -41,7 +42,7 @@ def parse_args():
         "--stderr": {"type": str, "help": "redirect execution stderr to file"}}
 
     arg_cmds = {
-        "mount": ["target", "mount", "-c", "-f"],
+        "mount": ["target", "mount", "-c", "-f", "-a"],
         "generate": ["-c"],
         "replicate": ["provenance", "-r", "-c", "-l", "-e", "--stdout", "--stderr"],
         "shutdown": ["-m", "-c"],
@@ -92,7 +93,7 @@ def main():
             core = Core(arguments.target, arguments.mount, configuration)
 
             # Mount
-            FUSE(core.fuse, arguments.mount, raw_fi=True, nothreads=False, foreground=True, allow_other=True)
+            FUSE(core.fuse, arguments.mount, raw_fi=True, nothreads=False, foreground=True, allow_other=arguments.access)
 
     # Replicate mode
     if arguments.command == "replicate":
