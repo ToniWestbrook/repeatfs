@@ -88,3 +88,26 @@ firefox results.txt.provenance.html
 ````
 
 ![Example 1](https://raw.githubusercontent.com/ToniWestbrook/repeatfs/master/images/example1.png)
+
+RepeatFS can also replicate these steps to recreate `results.tar` using the `results.tar.provenance.json` file.  You can use this file (or distribute it to others) to reproduce your work.  In the following example, we've copied the provenance record into our home directory.  We then mount a directory with RepeatFS and replicate the work (and save stdout and stderr into log files):
+
+```
+repeatfs mount ~/replicate ~/mnt
+cd ~/mnt
+
+repeatfs replicate ~/results.txt.provenance.json --stdout stdout.log --stderr stderr.log
+```
+RepeatFS will execute and verify each step
+
+```
+[info] Starting replication
+[info] Replication complete
+[info] Starting verification
+[ok] Process 16056 (wget ftp://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/complete/uniprot_sprot.fasta.gz) executed
+[ok] Process 16091 (gzip -d uniprot_sprot.fasta.gz) executed
+[ok] Process 16107 (grep --color=auto > uniprot_sprot.fasta) executed
+[ok] Process 16110 (cat uniprot_sprot.fasta) executed
+[ok] Process 16113 (wc -l) executed
+[ok] Process 16118 (tar -cvf results.tar headers.txt count.txt) executed
+[info] Verification complete
+```
