@@ -169,3 +169,8 @@ This would create a corresponding `.count` for every file in the RepeatFS mount,
 less ~/mnt/example.fastq+/example.fastq.fasta+/example.fastq.fasta.count
 ```
 
+While VDFs are not required to record provenance in RepeatFS, they do represent a powerful tool to aid in improving reproducibilty by performing common tasks in a uniform, documented fashion.
+
+QUESTIONS
+--
+RepeatFS is actively being developed and improved all the time.  If you encounter any issue at all, please don't hesitate to reach out and file a bug report here: https://github.com/ToniWestbrook/repeatfs/issues
