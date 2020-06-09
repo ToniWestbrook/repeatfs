@@ -97,7 +97,8 @@ cd ~/mnt
 
 repeatfs replicate ~/results.txt.provenance.json --stdout stdout.log --stderr stderr.log
 ```
-RepeatFS will execute and verify each step
+
+RepeatFS will execute and verify each step. Version mismatches or other errors will be reported:
 
 ```
 [info] Starting replication
@@ -111,3 +112,20 @@ RepeatFS will execute and verify each step
 [ok] Process 16118 (tar -cvf results.tar headers.txt count.txt) executed
 [info] Verification complete
 ```
+
+RepeatFS can also simply list the commands that would be used during replication:
+
+```
+repeatfs replicate ~/results.txt.provenance.json -l
+```
+
+This will list each command that will be run, in order.  It will also list ID(s) next to each command, which can be used during replication (using the `-e` option) to reconstruct a missing shell script.
+
+```
+[turing|1591668563.97|1652] wget ftp://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/complete/uniprot_sprot.fasta.gz
+[turing|1591668614.24|1695] gzip -d uniprot_sprot.fasta.gz
+[turing|1591668694.23|1756] grep --color=auto > uniprot_sprot.fasta > /tmp/mnt/headers.txt
+[turing|1591669111.77|2165, turing|1591669111.77|2166] cat uniprot_sprot.fasta | wc -l > /tmp/mnt/count.txt
+[turing|1591669123.5|2175] tar -cvf results.tar headers.txt count.txt
+```
+
