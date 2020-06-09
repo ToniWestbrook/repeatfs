@@ -113,13 +113,13 @@ RepeatFS will execute and verify each step. Version mismatches or other errors w
 [info] Verification complete
 ```
 
-RepeatFS can also simply list the commands that would be used during replication:
+RepeatFS can also simply list the commands that would be used during replication (using the `-l` argument):
 
 ```
 repeatfs replicate ~/results.txt.provenance.json -l
 ```
 
-This will list each command that will be run, in order.  It will also list ID(s) next to each command, which can be used during replication (using the `-e` option) to reconstruct a missing shell script.
+This will list each command that will be run, in order.  It will also list ID(s) next to each command, which can be used during replication (using the `-e` argument) to reconstruct a missing shell script.
 
 ```
 [turing|1591668563.97|1652] wget ftp://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/complete/uniprot_sprot.fasta.gz
