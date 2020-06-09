@@ -16,11 +16,11 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name='RepeatFS',
-    version='0.9.1',
+    version='0.9.2',
     author='Anthony Westbrook',
     author_email='anthony.westbrook@unh.edu',
     packages=setuptools.find_packages(),
-    scripts=['repeatfs/repeatfs.py'],
+    scripts=['scripts/repeatfs'],
     url='http://github.com/ToniWestbrook/repeatfs',
     license='LICENSE',
     description='File system providing reproducibility through provenance and automation',
