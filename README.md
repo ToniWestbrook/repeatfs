@@ -65,7 +65,7 @@ repeatfs replicate -r <replication destination> <provenance file>
 
 
 
-EXAMPLES
+REPLICATION EXAMPLES
 --
 In this example, we first mount our work directory using RepeatFS.  Then we download a copy of the UniProt SwissProt database, decompress it, and perform two simple tasks: extract fasta header sequences, and count the number of lines in the fasta file.  We take both results, and add it to a new archive.
 
