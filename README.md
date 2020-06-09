@@ -26,7 +26,7 @@ After the dependencies have been installed, RepeatFS can be installed from PyPI 
 pip3 install repeatfs
 ```
 
-If installing using a normal user account, pip will likely be install RepeatFS into your `~/.local/bin` directory.  If this directory is in your PATH variable, you can simply run `repeatfs`.  If not, you'll need to add this directory to your PATH variable, or run RepeatFS using the full path `~/.local/bin/repeatfs`.
+If installing using a normal user account, pip will likely install RepeatFS into your `~/.local/bin` directory.  If this directory is in your PATH variable, you can simply run `repeatfs`.  If not, you'll need to add this directory to your PATH variable, or run RepeatFS using the full path `~/.local/bin/repeatfs`.
 
 USAGE
 --
