@@ -1,12 +1,12 @@
 #! /usr/bin/env python3
 
 #
-#   This file is part of RepeatFS 
+#   This file is part of RepeatFS
 #
 #   SPDX-FileCopyrightText: 2020  Anthony Westbrook, University of New Hampshire <anthony.westbrook@unh.edu>
 #
-#   SPDX-License-Identifier: GPL-3.0-only WITH LicenseRef-repeatfs-graphviz-linking-source-exception 
-#             
+#   SPDX-License-Identifier: GPL-3.0-only WITH LicenseRef-repeatfs-graphviz-linking-source-exception
+#
 
 
 import os
@@ -21,14 +21,13 @@ from repeatfs.descriptor_entry import DescriptorEntry
 from repeatfs.file_entry import FileEntry
 from repeatfs.fuse import Fuse
 from repeatfs.provenance.management import Management as Provenance
-import cProfile
 
 
 class Core:
     """ Implements core RepeatFS FS functionality """
     LOG_OUTPUT, LOG_CALL, LOG_DEBUG = range(3)
-    LOG_MAX = LOG_DEBUG
-    VERSION = "0.9.1"
+    LOG_MAX = LOG_OUTPUT
+    VERSION = "0.9.2"
 
     log_lock = threading.RLock()
 
@@ -217,7 +216,6 @@ class Core:
             # Register provenance
             if file_entry.provenance:
                 self.provenance.register_op_read(file_entry, Provenance.OP_ATTR)
-                # cProfile.runctx('self.provenance.register_op_read(file_entry, Provenance.OP_ATTR)', globals(), locals())
 
         # Check for invalid file entry
         if not file_entry.valid:

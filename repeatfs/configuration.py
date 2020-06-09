@@ -1,12 +1,12 @@
 #! /usr/bin/env python3
 
 #
-#   This file is part of RepeatFS 
+#   This file is part of RepeatFS
 #
 #   SPDX-FileCopyrightText: 2020  Anthony Westbrook, University of New Hampshire <anthony.westbrook@unh.edu>
 #
-#   SPDX-License-Identifier: GPL-3.0-only WITH LicenseRef-repeatfs-graphviz-linking-source-exception 
-#             
+#   SPDX-License-Identifier: GPL-3.0-only WITH LicenseRef-repeatfs-graphviz-linking-source-exception
+#
 
 
 import os
@@ -138,56 +138,60 @@ class Configuration:
 
         invalid = None
 
-        with open(path, "r") as handle:
-            entry_mode = False
-            line_num = 0
+        try:
+            with open(path, "r") as handle:
+                entry_mode = False
+                line_num = 0
 
-            for line in handle:
-                line = line.rstrip()
-                line_num += 1
+                for line in handle:
+                    line = line.rstrip()
+                    line_num += 1
 
-                # Skip comments
-                if re.match("^[ \t]*(#.*)*$", line): continue
+                    # Skip comments
+                    if re.match("^[ \t]*(#.*)*$", line): continue
 
-                # Process entry header
-                if re.match("^[ \t]*\[entry\][ \t]*(#.*)*$", line):
-                    # Complete the previous entry
-                    invalid = self._add_entry(entry_mode, values)
-                    if invalid: break
+                    # Process entry header
+                    if re.match("^[ \t]*\[entry\][ \t]*(#.*)*$", line):
+                        # Complete the previous entry
+                        invalid = self._add_entry(entry_mode, values)
+                        if invalid: break
 
-                    # Start new entry
-                    values = {}
-                    entry_mode = True
-                    continue
+                        # Start new entry
+                        values = {}
+                        entry_mode = True
+                        continue
 
-                # Check field validity
-                match = re.search("^[ \t]*([^= \t]+)[ \t]*=[ \t]*([^#]+)(#.*)*$", line)
+                    # Check field validity
+                    match = re.search("^[ \t]*([^= \t]+)[ \t]*=[ \t]*([^#]+)(#.*)*$", line)
 
-                if not match or match.groups(1)[0] not in Configuration.CONFIG_FIELDS:
-                    invalid = "Invalid line in configuration"
-                    break
-                if entry_mode and not Configuration.CONFIG_FIELDS[match.groups(1)[0]][Configuration.FIELD_MODE]:
-                    invalid = "Global attribute in entry section"
-                    break
-                if not entry_mode and Configuration.CONFIG_FIELDS[match.groups(1)[0]][Configuration.FIELD_MODE]:
-                    invalid = "Entry attribute in global section"
-                    break
+                    if not match or match.groups(1)[0] not in Configuration.CONFIG_FIELDS:
+                        invalid = "Invalid line in configuration"
+                        break
+                    if entry_mode and not Configuration.CONFIG_FIELDS[match.groups(1)[0]][Configuration.FIELD_MODE]:
+                        invalid = "Global attribute in entry section"
+                        break
+                    if not entry_mode and Configuration.CONFIG_FIELDS[match.groups(1)[0]][Configuration.FIELD_MODE]:
+                        invalid = "Entry attribute in global section"
+                        break
 
-                # Save field value
-                values[match.groups(1)[0]] = match.groups(1)[1]
+                    # Save field value
+                    values[match.groups(1)[0]] = match.groups(1)[1]
 
-        # Add final entry
-        if not invalid:
-            invalid = self._add_entry(entry_mode, values)
+            # Add final entry
+            if not invalid:
+                invalid = self._add_entry(entry_mode, values)
 
-        # Check for errors
-        if invalid:
-            self.core.log("Configuration error: {0} ({1})".format(invalid, line_num), self.core.LOG_OUTPUT)
+            # Check for errors
+            if invalid:
+                print("Configuration error: {0} ({1})".format(invalid, line_num))
+                return False
+
+            # Add system entries
+            for entry in Configuration.SYSTEM_ENTRIES:
+                self._add_entry(True, entry)
+
+            return True
+
+        except IOError:
+            print("Error: configuration file not found at location `{}`.  Please run 'repeatfs generate' to create a new configuration.".format(path))
             return False
-
-        # Add system entries
-        for entry in Configuration.SYSTEM_ENTRIES:
-            self._add_entry(True, entry)
-
-        return True
-

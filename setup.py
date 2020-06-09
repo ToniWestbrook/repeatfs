@@ -1,3 +1,14 @@
+#! /usr/bin/env python3
+
+#
+#   This file is part of RepeatFS
+#
+#   SPDX-FileCopyrightText: 2020  Anthony Westbrook, University of New Hampshire <anthony.westbrook@unh.edu>
+#
+#   SPDX-License-Identifier: GPL-3.0-only WITH LicenseRef-repeatfs-graphviz-linking-source-exception
+#
+
+
 import setuptools
 
 with open("README.md", "r") as fh:
@@ -9,7 +20,7 @@ setuptools.setup(
     author='Anthony Westbrook',
     author_email='anthony.westbrook@unh.edu',
     packages=setuptools.find_packages(),
-    scripts=['scripts/repeatfs'],
+    scripts=['repeatfs/repeatfs.py'],
     url='http://github.com/ToniWestbrook/repeatfs',
     license='LICENSE',
     description='File system providing reproducibility through provenance and automation',

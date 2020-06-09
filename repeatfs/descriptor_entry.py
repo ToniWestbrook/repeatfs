@@ -1,12 +1,12 @@
 #! /usr/bin/env python3
 
 #
-#   This file is part of RepeatFS 
+#   This file is part of RepeatFS
 #
 #   SPDX-FileCopyrightText: 2020  Anthony Westbrook, University of New Hampshire <anthony.westbrook@unh.edu>
 #
-#   SPDX-License-Identifier: GPL-3.0-only WITH LicenseRef-repeatfs-graphviz-linking-source-exception 
-#             
+#   SPDX-License-Identifier: GPL-3.0-only WITH LicenseRef-repeatfs-graphviz-linking-source-exception
+#
 
 
 import os
