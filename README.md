@@ -129,3 +129,5 @@ This will list each command that will be run, in order.  It will also list ID(s)
 [turing|1591669123.5|2175] tar -cvf results.tar headers.txt count.txt
 ```
 
+USING VIRTUAL DYNAMIC FILES
+--
