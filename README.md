@@ -26,6 +26,8 @@ After the dependencies have been installed, RepeatFS can be installed from PyPI 
 pip3 install repeatfs
 ```
 
+If installing using a normal user account, this will likely be installed into your `~/.local/bin` directory.  If this directory is in your path, you can simply run `repeatfs`.  If not, you'll need to add this directory to your PATH variable, or run RepeatFS using the full path `~/.local/bin/repeatfs`.
+
 USAGE
 --
 RepeatFS functions as a transparent layer between you and your files, recording all IO activity. In order to use RepeatFS, you'll mount the target directory (and all subdirectories/files) you want to monitor.  Then, anytime you wish to access any files within the monitored directory, you'll instead use the path to the RepeatFS mount.
