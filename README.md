@@ -30,7 +30,7 @@ If installing using a normal user account, pip will likely install RepeatFS into
 
 USAGE
 --
-RepeatFS functions as a transparent layer between you and your files, recording all IO activity. In order to use RepeatFS, you'll mount the target directory (and all subdirectories/files) you want to monitor.  Then, anytime you wish to access any files within the monitored directory, you'll instead use the path to the RepeatFS mount.
+RepeatFS functions as a transparent layer between you and your files, recording all IO activity. In order to use RepeatFS, you'll mount the target directory you want to monitor (which includes subdirectories and files).  Then, anytime you wish to access any files within the monitored directory, you'll instead use the path to the RepeatFS mount.
 
 **Mount and monitor a directory**:
 
