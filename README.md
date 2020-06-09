@@ -145,3 +145,27 @@ match=\.fastq$            # This regular expression controls which files are val
 ext=.fasta                # This extension will be appended to the end of the VDF
 cmd=seqtk seq -A {input}  # This is the command that will be run when accessing the VDF
 ```
+
+All VDF files, including system-provided ones like provenance, or user-defined ones like the FASTQ->FASTA example above, can be found by placing a plus sign `+` after the input filename.  So if we had a FASTQ file located at `~/mnt/example.fastq`, listing the contents of `~/mnt/example.fastq+` would show the following files:
+
+```
+example.fastq.fasta
+example.fastq.provenance.html
+example.fastq.provenance.json
+```
+
+Note that since VDFs are treated as normal files, they also can be used as inputs to other VDFs.  In this way, multiple VDFs can be chained together to perform automated operations in a modular fashion.  Using the above example, if we define the following VDF:
+
+```
+[entry]
+match=.*
+ext=.count
+cmd=wc -l {input}
+```
+
+This would create a corresponding `.count` for every file in the RepeatFS mount, containing the number of lines the original file contained (even if that original file was a VDF).  In this way, we can view the number of lines in a FASTA converted from the FASTQ file above:
+
+```
+less ~/mnt/example.fastq+/example.fastq.fasta+/example.fastq.fasta.count
+```
+
