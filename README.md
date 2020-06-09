@@ -67,3 +67,24 @@ repeatfs replicate -r <replication destination> <provenance file>
 
 EXAMPLES
 --
+In this example, we first mount our work directory using RepeatFS.  Then we download a copy of the UniProt SwissProt database, decompress it, and perform two simple tasks: extract fasta header sequences, and count the number of lines in the fasta file.  We take both results, and add it to a new archive.
+
+```
+repeatfs mount ~/work ~/mnt
+cd ~/mnt
+
+wget ftp://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/complete/uniprot_sprot.fasta.gz
+gzip -d uniprot_sprot.fasta.gz
+grep ">" uniprot_sprot.fasta > ~/mnt/headers.txt
+cat uniprot_sprot.fasta | wc -l > ~/mnt/count.txt
+tar -cvf results.tar headers.txt count.txt
+```
+
+To visualize the provenance of the `results.tar` file within our browser:
+
+```
+cd results.txt+
+firefox results.txt.provenance.html
+````
+
+![Example 1](https://raw.githubusercontent.com/ToniWestbrook/repeatfs/master/images/example1.png)
