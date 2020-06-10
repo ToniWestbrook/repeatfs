@@ -16,7 +16,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name='RepeatFS',
-    version='0.9.2',
+    version='0.9.3',
     author='Anthony Westbrook',
     author_email='anthony.westbrook@unh.edu',
     packages=setuptools.find_packages(),

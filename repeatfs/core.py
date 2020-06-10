@@ -27,7 +27,7 @@ class Core:
     """ Implements core RepeatFS FS functionality """
     LOG_OUTPUT, LOG_CALL, LOG_DEBUG = range(3)
     LOG_MAX = LOG_OUTPUT
-    VERSION = "0.9.2"
+    VERSION = "0.9.3"
 
     log_lock = threading.RLock()
 
@@ -230,9 +230,9 @@ class Core:
         elif file_entry.derived_source:
             stats = self.fuse.getattr(file_entry.derived_source.paths["abs_virt"], info)
             stats['st_mode'] &= 0x01FF
+            stats['st_mode'] |= file_entry.file_type
             stats['st_size'] = 0
             stats['st_mtime'] = 0
-            stats['st_mode'] = file_entry.file_type
             if file_entry.file_type == stat.S_IFREG:
                 # If file is cached, report correct file size
                 if file_entry.paths["abs_real"] in CacheEntry.entries:

@@ -103,5 +103,6 @@ def main():
     if arguments.command == "shutdown":
         repeatfs.client.shutdown(arguments.mount_path, configuration)
 
+
 if __name__ == '__main__':
     main()
