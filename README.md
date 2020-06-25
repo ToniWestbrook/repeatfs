@@ -11,14 +11,14 @@ INSTALLATION
 --
 **Dependencies**
 * Python 3 (and pip)
-* FUSE 3 (and libfuse)
+* FUSE 2 (and libfuse)
 * GraphViz
 
 Dependencies are available in all popular system package managers.  Python 3, Libfuse, and GraphViz are also available within Anaconda (you may be able to find a channel with FUSE available as well):
 
-* Debian/Ubuntu: `sudo apt install python3 python3-pip fuse3 libfuse3-3 graphviz libgraphviz-dev`
-* RHEL/Fedora: `sudo yum install python3 python3-pip fuse3 fuse3-libs graphviz graphviz-devel`
-* Anaconda: `conda install -c conda-forge python=3 pip libfuse graphviz`
+* Debian/Ubuntu: `sudo apt install python3 python3-pip fuse2 libfuse2 graphviz libgraphviz-dev`
+* RHEL/Fedora: `sudo yum install python3 python3-pip fuse2 fuse2-libs graphviz graphviz-devel`
+* Anaconda: `conda install -c conda-forge python=3 pip libfuse=2 graphviz`
 
 After the dependencies have been installed, RepeatFS can be installed from PyPI using pip:
 
