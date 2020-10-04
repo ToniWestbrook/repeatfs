@@ -1,0 +1,8 @@
+Command List
+[turing|1585509138.75|13414] mkdir reads
+[turing|1585509138.76|13415] fastq-dump --split-files SRR9847874
+[turing|1585509194.87|13460] python /home/anthonyw/anaconda3/bin/trimmomatic PE SRR9847874_1.fastq SRR9847874_2.fastq out_fwd_paired.fq out_fwd_unpaired.fq out_rev_paired.fq out_rev_unpaired.fq ILLUMINACLIP:TruSeq3-PE.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36 -threads 6
+[turing|1585509238.95|13526] mkdir assembly
+[turing|1585509238.96|13527] python /home/anthonyw/anaconda3/bin/spades.py --pe1-1 ../reads/out_fwd_paired.fq --pe1-2 ../reads/out_rev_paired.fq --pe1-s ../reads/out_fwd_unpaired.fq --pe1-s ../reads/out_rev_unpaired.fq -k 77 --tmp-dir /tmp/spades -o output
+[turing|1585509747.33|15707] mkdir annotation
+[turing|1585509747.34|15708] perl /home/anthonyw/anaconda3/bin/prokka ../assembly/output/scaffolds.fasta --centre C --locustag L --force

@@ -1,0 +1,2665 @@
+CALL: opendir (/)
+CALL: getattr (/.xdg-volume-info) (None)
+CALL: getattr (/autorun.inf) (None)
+CALL: getattr (/) (None)
+CALL: readdir (/, 0)
+CALL: getattr (/test.py) (None)
+CALL: getattr (/testpipe.sh) (None)
+CALL: getattr (/tmp) (None)
+CALL: getattr (/tree) (None)
+CALL: getattr (/output-run-mafft.txt) (None)
+CALL: getattr (/.fuse_hidden0000002900000001) (None)
+CALL: getattr (/uniprot_sprot.fasta.gz.pac) (None)
+CALL: getattr (/paladin) (None)
+CALL: getattr (/output-run-silva.txt) (None)
+CALL: getattr (/output.tar.gz) (None)
+CALL: getattr (/provenance.db) (None)
+CALL: getattr (/output-run-trimmomatic.txt) (None)
+CALL: getattr (/output-run-fastqdump.txt) (None)
+CALL: getattr (/output-run-bioawk.txt) (None)
+CALL: getattr (/outer.sh) (None)
+CALL: getattr (/reads) (None)
+CALL: getattr (/output-run-annotation.txt) (None)
+CALL: getattr (/reference) (None)
+CALL: getattr (/masurca) (None)
+CALL: getattr (/uniprot_sprot.fasta.gz.amb) (None)
+CALL: getattr (/output-run-raxml.txt) (None)
+CALL: getattr (/data.sam) (None)
+CALL: getattr (/annotation) (None)
+CALL: getattr (/threads.sam) (None)
+CALL: getattr (/uniprot_sprot.fasta.gz) (None)
+CALL: getattr (/inner.sh) (None)
+CALL: getattr (/output-run-assembly.txt) (None)
+CALL: getattr (/start.sh) (None)
+CALL: getattr (/output-run-gzip.txt) (None)
+CALL: getattr (/uniprot_sprot.fasta.gz.ann) (None)
+CALL: getattr (/assembly) (None)
+CALL: getattr (/uniprot_sprot.fasta.gz.pro) (None)
+CALL: getattr (/run2.sh) (None)
+CALL: getattr (/parameters.sh) (None)
+CALL: getattr (/.money.txt.swp) (None)
+CALL: getattr (/uniprot_sprot.fasta.gz.sa) (None)
+CALL: getattr (/clean.sh) (None)
+CALL: getattr (/liststats.py) (None)
+CALL: getattr (/map.py) (None)
+CALL: getattr (/run.sh) (None)
+CALL: getattr (/test.sam) (None)
+CALL: getattr (/uniprot_sprot.fasta.gz.bwt) (None)
+CALL: getattr (/repeatfs.conf) (None)
+CALL: getattr (/test.txt) (None)
+CALL: opendir (/)
+CALL: getattr (/) (None)
+CALL: readdir (/, 0)
+CALL: opendir (/)
+CALL: getattr (/) (None)
+CALL: readdir (/, 0)
+CALL: opendir (/)
+CALL: getattr (/) (None)
+CALL: readdir (/, 0)
+CALL: opendir (/)
+CALL: getattr (/) (None)
+CALL: readdir (/, 0)
+CALL: opendir (/)
+CALL: getattr (/) (None)
+CALL: readdir (/, 0)
+CALL: opendir (/)
+CALL: getattr (/) (None)
+CALL: readdir (/, 0)
+CALL: opendir (/)
+CALL: getattr (/) (None)
+CALL: readdir (/, 0)
+CALL: opendir (/)
+CALL: getattr (/) (None)
+CALL: readdir (/, 0)
+CALL: opendir (/)
+CALL: getattr (/) (None)
+CALL: readdir (/, 0)
+CALL: opendir (/)
+CALL: getattr (/) (None)
+CALL: readdir (/, 0)
+CALL: opendir (/)
+CALL: getattr (/) (None)
+CALL: readdir (/, 0)
+CALL: opendir (/)
+CALL: getattr (/) (None)
+CALL: readdir (/, 0)
+CALL: opendir (/)
+CALL: getattr (/) (None)
+CALL: readdir (/, 0)
+CALL: opendir (/)
+CALL: getattr (/) (None)
+CALL: readdir (/, 0)
+CALL: opendir (/)
+CALL: getattr (/) (None)
+CALL: readdir (/, 0)
+CALL: opendir (/)
+CALL: getattr (/) (None)
+CALL: readdir (/, 0)
+CALL: opendir (/)
+CALL: getattr (/) (None)
+CALL: readdir (/, 0)
+CALL: opendir (/)
+CALL: getattr (/) (None)
+CALL: readdir (/, 0)
+CALL: opendir (/)
+CALL: getattr (/) (None)
+CALL: readdir (/, 0)
+CALL: opendir (/)
+CALL: getattr (/) (None)
+CALL: readdir (/, 0)
+CALL: opendir (/)
+CALL: getattr (/) (None)
+CALL: readdir (/, 0)
+CALL: opendir (/)
+CALL: getattr (/) (None)
+CALL: readdir (/, 0)
+CALL: getattr (/autorun.inf) (None)
+CALL: getattr (/) (None)
+CALL: getattr (/tree) (None)
+CALL: access (/tree, 1)
+CALL: getattr (/tree) (None)
+CALL: getattr (/tree/aligned.fasta) (None)
+CALL: open (/tree/aligned.fasta, 32768)
+CALL: getattr (/tree/aligned.fasta) (1181)
+CALL: flush (/tree/aligned.fasta, 1181)
+CALL: release (/tree/aligned.fasta, 1181)
+CALL: getattr (/tree) (None)
+CALL: getattr (/tree/RAxML_info.yersinia) (None)
+CALL: getattr (/tree/RAxML_info.yersinia) (None)
+CALL: create (/tree/RAxML_info.yersinia, 33204)
+CALL: getattr (/tree/RAxML_info.yersinia) (1185)
+CALL: flush (/tree/RAxML_info.yersinia, 1185)
+CALL: release (/tree/RAxML_info.yersinia, 1185)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1186)
+CALL: flush (/tree/RAxML_info.yersinia, 1186)
+CALL: release (/tree/RAxML_info.yersinia, 1186)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1187)
+CALL: flush (/tree/RAxML_info.yersinia, 1187)
+CALL: release (/tree/RAxML_info.yersinia, 1187)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1188)
+CALL: flush (/tree/RAxML_info.yersinia, 1188)
+CALL: release (/tree/RAxML_info.yersinia, 1188)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1189)
+CALL: flush (/tree/RAxML_info.yersinia, 1189)
+CALL: release (/tree/RAxML_info.yersinia, 1189)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1190)
+CALL: flush (/tree/RAxML_info.yersinia, 1190)
+CALL: release (/tree/RAxML_info.yersinia, 1190)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1191)
+CALL: flush (/tree/RAxML_info.yersinia, 1191)
+CALL: release (/tree/RAxML_info.yersinia, 1191)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1192)
+CALL: flush (/tree/RAxML_info.yersinia, 1192)
+CALL: release (/tree/RAxML_info.yersinia, 1192)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1193)
+CALL: flush (/tree/RAxML_info.yersinia, 1193)
+CALL: release (/tree/RAxML_info.yersinia, 1193)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1194)
+CALL: flush (/tree/RAxML_info.yersinia, 1194)
+CALL: release (/tree/RAxML_info.yersinia, 1194)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1195)
+CALL: flush (/tree/RAxML_info.yersinia, 1195)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: release (/tree/RAxML_info.yersinia, 1195)
+CALL: getattr (/tree/RAxML_info.yersinia) (1196)
+CALL: flush (/tree/RAxML_info.yersinia, 1196)
+CALL: release (/tree/RAxML_info.yersinia, 1196)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1197)
+CALL: flush (/tree/RAxML_info.yersinia, 1197)
+CALL: release (/tree/RAxML_info.yersinia, 1197)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1198)
+CALL: flush (/tree/RAxML_info.yersinia, 1198)
+CALL: release (/tree/RAxML_info.yersinia, 1198)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1199)
+CALL: flush (/tree/RAxML_info.yersinia, 1199)
+CALL: release (/tree/RAxML_info.yersinia, 1199)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1200)
+CALL: flush (/tree/RAxML_info.yersinia, 1200)
+CALL: release (/tree/RAxML_info.yersinia, 1200)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1201)
+CALL: flush (/tree/RAxML_info.yersinia, 1201)
+CALL: release (/tree/RAxML_info.yersinia, 1201)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1202)
+CALL: flush (/tree/RAxML_info.yersinia, 1202)
+CALL: release (/tree/RAxML_info.yersinia, 1202)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1203)
+CALL: flush (/tree/RAxML_info.yersinia, 1203)
+CALL: release (/tree/RAxML_info.yersinia, 1203)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1204)
+CALL: flush (/tree/RAxML_info.yersinia, 1204)
+CALL: release (/tree/RAxML_info.yersinia, 1204)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1205)
+CALL: flush (/tree/RAxML_info.yersinia, 1205)
+CALL: release (/tree/RAxML_info.yersinia, 1205)
+CALL: getattr (/tree) (None)
+CALL: getattr (/tree/RAxML_info.yersinia) (None)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: flush (/tree/RAxML_info.yersinia, 1208)
+CALL: release (/tree/RAxML_info.yersinia, 1208)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1209)
+CALL: flush (/tree/RAxML_info.yersinia, 1209)
+CALL: release (/tree/RAxML_info.yersinia, 1209)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1210)
+CALL: flush (/tree/RAxML_info.yersinia, 1210)
+CALL: release (/tree/RAxML_info.yersinia, 1210)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1211)
+CALL: flush (/tree/RAxML_info.yersinia, 1211)
+CALL: release (/tree/RAxML_info.yersinia, 1211)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1212)
+CALL: flush (/tree/RAxML_info.yersinia, 1212)
+CALL: release (/tree/RAxML_info.yersinia, 1212)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1213)
+CALL: flush (/tree/RAxML_info.yersinia, 1213)
+CALL: release (/tree/RAxML_info.yersinia, 1213)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1214)
+CALL: flush (/tree/RAxML_info.yersinia, 1214)
+CALL: release (/tree/RAxML_info.yersinia, 1214)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1215)
+CALL: flush (/tree/RAxML_info.yersinia, 1215)
+CALL: release (/tree/RAxML_info.yersinia, 1215)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1216)
+CALL: flush (/tree/RAxML_info.yersinia, 1216)
+CALL: release (/tree/RAxML_info.yersinia, 1216)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1217)
+CALL: flush (/tree/RAxML_info.yersinia, 1217)
+CALL: release (/tree/RAxML_info.yersinia, 1217)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1218)
+CALL: flush (/tree/RAxML_info.yersinia, 1218)
+CALL: release (/tree/RAxML_info.yersinia, 1218)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1219)
+CALL: flush (/tree/RAxML_info.yersinia, 1219)
+CALL: release (/tree/RAxML_info.yersinia, 1219)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1220)
+CALL: flush (/tree/RAxML_info.yersinia, 1220)
+CALL: release (/tree/RAxML_info.yersinia, 1220)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1221)
+CALL: flush (/tree/RAxML_info.yersinia, 1221)
+CALL: release (/tree/RAxML_info.yersinia, 1221)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1222)
+CALL: flush (/tree/RAxML_info.yersinia, 1222)
+CALL: release (/tree/RAxML_info.yersinia, 1222)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1223)
+CALL: flush (/tree/RAxML_info.yersinia, 1223)
+CALL: release (/tree/RAxML_info.yersinia, 1223)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1224)
+CALL: flush (/tree/RAxML_info.yersinia, 1224)
+CALL: release (/tree/RAxML_info.yersinia, 1224)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1225)
+CALL: flush (/tree/RAxML_info.yersinia, 1225)
+CALL: release (/tree/RAxML_info.yersinia, 1225)
+CALL: getattr (/tree) (None)
+CALL: getattr (/tree/RAxML_info.yersinia) (None)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: flush (/tree/RAxML_info.yersinia, 1228)
+CALL: release (/tree/RAxML_info.yersinia, 1228)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1229)
+CALL: flush (/tree/RAxML_info.yersinia, 1229)
+CALL: release (/tree/RAxML_info.yersinia, 1229)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1230)
+CALL: flush (/tree/RAxML_info.yersinia, 1230)
+CALL: release (/tree/RAxML_info.yersinia, 1230)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1231)
+CALL: flush (/tree/RAxML_info.yersinia, 1231)
+CALL: release (/tree/RAxML_info.yersinia, 1231)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1232)
+CALL: flush (/tree/RAxML_info.yersinia, 1232)
+CALL: release (/tree/RAxML_info.yersinia, 1232)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1233)
+CALL: flush (/tree/RAxML_info.yersinia, 1233)
+CALL: release (/tree/RAxML_info.yersinia, 1233)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1234)
+CALL: flush (/tree/RAxML_info.yersinia, 1234)
+CALL: release (/tree/RAxML_info.yersinia, 1234)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1235)
+CALL: flush (/tree/RAxML_info.yersinia, 1235)
+CALL: release (/tree/RAxML_info.yersinia, 1235)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1236)
+CALL: flush (/tree/RAxML_info.yersinia, 1236)
+CALL: release (/tree/RAxML_info.yersinia, 1236)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1237)
+CALL: flush (/tree/RAxML_info.yersinia, 1237)
+CALL: release (/tree/RAxML_info.yersinia, 1237)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1238)
+CALL: flush (/tree/RAxML_info.yersinia, 1238)
+CALL: release (/tree/RAxML_info.yersinia, 1238)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1239)
+CALL: flush (/tree/RAxML_info.yersinia, 1239)
+CALL: release (/tree/RAxML_info.yersinia, 1239)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1240)
+CALL: flush (/tree/RAxML_info.yersinia, 1240)
+CALL: release (/tree/RAxML_info.yersinia, 1240)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1241)
+CALL: flush (/tree/RAxML_info.yersinia, 1241)
+CALL: release (/tree/RAxML_info.yersinia, 1241)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1242)
+CALL: flush (/tree/RAxML_info.yersinia, 1242)
+CALL: release (/tree/RAxML_info.yersinia, 1242)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1243)
+CALL: flush (/tree/RAxML_info.yersinia, 1243)
+CALL: release (/tree/RAxML_info.yersinia, 1243)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1244)
+CALL: flush (/tree/RAxML_info.yersinia, 1244)
+CALL: release (/tree/RAxML_info.yersinia, 1244)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1245)
+CALL: flush (/tree/RAxML_info.yersinia, 1245)
+CALL: release (/tree/RAxML_info.yersinia, 1245)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1246)
+CALL: flush (/tree/RAxML_info.yersinia, 1246)
+CALL: release (/tree/RAxML_info.yersinia, 1246)
+CALL: getattr (/tree) (None)
+CALL: getattr (/tree/RAxML_info.yersinia) (None)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: flush (/tree/RAxML_info.yersinia, 1249)
+CALL: release (/tree/RAxML_info.yersinia, 1249)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1250)
+CALL: flush (/tree/RAxML_info.yersinia, 1250)
+CALL: release (/tree/RAxML_info.yersinia, 1250)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1251)
+CALL: flush (/tree/RAxML_info.yersinia, 1251)
+CALL: release (/tree/RAxML_info.yersinia, 1251)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1252)
+CALL: flush (/tree/RAxML_info.yersinia, 1252)
+CALL: release (/tree/RAxML_info.yersinia, 1252)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1253)
+CALL: flush (/tree/RAxML_info.yersinia, 1253)
+CALL: release (/tree/RAxML_info.yersinia, 1253)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1254)
+CALL: flush (/tree/RAxML_info.yersinia, 1254)
+CALL: release (/tree/RAxML_info.yersinia, 1254)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1255)
+CALL: flush (/tree/RAxML_info.yersinia, 1255)
+CALL: release (/tree/RAxML_info.yersinia, 1255)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1256)
+CALL: flush (/tree/RAxML_info.yersinia, 1256)
+CALL: release (/tree/RAxML_info.yersinia, 1256)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1257)
+CALL: flush (/tree/RAxML_info.yersinia, 1257)
+CALL: release (/tree/RAxML_info.yersinia, 1257)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1258)
+CALL: flush (/tree/RAxML_info.yersinia, 1258)
+CALL: release (/tree/RAxML_info.yersinia, 1258)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1259)
+CALL: flush (/tree/RAxML_info.yersinia, 1259)
+CALL: release (/tree/RAxML_info.yersinia, 1259)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1260)
+CALL: flush (/tree/RAxML_info.yersinia, 1260)
+CALL: release (/tree/RAxML_info.yersinia, 1260)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1261)
+CALL: flush (/tree/RAxML_info.yersinia, 1261)
+CALL: release (/tree/RAxML_info.yersinia, 1261)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1262)
+CALL: flush (/tree/RAxML_info.yersinia, 1262)
+CALL: release (/tree/RAxML_info.yersinia, 1262)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1263)
+CALL: flush (/tree/RAxML_info.yersinia, 1263)
+CALL: release (/tree/RAxML_info.yersinia, 1263)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1264)
+CALL: flush (/tree/RAxML_info.yersinia, 1264)
+CALL: release (/tree/RAxML_info.yersinia, 1264)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1265)
+CALL: flush (/tree/RAxML_info.yersinia, 1265)
+CALL: release (/tree/RAxML_info.yersinia, 1265)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1266)
+CALL: flush (/tree/RAxML_info.yersinia, 1266)
+CALL: release (/tree/RAxML_info.yersinia, 1266)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1267)
+CALL: flush (/tree/RAxML_info.yersinia, 1267)
+CALL: release (/tree/RAxML_info.yersinia, 1267)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1268)
+CALL: flush (/tree/RAxML_info.yersinia, 1268)
+CALL: release (/tree/RAxML_info.yersinia, 1268)
+CALL: getattr (/tree) (None)
+CALL: getattr (/tree/RAxML_info.yersinia) (None)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: flush (/tree/RAxML_info.yersinia, 1271)
+CALL: release (/tree/RAxML_info.yersinia, 1271)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1272)
+CALL: flush (/tree/RAxML_info.yersinia, 1272)
+CALL: release (/tree/RAxML_info.yersinia, 1272)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1273)
+CALL: flush (/tree/RAxML_info.yersinia, 1273)
+CALL: release (/tree/RAxML_info.yersinia, 1273)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1274)
+CALL: flush (/tree/RAxML_info.yersinia, 1274)
+CALL: release (/tree/RAxML_info.yersinia, 1274)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1275)
+CALL: flush (/tree/RAxML_info.yersinia, 1275)
+CALL: release (/tree/RAxML_info.yersinia, 1275)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1276)
+CALL: flush (/tree/RAxML_info.yersinia, 1276)
+CALL: release (/tree/RAxML_info.yersinia, 1276)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1277)
+CALL: flush (/tree/RAxML_info.yersinia, 1277)
+CALL: release (/tree/RAxML_info.yersinia, 1277)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1278)
+CALL: flush (/tree/RAxML_info.yersinia, 1278)
+CALL: release (/tree/RAxML_info.yersinia, 1278)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1279)
+CALL: flush (/tree/RAxML_info.yersinia, 1279)
+CALL: release (/tree/RAxML_info.yersinia, 1279)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1280)
+CALL: flush (/tree/RAxML_info.yersinia, 1280)
+CALL: release (/tree/RAxML_info.yersinia, 1280)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1281)
+CALL: flush (/tree/RAxML_info.yersinia, 1281)
+CALL: release (/tree/RAxML_info.yersinia, 1281)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1282)
+CALL: flush (/tree/RAxML_info.yersinia, 1282)
+CALL: release (/tree/RAxML_info.yersinia, 1282)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1283)
+CALL: flush (/tree/RAxML_info.yersinia, 1283)
+CALL: release (/tree/RAxML_info.yersinia, 1283)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1284)
+CALL: flush (/tree/RAxML_info.yersinia, 1284)
+CALL: release (/tree/RAxML_info.yersinia, 1284)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1285)
+CALL: flush (/tree/RAxML_info.yersinia, 1285)
+CALL: release (/tree/RAxML_info.yersinia, 1285)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1286)
+CALL: flush (/tree/RAxML_info.yersinia, 1286)
+CALL: release (/tree/RAxML_info.yersinia, 1286)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1287)
+CALL: flush (/tree/RAxML_info.yersinia, 1287)
+CALL: release (/tree/RAxML_info.yersinia, 1287)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1288)
+CALL: flush (/tree/RAxML_info.yersinia, 1288)
+CALL: release (/tree/RAxML_info.yersinia, 1288)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1289)
+CALL: flush (/tree/RAxML_info.yersinia, 1289)
+CALL: release (/tree/RAxML_info.yersinia, 1289)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1290)
+CALL: flush (/tree/RAxML_info.yersinia, 1290)
+CALL: release (/tree/RAxML_info.yersinia, 1290)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1291)
+CALL: flush (/tree/RAxML_info.yersinia, 1291)
+CALL: release (/tree/RAxML_info.yersinia, 1291)
+CALL: getattr (/tree) (None)
+CALL: getattr (/tree/RAxML_info.yersinia) (None)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: flush (/tree/RAxML_info.yersinia, 1294)
+CALL: release (/tree/RAxML_info.yersinia, 1294)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1295)
+CALL: flush (/tree/RAxML_info.yersinia, 1295)
+CALL: release (/tree/RAxML_info.yersinia, 1295)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1296)
+CALL: flush (/tree/RAxML_info.yersinia, 1296)
+CALL: release (/tree/RAxML_info.yersinia, 1296)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1297)
+CALL: flush (/tree/RAxML_info.yersinia, 1297)
+CALL: release (/tree/RAxML_info.yersinia, 1297)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1298)
+CALL: flush (/tree/RAxML_info.yersinia, 1298)
+CALL: release (/tree/RAxML_info.yersinia, 1298)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1299)
+CALL: flush (/tree/RAxML_info.yersinia, 1299)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: release (/tree/RAxML_info.yersinia, 1299)
+CALL: getattr (/tree/RAxML_info.yersinia) (1300)
+CALL: flush (/tree/RAxML_info.yersinia, 1300)
+CALL: release (/tree/RAxML_info.yersinia, 1300)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1301)
+CALL: flush (/tree/RAxML_info.yersinia, 1301)
+CALL: release (/tree/RAxML_info.yersinia, 1301)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1302)
+CALL: flush (/tree/RAxML_info.yersinia, 1302)
+CALL: release (/tree/RAxML_info.yersinia, 1302)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1303)
+CALL: flush (/tree/RAxML_info.yersinia, 1303)
+CALL: release (/tree/RAxML_info.yersinia, 1303)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1304)
+CALL: flush (/tree/RAxML_info.yersinia, 1304)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: release (/tree/RAxML_info.yersinia, 1304)
+CALL: getattr (/tree/RAxML_info.yersinia) (1305)
+CALL: flush (/tree/RAxML_info.yersinia, 1305)
+CALL: release (/tree/RAxML_info.yersinia, 1305)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1306)
+CALL: flush (/tree/RAxML_info.yersinia, 1306)
+CALL: release (/tree/RAxML_info.yersinia, 1306)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1307)
+CALL: flush (/tree/RAxML_info.yersinia, 1307)
+CALL: release (/tree/RAxML_info.yersinia, 1307)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1308)
+CALL: flush (/tree/RAxML_info.yersinia, 1308)
+CALL: release (/tree/RAxML_info.yersinia, 1308)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1309)
+CALL: flush (/tree/RAxML_info.yersinia, 1309)
+CALL: release (/tree/RAxML_info.yersinia, 1309)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1310)
+CALL: flush (/tree/RAxML_info.yersinia, 1310)
+CALL: release (/tree/RAxML_info.yersinia, 1310)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1311)
+CALL: flush (/tree/RAxML_info.yersinia, 1311)
+CALL: release (/tree/RAxML_info.yersinia, 1311)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1312)
+CALL: flush (/tree/RAxML_info.yersinia, 1312)
+CALL: release (/tree/RAxML_info.yersinia, 1312)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1313)
+CALL: flush (/tree/RAxML_info.yersinia, 1313)
+CALL: release (/tree/RAxML_info.yersinia, 1313)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1314)
+CALL: flush (/tree/RAxML_info.yersinia, 1314)
+CALL: release (/tree/RAxML_info.yersinia, 1314)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1315)
+CALL: flush (/tree/RAxML_info.yersinia, 1315)
+CALL: release (/tree/RAxML_info.yersinia, 1315)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1316)
+CALL: flush (/tree/RAxML_info.yersinia, 1316)
+CALL: release (/tree/RAxML_info.yersinia, 1316)
+CALL: getattr (/tree) (None)
+CALL: getattr (/tree/RAxML_info.yersinia) (None)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: flush (/tree/RAxML_info.yersinia, 1319)
+CALL: release (/tree/RAxML_info.yersinia, 1319)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1320)
+CALL: flush (/tree/RAxML_info.yersinia, 1320)
+CALL: release (/tree/RAxML_info.yersinia, 1320)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1321)
+CALL: flush (/tree/RAxML_info.yersinia, 1321)
+CALL: release (/tree/RAxML_info.yersinia, 1321)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1322)
+CALL: flush (/tree/RAxML_info.yersinia, 1322)
+CALL: release (/tree/RAxML_info.yersinia, 1322)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1323)
+CALL: flush (/tree/RAxML_info.yersinia, 1323)
+CALL: release (/tree/RAxML_info.yersinia, 1323)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1324)
+CALL: flush (/tree/RAxML_info.yersinia, 1324)
+CALL: release (/tree/RAxML_info.yersinia, 1324)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1325)
+CALL: flush (/tree/RAxML_info.yersinia, 1325)
+CALL: release (/tree/RAxML_info.yersinia, 1325)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1326)
+CALL: flush (/tree/RAxML_info.yersinia, 1326)
+CALL: release (/tree/RAxML_info.yersinia, 1326)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1327)
+CALL: flush (/tree/RAxML_info.yersinia, 1327)
+CALL: release (/tree/RAxML_info.yersinia, 1327)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1328)
+CALL: flush (/tree/RAxML_info.yersinia, 1328)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: release (/tree/RAxML_info.yersinia, 1328)
+CALL: getattr (/tree/RAxML_info.yersinia) (1329)
+CALL: flush (/tree/RAxML_info.yersinia, 1329)
+CALL: release (/tree/RAxML_info.yersinia, 1329)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1330)
+CALL: flush (/tree/RAxML_info.yersinia, 1330)
+CALL: release (/tree/RAxML_info.yersinia, 1330)
+CALL: getattr (/tree) (None)
+CALL: getattr (/tree/RAxML_info.yersinia) (None)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: flush (/tree/RAxML_info.yersinia, 1333)
+CALL: release (/tree/RAxML_info.yersinia, 1333)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1334)
+CALL: flush (/tree/RAxML_info.yersinia, 1334)
+CALL: release (/tree/RAxML_info.yersinia, 1334)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1335)
+CALL: flush (/tree/RAxML_info.yersinia, 1335)
+CALL: release (/tree/RAxML_info.yersinia, 1335)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1336)
+CALL: flush (/tree/RAxML_info.yersinia, 1336)
+CALL: release (/tree/RAxML_info.yersinia, 1336)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1337)
+CALL: flush (/tree/RAxML_info.yersinia, 1337)
+CALL: release (/tree/RAxML_info.yersinia, 1337)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1338)
+CALL: flush (/tree/RAxML_info.yersinia, 1338)
+CALL: release (/tree/RAxML_info.yersinia, 1338)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1339)
+CALL: flush (/tree/RAxML_info.yersinia, 1339)
+CALL: release (/tree/RAxML_info.yersinia, 1339)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1340)
+CALL: flush (/tree/RAxML_info.yersinia, 1340)
+CALL: release (/tree/RAxML_info.yersinia, 1340)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1341)
+CALL: flush (/tree/RAxML_info.yersinia, 1341)
+CALL: release (/tree/RAxML_info.yersinia, 1341)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1342)
+CALL: flush (/tree/RAxML_info.yersinia, 1342)
+CALL: release (/tree/RAxML_info.yersinia, 1342)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1343)
+CALL: flush (/tree/RAxML_info.yersinia, 1343)
+CALL: release (/tree/RAxML_info.yersinia, 1343)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1344)
+CALL: flush (/tree/RAxML_info.yersinia, 1344)
+CALL: release (/tree/RAxML_info.yersinia, 1344)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1345)
+CALL: flush (/tree/RAxML_info.yersinia, 1345)
+CALL: release (/tree/RAxML_info.yersinia, 1345)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1346)
+CALL: flush (/tree/RAxML_info.yersinia, 1346)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: release (/tree/RAxML_info.yersinia, 1346)
+CALL: getattr (/tree/RAxML_info.yersinia) (1347)
+CALL: flush (/tree/RAxML_info.yersinia, 1347)
+CALL: release (/tree/RAxML_info.yersinia, 1347)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1348)
+CALL: flush (/tree/RAxML_info.yersinia, 1348)
+CALL: release (/tree/RAxML_info.yersinia, 1348)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1349)
+CALL: flush (/tree/RAxML_info.yersinia, 1349)
+CALL: release (/tree/RAxML_info.yersinia, 1349)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1350)
+CALL: flush (/tree/RAxML_info.yersinia, 1350)
+CALL: release (/tree/RAxML_info.yersinia, 1350)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1351)
+CALL: flush (/tree/RAxML_info.yersinia, 1351)
+CALL: release (/tree/RAxML_info.yersinia, 1351)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1352)
+CALL: flush (/tree/RAxML_info.yersinia, 1352)
+CALL: release (/tree/RAxML_info.yersinia, 1352)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1353)
+CALL: flush (/tree/RAxML_info.yersinia, 1353)
+CALL: release (/tree/RAxML_info.yersinia, 1353)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1354)
+CALL: flush (/tree/RAxML_info.yersinia, 1354)
+CALL: release (/tree/RAxML_info.yersinia, 1354)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1355)
+CALL: flush (/tree/RAxML_info.yersinia, 1355)
+CALL: release (/tree/RAxML_info.yersinia, 1355)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1356)
+CALL: flush (/tree/RAxML_info.yersinia, 1356)
+CALL: release (/tree/RAxML_info.yersinia, 1356)
+CALL: getattr (/tree) (None)
+CALL: getattr (/tree/RAxML_info.yersinia) (None)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: flush (/tree/RAxML_info.yersinia, 1359)
+CALL: release (/tree/RAxML_info.yersinia, 1359)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1360)
+CALL: flush (/tree/RAxML_info.yersinia, 1360)
+CALL: release (/tree/RAxML_info.yersinia, 1360)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1361)
+CALL: flush (/tree/RAxML_info.yersinia, 1361)
+CALL: release (/tree/RAxML_info.yersinia, 1361)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1362)
+CALL: flush (/tree/RAxML_info.yersinia, 1362)
+CALL: release (/tree/RAxML_info.yersinia, 1362)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1363)
+CALL: flush (/tree/RAxML_info.yersinia, 1363)
+CALL: release (/tree/RAxML_info.yersinia, 1363)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1364)
+CALL: flush (/tree/RAxML_info.yersinia, 1364)
+CALL: release (/tree/RAxML_info.yersinia, 1364)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1365)
+CALL: flush (/tree/RAxML_info.yersinia, 1365)
+CALL: release (/tree/RAxML_info.yersinia, 1365)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1366)
+CALL: flush (/tree/RAxML_info.yersinia, 1366)
+CALL: release (/tree/RAxML_info.yersinia, 1366)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1367)
+CALL: flush (/tree/RAxML_info.yersinia, 1367)
+CALL: release (/tree/RAxML_info.yersinia, 1367)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1368)
+CALL: flush (/tree/RAxML_info.yersinia, 1368)
+CALL: release (/tree/RAxML_info.yersinia, 1368)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1369)
+CALL: flush (/tree/RAxML_info.yersinia, 1369)
+CALL: release (/tree/RAxML_info.yersinia, 1369)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1370)
+CALL: flush (/tree/RAxML_info.yersinia, 1370)
+CALL: release (/tree/RAxML_info.yersinia, 1370)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1371)
+CALL: flush (/tree/RAxML_info.yersinia, 1371)
+CALL: release (/tree/RAxML_info.yersinia, 1371)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1372)
+CALL: flush (/tree/RAxML_info.yersinia, 1372)
+CALL: release (/tree/RAxML_info.yersinia, 1372)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1373)
+CALL: flush (/tree/RAxML_info.yersinia, 1373)
+CALL: release (/tree/RAxML_info.yersinia, 1373)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1374)
+CALL: flush (/tree/RAxML_info.yersinia, 1374)
+CALL: release (/tree/RAxML_info.yersinia, 1374)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1375)
+CALL: flush (/tree/RAxML_info.yersinia, 1375)
+CALL: release (/tree/RAxML_info.yersinia, 1375)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1376)
+CALL: flush (/tree/RAxML_info.yersinia, 1376)
+CALL: release (/tree/RAxML_info.yersinia, 1376)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1377)
+CALL: flush (/tree/RAxML_info.yersinia, 1377)
+CALL: release (/tree/RAxML_info.yersinia, 1377)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1378)
+CALL: flush (/tree/RAxML_info.yersinia, 1378)
+CALL: release (/tree/RAxML_info.yersinia, 1378)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1379)
+CALL: flush (/tree/RAxML_info.yersinia, 1379)
+CALL: release (/tree/RAxML_info.yersinia, 1379)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1380)
+CALL: flush (/tree/RAxML_info.yersinia, 1380)
+CALL: release (/tree/RAxML_info.yersinia, 1380)
+CALL: getattr (/tree) (None)
+CALL: getattr (/tree/RAxML_info.yersinia) (None)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: flush (/tree/RAxML_info.yersinia, 1383)
+CALL: release (/tree/RAxML_info.yersinia, 1383)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1384)
+CALL: flush (/tree/RAxML_info.yersinia, 1384)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: release (/tree/RAxML_info.yersinia, 1384)
+CALL: getattr (/tree/RAxML_info.yersinia) (1385)
+CALL: flush (/tree/RAxML_info.yersinia, 1385)
+CALL: release (/tree/RAxML_info.yersinia, 1385)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1386)
+CALL: flush (/tree/RAxML_info.yersinia, 1386)
+CALL: release (/tree/RAxML_info.yersinia, 1386)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1387)
+CALL: flush (/tree/RAxML_info.yersinia, 1387)
+CALL: release (/tree/RAxML_info.yersinia, 1387)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1388)
+CALL: flush (/tree/RAxML_info.yersinia, 1388)
+CALL: release (/tree/RAxML_info.yersinia, 1388)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1389)
+CALL: flush (/tree/RAxML_info.yersinia, 1389)
+CALL: release (/tree/RAxML_info.yersinia, 1389)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1390)
+CALL: flush (/tree/RAxML_info.yersinia, 1390)
+CALL: release (/tree/RAxML_info.yersinia, 1390)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1391)
+CALL: flush (/tree/RAxML_info.yersinia, 1391)
+CALL: release (/tree/RAxML_info.yersinia, 1391)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1392)
+CALL: flush (/tree/RAxML_info.yersinia, 1392)
+CALL: release (/tree/RAxML_info.yersinia, 1392)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1393)
+CALL: flush (/tree/RAxML_info.yersinia, 1393)
+CALL: release (/tree/RAxML_info.yersinia, 1393)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1394)
+CALL: flush (/tree/RAxML_info.yersinia, 1394)
+CALL: release (/tree/RAxML_info.yersinia, 1394)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1395)
+CALL: flush (/tree/RAxML_info.yersinia, 1395)
+CALL: release (/tree/RAxML_info.yersinia, 1395)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1396)
+CALL: flush (/tree/RAxML_info.yersinia, 1396)
+CALL: release (/tree/RAxML_info.yersinia, 1396)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1397)
+CALL: flush (/tree/RAxML_info.yersinia, 1397)
+CALL: release (/tree/RAxML_info.yersinia, 1397)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1398)
+CALL: flush (/tree/RAxML_info.yersinia, 1398)
+CALL: release (/tree/RAxML_info.yersinia, 1398)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1399)
+CALL: flush (/tree/RAxML_info.yersinia, 1399)
+CALL: release (/tree/RAxML_info.yersinia, 1399)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1400)
+CALL: flush (/tree/RAxML_info.yersinia, 1400)
+CALL: release (/tree/RAxML_info.yersinia, 1400)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1401)
+CALL: flush (/tree/RAxML_info.yersinia, 1401)
+CALL: release (/tree/RAxML_info.yersinia, 1401)
+CALL: getattr (/tree) (None)
+CALL: getattr (/tree/RAxML_info.yersinia) (None)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: flush (/tree/RAxML_info.yersinia, 1404)
+CALL: release (/tree/RAxML_info.yersinia, 1404)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1405)
+CALL: flush (/tree/RAxML_info.yersinia, 1405)
+CALL: release (/tree/RAxML_info.yersinia, 1405)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1406)
+CALL: flush (/tree/RAxML_info.yersinia, 1406)
+CALL: release (/tree/RAxML_info.yersinia, 1406)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1407)
+CALL: flush (/tree/RAxML_info.yersinia, 1407)
+CALL: release (/tree/RAxML_info.yersinia, 1407)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1408)
+CALL: flush (/tree/RAxML_info.yersinia, 1408)
+CALL: release (/tree/RAxML_info.yersinia, 1408)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1409)
+CALL: flush (/tree/RAxML_info.yersinia, 1409)
+CALL: release (/tree/RAxML_info.yersinia, 1409)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1410)
+CALL: flush (/tree/RAxML_info.yersinia, 1410)
+CALL: release (/tree/RAxML_info.yersinia, 1410)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1411)
+CALL: flush (/tree/RAxML_info.yersinia, 1411)
+CALL: release (/tree/RAxML_info.yersinia, 1411)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1412)
+CALL: flush (/tree/RAxML_info.yersinia, 1412)
+CALL: release (/tree/RAxML_info.yersinia, 1412)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1413)
+CALL: flush (/tree/RAxML_info.yersinia, 1413)
+CALL: release (/tree/RAxML_info.yersinia, 1413)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1414)
+CALL: flush (/tree/RAxML_info.yersinia, 1414)
+CALL: release (/tree/RAxML_info.yersinia, 1414)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1415)
+CALL: flush (/tree/RAxML_info.yersinia, 1415)
+CALL: release (/tree/RAxML_info.yersinia, 1415)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1416)
+CALL: flush (/tree/RAxML_info.yersinia, 1416)
+CALL: release (/tree/RAxML_info.yersinia, 1416)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1417)
+CALL: flush (/tree/RAxML_info.yersinia, 1417)
+CALL: release (/tree/RAxML_info.yersinia, 1417)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1418)
+CALL: flush (/tree/RAxML_info.yersinia, 1418)
+CALL: release (/tree/RAxML_info.yersinia, 1418)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1419)
+CALL: flush (/tree/RAxML_info.yersinia, 1419)
+CALL: release (/tree/RAxML_info.yersinia, 1419)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1420)
+CALL: flush (/tree/RAxML_info.yersinia, 1420)
+CALL: release (/tree/RAxML_info.yersinia, 1420)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1421)
+CALL: flush (/tree/RAxML_info.yersinia, 1421)
+CALL: release (/tree/RAxML_info.yersinia, 1421)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1422)
+CALL: flush (/tree/RAxML_info.yersinia, 1422)
+CALL: release (/tree/RAxML_info.yersinia, 1422)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1423)
+CALL: flush (/tree/RAxML_info.yersinia, 1423)
+CALL: release (/tree/RAxML_info.yersinia, 1423)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1424)
+CALL: flush (/tree/RAxML_info.yersinia, 1424)
+CALL: release (/tree/RAxML_info.yersinia, 1424)
+CALL: getattr (/tree) (None)
+CALL: getattr (/tree/RAxML_info.yersinia) (None)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: flush (/tree/RAxML_info.yersinia, 1427)
+CALL: release (/tree/RAxML_info.yersinia, 1427)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1428)
+CALL: flush (/tree/RAxML_info.yersinia, 1428)
+CALL: release (/tree/RAxML_info.yersinia, 1428)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1429)
+CALL: flush (/tree/RAxML_info.yersinia, 1429)
+CALL: release (/tree/RAxML_info.yersinia, 1429)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1430)
+CALL: flush (/tree/RAxML_info.yersinia, 1430)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: release (/tree/RAxML_info.yersinia, 1430)
+CALL: getattr (/tree/RAxML_info.yersinia) (1431)
+CALL: flush (/tree/RAxML_info.yersinia, 1431)
+CALL: release (/tree/RAxML_info.yersinia, 1431)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1432)
+CALL: flush (/tree/RAxML_info.yersinia, 1432)
+CALL: release (/tree/RAxML_info.yersinia, 1432)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1433)
+CALL: flush (/tree/RAxML_info.yersinia, 1433)
+CALL: release (/tree/RAxML_info.yersinia, 1433)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1434)
+CALL: flush (/tree/RAxML_info.yersinia, 1434)
+CALL: release (/tree/RAxML_info.yersinia, 1434)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1435)
+CALL: flush (/tree/RAxML_info.yersinia, 1435)
+CALL: release (/tree/RAxML_info.yersinia, 1435)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1436)
+CALL: flush (/tree/RAxML_info.yersinia, 1436)
+CALL: release (/tree/RAxML_info.yersinia, 1436)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1437)
+CALL: flush (/tree/RAxML_info.yersinia, 1437)
+CALL: release (/tree/RAxML_info.yersinia, 1437)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1438)
+CALL: flush (/tree/RAxML_info.yersinia, 1438)
+CALL: release (/tree/RAxML_info.yersinia, 1438)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1439)
+CALL: flush (/tree/RAxML_info.yersinia, 1439)
+CALL: release (/tree/RAxML_info.yersinia, 1439)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1440)
+CALL: flush (/tree/RAxML_info.yersinia, 1440)
+CALL: release (/tree/RAxML_info.yersinia, 1440)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1441)
+CALL: flush (/tree/RAxML_info.yersinia, 1441)
+CALL: release (/tree/RAxML_info.yersinia, 1441)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1442)
+CALL: flush (/tree/RAxML_info.yersinia, 1442)
+CALL: release (/tree/RAxML_info.yersinia, 1442)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1443)
+CALL: flush (/tree/RAxML_info.yersinia, 1443)
+CALL: release (/tree/RAxML_info.yersinia, 1443)
+CALL: getattr (/tree) (None)
+CALL: getattr (/tree/RAxML_info.yersinia) (None)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: flush (/tree/RAxML_info.yersinia, 1446)
+CALL: release (/tree/RAxML_info.yersinia, 1446)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1447)
+CALL: flush (/tree/RAxML_info.yersinia, 1447)
+CALL: release (/tree/RAxML_info.yersinia, 1447)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1448)
+CALL: flush (/tree/RAxML_info.yersinia, 1448)
+CALL: release (/tree/RAxML_info.yersinia, 1448)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1449)
+CALL: flush (/tree/RAxML_info.yersinia, 1449)
+CALL: release (/tree/RAxML_info.yersinia, 1449)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1450)
+CALL: flush (/tree/RAxML_info.yersinia, 1450)
+CALL: release (/tree/RAxML_info.yersinia, 1450)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1451)
+CALL: flush (/tree/RAxML_info.yersinia, 1451)
+CALL: release (/tree/RAxML_info.yersinia, 1451)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1452)
+CALL: flush (/tree/RAxML_info.yersinia, 1452)
+CALL: release (/tree/RAxML_info.yersinia, 1452)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1453)
+CALL: flush (/tree/RAxML_info.yersinia, 1453)
+CALL: release (/tree/RAxML_info.yersinia, 1453)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1454)
+CALL: flush (/tree/RAxML_info.yersinia, 1454)
+CALL: release (/tree/RAxML_info.yersinia, 1454)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1455)
+CALL: flush (/tree/RAxML_info.yersinia, 1455)
+CALL: release (/tree/RAxML_info.yersinia, 1455)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1456)
+CALL: flush (/tree/RAxML_info.yersinia, 1456)
+CALL: release (/tree/RAxML_info.yersinia, 1456)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1457)
+CALL: flush (/tree/RAxML_info.yersinia, 1457)
+CALL: release (/tree/RAxML_info.yersinia, 1457)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1458)
+CALL: flush (/tree/RAxML_info.yersinia, 1458)
+CALL: release (/tree/RAxML_info.yersinia, 1458)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1459)
+CALL: flush (/tree/RAxML_info.yersinia, 1459)
+CALL: release (/tree/RAxML_info.yersinia, 1459)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1460)
+CALL: flush (/tree/RAxML_info.yersinia, 1460)
+CALL: release (/tree/RAxML_info.yersinia, 1460)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1461)
+CALL: flush (/tree/RAxML_info.yersinia, 1461)
+CALL: release (/tree/RAxML_info.yersinia, 1461)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1462)
+CALL: flush (/tree/RAxML_info.yersinia, 1462)
+CALL: release (/tree/RAxML_info.yersinia, 1462)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1463)
+CALL: flush (/tree/RAxML_info.yersinia, 1463)
+CALL: release (/tree/RAxML_info.yersinia, 1463)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1464)
+CALL: flush (/tree/RAxML_info.yersinia, 1464)
+CALL: release (/tree/RAxML_info.yersinia, 1464)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1465)
+CALL: flush (/tree/RAxML_info.yersinia, 1465)
+CALL: release (/tree/RAxML_info.yersinia, 1465)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1466)
+CALL: flush (/tree/RAxML_info.yersinia, 1466)
+CALL: release (/tree/RAxML_info.yersinia, 1466)
+CALL: getattr (/tree) (None)
+CALL: getattr (/tree/RAxML_info.yersinia) (None)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: flush (/tree/RAxML_info.yersinia, 1469)
+CALL: release (/tree/RAxML_info.yersinia, 1469)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1470)
+CALL: flush (/tree/RAxML_info.yersinia, 1470)
+CALL: release (/tree/RAxML_info.yersinia, 1470)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1471)
+CALL: flush (/tree/RAxML_info.yersinia, 1471)
+CALL: release (/tree/RAxML_info.yersinia, 1471)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1472)
+CALL: flush (/tree/RAxML_info.yersinia, 1472)
+CALL: release (/tree/RAxML_info.yersinia, 1472)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1473)
+CALL: flush (/tree/RAxML_info.yersinia, 1473)
+CALL: release (/tree/RAxML_info.yersinia, 1473)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1474)
+CALL: flush (/tree/RAxML_info.yersinia, 1474)
+CALL: release (/tree/RAxML_info.yersinia, 1474)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1475)
+CALL: flush (/tree/RAxML_info.yersinia, 1475)
+CALL: release (/tree/RAxML_info.yersinia, 1475)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1476)
+CALL: flush (/tree/RAxML_info.yersinia, 1476)
+CALL: release (/tree/RAxML_info.yersinia, 1476)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1477)
+CALL: flush (/tree/RAxML_info.yersinia, 1477)
+CALL: release (/tree/RAxML_info.yersinia, 1477)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1478)
+CALL: flush (/tree/RAxML_info.yersinia, 1478)
+CALL: release (/tree/RAxML_info.yersinia, 1478)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1479)
+CALL: flush (/tree/RAxML_info.yersinia, 1479)
+CALL: release (/tree/RAxML_info.yersinia, 1479)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1480)
+CALL: flush (/tree/RAxML_info.yersinia, 1480)
+CALL: release (/tree/RAxML_info.yersinia, 1480)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1481)
+CALL: flush (/tree/RAxML_info.yersinia, 1481)
+CALL: release (/tree/RAxML_info.yersinia, 1481)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1482)
+CALL: flush (/tree/RAxML_info.yersinia, 1482)
+CALL: release (/tree/RAxML_info.yersinia, 1482)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1483)
+CALL: flush (/tree/RAxML_info.yersinia, 1483)
+CALL: release (/tree/RAxML_info.yersinia, 1483)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1484)
+CALL: flush (/tree/RAxML_info.yersinia, 1484)
+CALL: release (/tree/RAxML_info.yersinia, 1484)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1485)
+CALL: flush (/tree/RAxML_info.yersinia, 1485)
+CALL: release (/tree/RAxML_info.yersinia, 1485)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1486)
+CALL: flush (/tree/RAxML_info.yersinia, 1486)
+CALL: release (/tree/RAxML_info.yersinia, 1486)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1487)
+CALL: flush (/tree/RAxML_info.yersinia, 1487)
+CALL: release (/tree/RAxML_info.yersinia, 1487)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1488)
+CALL: flush (/tree/RAxML_info.yersinia, 1488)
+CALL: release (/tree/RAxML_info.yersinia, 1488)
+CALL: getattr (/tree) (None)
+CALL: getattr (/tree/RAxML_info.yersinia) (None)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: flush (/tree/RAxML_info.yersinia, 1491)
+CALL: release (/tree/RAxML_info.yersinia, 1491)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1492)
+CALL: flush (/tree/RAxML_info.yersinia, 1492)
+CALL: release (/tree/RAxML_info.yersinia, 1492)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1493)
+CALL: flush (/tree/RAxML_info.yersinia, 1493)
+CALL: release (/tree/RAxML_info.yersinia, 1493)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1494)
+CALL: flush (/tree/RAxML_info.yersinia, 1494)
+CALL: release (/tree/RAxML_info.yersinia, 1494)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1495)
+CALL: flush (/tree/RAxML_info.yersinia, 1495)
+CALL: release (/tree/RAxML_info.yersinia, 1495)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1496)
+CALL: flush (/tree/RAxML_info.yersinia, 1496)
+CALL: release (/tree/RAxML_info.yersinia, 1496)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1497)
+CALL: flush (/tree/RAxML_info.yersinia, 1497)
+CALL: release (/tree/RAxML_info.yersinia, 1497)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1498)
+CALL: flush (/tree/RAxML_info.yersinia, 1498)
+CALL: release (/tree/RAxML_info.yersinia, 1498)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1499)
+CALL: flush (/tree/RAxML_info.yersinia, 1499)
+CALL: release (/tree/RAxML_info.yersinia, 1499)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1500)
+CALL: flush (/tree/RAxML_info.yersinia, 1500)
+CALL: release (/tree/RAxML_info.yersinia, 1500)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1501)
+CALL: flush (/tree/RAxML_info.yersinia, 1501)
+CALL: release (/tree/RAxML_info.yersinia, 1501)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1502)
+CALL: flush (/tree/RAxML_info.yersinia, 1502)
+CALL: release (/tree/RAxML_info.yersinia, 1502)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1503)
+CALL: flush (/tree/RAxML_info.yersinia, 1503)
+CALL: release (/tree/RAxML_info.yersinia, 1503)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1504)
+CALL: flush (/tree/RAxML_info.yersinia, 1504)
+CALL: release (/tree/RAxML_info.yersinia, 1504)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1505)
+CALL: flush (/tree/RAxML_info.yersinia, 1505)
+CALL: release (/tree/RAxML_info.yersinia, 1505)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1506)
+CALL: flush (/tree/RAxML_info.yersinia, 1506)
+CALL: release (/tree/RAxML_info.yersinia, 1506)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1507)
+CALL: flush (/tree/RAxML_info.yersinia, 1507)
+CALL: release (/tree/RAxML_info.yersinia, 1507)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1508)
+CALL: flush (/tree/RAxML_info.yersinia, 1508)
+CALL: release (/tree/RAxML_info.yersinia, 1508)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1509)
+CALL: flush (/tree/RAxML_info.yersinia, 1509)
+CALL: release (/tree/RAxML_info.yersinia, 1509)
+CALL: getattr (/tree) (None)
+CALL: getattr (/tree/RAxML_info.yersinia) (None)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: flush (/tree/RAxML_info.yersinia, 1512)
+CALL: release (/tree/RAxML_info.yersinia, 1512)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1513)
+CALL: flush (/tree/RAxML_info.yersinia, 1513)
+CALL: release (/tree/RAxML_info.yersinia, 1513)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1514)
+CALL: flush (/tree/RAxML_info.yersinia, 1514)
+CALL: release (/tree/RAxML_info.yersinia, 1514)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1515)
+CALL: flush (/tree/RAxML_info.yersinia, 1515)
+CALL: release (/tree/RAxML_info.yersinia, 1515)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1516)
+CALL: flush (/tree/RAxML_info.yersinia, 1516)
+CALL: release (/tree/RAxML_info.yersinia, 1516)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1517)
+CALL: flush (/tree/RAxML_info.yersinia, 1517)
+CALL: release (/tree/RAxML_info.yersinia, 1517)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1518)
+CALL: flush (/tree/RAxML_info.yersinia, 1518)
+CALL: release (/tree/RAxML_info.yersinia, 1518)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1519)
+CALL: flush (/tree/RAxML_info.yersinia, 1519)
+CALL: release (/tree/RAxML_info.yersinia, 1519)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1520)
+CALL: flush (/tree/RAxML_info.yersinia, 1520)
+CALL: release (/tree/RAxML_info.yersinia, 1520)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1521)
+CALL: flush (/tree/RAxML_info.yersinia, 1521)
+CALL: release (/tree/RAxML_info.yersinia, 1521)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1522)
+CALL: flush (/tree/RAxML_info.yersinia, 1522)
+CALL: release (/tree/RAxML_info.yersinia, 1522)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1523)
+CALL: flush (/tree/RAxML_info.yersinia, 1523)
+CALL: release (/tree/RAxML_info.yersinia, 1523)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1524)
+CALL: flush (/tree/RAxML_info.yersinia, 1524)
+CALL: release (/tree/RAxML_info.yersinia, 1524)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1525)
+CALL: flush (/tree/RAxML_info.yersinia, 1525)
+CALL: release (/tree/RAxML_info.yersinia, 1525)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1526)
+CALL: flush (/tree/RAxML_info.yersinia, 1526)
+CALL: release (/tree/RAxML_info.yersinia, 1526)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1527)
+CALL: flush (/tree/RAxML_info.yersinia, 1527)
+CALL: release (/tree/RAxML_info.yersinia, 1527)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1528)
+CALL: flush (/tree/RAxML_info.yersinia, 1528)
+CALL: release (/tree/RAxML_info.yersinia, 1528)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1529)
+CALL: flush (/tree/RAxML_info.yersinia, 1529)
+CALL: release (/tree/RAxML_info.yersinia, 1529)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1530)
+CALL: flush (/tree/RAxML_info.yersinia, 1530)
+CALL: release (/tree/RAxML_info.yersinia, 1530)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1531)
+CALL: flush (/tree/RAxML_info.yersinia, 1531)
+CALL: release (/tree/RAxML_info.yersinia, 1531)
+CALL: getattr (/tree) (None)
+CALL: getattr (/tree/RAxML_info.yersinia) (None)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: flush (/tree/RAxML_info.yersinia, 1534)
+CALL: release (/tree/RAxML_info.yersinia, 1534)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1535)
+CALL: flush (/tree/RAxML_info.yersinia, 1535)
+CALL: release (/tree/RAxML_info.yersinia, 1535)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1536)
+CALL: flush (/tree/RAxML_info.yersinia, 1536)
+CALL: release (/tree/RAxML_info.yersinia, 1536)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1537)
+CALL: flush (/tree/RAxML_info.yersinia, 1537)
+CALL: release (/tree/RAxML_info.yersinia, 1537)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1538)
+CALL: flush (/tree/RAxML_info.yersinia, 1538)
+CALL: release (/tree/RAxML_info.yersinia, 1538)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1539)
+CALL: flush (/tree/RAxML_info.yersinia, 1539)
+CALL: release (/tree/RAxML_info.yersinia, 1539)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1540)
+CALL: flush (/tree/RAxML_info.yersinia, 1540)
+CALL: release (/tree/RAxML_info.yersinia, 1540)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1541)
+CALL: flush (/tree/RAxML_info.yersinia, 1541)
+CALL: release (/tree/RAxML_info.yersinia, 1541)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1542)
+CALL: flush (/tree/RAxML_info.yersinia, 1542)
+CALL: release (/tree/RAxML_info.yersinia, 1542)set_last: 1584491502.225
+READ 1181 (/tree/aligned.fasta):0:16384
+READ 1181 (/tree/aligned.fasta):16384:32768
+READ 1181 (/tree/aligned.fasta):49152:65536
+READ 1181 (/tree/aligned.fasta):114688:131072
+READ 1181 (/tree/aligned.fasta):245760:131072
+READ 1181 (/tree/aligned.fasta):376832:131072
+READ 1181 (/tree/aligned.fasta):507904:131072
+READ 1181 (/tree/aligned.fasta):638976:131072
+READ 1181 (/tree/aligned.fasta):770048:131072
+READ 1181 (/tree/aligned.fasta):901120:131072
+READ 1181 (/tree/aligned.fasta):1032192:131072
+READ 1181 (/tree/aligned.fasta):1163264:131072
+READ 1181 (/tree/aligned.fasta):1294336:98304
+set_last: 1584491510.082
+set_last: 1584491510.086
+WRITE 1185:0:112
+WRITE 1186:112:113
+WRITE 1187:225:89
+WRITE 1188:314:107
+WRITE 1189:421:105
+WRITE 1190:526:107
+WRITE 1191:633:107
+WRITE 1192:740:103
+WRITE 1193:843:99
+WRITE 1194:942:103
+WRITE 1195:1045:103
+WRITE 1196:1148:103
+WRITE 1197:1251:103
+WRITE 1198:1354:103
+WRITE 1199:1457:103
+WRITE 1200:1560:103
+WRITE 1201:1663:103
+WRITE 1202:1766:103
+WRITE 1203:1869:103
+WRITE 1204:1972:103
+WRITE 1205:2075:99
+WRITE 1208:2174:99
+WRITE 1209:2273:107
+WRITE 1210:2380:105
+WRITE 1211:2485:107
+WRITE 1212:2592:107
+WRITE 1213:2699:89
+WRITE 1214:2788:89
+WRITE 1215:2877:89
+WRITE 1216:2966:89
+WRITE 1217:3055:89
+WRITE 1218:3144:89
+WRITE 1219:3233:89
+WRITE 1220:3322:89
+WRITE 1221:3411:105
+WRITE 1222:3516:105
+WRITE 1223:3621:105
+WRITE 1224:3726:107
+WRITE 1225:3833:89
+WRITE 1228:3922:89
+WRITE 1229:4011:85
+WRITE 1229:4096:4
+WRITE 1230:4100:89
+WRITE 1231:4189:89
+WRITE 1232:4278:107
+WRITE 1233:4385:105
+WRITE 1234:4490:107
+WRITE 1235:4597:107
+WRITE 1236:4704:107
+WRITE 1237:4811:105
+WRITE 1238:4916:107
+WRITE 1239:5023:105
+WRITE 1240:5128:105
+WRITE 1241:5233:105
+WRITE 1242:5338:103
+WRITE 1243:5441:105
+WRITE 1244:5546:107
+WRITE 1245:5653:105
+WRITE 1246:5758:105
+WRITE 1249:5863:107
+WRITE 1250:5970:105
+WRITE 1251:6075:107
+WRITE 1252:6182:107
+WRITE 1253:6289:105
+WRITE 1254:6394:105
+WRITE 1255:6499:105
+WRITE 1256:6604:101
+WRITE 1257:6705:99
+WRITE 1258:6804:103
+WRITE 1259:6907:103
+WRITE 1260:7010:107
+WRITE 1261:7117:107
+WRITE 1262:7224:107
+WRITE 1263:7331:107
+WRITE 1264:7438:103
+WRITE 1265:7541:105
+WRITE 1266:7646:105
+WRITE 1267:7751:105
+WRITE 1268:7856:107
+WRITE 1271:7963:105
+WRITE 1272:8068:107
+WRITE 1273:8175:17
+WRITE 1273:8192:90
+WRITE 1274:8282:107
+WRITE 1275:8389:105
+WRITE 1276:8494:107
+WRITE 1277:8601:105
+WRITE 1278:8706:105
+WRITE 1279:8811:107
+WRITE 1280:8918:105
+WRITE 1281:9023:107
+WRITE 1282:9130:107
+WRITE 1283:9237:105
+WRITE 1284:9342:107
+WRITE 1285:9449:105
+WRITE 1286:9554:107
+WRITE 1287:9661:105
+WRITE 1288:9766:101
+WRITE 1289:9867:103
+WRITE 1290:9970:103
+WRITE 1291:10073:107
+WRITE 1294:10180:107
+WRITE 1295:10287:105
+WRITE 1296:10392:105
+WRITE 1297:10497:103
+WRITE 1298:10600:105
+WRITE 1299:10705:107
+WRITE 1300:10812:107
+WRITE 1301:10919:105
+WRITE 1302:11024:107
+WRITE 1303:11131:107
+WRITE 1304:11238:103
+WRITE 1305:11341:107
+WRITE 1306:11448:107
+WRITE 1307:11555:105
+WRITE 1308:11660:107
+WRITE 1309:11767:107
+WRITE 1310:11874:107
+WRITE 1311:11981:107
+WRITE 1312:12088:105
+WRITE 1313:12193:95
+WRITE 1313:12288:12
+WRITE 1314:12300:105
+WRITE 1315:12405:103
+WRITE 1316:12508:107
+WRITE 1319:12615:107
+WRITE 1320:12722:107
+WRITE 1321:12829:105
+WRITE 1322:12934:107
+WRITE 1323:13041:107
+WRITE 1324:13148:107
+WRITE 1325:13255:103
+WRITE 1326:13358:107
+WRITE 1327:13465:107
+WRITE 1328:13572:107
+WRITE 1329:13679:105
+WRITE 1330:13784:107
+WRITE 1333:13891:107
+WRITE 1334:13998:107
+WRITE 1335:14105:107
+WRITE 1336:14212:107
+WRITE 1337:14319:105
+WRITE 1338:14424:107
+WRITE 1339:14531:107
+WRITE 1340:14638:105
+WRITE 1341:14743:105
+WRITE 1342:14848:105
+WRITE 1343:14953:105
+WRITE 1344:15058:103
+WRITE 1345:15161:103
+WRITE 1346:15264:107
+WRITE 1347:15371:107
+WRITE 1348:15478:107
+WRITE 1349:15585:107
+WRITE 1350:15692:107
+WRITE 1351:15799:107
+WRITE 1352:15906:107
+WRITE 1353:16013:107
+WRITE 1354:16120:105
+WRITE 1355:16225:105
+WRITE 1356:16330:54
+WRITE 1356:16384:53
+WRITE 1359:16437:107
+WRITE 1360:16544:107
+WRITE 1361:16651:107
+WRITE 1362:16758:107
+WRITE 1363:16865:107
+WRITE 1364:16972:105
+WRITE 1365:17077:107
+WRITE 1366:17184:107
+WRITE 1367:17291:107
+WRITE 1368:17398:105
+WRITE 1369:17503:107
+WRITE 1370:17610:107
+WRITE 1371:17717:107
+WRITE 1372:17824:107
+WRITE 1373:17931:105
+WRITE 1374:18036:107
+WRITE 1375:18143:105
+WRITE 1376:18248:107
+WRITE 1377:18355:107
+WRITE 1378:18462:107
+WRITE 1379:18569:107
+WRITE 1380:18676:107
+WRITE 1383:18783:107
+WRITE 1384:18890:105
+WRITE 1385:18995:107
+WRITE 1386:19102:107
+WRITE 1387:19209:107
+WRITE 1388:19316:107
+WRITE 1389:19423:105
+WRITE 1390:19528:107
+WRITE 1391:19635:107
+WRITE 1392:19742:107
+WRITE 1393:19849:107
+WRITE 1394:19956:107
+WRITE 1395:20063:105
+WRITE 1396:20168:107
+WRITE 1397:20275:107
+WRITE 1398:20382:98
+WRITE 1398:20480:9
+WRITE 1399:20489:105
+WRITE 1400:20594:107
+WRITE 1401:20701:105
+WRITE 1404:20806:107
+WRITE 1405:20913:107
+WRITE 1406:21020:107
+WRITE 1407:21127:107
+WRITE 1408:21234:105
+WRITE 1409:21339:107
+WRITE 1410:21446:105
+WRITE 1411:21551:105
+WRITE 1412:21656:103
+WRITE 1413:21759:105
+WRITE 1414:21864:105
+WRITE 1415:21969:105
+WRITE 1416:22074:103
+WRITE 1417:22177:103
+WRITE 1418:22280:103
+WRITE 1419:22383:105
+WRITE 1420:22488:105
+WRITE 1421:22593:103
+WRITE 1422:22696:103
+WRITE 1423:22799:105
+WRITE 1424:22904:107
+WRITE 1427:23011:107
+WRITE 1428:23118:107
+WRITE 1429:23225:107
+WRITE 1430:23332:107
+WRITE 1431:23439:107
+WRITE 1432:23546:107
+WRITE 1433:23653:107
+WRITE 1434:23760:107
+WRITE 1435:23867:107
+WRITE 1436:23974:105
+WRITE 1437:24079:107
+WRITE 1438:24186:107
+WRITE 1439:24293:105
+WRITE 1440:24398:107
+WRITE 1441:24505:71
+WRITE 1441:24576:34
+WRITE 1442:24610:105
+WRITE 1443:24715:107
+WRITE 1446:24822:105
+WRITE 1447:24927:105
+WRITE 1448:25032:107
+WRITE 1449:25139:105
+WRITE 1450:25244:107
+WRITE 1451:25351:107
+WRITE 1452:25458:107
+WRITE 1453:25565:105
+WRITE 1454:25670:107
+WRITE 1455:25777:107
+WRITE 1456:25884:105
+WRITE 1457:25989:105
+WRITE 1458:26094:107
+WRITE 1459:26201:107
+WRITE 1460:26308:107
+WRITE 1461:26415:107
+WRITE 1462:26522:107
+WRITE 1463:26629:107
+WRITE 1464:26736:107
+WRITE 1465:26843:105
+WRITE 1466:26948:107
+WRITE 1469:27055:107
+WRITE 1470:27162:107
+WRITE 1471:27269:107
+WRITE 1472:27376:107
+WRITE 1473:27483:107
+WRITE 1474:27590:107
+WRITE 1475:27697:107
+WRITE 1476:27804:105
+WRITE 1477:27909:107
+WRITE 1478:28016:107
+WRITE 1479:28123:103
+WRITE 1480:28226:105
+WRITE 1481:28331:105
+WRITE 1482:28436:105
+WRITE 1483:28541:107
+WRITE 1484:28648:24
+WRITE 1484:28672:83
+WRITE 1485:28755:107
+WRITE 1486:28862:107
+WRITE 1487:28969:107
+WRITE 1488:29076:107
+WRITE 1491:29183:105
+WRITE 1492:29288:105
+WRITE 1493:29393:105
+WRITE 1494:29498:105
+WRITE 1495:29603:107
+WRITE 1496:29710:107
+WRITE 1497:29817:107
+WRITE 1498:29924:107
+WRITE 1499:30031:107
+WRITE 1500:30138:105
+WRITE 1501:30243:105
+WRITE 1502:30348:103
+WRITE 1503:30451:105
+WRITE 1504:30556:107
+WRITE 1505:30663:107
+WRITE 1506:30770:103
+WRITE 1507:30873:107
+WRITE 1508:30980:107
+WRITE 1509:31087:107
+WRITE 1512:31194:107
+WRITE 1513:31301:107
+WRITE 1514:31408:105
+WRITE 1515:31513:107
+WRITE 1516:31620:105
+WRITE 1517:31725:107
+WRITE 1518:31832:107
+WRITE 1519:31939:107
+WRITE 1520:32046:107
+WRITE 1521:32153:105
+WRITE 1522:32258:107
+WRITE 1523:32365:107
+WRITE 1524:32472:107
+WRITE 1525:32579:107
+WRITE 1526:32686:82
+WRITE 1526:32768:25
+WRITE 1527:32793:107
+WRITE 1528:32900:107
+WRITE 1529:33007:103
+WRITE 1530:33110:105
+WRITE 1531:33215:103
+WRITE 1534:33318:105
+WRITE 1535:33423:103
+WRITE 1536:33526:105
+WRITE 1537:33631:105
+WRITE 1538:33736:107
+WRITE 1539:33843:107
+WRITE 1540:33950:107
+WRITE 1541:34057:107
+WRITE 1542:34164:107
+WRITE 1543:34271:107
+WRITE 1544:34378:107
+WRITE 1545:34485:107
+WRITE 1546:34592:107
+WRITE 1547:34699:107
+WRITE 1548:34806:107
+WRITE 1549:34913:105
+WRITE 1550:35018:107
+WRITE 1551:35125:107
+WRITE 1552:35232:107
+WRITE 1553:35339:107
+WRITE 1554:35446:105
+WRITE 1555:35551:107
+WRITE 1558:35658:105
+WRITE 1559:35763:103
+WRITE 1560:35866:107
+WRITE 1561:35973:105
+WRITE 1562:36078:107
+WRITE 1563:36185:107
+WRITE 1564:36292:105
+WRITE 1565:36397:107
+WRITE 1566:36504:107
+WRITE 1567:36611:107
+WRITE 1568:36718:107
+WRITE 1569:36825:39
+WRITE 1569:36864:68
+WRITE 1570:36932:107
+WRITE 1571:37039:107
+WRITE 1572:37146:105
+WRITE 1573:37251:107
+WRITE 1574:37358:105
+WRITE 1575:37463:107
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1543)
+CALL: flush (/tree/RAxML_info.yersinia, 1543)
+CALL: release (/tree/RAxML_info.yersinia, 1543)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1544)
+CALL: flush (/tree/RAxML_info.yersinia, 1544)
+CALL: release (/tree/RAxML_info.yersinia, 1544)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1545)
+CALL: flush (/tree/RAxML_info.yersinia, 1545)
+CALL: release (/tree/RAxML_info.yersinia, 1545)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1546)
+CALL: flush (/tree/RAxML_info.yersinia, 1546)
+CALL: release (/tree/RAxML_info.yersinia, 1546)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1547)
+CALL: flush (/tree/RAxML_info.yersinia, 1547)
+CALL: release (/tree/RAxML_info.yersinia, 1547)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1548)
+CALL: flush (/tree/RAxML_info.yersinia, 1548)
+CALL: release (/tree/RAxML_info.yersinia, 1548)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1549)
+CALL: flush (/tree/RAxML_info.yersinia, 1549)
+CALL: release (/tree/RAxML_info.yersinia, 1549)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1550)
+CALL: flush (/tree/RAxML_info.yersinia, 1550)
+CALL: release (/tree/RAxML_info.yersinia, 1550)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1551)
+CALL: flush (/tree/RAxML_info.yersinia, 1551)
+CALL: release (/tree/RAxML_info.yersinia, 1551)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1552)
+CALL: flush (/tree/RAxML_info.yersinia, 1552)
+CALL: release (/tree/RAxML_info.yersinia, 1552)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1553)
+CALL: flush (/tree/RAxML_info.yersinia, 1553)
+CALL: release (/tree/RAxML_info.yersinia, 1553)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1554)
+CALL: flush (/tree/RAxML_info.yersinia, 1554)
+CALL: release (/tree/RAxML_info.yersinia, 1554)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1555)
+CALL: flush (/tree/RAxML_info.yersinia, 1555)
+CALL: release (/tree/RAxML_info.yersinia, 1555)
+CALL: getattr (/tree) (None)
+CALL: getattr (/tree/RAxML_info.yersinia) (None)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: flush (/tree/RAxML_info.yersinia, 1558)
+CALL: release (/tree/RAxML_info.yersinia, 1558)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1559)
+CALL: flush (/tree/RAxML_info.yersinia, 1559)
+CALL: release (/tree/RAxML_info.yersinia, 1559)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1560)
+CALL: flush (/tree/RAxML_info.yersinia, 1560)
+CALL: release (/tree/RAxML_info.yersinia, 1560)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1561)
+CALL: flush (/tree/RAxML_info.yersinia, 1561)
+CALL: release (/tree/RAxML_info.yersinia, 1561)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1562)
+CALL: flush (/tree/RAxML_info.yersinia, 1562)
+CALL: release (/tree/RAxML_info.yersinia, 1562)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1563)
+CALL: flush (/tree/RAxML_info.yersinia, 1563)
+CALL: release (/tree/RAxML_info.yersinia, 1563)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1564)
+CALL: flush (/tree/RAxML_info.yersinia, 1564)
+CALL: release (/tree/RAxML_info.yersinia, 1564)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1565)
+CALL: flush (/tree/RAxML_info.yersinia, 1565)
+CALL: release (/tree/RAxML_info.yersinia, 1565)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1566)
+CALL: flush (/tree/RAxML_info.yersinia, 1566)
+CALL: release (/tree/RAxML_info.yersinia, 1566)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1567)
+CALL: flush (/tree/RAxML_info.yersinia, 1567)
+CALL: release (/tree/RAxML_info.yersinia, 1567)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1568)
+CALL: flush (/tree/RAxML_info.yersinia, 1568)
+CALL: release (/tree/RAxML_info.yersinia, 1568)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1569)
+CALL: flush (/tree/RAxML_info.yersinia, 1569)
+CALL: release (/tree/RAxML_info.yersinia, 1569)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1570)
+CALL: flush (/tree/RAxML_info.yersinia, 1570)
+CALL: release (/tree/RAxML_info.yersinia, 1570)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1571)
+CALL: flush (/tree/RAxML_info.yersinia, 1571)
+CALL: release (/tree/RAxML_info.yersinia, 1571)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1572)
+CALL: flush (/tree/RAxML_info.yersinia, 1572)
+CALL: release (/tree/RAxML_info.yersinia, 1572)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1573)
+CALL: flush (/tree/RAxML_info.yersinia, 1573)
+CALL: release (/tree/RAxML_info.yersinia, 1573)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1574)
+CALL: flush (/tree/RAxML_info.yersinia, 1574)
+CALL: release (/tree/RAxML_info.yersinia, 1574)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1575)
+CALL: flush (/tree/RAxML_info.yersinia, 1575)
+CALL: release (/tree/RAxML_info.yersinia, 1575)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1576)
+CALL: flush (/tree/RAxML_info.yersinia, 1576)
+CALL: release (/tree/RAxML_info.yersinia, 1576)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1577)
+CALL: flush (/tree/RAxML_info.yersinia, 1577)
+CALL: release (/tree/RAxML_info.yersinia, 1577)
+CALL: getattr (/tree) (None)
+CALL: getattr (/tree/RAxML_info.yersinia) (None)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: flush (/tree/RAxML_info.yersinia, 1580)
+CALL: release (/tree/RAxML_info.yersinia, 1580)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1581)
+CALL: flush (/tree/RAxML_info.yersinia, 1581)
+CALL: release (/tree/RAxML_info.yersinia, 1581)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1582)
+CALL: flush (/tree/RAxML_info.yersinia, 1582)
+CALL: release (/tree/RAxML_info.yersinia, 1582)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1583)
+CALL: flush (/tree/RAxML_info.yersinia, 1583)
+CALL: release (/tree/RAxML_info.yersinia, 1583)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1584)
+CALL: flush (/tree/RAxML_info.yersinia, 1584)
+CALL: release (/tree/RAxML_info.yersinia, 1584)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1585)
+CALL: flush (/tree/RAxML_info.yersinia, 1585)
+CALL: release (/tree/RAxML_info.yersinia, 1585)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1586)
+CALL: flush (/tree/RAxML_info.yersinia, 1586)
+CALL: release (/tree/RAxML_info.yersinia, 1586)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1587)
+CALL: flush (/tree/RAxML_info.yersinia, 1587)
+CALL: release (/tree/RAxML_info.yersinia, 1587)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1588)
+CALL: flush (/tree/RAxML_info.yersinia, 1588)
+CALL: release (/tree/RAxML_info.yersinia, 1588)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1589)
+CALL: flush (/tree/RAxML_info.yersinia, 1589)
+CALL: release (/tree/RAxML_info.yersinia, 1589)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1590)
+CALL: flush (/tree/RAxML_info.yersinia, 1590)
+CALL: release (/tree/RAxML_info.yersinia, 1590)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1591)
+CALL: flush (/tree/RAxML_info.yersinia, 1591)
+CALL: release (/tree/RAxML_info.yersinia, 1591)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1592)
+CALL: flush (/tree/RAxML_info.yersinia, 1592)
+CALL: release (/tree/RAxML_info.yersinia, 1592)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1593)
+CALL: flush (/tree/RAxML_info.yersinia, 1593)
+CALL: release (/tree/RAxML_info.yersinia, 1593)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1594)
+CALL: flush (/tree/RAxML_info.yersinia, 1594)
+CALL: release (/tree/RAxML_info.yersinia, 1594)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1595)
+CALL: flush (/tree/RAxML_info.yersinia, 1595)
+CALL: release (/tree/RAxML_info.yersinia, 1595)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1596)
+CALL: flush (/tree/RAxML_info.yersinia, 1596)
+CALL: release (/tree/RAxML_info.yersinia, 1596)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1597)
+CALL: flush (/tree/RAxML_info.yersinia, 1597)
+CALL: release (/tree/RAxML_info.yersinia, 1597)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1598)
+CALL: flush (/tree/RAxML_info.yersinia, 1598)
+CALL: release (/tree/RAxML_info.yersinia, 1598)
+CALL: getattr (/tree) (None)
+CALL: getattr (/tree/RAxML_info.yersinia) (None)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: flush (/tree/RAxML_info.yersinia, 1601)
+CALL: release (/tree/RAxML_info.yersinia, 1601)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1602)
+CALL: flush (/tree/RAxML_info.yersinia, 1602)
+CALL: release (/tree/RAxML_info.yersinia, 1602)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1603)
+CALL: flush (/tree/RAxML_info.yersinia, 1603)
+CALL: release (/tree/RAxML_info.yersinia, 1603)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1604)
+CALL: flush (/tree/RAxML_info.yersinia, 1604)
+CALL: release (/tree/RAxML_info.yersinia, 1604)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1605)
+CALL: flush (/tree/RAxML_info.yersinia, 1605)
+CALL: release (/tree/RAxML_info.yersinia, 1605)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1606)
+CALL: flush (/tree/RAxML_info.yersinia, 1606)
+CALL: release (/tree/RAxML_info.yersinia, 1606)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1607)
+CALL: flush (/tree/RAxML_info.yersinia, 1607)
+CALL: release (/tree/RAxML_info.yersinia, 1607)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1608)
+CALL: flush (/tree/RAxML_info.yersinia, 1608)
+CALL: release (/tree/RAxML_info.yersinia, 1608)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1609)
+CALL: flush (/tree/RAxML_info.yersinia, 1609)
+CALL: release (/tree/RAxML_info.yersinia, 1609)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1610)
+CALL: flush (/tree/RAxML_info.yersinia, 1610)
+CALL: release (/tree/RAxML_info.yersinia, 1610)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1611)
+CALL: flush (/tree/RAxML_info.yersinia, 1611)
+CALL: release (/tree/RAxML_info.yersinia, 1611)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1612)
+CALL: flush (/tree/RAxML_info.yersinia, 1612)
+CALL: release (/tree/RAxML_info.yersinia, 1612)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1613)
+CALL: flush (/tree/RAxML_info.yersinia, 1613)
+CALL: release (/tree/RAxML_info.yersinia, 1613)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1614)
+CALL: flush (/tree/RAxML_info.yersinia, 1614)
+CALL: release (/tree/RAxML_info.yersinia, 1614)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1615)
+CALL: flush (/tree/RAxML_info.yersinia, 1615)
+CALL: release (/tree/RAxML_info.yersinia, 1615)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1616)
+CALL: flush (/tree/RAxML_info.yersinia, 1616)
+CALL: release (/tree/RAxML_info.yersinia, 1616)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1617)
+CALL: flush (/tree/RAxML_info.yersinia, 1617)
+CALL: release (/tree/RAxML_info.yersinia, 1617)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1618)
+CALL: flush (/tree/RAxML_info.yersinia, 1618)
+CALL: release (/tree/RAxML_info.yersinia, 1618)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1619)
+CALL: flush (/tree/RAxML_info.yersinia, 1619)
+CALL: release (/tree/RAxML_info.yersinia, 1619)
+CALL: getattr (/tree) (None)
+CALL: getattr (/tree/RAxML_info.yersinia) (None)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: flush (/tree/RAxML_info.yersinia, 1622)
+CALL: release (/tree/RAxML_info.yersinia, 1622)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1623)
+CALL: flush (/tree/RAxML_info.yersinia, 1623)
+CALL: release (/tree/RAxML_info.yersinia, 1623)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1624)
+CALL: flush (/tree/RAxML_info.yersinia, 1624)
+CALL: release (/tree/RAxML_info.yersinia, 1624)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1625)
+CALL: flush (/tree/RAxML_info.yersinia, 1625)
+CALL: release (/tree/RAxML_info.yersinia, 1625)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1626)
+CALL: flush (/tree/RAxML_info.yersinia, 1626)
+CALL: release (/tree/RAxML_info.yersinia, 1626)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1627)
+CALL: flush (/tree/RAxML_info.yersinia, 1627)
+CALL: release (/tree/RAxML_info.yersinia, 1627)
+CALL: getattr (/tree/aligned.fasta.reduced) (None)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1629)
+CALL: flush (/tree/RAxML_info.yersinia, 1629)
+CALL: release (/tree/RAxML_info.yersinia, 1629)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1630)
+CALL: flush (/tree/RAxML_info.yersinia, 1630)
+CALL: release (/tree/RAxML_info.yersinia, 1630)
+CALL: getattr (/tree/aligned.fasta.reduced) (None)
+CALL: create (/tree/aligned.fasta.reduced, 33204)
+CALL: getattr (/tree/aligned.fasta.reduced) (1632)
+CALL: flush (/tree/aligned.fasta.reduced, 1632)
+CALL: release (/tree/aligned.fasta.reduced, 1632)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1633)
+CALL: flush (/tree/RAxML_info.yersinia, 1633)
+CALL: release (/tree/RAxML_info.yersinia, 1633)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1634)
+CALL: flush (/tree/RAxML_info.yersinia, 1634)
+CALL: release (/tree/RAxML_info.yersinia, 1634)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1635)
+CALL: flush (/tree/RAxML_info.yersinia, 1635)
+CALL: release (/tree/RAxML_info.yersinia, 1635)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1636)
+CALL: flush (/tree/RAxML_info.yersinia, 1636)
+CALL: release (/tree/RAxML_info.yersinia, 1636)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1637)
+CALL: flush (/tree/RAxML_info.yersinia, 1637)
+CALL: release (/tree/RAxML_info.yersinia, 1637)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1638)
+CALL: flush (/tree/RAxML_info.yersinia, 1638)
+CALL: release (/tree/RAxML_info.yersinia, 1638)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1639)
+CALL: flush (/tree/RAxML_info.yersinia, 1639)
+CALL: release (/tree/RAxML_info.yersinia, 1639)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1640)
+CALL: flush (/tree/RAxML_info.yersinia, 1640)
+CALL: release (/tree/RAxML_info.yersinia, 1640)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1641)
+CALL: flush (/tree/RAxML_info.yersinia, 1641)
+CALL: release (/tree/RAxML_info.yersinia, 1641)
+CALL: getattr (/tree) (None)
+CALL: getattr (/tree/RAxML_info.yersinia) (None)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: flush (/tree/RAxML_info.yersinia, 1644)
+CALL: release (/tree/RAxML_info.yersinia, 1644)
+CALL: getattr (/tree) (None)
+CALL: getattr (/tree/RAxML_parsimonyTree.yersinia) (None)
+CALL: create (/tree/RAxML_parsimonyTree.yersinia, 33204)
+CALL: getattr (/tree/RAxML_parsimonyTree.yersinia) (1647)
+CALL: flush (/tree/RAxML_parsimonyTree.yersinia, 1647)
+CALL: release (/tree/RAxML_parsimonyTree.yersinia, 1647)
+CALL: getattr (/tree) (None)
+CALL: getattr (/tree/RAxML_log.yersinia) (None)
+CALL: create (/tree/RAxML_log.yersinia, 33204)
+CALL: getattr (/tree/RAxML_log.yersinia) (1650)
+CALL: flush (/tree/RAxML_log.yersinia, 1650)
+CALL: release (/tree/RAxML_log.yersinia, 1650)
+CALL: getattr (/tree) (None)
+CALL: getattr (/tree/RAxML_log.yersinia) (None)
+CALL: open (/tree/RAxML_log.yersinia, 33793)
+CALL: flush (/tree/RAxML_log.yersinia, 1653)
+CALL: release (/tree/RAxML_log.yersinia, 1653)
+CALL: getattr (/tree) (None)
+CALL: getattr (/tree/RAxML_log.yersinia) (None)
+CALL: open (/tree/RAxML_log.yersinia, 33793)
+CALL: flush (/tree/RAxML_log.yersinia, 1656)
+CALL: release (/tree/RAxML_log.yersinia, 1656)
+CALL: getattr (/tree) (None)
+CALL: getattr (/tree/RAxML_log.yersinia) (None)
+CALL: open (/tree/RAxML_log.yersinia, 33793)
+CALL: flush (/tree/RAxML_log.yersinia, 1659)
+CALL: release (/tree/RAxML_log.yersinia, 1659)
+CALL: getattr (/tree) (None)
+CALL: getattr (/tree/RAxML_log.yersinia) (None)
+CALL: open (/tree/RAxML_log.yersinia, 33793)
+CALL: flush (/tree/RAxML_log.yersinia, 1662)
+CALL: release (/tree/RAxML_log.yersinia, 1662)
+CALL: getattr (/tree) (None)
+CALL: getattr (/tree/RAxML_log.yersinia) (None)
+CALL: open (/tree/RAxML_log.yersinia, 33793)
+CALL: flush (/tree/RAxML_log.yersinia, 1665)
+CALL: release (/tree/RAxML_log.yersinia, 1665)
+CALL: getattr (/tree/RAxML_result.yersinia) (None)
+CALL: create (/tree/RAxML_result.yersinia, 33204)
+CALL: getattr (/tree/RAxML_result.yersinia) (1667)
+CALL: flush (/tree/RAxML_result.yersinia, 1667)
+CALL: release (/tree/RAxML_result.yersinia, 1667)
+CALL: getattr (/tree) (None)
+CALL: getattr (/tree/RAxML_log.yersinia) (None)
+CALL: open (/tree/RAxML_log.yersinia, 33793)
+CALL: flush (/tree/RAxML_log.yersinia, 1670)
+CALL: release (/tree/RAxML_log.yersinia, 1670)
+CALL: getattr (/tree/RAxML_result.yersinia) (None)
+CALL: open (/tree/RAxML_result.yersinia, 32769)
+CALL: truncate (/tree/RAxML_result.yersinia, 0)
+CALL: getattr (/tree/RAxML_result.yersinia) (None)
+CALL: flush (/tree/RAxML_result.yersinia, 1672)
+CALL: release (/tree/RAxML_result.yersinia, 1672)
+CALL: getattr (/tree) (None)
+CALL: getattr (/tree/RAxML_result.yersinia) (None)
+CALL: open (/tree/RAxML_result.yersinia, 32769)
+CALL: truncate (/tree/RAxML_result.yersinia, 0)
+CALL: getattr (/tree/RAxML_result.yersinia) (None)
+CALL: flush (/tree/RAxML_result.yersinia, 1678)
+CALL: release (/tree/RAxML_result.yersinia, 1678)
+CALL: getattr (/tree/RAxML_log.yersinia) (None)
+CALL: open (/tree/RAxML_log.yersinia, 33793)
+CALL: flush (/tree/RAxML_log.yersinia, 1683)
+CALL: release (/tree/RAxML_log.yersinia, 1683)
+CALL: getattr (/tree) (None)
+CALL: getattr (/tree/RAxML_result.yersinia) (None)
+CALL: open (/tree/RAxML_result.yersinia, 32769)
+CALL: truncate (/tree/RAxML_result.yersinia, 0)
+CALL: getattr (/tree/RAxML_result.yersinia) (None)
+CALL: flush (/tree/RAxML_result.yersinia, 1686)
+CALL: release (/tree/RAxML_result.yersinia, 1686)
+CALL: getattr (/tree/RAxML_log.yersinia) (None)
+CALL: open (/tree/RAxML_log.yersinia, 33793)
+CALL: flush (/tree/RAxML_log.yersinia, 1691)
+CALL: release (/tree/RAxML_log.yersinia, 1691)
+CALL: getattr (/tree) (None)
+CALL: getattr (/tree/RAxML_log.yersinia) (None)
+CALL: open (/tree/RAxML_log.yersinia, 33793)
+CALL: flush (/tree/RAxML_log.yersinia, 1694)
+CALL: release (/tree/RAxML_log.yersinia, 1694)
+CALL: getattr (/tree) (None)
+CALL: getattr (/tree/RAxML_log.yersinia) (None)
+CALL: open (/tree/RAxML_log.yersinia, 33793)
+CALL: flush (/tree/RAxML_log.yersinia, 1697)
+CALL: release (/tree/RAxML_log.yersinia, 1697)
+CALL: getattr (/tree) (None)
+CALL: getattr (/tree/RAxML_result.yersinia) (None)
+CALL: open (/tree/RAxML_result.yersinia, 32769)
+CALL: truncate (/tree/RAxML_result.yersinia, 0)
+CALL: getattr (/tree/RAxML_result.yersinia) (None)
+CALL: flush (/tree/RAxML_result.yersinia, 1700)
+CALL: release (/tree/RAxML_result.yersinia, 1700)
+CALL: getattr (/tree/RAxML_log.yersinia) (None)
+CALL: open (/tree/RAxML_log.yersinia, 33793)
+CALL: flush (/tree/RAxML_log.yersinia, 1705)
+CALL: release (/tree/RAxML_log.yersinia, 1705)
+CALL: getattr (/tree) (None)
+CALL: getattr (/tree/RAxML_log.yersinia) (None)
+CALL: open (/tree/RAxML_log.yersinia, 33793)
+CALL: flush (/tree/RAxML_log.yersinia, 1708)
+CALL: release (/tree/RAxML_log.yersinia, 1708)
+CALL: getattr (/tree) (None)
+CALL: getattr (/tree/RAxML_log.yersinia) (None)
+CALL: open (/tree/RAxML_log.yersinia, 33793)
+CALL: flush (/tree/RAxML_log.yersinia, 1711)
+CALL: release (/tree/RAxML_log.yersinia, 1711)
+CALL: getattr (/tree) (None)
+CALL: getattr (/tree/RAxML_log.yersinia) (None)
+CALL: open (/tree/RAxML_log.yersinia, 33793)
+CALL: flush (/tree/RAxML_log.yersinia, 1714)
+CALL: release (/tree/RAxML_log.yersinia, 1714)
+CALL: getattr (/tree) (None)
+CALL: getattr (/tree/RAxML_log.yersinia) (None)
+CALL: open (/tree/RAxML_log.yersinia, 33793)
+CALL: flush (/tree/RAxML_log.yersinia, 1717)
+CALL: release (/tree/RAxML_log.yersinia, 1717)
+CALL: getattr (/tree/RAxML_result.yersinia) (None)
+CALL: open (/tree/RAxML_result.yersinia, 32769)
+CALL: truncate (/tree/RAxML_result.yersinia, 0)
+CALL: getattr (/tree/RAxML_result.yersinia) (None)
+CALL: flush (/tree/RAxML_result.yersinia, 1719)
+CALL: release (/tree/RAxML_result.yersinia, 1719)
+CALL: getattr (/tree/RAxML_info.yersinia) (None)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: flush (/tree/RAxML_info.yersinia, 1724)
+CALL: release (/tree/RAxML_info.yersinia, 1724)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1725)
+CALL: flush (/tree/RAxML_info.yersinia, 1725)
+CALL: release (/tree/RAxML_info.yersinia, 1725)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1726)
+CALL: flush (/tree/RAxML_info.yersinia, 1726)
+CALL: release (/tree/RAxML_info.yersinia, 1726)
+CALL: getattr (/tree) (None)
+CALL: getattr (/tree/RAxML_result.yersinia) (None)
+CALL: open (/tree/RAxML_result.yersinia, 32769)
+CALL: truncate (/tree/RAxML_result.yersinia, 0)
+CALL: getattr (/tree/RAxML_result.yersinia) (None)
+CALL: flush (/tree/RAxML_result.yersinia, 1729)
+CALL: release (/tree/RAxML_result.yersinia, 1729)
+CALL: getattr (/tree/RAxML_info.yersinia) (None)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: flush (/tree/RAxML_info.yersinia, 1734)
+CALL: release (/tree/RAxML_info.yersinia, 1734)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1735)
+CALL: flush (/tree/RAxML_info.yersinia, 1735)
+CALL: release (/tree/RAxML_info.yersinia, 1735)
+CALL: getattr (/tree) (None)
+CALL: getattr (/tree/RAxML_info.yersinia) (None)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: flush (/tree/RAxML_info.yersinia, 1738)
+CALL: release (/tree/RAxML_info.yersinia, 1738)
+CALL: getattr (/tree/RAxML_bestTree.yersinia) (None)
+CALL: create (/tree/RAxML_bestTree.yersinia, 33204)
+CALL: getattr (/tree/RAxML_bestTree.yersinia) (1740)
+CALL: flush (/tree/RAxML_bestTree.yersinia, 1740)
+CALL: release (/tree/RAxML_bestTree.yersinia, 1740)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1741)
+CALL: flush (/tree/RAxML_info.yersinia, 1741)
+CALL: release (/tree/RAxML_info.yersinia, 1741)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1742)
+CALL: flush (/tree/RAxML_info.yersinia, 1742)
+CALL: release (/tree/RAxML_info.yersinia, 1742)
+CALL: open (/tree/RAxML_info.yersinia, 33793)
+CALL: getattr (/tree/RAxML_info.yersinia) (1743)
+CALL: flush (/tree/RAxML_info.yersinia, 1743)
+CALL: release (/tree/RAxML_info.yersinia, 1743)
+
+WRITE 1576:37570:107
+WRITE 1577:37677:107
+WRITE 1580:37784:107
+WRITE 1581:37891:103
+WRITE 1582:37994:103
+WRITE 1583:38097:107
+WRITE 1584:38204:107
+WRITE 1585:38311:107
+WRITE 1586:38418:107
+WRITE 1587:38525:103
+WRITE 1588:38628:107
+WRITE 1589:38735:107
+WRITE 1590:38842:107
+WRITE 1591:38949:107
+WRITE 1592:39056:107
+WRITE 1593:39163:105
+WRITE 1594:39268:107
+WRITE 1595:39375:105
+WRITE 1596:39480:105
+WRITE 1597:39585:107
+WRITE 1598:39692:105
+WRITE 1601:39797:107
+WRITE 1602:39904:107
+WRITE 1603:40011:105
+WRITE 1604:40116:107
+WRITE 1605:40223:107
+WRITE 1606:40330:107
+WRITE 1607:40437:107
+WRITE 1608:40544:105
+WRITE 1609:40649:107
+WRITE 1610:40756:107
+WRITE 1611:40863:97
+WRITE 1611:40960:10
+WRITE 1612:40970:107
+WRITE 1613:41077:105
+WRITE 1614:41182:107
+WRITE 1615:41289:107
+WRITE 1616:41396:107
+WRITE 1617:41503:105
+WRITE 1618:41608:103
+WRITE 1619:41711:103
+WRITE 1622:41814:19
+WRITE 1623:41833:84
+WRITE 1624:41917:53
+WRITE 1625:41970:19
+WRITE 1626:41989:93
+WRITE 1627:42082:62
+set_last: 1584491531.02
+WRITE 1629:42144:56
+WRITE 1630:42200:94
+set_last: 1584491531.121
+WRITE 1632:0:4096
+WRITE 1632:4096:4096
+WRITE 1632:8192:4096
+WRITE 1632:12288:4096
+WRITE 1632:16384:4096
+WRITE 1632:20480:4096
+WRITE 1632:24576:4096
+WRITE 1632:28672:4096
+WRITE 1632:32768:4096
+WRITE 1632:36864:4096
+WRITE 1632:40960:4096
+WRITE 1632:45056:4096
+WRITE 1632:49152:4096
+WRITE 1632:53248:4096
+WRITE 1632:57344:4096
+WRITE 1632:61440:4096
+WRITE 1632:65536:4096
+WRITE 1632:69632:4096
+WRITE 1632:73728:4096
+WRITE 1632:77824:4096
+WRITE 1632:81920:4096
+WRITE 1632:86016:4096
+WRITE 1632:90112:4096
+WRITE 1632:94208:4096
+WRITE 1632:98304:4096
+WRITE 1632:102400:4096
+WRITE 1632:106496:4096
+WRITE 1632:110592:4096
+WRITE 1632:114688:4096
+WRITE 1632:118784:4096
+WRITE 1632:122880:4096
+WRITE 1632:126976:4096
+WRITE 1632:131072:4096
+WRITE 1632:135168:4096
+WRITE 1632:139264:4096
+WRITE 1632:143360:4096
+WRITE 1632:147456:4096
+WRITE 1632:151552:4096
+WRITE 1632:155648:4096
+WRITE 1632:159744:4096
+WRITE 1632:163840:4096
+WRITE 1632:167936:4096
+WRITE 1632:172032:4096
+WRITE 1632:176128:4096
+WRITE 1632:180224:4096
+WRITE 1632:184320:4096
+WRITE 1632:188416:4096
+WRITE 1632:192512:4096
+WRITE 1632:196608:4096
+WRITE 1632:200704:4096
+WRITE 1632:204800:4096
+WRITE 1632:208896:4096
+WRITE 1632:212992:4096
+WRITE 1632:217088:4096
+WRITE 1632:221184:4096
+WRITE 1632:225280:4096
+WRITE 1632:229376:4096
+WRITE 1632:233472:4096
+WRITE 1632:237568:4096
+WRITE 1632:241664:4096
+WRITE 1632:245760:4096
+WRITE 1632:249856:4096
+WRITE 1632:253952:4096
+WRITE 1632:258048:4096
+WRITE 1632:262144:4096
+WRITE 1632:266240:4096
+WRITE 1632:270336:4096
+WRITE 1632:274432:4096
+WRITE 1632:278528:4096
+WRITE 1632:282624:4096
+WRITE 1632:286720:4096
+WRITE 1632:290816:4096
+WRITE 1632:294912:4096
+WRITE 1632:299008:4096
+WRITE 1632:303104:4096
+WRITE 1632:307200:4096
+WRITE 1632:311296:4096
+WRITE 1632:315392:4096
+WRITE 1632:319488:4096
+WRITE 1632:323584:4096
+WRITE 1632:327680:4096
+WRITE 1632:331776:4096
+WRITE 1632:335872:4096
+WRITE 1632:339968:4096
+WRITE 1632:344064:4096
+WRITE 1632:348160:4096
+WRITE 1632:352256:4096
+WRITE 1632:356352:4096
+WRITE 1632:360448:4096
+WRITE 1632:364544:4096
+WRITE 1632:368640:4096
+WRITE 1632:372736:4096
+WRITE 1632:376832:4096
+WRITE 1632:380928:4096
+WRITE 1632:385024:4096
+WRITE 1632:389120:4096
+WRITE 1632:393216:4096
+WRITE 1632:397312:4096
+WRITE 1632:401408:4096
+WRITE 1632:405504:4096
+WRITE 1632:409600:4096
+WRITE 1632:413696:4096
+WRITE 1632:417792:4096
+WRITE 1632:421888:4096
+WRITE 1632:425984:4096
+WRITE 1632:430080:4096
+WRITE 1632:434176:4096
+WRITE 1632:438272:4096
+WRITE 1632:442368:4096
+WRITE 1632:446464:4096
+WRITE 1632:450560:4096
+WRITE 1632:454656:4096
+WRITE 1632:458752:4096
+WRITE 1632:462848:4096
+WRITE 1632:466944:4096
+WRITE 1632:471040:4096
+WRITE 1632:475136:4096
+WRITE 1632:479232:4096
+WRITE 1632:483328:4096
+WRITE 1632:487424:4096
+WRITE 1632:491520:4096
+WRITE 1632:495616:4096
+WRITE 1632:499712:4096
+WRITE 1632:503808:4096
+WRITE 1632:507904:4096
+WRITE 1632:512000:4096
+WRITE 1632:516096:4096
+WRITE 1632:520192:4096
+WRITE 1632:524288:4096
+WRITE 1632:528384:4096
+WRITE 1632:532480:4096
+WRITE 1632:536576:4096
+WRITE 1632:540672:4096
+WRITE 1632:544768:4096
+WRITE 1632:548864:4096
+WRITE 1632:552960:4096
+WRITE 1632:557056:4096
+WRITE 1632:561152:4096
+WRITE 1632:565248:4096
+WRITE 1632:569344:4096
+WRITE 1632:573440:4096
+WRITE 1632:577536:2033
+WRITE 1633:42294:91
+WRITE 1634:42385:103
+WRITE 1635:42488:1194
+WRITE 1636:43682:41
+WRITE 1637:43723:18
+WRITE 1638:43741:6
+WRITE 1639:43747:6
+WRITE 1640:43753:6
+WRITE 1641:43759:6
+WRITE 1644:43765:2
+set_last: 1584491533.392
+set_last: 1584491533.393
+WRITE 1647:0:4096
+WRITE 1647:4096:4096
+WRITE 1647:8192:4096
+WRITE 1647:12288:4096
+WRITE 1647:16384:1740
+set_last: 1584491538.473
+set_last: 1584491538.474
+WRITE 1650:0:24
+WRITE 1653:24:24
+WRITE 1656:48:24
+WRITE 1659:72:24
+WRITE 1662:96:24
+WRITE 1665:120:24
+set_last: 1584491589.649
+set_last: 1584491589.649
+WRITE 1667:0:4096
+WRITE 1667:4096:4096
+WRITE 1667:8192:4096
+WRITE 1667:12288:4096
+WRITE 1667:16384:1740
+WRITE 1670:144:24
+WRITE 1672:0:4096
+WRITE 1672:4096:4096
+WRITE 1672:8192:4096
+WRITE 1672:12288:4096
+WRITE 1672:16384:1740
+WRITE 1678:0:4096
+WRITE 1678:4096:4096
+WRITE 1678:8192:4096
+WRITE 1678:12288:4096
+WRITE 1678:16384:1740
+WRITE 1683:168:24
+WRITE 1686:0:4096
+WRITE 1686:4096:4096
+WRITE 1686:8192:4096
+WRITE 1686:12288:4096
+WRITE 1686:16384:1740
+WRITE 1691:192:25
+WRITE 1694:217:25
+WRITE 1697:242:25
+WRITE 1700:0:4096
+WRITE 1700:4096:4096
+WRITE 1700:8192:4096
+WRITE 1700:12288:4096
+WRITE 1700:16384:1740
+WRITE 1705:267:25
+WRITE 1708:292:25
+WRITE 1711:317:25
+WRITE 1714:342:25
+WRITE 1717:367:25
+WRITE 1719:0:4096
+WRITE 1719:4096:4096
+WRITE 1719:8192:4096
+WRITE 1719:12288:4096
+WRITE 1719:16384:1740
+WRITE 1724:43767:96
+WRITE 1725:43863:102
+WRITE 1726:43965:85
+WRITE 1729:0:4096
+WRITE 1729:4096:4096
+WRITE 1729:8192:4096
+WRITE 1729:12288:4096
+WRITE 1729:16384:4096
+WRITE 1729:20480:4096
+WRITE 1729:24576:4096
+WRITE 1729:28672:4096
+WRITE 1729:32768:4096
+WRITE 1729:36864:4096
+WRITE 1729:40960:4096
+WRITE 1729:45056:4096
+WRITE 1729:49152:1935
+WRITE 1734:44050:172
+WRITE 1735:44222:93
+WRITE 1738:44315:52
+set_last: 1584491721.223
+set_last: 1584491721.223
+WRITE 1740:0:4096
+WRITE 1740:4096:4096
+WRITE 1740:8192:4096
+WRITE 1740:12288:4096
+WRITE 1740:16384:4096
+WRITE 1740:20480:4096
+WRITE 1740:24576:4096
+WRITE 1740:28672:4096
+WRITE 1740:32768:4096
+WRITE 1740:36864:4096
+WRITE 1740:40960:4096
+WRITE 1740:45056:4096
+WRITE 1740:49152:1935
+WRITE 1741:44367:126
+WRITE 1742:44493:130
+WRITE 1743:44623:76

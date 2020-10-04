@@ -1,0 +1,609 @@
+CALL: getattr (/.xdg-volume-info) (None)
+CALL: opendir (/)
+CALL: getattr (/autorun.inf) (None)
+CALL: getattr (/) (None)
+CALL: readdir (/, 0)
+CALL: getattr (/test.py) (None)
+CALL: getattr (/testpipe.sh) (None)
+CALL: getattr (/tmp) (None)
+CALL: getattr (/output-run-mafft.txt) (None)
+CALL: getattr (/.fuse_hidden0000002900000001) (None)
+CALL: getattr (/uniprot_sprot.fasta.gz.pac) (None)
+CALL: getattr (/paladin) (None)
+CALL: getattr (/output-run-silva.txt) (None)
+CALL: getattr (/output.tar.gz) (None)
+CALL: getattr (/provenance.db) (None)
+CALL: getattr (/output-run-trimmomatic.txt) (None)
+CALL: getattr (/output-run-fastqdump.txt) (None)
+CALL: getattr (/output-run-bioawk.txt) (None)
+CALL: getattr (/outer.sh) (None)
+CALL: getattr (/reads) (None)
+CALL: getattr (/output-run-annotation.txt) (None)
+CALL: getattr (/reference) (None)
+CALL: getattr (/masurca) (None)
+CALL: getattr (/uniprot_sprot.fasta.gz.amb) (None)
+CALL: getattr (/data.sam) (None)
+CALL: getattr (/annotation) (None)
+CALL: getattr (/threads.sam) (None)
+CALL: getattr (/uniprot_sprot.fasta.gz) (None)
+CALL: getattr (/inner.sh) (None)
+CALL: getattr (/output-run-assembly.txt) (None)
+CALL: getattr (/start.sh) (None)
+CALL: getattr (/output-run-gzip.txt) (None)
+CALL: getattr (/uniprot_sprot.fasta.gz.ann) (None)
+CALL: getattr (/assembly) (None)
+CALL: getattr (/uniprot_sprot.fasta.gz.pro) (None)
+CALL: getattr (/run2.sh) (None)
+CALL: getattr (/parameters.sh) (None)
+CALL: getattr (/.money.txt.swp) (None)
+CALL: getattr (/uniprot_sprot.fasta.gz.sa) (None)
+CALL: getattr (/clean.sh) (None)
+CALL: getattr (/liststats.py) (None)
+CALL: getattr (/map.py) (None)
+CALL: getattr (/run.sh) (None)
+CALL: getattr (/test.sam) (None)
+CALL: getattr (/uniprot_sprot.fasta.gz.bwt) (None)
+CALL: getattr (/repeatfs.conf) (None)
+CALL: getattr (/test.txt) (None)
+CALL: opendir (/)
+CALL: getattr (/) (None)
+CALL: readdir (/, 0)
+CALL: opendir (/)
+CALL: getattr (/) (None)
+CALL: readdir (/, 0)
+CALL: opendir (/)
+CALL: getattr (/) (None)
+CALL: readdir (/, 0)
+CALL: opendir (/)
+CALL: getattr (/) (None)
+CALL: readdir (/, 0)
+CALL: opendir (/)
+CALL: getattr (/) (None)
+CALL: readdir (/, 0)
+CALL: opendir (/)
+CALL: getattr (/) (None)
+CALL: readdir (/, 0)
+CALL: opendir (/)
+CALL: getattr (/) (None)
+CALL: readdir (/, 0)
+CALL: opendir (/)
+CALL: getattr (/) (None)
+CALL: readdir (/, 0)
+CALL: opendir (/)
+CALL: getattr (/) (None)
+CALL: readdir (/, 0)
+CALL: opendir (/)
+CALL: getattr (/) (None)
+CALL: readdir (/, 0)
+CALL: opendir (/)
+CALL: getattr (/) (None)
+CALL: readdir (/, 0)
+CALL: opendir (/)
+CALL: getattr (/) (None)
+CALL: readdir (/, 0)
+CALL: opendir (/)
+CALL: getattr (/) (None)
+CALL: readdir (/, 0)
+CALL: opendir (/)
+CALL: getattr (/) (None)
+CALL: readdir (/, 0)
+CALL: opendir (/)
+CALL: getattr (/) (None)
+CALL: readdir (/, 0)
+CALL: opendir (/)
+CALL: getattr (/) (None)
+CALL: readdir (/, 0)
+CALL: opendir (/)
+CALL: getattr (/) (None)
+CALL: readdir (/, 0)
+CALL: opendir (/)
+CALL: getattr (/) (None)
+CALL: readdir (/, 0)
+CALL: opendir (/)
+CALL: getattr (/) (None)
+CALL: readdir (/, 0)
+CALL: opendir (/)
+CALL: getattr (/) (None)
+CALL: readdir (/, 0)
+CALL: opendir (/)
+CALL: getattr (/) (None)
+CALL: readdir (/, 0)
+CALL: opendir (/)
+CALL: getattr (/) (None)
+CALL: readdir (/, 0)
+CALL: getattr (/autorun.inf) (None)
+CALL: getattr (/) (None)
+CALL: access (/, 1)
+CALL: getattr (/tree) (None)
+CALL: mkdir (/tree, 509)
+CALL: getattr (/tree) (None)
+CALL: getattr (/) (None)
+CALL: getattr (/tree) (None)
+CALL: access (/tree, 1)
+CALL: getattr (/tree) (None)
+CALL: getattr (/tree/aligned.fasta) (None)
+CALL: create (/tree/aligned.fasta, 33204)
+CALL: getattr (/tree/aligned.fasta) (1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: getattr (/tree) (None)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: getattr (/reference) (None)
+CALL: getattr (/reference/yersinia.fasta) (None)
+CALL: access (/reference/yersinia.fasta, 4)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: open (/reference/yersinia.fasta, 32768)
+CALL: getattr (/reference/yersinia.fasta) (1145)
+CALL: flush (/reference/yersinia.fasta, 1145)
+CALL: release (/reference/yersinia.fasta, 1145)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)set_last: 1584491418.209
+set_last: 1584491420.568
+set_last: 1584491429.087
+set_last: 1584491429.092
+set_last: 1584491429.201
+READ 1145 (/reference/yersinia.fasta):0:131072
+READ 1145 (/reference/yersinia.fasta):131072:131072
+READ 1145 (/reference/yersinia.fasta):262144:131072
+READ 1145 (/reference/yersinia.fasta):393216:131072
+READ 1145 (/reference/yersinia.fasta):524288:131072
+READ 1145 (/reference/yersinia.fasta):655360:131072
+READ 1145 (/reference/yersinia.fasta):786432:131072
+READ 1145 (/reference/yersinia.fasta):917504:131072
+READ 1145 (/reference/yersinia.fasta):1048576:131072
+READ 1145 (/reference/yersinia.fasta):1179648:8192
+WRITE 1139:0:4096
+WRITE 1139:4096:4096
+WRITE 1139:8192:4096
+WRITE 1139:12288:4096
+WRITE 1139:16384:4096
+WRITE 1139:20480:4096
+WRITE 1139:24576:4096
+WRITE 1139:28672:4096
+WRITE 1139:32768:4096
+WRITE 1139:36864:4096
+WRITE 1139:40960:4096
+WRITE 1139:45056:4096
+WRITE 1139:49152:4096
+WRITE 1139:53248:4096
+WRITE 1139:57344:4096
+WRITE 1139:61440:4096
+WRITE 1139:65536:4096
+WRITE 1139:69632:4096
+WRITE 1139:73728:4096
+WRITE 1139:77824:4096
+WRITE 1139:81920:4096
+WRITE 1139:86016:4096
+WRITE 1139:90112:4096
+WRITE 1139:94208:4096
+WRITE 1139:98304:4096
+WRITE 1139:102400:4096
+WRITE 1139:106496:4096
+WRITE 1139:110592:4096
+WRITE 1139:114688:4096
+WRITE 1139:118784:4096
+WRITE 1139:122880:4096
+WRITE 1139:126976:4096
+WRITE 1139:131072:4096
+WRITE 1139:135168:4096
+WRITE 1139:139264:4096
+WRITE 1139:143360:4096
+WRITE 1139:147456:4096
+WRITE 1139:151552:4096
+WRITE 1139:155648:4096
+WRITE 1139:159744:4096
+WRITE 1139:163840:4096
+WRITE 1139:167936:4096
+WRITE 1139:172032:4096
+WRITE 1139:176128:4096
+WRITE 1139:180224:4096
+WRITE 1139:184320:4096
+WRITE 1139:188416:4096
+WRITE 1139:192512:4096
+WRITE 1139:196608:4096
+WRITE 1139:200704:4096
+WRITE 1139:204800:4096
+WRITE 1139:208896:4096
+WRITE 1139:212992:4096
+WRITE 1139:217088:4096
+WRITE 1139:221184:4096
+WRITE 1139:225280:4096
+WRITE 1139:229376:4096
+WRITE 1139:233472:4096
+WRITE 1139:237568:4096
+WRITE 1139:241664:4096
+WRITE 1139:245760:4096
+WRITE 1139:249856:4096
+WRITE 1139:253952:4096
+WRITE 1139:258048:4096
+WRITE 1139:262144:4096
+WRITE 1139:266240:4096
+WRITE 1139:270336:4096
+WRITE 1139:274432:4096
+WRITE 1139:278528:4096
+WRITE 1139:282624:4096
+WRITE 1139:286720:4096
+WRITE 1139:290816:4096
+WRITE 1139:294912:4096
+WRITE 1139:299008:4096
+WRITE 1139:303104:4096
+WRITE 1139:307200:4096
+WRITE 1139:311296:4096
+WRITE 1139:315392:4096
+WRITE 1139:319488:4096
+WRITE 1139:323584:4096
+WRITE 1139:327680:4096
+WRITE 1139:331776:4096
+WRITE 1139:335872:4096
+WRITE 1139:339968:4096
+WRITE 1139:344064:4096
+WRITE 1139:348160:4096
+WRITE 1139:352256:4096
+WRITE 1139:356352:4096
+WRITE 1139:360448:4096
+WRITE 1139:364544:4096
+WRITE 1139:368640:4096
+WRITE 1139:372736:4096
+WRITE 1139:376832:4096
+WRITE 1139:380928:4096
+WRITE 1139:385024:4096
+WRITE 1139:389120:4096
+WRITE 1139:393216:4096
+WRITE 1139:397312:4096
+WRITE 1139:401408:4096
+WRITE 1139:405504:4096
+WRITE 1139:409600:4096
+WRITE 1139:413696:4096
+WRITE 1139:417792:4096
+WRITE 1139:421888:4096
+WRITE 1139:425984:4096
+WRITE 1139:430080:4096
+WRITE 1139:434176:4096
+WRITE 1139:438272:4096
+WRITE 1139:442368:4096
+WRITE 1139:446464:4096
+WRITE 1139:450560:4096
+WRITE 1139:454656:4096
+WRITE 1139:458752:4096
+WRITE 1139:462848:4096
+WRITE 1139:466944:4096
+WRITE 1139:471040:4096
+WRITE 1139:475136:4096
+WRITE 1139:479232:4096
+WRITE 1139:483328:4096
+WRITE 1139:487424:4096
+WRITE 1139:491520:4096
+WRITE 1139:495616:4096
+WRITE 1139:499712:4096
+WRITE 1139:503808:4096
+WRITE 1139:507904:4096
+WRITE 1139:512000:4096
+WRITE 1139:516096:4096
+WRITE 1139:520192:4096
+WRITE 1139:524288:4096
+WRITE 1139:528384:4096
+WRITE 1139:532480:4096
+WRITE 1139:536576:4096
+WRITE 1139:540672:4096
+WRITE 1139:544768:4096
+WRITE 1139:548864:4096
+WRITE 1139:552960:4096
+WRITE 1139:557056:4096
+WRITE 1139:561152:4096
+WRITE 1139:565248:4096
+WRITE 1139:569344:4096
+WRITE 1139:573440:4096
+WRITE 1139:577536:4096
+WRITE 1139:581632:4096
+WRITE 1139:585728:4096
+WRITE 1139:589824:4096
+WRITE 1139:593920:4096
+WRITE 1139:598016:4096
+WRITE 1139:602112:4096
+WRITE 1139:606208:4096
+WRITE 1139:610304:4096
+WRITE 1139:614400:4096
+WRITE 1139:618496:4096
+WRITE 1139:622592:4096
+WRITE 1139:626688:4096
+WRITE 1139:630784:4096
+WRITE 1139:634880:4096
+WRITE 1139:638976:4096
+WRITE 1139:643072:4096
+WRITE 1139:647168:4096
+WRITE 1139:651264:4096
+WRITE 1139:655360:4096
+WRITE 1139:659456:4096
+WRITE 1139:663552:4096
+WRITE 1139:667648:4096
+WRITE 1139:671744:4096
+WRITE 1139:675840:4096
+WRITE 1139:679936:4096
+WRITE 1139:684032:4096
+WRITE 1139:688128:4096
+WRITE 1139:692224:4096
+WRITE 1139:696320:4096
+WRITE 1139:700416:4096
+WRITE 1139:704512:4096
+WRITE 1139:708608:4096
+WRITE 1139:712704:4096
+WRITE 1139:716800:4096
+WRITE 1139:720896:4096
+WRITE 1139:724992:4096
+WRITE 1139:729088:4096
+WRITE 1139:733184:4096
+WRITE 1139:737280:4096
+WRITE 1139:741376:4096
+WRITE 1139:745472:4096
+WRITE 1139:749568:4096
+WRITE 1139:753664:4096
+WRITE 1139:757760:4096
+WRITE 1139:761856:4096
+WRITE 1139:765952:4096
+WRITE 1139:770048:4096
+WRITE 1139:774144:4096
+WRITE 1139:778240:4096
+WRITE 1139:782336:4096
+WRITE 1139:786432:4096
+WRITE 1139:790528:4096
+WRITE 1139:794624:4096
+WRITE 1139:798720:4096
+WRITE 1139:802816:4096
+WRITE 1139:806912:4096
+WRITE 1139:811008:4096
+WRITE 1139:815104:4096
+WRITE 1139:819200:4096
+WRITE 1139:823296:4096
+WRITE 1139:827392:4096
+WRITE 1139:831488:4096
+WRITE 1139:835584:4096
+WRITE 1139:839680:4096
+WRITE 1139:843776:4096
+WRITE 1139:847872:4096
+WRITE 1139:851968:4096
+WRITE 1139:856064:4096
+WRITE 1139:860160:4096
+WRITE 1139:864256:4096
+WRITE 1139:868352:4096
+WRITE 1139:872448:4096
+WRITE 1139:876544:4096
+WRITE 1139:880640:4096
+WRITE 1139:884736:4096
+WRITE 1139:888832:4096
+WRITE 1139:892928:4096
+WRITE 1139:897024:4096
+WRITE 1139:901120:4096
+WRITE 1139:905216:4096
+WRITE 1139:909312:4096
+WRITE 1139:913408:4096
+WRITE 1139:917504:4096
+WRITE 1139:921600:4096
+WRITE 1139:925696:4096
+WRITE 1139:929792:4096
+WRITE 1139:933888:4096
+WRITE 1139:937984:4096
+WRITE 1139:942080:4096
+WRITE 1139:946176:4096
+WRITE 1139:950272:4096
+WRITE 1139:954368:4096
+WRITE 1139:958464:4096
+WRITE 1139:962560:4096
+WRITE 1139:966656:4096
+WRITE 1139:970752:4096
+WRITE 1139:974848:4096
+WRITE 1139:978944:4096
+WRITE 1139:983040:4096
+WRITE 1139:987136:4096
+WRITE 1139:991232:4096
+WRITE 1139:995328:4096
+WRITE 1139:999424:4096
+WRITE 1139:1003520:4096
+WRITE 1139:1007616:4096
+WRITE 1139:1011712:4096
+WRITE 1139:1015808:4096
+WRITE 1139:1019904:4096
+WRITE 1139:1024000:4096
+WRITE 1139:1028096:4096
+WRITE 1139:1032192:4096
+WRITE 1139:1036288:4096
+WRITE 1139:1040384:4096
+WRITE 1139:1044480:4096
+WRITE 1139:1048576:4096
+WRITE 1139:1052672:4096
+WRITE 1139:1056768:4096
+WRITE 1139:1060864:4096
+WRITE 1139:1064960:4096
+WRITE 1139:1069056:4096
+WRITE 1139:1073152:4096
+WRITE 1139:1077248:4096
+WRITE 1139:1081344:4096
+WRITE 1139:1085440:4096
+WRITE 1139:1089536:4096
+WRITE 1139:1093632:4096
+WRITE 1139:1097728:4096
+WRITE 1139:1101824:4096
+WRITE 1139:1105920:4096
+WRITE 1139:1110016:4096
+WRITE 1139:1114112:4096
+WRITE 1139:1118208:4096
+WRITE 1139:1122304:4096
+WRITE 1139:1126400:4096
+WRITE 1139:1130496:4096
+WRITE 1139:1134592:4096
+WRITE 1139:1138688:4096
+WRITE 1139:1142784:4096
+WRITE 1139:1146880:4096
+WRITE 1139:1150976:4096
+WRITE 1139:1155072:4096
+WRITE 1139:1159168:4096
+WRITE 1139:1163264:4096
+WRITE 1139:1167360:4096
+WRITE 1139:1171456:4096
+WRITE 1139:1175552:4096
+WRITE 1139:1179648:4096
+WRITE 1139:1183744:4096
+WRITE 1139:1187840:4096
+WRITE 1139:1191936:4096
+WRITE 1139:1196032:4096
+WRITE 1139:1200128:4096
+WRITE 1139:1204224:4096
+WRITE 1139:1208320:4096
+WRITE 1139:1212416:4096
+WRITE 1139:1216512:4096
+WRITE 1139:1220608:4096
+WRITE 1139:1224704:4096
+WRITE 1139:1228800:4096
+WRITE 1139:1232896:4096
+WRITE 1139:1236992:4096
+WRITE 1139:1241088:4096
+WRITE 1139:1245184:4096
+WRITE 1139:1249280:4096
+WRITE 1139:1253376:4096
+WRITE 1139:1257472:4096
+WRITE 1139:1261568:4096
+WRITE 1139:1265664:4096
+WRITE 1139:1269760:4096
+WRITE 1139:1273856:4096
+WRITE 1139:1277952:4096
+WRITE 1139:1282048:4096
+WRITE 1139:1286144:4096
+WRITE 1139:1290240:4096
+WRITE 1139:1294336:4096
+WRITE 1139:1298432:4096
+WRITE 1139:1302528:4096
+WRITE 1139:1306624:4096
+WRITE 1139:1310720:4096
+WRITE 1139:1314816:4096
+WRITE 1139:1318912:4096
+WRITE 1139:1323008:4096
+WRITE 1139:1327104:4096
+WRITE 1139:1331200:4096
+WRITE 1139:1335296:4096
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: getattr (/tree/aligned.fasta) (None)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: flush (/tree/aligned.fasta, 1139)
+CALL: release (/tree/aligned.fasta, 1139)
+
+WRITE 1139:1339392:4096
+WRITE 1139:1343488:4096
+WRITE 1139:1347584:4096
+WRITE 1139:1351680:4096
+WRITE 1139:1355776:4096
+WRITE 1139:1359872:4096
+WRITE 1139:1363968:4096
+WRITE 1139:1368064:4096
+WRITE 1139:1372160:4096
+WRITE 1139:1376256:4096
+WRITE 1139:1380352:4096
+WRITE 1139:1384448:4096
+WRITE 1139:1388544:652

@@ -1,0 +1,1209 @@
+[info] Starting replication
+TrimmomaticPE: Started with arguments:
+ SRR9847874_1.fastq SRR9847874_2.fastq out_fwd_paired.fq out_fwd_unpaired.fq out_rev_paired.fq out_rev_unpaired.fq ILLUMINACLIP:TruSeq3-PE.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36 -threads 6
+java.io.FileNotFoundException: /home/anthonyw/repo_personal/unh/repeatfs/experiments/mnt-replicate/reads/TruSeq3-PE.fa (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at org.usadellab.trimmomatic.fasta.FastaParser.parse(FastaParser.java:54)
+	at org.usadellab.trimmomatic.trim.IlluminaClippingTrimmer.loadSequences(IlluminaClippingTrimmer.java:110)
+	at org.usadellab.trimmomatic.trim.IlluminaClippingTrimmer.makeIlluminaClippingTrimmer(IlluminaClippingTrimmer.java:71)
+	at org.usadellab.trimmomatic.trim.TrimmerFactory.makeTrimmer(TrimmerFactory.java:32)
+	at org.usadellab.trimmomatic.Trimmomatic.createTrimmers(Trimmomatic.java:59)
+	at org.usadellab.trimmomatic.TrimmomaticPE.run(TrimmomaticPE.java:552)
+	at org.usadellab.trimmomatic.Trimmomatic.main(Trimmomatic.java:80)
+Quality encoding detected as phred33
+Input Read Pairs: 971388 Both Surviving: 957586 (98.58%) Forward Only Surviving: 12266 (1.26%) Reverse Only Surviving: 1267 (0.13%) Dropped: 269 (0.03%)
+TrimmomaticPE: Completed successfully
+[21:47:20] This is prokka 1.14.6
+[21:47:20] Written by Torsten Seemann <torsten.seemann@gmail.com>
+[21:47:20] Homepage is https://github.com/tseemann/prokka
+[21:47:20] Local time is Sun Mar 29 21:47:20 2020
+[21:47:20] You are anthonyw
+[21:47:20] Operating system is linux
+[21:47:20] You have BioPerl 1.007002
+[21:47:20] System has 8 cores.
+[21:47:20] Will use maximum of 8 cores.
+[21:47:20] Annotating as >>> Bacteria <<<
+[21:47:20] Creating new output folder: PROKKA_03292020
+[21:47:20] Running: mkdir -p PROKKA_03292020
+[21:47:20] Using filename prefix: PROKKA_03292020.XXX
+[21:47:20] Setting HMMER_NCPU=1
+[21:47:20] Writing log to: PROKKA_03292020/PROKKA_03292020.log
+[21:47:20] Command: /home/anthonyw/anaconda3/bin/prokka ../assembly/output/scaffolds.fasta --centre C --locustag L --force
+[21:47:20] Appending to PATH: /home/anthonyw/anaconda3/bin
+[21:47:20] Looking for 'aragorn' - found /home/anthonyw/anaconda3/bin/aragorn
+[21:47:20] Determined aragorn version is 001002 from 'ARAGORN v1.2.38 Dean Laslett'
+[21:47:20] Looking for 'barrnap' - found /home/anthonyw/anaconda3/bin/barrnap
+[21:47:20] Determined barrnap version is 000009 from 'barrnap 0.9'
+[21:47:20] Looking for 'blastp' - found /home/anthonyw/anaconda3/bin/blastp
+[21:47:21] Determined blastp version is 002007 from 'blastp: 2.7.1+'
+[21:47:21] Looking for 'cmpress' - found /home/anthonyw/anaconda3/bin/cmpress
+[21:47:21] Determined cmpress version is 001001 from '# INFERNAL 1.1.2 (July 2016)'
+[21:47:21] Looking for 'cmscan' - found /home/anthonyw/anaconda3/bin/cmscan
+[21:47:21] Determined cmscan version is 001001 from '# INFERNAL 1.1.2 (July 2016)'
+[21:47:21] Looking for 'egrep' - found /home/anthonyw/anaconda3/bin/egrep
+[21:47:21] Looking for 'find' - found /usr/bin/find
+[21:47:21] Looking for 'grep' - found /bin/grep
+[21:47:21] Looking for 'hmmpress' - found /home/anthonyw/anaconda3/bin/hmmpress
+[21:47:21] Determined hmmpress version is 003002 from '# HMMER 3.2.1 (June 2018); http://hmmer.org/'
+[21:47:21] Looking for 'hmmscan' - found /home/anthonyw/anaconda3/bin/hmmscan
+[21:47:21] Determined hmmscan version is 003002 from '# HMMER 3.2.1 (June 2018); http://hmmer.org/'
+[21:47:21] Looking for 'java' - found /usr/bin/java
+[21:47:21] Looking for 'makeblastdb' - found /home/anthonyw/anaconda3/bin/makeblastdb
+[21:47:21] Determined makeblastdb version is 002007 from 'makeblastdb: 2.7.1+'
+[21:47:21] Looking for 'minced' - found /home/anthonyw/anaconda3/bin/minced
+[21:47:21] Determined minced version is 003002 from 'minced 0.3.2'
+[21:47:21] Looking for 'parallel' - found /home/anthonyw/anaconda3/bin/parallel
+[21:47:21] Determined parallel version is 20200322 from 'GNU parallel 20200322'
+[21:47:21] Looking for 'prodigal' - found /home/anthonyw/anaconda3/bin/prodigal
+[21:47:21] Determined prodigal version is 002006 from 'Prodigal V2.6.3: February, 2016'
+[21:47:21] Looking for 'prokka-genbank_to_fasta_db' - found /home/anthonyw/anaconda3/bin/prokka-genbank_to_fasta_db
+[21:47:21] Looking for 'sed' - found /bin/sed
+[21:47:21] Looking for 'tbl2asn' - found /home/anthonyw/bin/tbl2asn
+[21:47:21] Determined tbl2asn version is 025008 from 'tbl2asn 25.8   arguments:'
+[21:47:21] Using genetic code table 11.
+[21:47:21] Loading and checking input file: ../assembly/output/scaffolds.fasta
+[21:47:22] Wrote 195 contigs totalling 5070002 bp.
+[21:47:22] Predicting tRNAs and tmRNAs
+[21:47:22] Running: aragorn -l -gc11  -w PROKKA_03292020\/PROKKA_03292020\.fna
+[21:47:24] 1 tRNA-Met [47954,48029] 34 (cat)
+[21:47:24] 2 tRNA-Met c[143803,143879] 35 (cat)
+[21:47:24] 3 tRNA-Leu c[147660,147746] 35 (gag)
+[21:47:24] 4 tRNA-Thr c[247138,247213] 34 (ggt)
+[21:47:24] 5 tRNA-Leu [559400,559486] 35 (cag)
+[21:47:24] 6 tRNA-Leu [559515,559601] 35 (cag)
+[21:47:24] 7 tRNA-Leu [559636,559722] 35 (cag)
+[21:47:24] 1 tRNA-Val [132528,132604] 35 (gac)
+[21:47:24] 2 tRNA-Val [132609,132685] 35 (gac)
+[21:47:24] 3 tRNA-Leu c[371794,371880] 35 (taa)
+[21:47:24] 4 tRNA-Cys c[371893,371966] 33 (gca)
+[21:47:24] 5 tRNA-Gly c[372020,372095] 34 (gcc)
+[21:47:24] 1 tRNA-Arg c[3772,3847] 35 (acg)
+[21:47:24] 2 tRNA-Arg c[3912,3988] 35 (acg)
+[21:47:24] 3 tRNA-Ser c[3992,4084] 35 (gct)
+[21:47:24] 4 tRNA-Met [131967,132043] 35 (cat)
+[21:47:24] 5 tRNA-Gly c[229144,229217] 33 (ccc)
+[21:47:24] 6 tRNA-Phe [342412,342487] 34 (gaa)
+[21:47:24] 1 tRNA-Pro [171885,171961] 35 (ggg)
+[21:47:24] 1 tRNA-Leu c[448,532] 35 (caa)
+[21:47:24] 2 tRNA-Gly c[113264,113339] 34 (gcc)
+[21:47:24] 3 tRNA-Gly c[113375,113450] 34 (gcc)
+[21:47:24] 4 tRNA-Phe [142416,142491] 34 (gaa)
+[21:47:24] 1 tRNA-Met [13131,13207] 35 (cat)
+[21:47:24] 2 tRNA-Leu [13218,13302] 35 (tag)
+[21:47:24] 3 tRNA-Gln [13326,13400] 33 (ttg)
+[21:47:24] 4 tRNA-Gln [13435,13509] 33 (ttg)
+[21:47:24] 5 tRNA-Met [13525,13600] 35 (cat)
+[21:47:24] 6 tRNA-Gln [13750,13824] 33 (ctg)
+[21:47:24] 7 tRNA-Gln [13862,13936] 33 (ctg)
+[21:47:24] 8 tRNA-Gln [14039,14113] 33 (ctg)
+[21:47:24] 9 tRNA-Arg c[127841,127917] 35 (tct)
+[21:47:24] 1 tRNA-Tyr c[93517,93601] 35 (gta)
+[21:47:24] 1 tRNA-Ser c[45505,45592] 35 (gga)
+[21:47:24] 2 tRNA-Ser c[140879,140966] 35 (tga)
+[21:47:24] 1 tRNA-Lys [2,77] 34 (ttt)
+[21:47:24] 1 tRNA-Pro c[41378,41454] 35 (cgg)
+[21:47:24] 2 tRNA-SeC [171961,172055] 35 (tca)
+[21:47:24] 1 tRNA-Lys c[126551,126626] 34 (ttt)
+[21:47:24] 1 tRNA-Thr [66065,66140] 34 (cgt)
+[21:47:24] 1 tRNA-Asn c[54046,54121] 34 (gtt)
+[21:47:24] 2 tRNA-Asn c[56455,56530] 34 (gtt)
+[21:47:24] 3 tRNA-Asn [58279,58354] 34 (gtt)
+[21:47:24] 4 tRNA-Asn c[98177,98252] 34 (gtt)
+[21:47:24] 5 tRNA-Ser [99244,99333] 35 (cga)
+[21:47:24] 1 tRNA-Asn [33519,33594] 34 (gtt)
+[21:47:24] 2 tRNA-Thr [33597,33672] 34 (tgt)
+[21:47:24] 3 tRNA-Met [35878,35953] 34 (cat)
+[21:47:24] 1 tmRNA [59341,59703] 90,125 ANDENYALAA**
+[21:47:24] 1 tRNA-Asp [119,195] 35 (gtc)
+[21:47:24] 2 tRNA-Trp [204,279] 34 (cca)
+[21:47:24] 3 tRNA-Arg [40099,40175] 35 (ccg)
+[21:47:24] 4 tRNA-His [40234,40309] 34 (gtg)
+[21:47:24] 5 tRNA-Leu [40330,40416] 35 (cag)
+[21:47:24] 6 tRNA-Pro [40459,40535] 35 (tgg)
+[21:47:24] 1 tRNA-Ser c[1661,1748] 35 (gga)
+[21:47:24] 1 tRNA-Val c[2,77] 34 (tac)
+[21:47:24] 2 tRNA-Ala [2776,2851] 34 (ggc)
+[21:47:24] 1 tRNA-Ser [24318,24398] 38 (gga)
+[21:47:24] 1 tRNA-Arg [8736,8810] 34 (cct)
+[21:47:24] 1 tRNA-Thr c[14599,14670] 34 (ggt)
+[21:47:24] 1 tRNA-Asp [7832,7908] 35 (gtc)
+[21:47:24] 1 tRNA-Lys [9544,9619] 34 (ttt)
+[21:47:24] 2 tRNA-Val [9655,9730] 34 (tac)
+[21:47:24] 1 tRNA-Thr c[327,402] 34 (ggt)
+[21:47:24] 2 tRNA-Gly c[409,483] 34 (tcc)
+[21:47:24] 3 tRNA-Tyr c[600,684] 35 (gta)
+[21:47:24] 4 tRNA-Thr c[693,768] 34 (tgt)
+[21:47:24] 1 tRNA-Asp [-1,76] 35 (gtc)
+[21:47:24] 1 tRNA-Ala c[139,214] 34 (tgc)
+[21:47:24] 2 tRNA-Ile c[257,333] 35 (gat)
+[21:47:24] 1 tRNA-Glu [119,194] 35 (ttc)
+[21:47:24] 1 tRNA-Val [-2,74] 34 (tac)
+[21:47:24] 2 tRNA-Val [121,196] 34 (tac)
+[21:47:24] 3 tRNA-Lys [201,276] 34 (ttt)
+[21:47:24] 1 tRNA-Lys [-1,75] 34 (ttt)
+[21:47:24] 2 tRNA-Lys [124,199] 34 (ttt)
+[21:47:24] 1 tRNA-Lys [-1,75] 34 (ttt)
+[21:47:24] 2 tRNA-Val [127,199] 34 (tac)
+[21:47:24] 1 tRNA-Ala [112,187] 34 (ggc)
+[21:47:24] 1 tRNA-Lys [2,77] 34 (ttt)
+[21:47:24] 2 tRNA-Lys [111,186] 34 (ttt)
+[21:47:24] 1 tRNA-Lys c[2,77] 34 (ttt)
+[21:47:24] Found 83 tRNAs
+[21:47:24] Predicting Ribosomal RNAs
+[21:47:24] Running Barrnap with 8 threads
+[21:47:25] 1 gnl|C|L_1 246986 5S ribosomal RNA
+[21:47:25] 2 gnl|C|L_1 247231 5S ribosomal RNA
+[21:47:25] 3 gnl|C|L_1 247440 23S ribosomal RNA
+[21:47:25] 4 gnl|C|L_1 250508 16S ribosomal RNA
+[21:47:25] Found 4 rRNAs
+[21:47:25] Skipping ncRNA search, enable with --rfam if desired.
+[21:47:25] Total of 86 tRNA + rRNA features
+[21:47:25] Searching for CRISPR repeats
+[21:47:26] Found 0 CRISPRs
+[21:47:26] Predicting coding sequences
+[21:47:26] Contigs total 5070002 bp, so using single mode
+[21:47:26] Running: prodigal -i PROKKA_03292020\/PROKKA_03292020\.fna -c -m -g 11 -p single -f sco -q
+[21:47:30] Excluding CDS which overlaps existing RNA (tRNA) at gnl|C|L_1:247061..247333 on + strand
+[21:47:30] Excluding CDS which overlaps existing RNA (rRNA) at gnl|C|L_1:250607..250861 on - strand
+[21:47:30] Excluding CDS which overlaps existing RNA (tRNA) at gnl|C|L_3:3844..4281 on + strand
+[21:47:32] Excluding CDS which overlaps existing RNA (tRNA) at gnl|C|L_27:13849..15222 on + strand
+[21:47:32] Found 4731 CDS
+[21:47:32] Connecting features back to sequences
+[21:47:32] Not using genus-specific database. Try --usegenus to enable it.
+[21:47:32] Annotating CDS, please be patient.
+[21:47:32] Will use 8 CPUs for similarity searching.
+[21:47:33] There are still 4731 unannotated CDS left (started with 4731)
+[21:47:33] Will use blast to search against /home/anthonyw/anaconda3/db/kingdom/Bacteria/IS with 8 CPUs
+[21:47:33] Running: cat PROKKA_03292020\/PROKKA_03292020\.IS\.tmp\.30830\.faa | parallel --gnu --tmpdir /home/anthonyw/repo_personal/unh/repeatfs/experiments/mnt-replicate/tmp --plain -j 8 --block 94265 --recstart '>' --pipe blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/IS -evalue 1e-30 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no > PROKKA_03292020\/PROKKA_03292020\.IS\.tmp\.30830\.blast 2> /dev/null
+[21:47:51] bls_name: PROKKA_03292020/PROKKA_03292020.IS.tmp.30830.blast
+[21:47:52] Deleting unwanted file: PROKKA_03292020/PROKKA_03292020.IS.tmp.30830.faa
+[21:47:52] Deleting unwanted file: PROKKA_03292020/PROKKA_03292020.IS.tmp.30830.blast
+[21:47:53] There are still 4682 unannotated CDS left (started with 4731)
+[21:47:53] Will use blast to search against /home/anthonyw/anaconda3/db/kingdom/Bacteria/AMR with 8 CPUs
+[21:47:53] Running: cat PROKKA_03292020\/PROKKA_03292020\.AMR\.tmp\.30830\.faa | parallel --gnu --tmpdir /home/anthonyw/repo_personal/unh/repeatfs/experiments/mnt-replicate/tmp --plain -j 8 --block 93546 --recstart '>' --pipe blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/AMR -evalue 9.99999999999999e-301 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no > PROKKA_03292020\/PROKKA_03292020\.AMR\.tmp\.30830\.blast 2> /dev/null
+[21:48:08] bls_name: PROKKA_03292020/PROKKA_03292020.AMR.tmp.30830.blast
+[21:48:10] Deleting unwanted file: PROKKA_03292020/PROKKA_03292020.AMR.tmp.30830.faa
+[21:48:10] Deleting unwanted file: PROKKA_03292020/PROKKA_03292020.AMR.tmp.30830.blast
+[21:48:11] There are still 4682 unannotated CDS left (started with 4731)
+[21:48:11] Will use blast to search against /home/anthonyw/anaconda3/db/kingdom/Bacteria/sprot with 8 CPUs
+[21:48:11] Running: cat PROKKA_03292020\/PROKKA_03292020\.sprot\.tmp\.30830\.faa | parallel --gnu --tmpdir /home/anthonyw/repo_personal/unh/repeatfs/experiments/mnt-replicate/tmp --plain -j 8 --block 93546 --recstart '>' --pipe blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/sprot -evalue 1e-09 -qcov_hsp_perc 80 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no > PROKKA_03292020\/PROKKA_03292020\.sprot\.tmp\.30830\.blast 2> /dev/null
+[21:49:17] bls_name: PROKKA_03292020/PROKKA_03292020.sprot.tmp.30830.blast
+[21:49:17] Modify product: Uncharacterized protein YqfG => putative protein YqfG
+[21:49:17] Modify product: UPF0073 inner membrane protein YqfA => hypothetical protein
+[21:49:17] Modify product: UPF0267 protein YqfB => hypothetical protein
+[21:49:17] Modify product: UPF0149 protein HI_0817 => hypothetical protein
+[21:49:17] Modify product: UPF0301 protein YqgE => hypothetical protein
+[21:49:17] Modify product: Uncharacterized protein YggR => putative protein YggR
+[21:49:17] Modify product: UPF0235 protein YggU => hypothetical protein
+[21:49:17] Modify product: Solute-binding protein Bamb_6123 => Solute-binding protein
+[21:49:17] Modify product: Uncharacterized protein HI_0341 => putative protein
+[21:49:17] Modify product: Probable Fe(2+)-trafficking protein => putative Fe(2+)-trafficking protein
+[21:49:17] Modify product: UPF0053 inner membrane protein YoaE => hypothetical protein
+[21:49:17] Modify product: Probable diguanylate cyclase DgcE => putative diguanylate cyclase DgcE
+[21:49:17] Modify product: UPF0339 protein YegP => hypothetical protein
+[21:49:17] Modify product: 23S rRNA 5-hydroxycytidine C2501 synthase => 23S rRNA 5-hydroxycytidine synthase
+[21:49:17] Modify product: Uncharacterized fimbrial-like protein YehA => putative fimbrial-like protein YehA
+[21:49:17] Modify product: Probable fimbrial chaperone YehC => putative fimbrial chaperone YehC
+[21:49:17] Modify product: Uncharacterized fimbrial-like protein YehD => putative fimbrial-like protein YehD
+[21:49:17] Modify product: Uncharacterized protein YehL => putative protein YehL
+[21:49:17] Modify product: Uncharacterized lipoprotein YehR => putative lipoprotein YehR
+[21:49:17] Modify product: UPF0387 membrane protein YohO => hypothetical protein
+[21:49:17] Modify product: Uncharacterized oxidoreductase YohF => putative oxidoreductase YohF
+[21:49:17] Modify product: UPF0299 membrane protein YohJ => hypothetical protein
+[21:49:17] Modify product: UPF0324 inner membrane protein YeiH => hypothetical protein
+[21:49:17] Modify product: UPF0153 protein YeiW => hypothetical protein
+[21:49:17] Modify product: Probable cyclic di-GMP phosphodiesterase PdeN => putative cyclic di-GMP phosphodiesterase PdeN
+[21:49:17] Modify product: Uncharacterized ABC transporter ATP-binding protein YejF => putative ABC transporter ATP-binding protein YejF
+[21:49:17] Modify product: Uncharacterized protein YejG => putative protein YejG
+[21:49:18] Modify product: Probable iron export permease protein FetB => putative iron export permease protein FetB
+[21:49:18] Modify product: Probable iron export ATP-binding protein FetA => putative iron export ATP-binding protein FetA
+[21:49:18] Modify product: Uncharacterized HTH-type transcriptional regulator YbaQ => putative HTH-type transcriptional regulator YbaQ
+[21:49:18] Modify product: Probable cyclic di-GMP phosphodiesterase PdeB => putative cyclic di-GMP phosphodiesterase PdeB
+[21:49:18] Modify product: Uncharacterized protein YbaA => putative protein YbaA
+[21:49:18] Modify product: Uncharacterized lipoprotein YbaY => putative lipoprotein YbaY
+[21:49:18] Modify product: Probable multidrug resistance ABC transporter ATP-binding/permease protein YheI => putative multidrug resistance ABC transporter ATP-binding/permease protein YheI
+[21:49:18] Modify product: Uncharacterized protein HI_1008 => putative protein
+[21:49:18] Modify product: UPF0234 protein YajQ => hypothetical protein
+[21:49:18] Modify product: Uncharacterized lipoprotein YajI => putative lipoprotein YajI
+[21:49:18] Modify product: Uncharacterized protein YaiA => putative protein YaiA
+[21:49:18] Modify product: UPF0178 protein YaiI => hypothetical protein
+[21:49:18] Modify product: Probable diguanylate cyclase DgcC => putative diguanylate cyclase DgcC
+[21:49:18] Modify product: Uncharacterized protein YlcG => putative protein YlcG
+[21:49:18] Modify product: Uncharacterized periplasmic iron-binding protein HI_0362 => putative periplasmic iron-binding protein
+[21:49:18] Modify product: Uncharacterized protein YdfO => putative protein YdfO
+[21:49:18] Modify product: Probable two-component-system connector protein YcgZ => putative two-component-system connector protein YcgZ
+[21:49:18] Modify product: Probable two-component-system connector protein AriR => putative two-component-system connector protein AriR
+[21:49:18] Modify product: Uncharacterized protein YmgC => putative protein YmgC
+[21:49:18] Modify product: Probable cyclic di-GMP phosphodiesterase PdeG => putative cyclic di-GMP phosphodiesterase PdeG
+[21:49:18] Modify product: Uncharacterized protein YmgD => putative protein YmgD
+[21:49:18] Modify product: UPF0757 protein YmgG => hypothetical protein
+[21:49:18] Modify product: Uncharacterized protein YcgM => putative protein YcgM
+[21:49:18] Modify product: Uncharacterized ABC transporter ATP-binding protein HI_1470 => putative ABC transporter ATP-binding protein
+[21:49:18] Modify product: Probable ABC transporter permease protein HI_1471 => putative ABC transporter permease protein
+[21:49:18] Modify product: UPF0225 protein YchJ => hypothetical protein
+[21:49:18] Modify product: Uncharacterized NTE family protein Rv1063c => putative NTE family protein
+[21:49:18] Modify product: UPF0056 inner membrane protein MarC => hypothetical protein
+[21:49:18] Modify product: UPF0263 protein YciU => hypothetical protein
+[21:49:18] Modify product: Uncharacterized acyl-CoA thioester hydrolase HI_0827 => putative acyl-CoA thioester hydrolase
+[21:49:18] Modify product: Probable intracellular septation protein A => putative intracellular septation protein A
+[21:49:18] Modify product: UPF0259 membrane protein YciC => hypothetical protein
+[21:49:18] Modify product: Uncharacterized protein YciO => putative protein YciO
+[21:49:18] Modify product: Uncharacterized oxidoreductase YciK => putative oxidoreductase YciK
+[21:49:18] Modify product: Probable protease SohB => putative protease SohB
+[21:49:18] Modify product: Uncharacterized protein YciH => putative protein YciH
+[21:49:18] Modify product: UPF0509 protein YciZ => hypothetical protein
+[21:49:18] Modify product: Probable efflux pump outer membrane protein TtgC => putative efflux pump outer membrane protein TtgC
+[21:49:18] Modify product: Probable major fimbrial subunit LpfA => putative major fimbrial subunit LpfA
+[21:49:18] Modify product: UPF0056 inner membrane protein MarC => hypothetical protein
+[21:49:18] Modify product: Probable amino-acid metabolite efflux pump => putative amino-acid metabolite efflux pump
+[21:49:18] Modify product: UPF0060 membrane protein YnfA => hypothetical protein
+[21:49:18] Modify product: UPF0482 protein YnfB => hypothetical protein
+[21:49:18] Modify product: Uncharacterized protein YnfD => putative protein YnfD
+[21:49:18] Modify product: Probable dimethyl sulfoxide reductase chain YnfF => putative dimethyl sulfoxide reductase chain YnfF
+[21:49:18] Modify product: Uncharacterized oxidoreductase YdgJ => putative oxidoreductase YdgJ
+[21:49:18] Modify product: Uncharacterized protein YnhF => putative protein YnhF
+[21:49:18] Modify product: Uncharacterized HTH-type transcriptional regulator YahB => putative HTH-type transcriptional regulator YahB
+[21:49:18] Modify product: Uncharacterized protein YdhT => putative protein YdhT
+[21:49:18] Modify product: Uncharacterized ferredoxin-like protein YdhX => putative ferredoxin-like protein YdhX
+[21:49:18] Modify product: Uncharacterized protein YdhW => putative protein YdhW
+[21:49:18] Modify product: Uncharacterized oxidoreductase YdhV => putative oxidoreductase YdhV
+[21:49:18] Modify product: Uncharacterized ferredoxin-like protein YdhY => putative ferredoxin-like protein YdhY
+[21:49:18] Modify product: Probable L,D-transpeptidase YnhG => putative L,D-transpeptidase YnhG
+[21:49:18] Modify product: Probable ATP-dependent transporter SufC => putative ATP-dependent transporter SufC
+[21:49:18] Modify product: Uncharacterized protein HI_1163 => putative protein
+[21:49:18] Modify product: Uncharacterized protein YdiE => putative protein YdiE
+[21:49:18] Modify product: Uncharacterized protein YniD => putative protein YniD
+[21:49:18] Modify product: Probable ketoamine kinase HMPREF0351_12196 => putative ketoamine kinase
+[21:49:18] Modify product: Uncharacterized HTH-type transcriptional regulator YdjF => putative HTH-type transcriptional regulator YdjF
+[21:49:18] Modify product: Uncharacterized sugar kinase YdjH => putative sugar kinase YdjH
+[21:49:18] Modify product: Uncharacterized protein YdjI => putative protein YdjI
+[21:49:18] Modify product: Uncharacterized zinc-type alcohol dehydrogenase-like protein YdjJ => putative zinc-type alcohol dehydrogenase-like protein YdjJ
+[21:49:18] Modify product: Stress response UPF0229 protein YhbH => hypothetical protein
+[21:49:18] Modify product: Probable diguanylate cyclase CdgI => putative diguanylate cyclase CdgI
+[21:49:18] Modify product: Probable diguanylate cyclase DgcJ => putative diguanylate cyclase DgcJ
+[21:49:18] Modify product: Uncharacterized protein YeaR => putative protein YeaR
+[21:49:18] Modify product: Probable ATP-dependent DNA helicase YoaA => putative ATP-dependent DNA helicase YoaA
+[21:49:18] Modify product: Probable cyclic di-GMP phosphodiesterase PdeD => putative cyclic di-GMP phosphodiesterase PdeD
+[21:49:18] Modify product: UPF0053 inner membrane protein YoaE => hypothetical protein
+[21:49:18] Modify product: UPF0266 membrane protein YobD => hypothetical protein
+[21:49:18] Modify product: Probable manganese efflux pump MntP => putative manganese efflux pump MntP
+[21:49:18] Modify product: Uncharacterized fimbrial-like protein YadN => putative fimbrial-like protein YadN
+[21:49:18] Modify product: Probable fimbrial chaperone YadV => putative fimbrial chaperone YadV
+[21:49:18] Modify product: Uncharacterized fimbrial-like protein YadM => putative fimbrial-like protein YadM
+[21:49:18] Modify product: Uncharacterized fimbrial-like protein YadL => putative fimbrial-like protein YadL
+[21:49:18] Modify product: Uncharacterized fimbrial-like protein YadK => putative fimbrial-like protein YadK
+[21:49:18] Modify product: Uncharacterized fimbrial-like protein YadC => putative fimbrial-like protein YadC
+[21:49:18] Modify product: Uncharacterized ABC transporter ATP-binding protein YadG => putative ABC transporter ATP-binding protein YadG
+[21:49:18] Modify product: UPF0231 protein YacL => hypothetical protein
+[21:49:18] Modify product: Probable peptidoglycan glycosyltransferase FtsW => putative peptidoglycan glycosyltransferase FtsW
+[21:49:18] Modify product: Probable inner membrane protein Smp => putative inner membrane protein Smp
+[21:49:18] Modify product: Uncharacterized protein YjjI => putative protein YjjI
+[21:49:18] Modify product: Uncharacterized metal-dependent hydrolase YjjV => putative metal-dependent hydrolase YjjV
+[21:49:18] Modify product: Prophage tail fiber assembly protein homolog TfaE => Prophage tail fiber assembly protein TfaE
+[21:49:18] Modify product: Uncharacterized HTH-type transcriptional regulator HI_1476 => putative HTH-type transcriptional regulator
+[21:49:18] Modify product: UPF0442 protein YjjB => hypothetical protein
+[21:49:18] Modify product: Probable HTH-type transcriptional regulator LgoR => putative HTH-type transcriptional regulator LgoR
+[21:49:18] Modify product: Uncharacterized protein YjiK => putative protein YjiK
+[21:49:18] Modify product: Uncharacterized protein YebV => putative protein YebV
+[21:49:18] Modify product: Probable transcriptional regulatory protein YebC => putative transcriptional regulatory protein YebC
+[21:49:19] Modify product: UPF0394 inner membrane protein YedE => hypothetical protein
+[21:49:19] Modify product: Uncharacterized protein YgcP => putative protein YgcP
+[21:49:19] Modify product: Uncharacterized protein YgcP => putative protein YgcP
+[21:49:19] Modify product: Probable glucarate transporter => putative glucarate transporter
+[21:49:19] Modify product: Uncharacterized protein PA3435 => putative protein
+[21:49:19] Modify product: Uncharacterized protein YqcC => putative protein YqcC
+[21:49:19] Modify product: Uncharacterized HTH-type transcriptional regulator YdjF => putative HTH-type transcriptional regulator YdjF
+[21:49:19] Modify product: UPF0382 inner membrane protein YgdD => hypothetical protein
+[21:49:19] Modify product: Uncharacterized lipoprotein YgdR => putative lipoprotein YgdR
+[21:49:19] Modify product: UPF0053 inner membrane protein YgdQ => hypothetical protein
+[21:49:19] Modify product: Uncharacterized lipoprotein YgdR => putative lipoprotein YgdR
+[21:49:19] Modify product: Probable cadaverine/lysine antiporter => putative cadaverine/lysine antiporter
+[21:49:19] Modify product: Uncharacterized protein YjdJ => putative protein YjdJ
+[21:49:19] Modify product: Probable transcriptional regulator PhnF => putative transcriptional regulator PhnF
+[21:49:19] Modify product: Probable D,D-dipeptide-binding periplasmic protein DdpA => putative D,D-dipeptide-binding periplasmic protein DdpA
+[21:49:19] Modify product: Probable D,D-dipeptide transport system permease protein DdpC => putative D,D-dipeptide transport system permease protein DdpC
+[21:49:19] Modify product: Uncharacterized ferredoxin-like protein YdhX => putative ferredoxin-like protein YdhX
+[21:49:19] Modify product: Probable cyclic di-GMP phosphodiesterase PdeC => putative cyclic di-GMP phosphodiesterase PdeC
+[21:49:19] Modify product: Uncharacterized protein YjbR => putative protein YjbR
+[21:49:19] Modify product: UPF0337 protein YjbJ => hypothetical protein
+[21:49:19] Modify product: Uncharacterized lipoprotein GfcB => putative lipoprotein GfcB
+[21:49:19] Modify product: UPF0053 inner membrane protein YgdQ => hypothetical protein
+[21:49:19] Modify product: UPF0250 protein YbeD => hypothetical protein
+[21:49:19] Modify product: Uncharacterized HTH-type transcriptional regulator YbdO => putative HTH-type transcriptional regulator YbdO
+[21:49:19] Modify product: Uncharacterized protein YbdM => putative protein YbdM
+[21:49:19] Modify product: Bifunctional protein FolD => Bifunctional protein FolD protein
+[21:49:19] Modify product: Uncharacterized protein YbcJ => putative protein YbcJ
+[21:49:19] Modify product: Probable quinol monooxygenase YgiN => putative quinol monooxygenase YgiN
+[21:49:19] Modify product: Probable siderophore transport system permease protein YfiZ => putative siderophore transport system permease protein YfiZ
+[21:49:19] Modify product: Probable siderophore transport system ATP-binding protein YusV => putative siderophore transport system ATP-binding protein YusV
+[21:49:19] Modify product: Probable glycerol-3-phosphate acyltransferase => putative glycerol-3-phosphate acyltransferase
+[21:49:19] Modify product: Uncharacterized protein YqjD => putative protein YqjD
+[21:49:19] Modify product: UPF0597 protein YhaM => hypothetical protein
+[21:49:19] Modify product: Probable serine transporter => putative serine transporter
+[21:49:19] Modify product: Probable galactarate transporter => putative galactarate transporter
+[21:49:19] Modify product: Uncharacterized protease YhbU => putative protease YhbU
+[21:49:19] Modify product: Uncharacterized inner membrane transporter YhbE => putative inner membrane transporter YhbE
+[21:49:19] Modify product: Uncharacterized protein YrbL => putative protein YrbL
+[21:49:19] Modify product: Uncharacterized protein YhcH => putative protein YhcH
+[21:49:19] Modify product: Uncharacterized protein YhcO => putative protein YhcO
+[21:49:19] Modify product: Probable acrylyl-CoA reductase AcuI => putative acrylyl-CoA reductase AcuI
+[21:49:19] Modify product: Uncharacterized membrane protein YhdT => putative membrane protein YhdT
+[21:49:19] Modify product: Uncharacterized protein YaeQ => putative protein YaeQ
+[21:49:19] Modify product: UPF0253 protein YaeP => hypothetical protein
+[21:49:19] Modify product: UPF0126 inner membrane protein YadS => hypothetical protein
+[21:49:19] Modify product: UPF0352 protein YejL => hypothetical protein
+[21:49:19] Modify product: Probable autotransporter YfaL => putative autotransporter YfaL
+[21:49:19] Modify product: Uncharacterized HTH-type transcriptional regulator RhmR => putative HTH-type transcriptional regulator RhmR
+[21:49:19] Modify product: Probable 4-deoxy-4-formamido-L-arabinose-phosphoundecaprenol deformylase ArnD => putative 4-deoxy-4-formamido-L-arabinose-phosphoundecaprenol deformylase ArnD
+[21:49:19] Modify product: Probable 4-amino-4-deoxy-L-arabinose-phosphoundecaprenol flippase subunit ArnE => putative 4-amino-4-deoxy-L-arabinose-phosphoundecaprenol flippase subunit ArnE
+[21:49:19] Modify product: Probable 4-amino-4-deoxy-L-arabinose-phosphoundecaprenol flippase subunit ArnF => putative 4-amino-4-deoxy-L-arabinose-phosphoundecaprenol flippase subunit ArnF
+[21:49:19] Modify product: UPF0304 protein YfbU => hypothetical protein
+[21:49:19] Modify product: UPF0208 membrane protein YfbV => hypothetical protein
+[21:49:19] Modify product: Uncharacterized Nudix hydrolase YfcD => putative Nudix hydrolase YfcD
+[21:49:19] Modify product: Epimerase family protein SA0724 => Epimerase family protein
+[21:49:19] Modify product: Uncharacterized MFS-type transporter YfcJ => putative MFS-type transporter YfcJ
+[21:49:19] Modify product: Probable membrane transporter protein YfcA => putative membrane transporter protein YfcA
+[21:49:19] Modify product: Uncharacterized protein YfcO => putative protein YfcO
+[21:49:19] Modify product: Uncharacterized fimbrial-like protein YfcP => putative fimbrial-like protein YfcP
+[21:49:19] Modify product: Uncharacterized fimbrial-like protein YfcQ => putative fimbrial-like protein YfcQ
+[21:49:19] Modify product: Uncharacterized fimbrial-like protein YfcR => putative fimbrial-like protein YfcR
+[21:49:19] Modify product: Probable fimbrial chaperone YfcS => putative fimbrial chaperone YfcS
+[21:49:19] Modify product: Uncharacterized fimbrial-like protein YfcV => putative fimbrial-like protein YfcV
+[21:49:19] Modify product: UPF0307 protein YjgA => hypothetical protein
+[21:49:19] Modify product: UPF0053 inner membrane protein YtfL => hypothetical protein
+[21:49:19] Modify product: Uncharacterized protein YtfJ => putative protein YtfJ
+[21:49:20] Modify product: Probable L-ascorbate-6-phosphate lactonase UlaG => putative L-ascorbate-6-phosphate lactonase UlaG
+[21:49:20] Modify product: UPF0719 inner membrane protein YjfL => hypothetical protein
+[21:49:20] Modify product: UPF0716 protein FxsA => hypothetical protein
+[21:49:20] Modify product: Uncharacterized protein YcjX => putative protein YcjX
+[21:49:20] Modify product: UPF0283 membrane protein YcjF => hypothetical protein
+[21:49:20] Modify product: Uncharacterized protein YcjY => putative protein YcjY
+[21:49:20] Modify product: Probable DNA endonuclease SmrA => putative DNA endonuclease SmrA
+[21:49:20] Modify product: Uncharacterized protein YbjN => putative protein YbjN
+[21:49:20] Modify product: Uncharacterized lipoprotein YbjP => putative lipoprotein YbjP
+[21:49:20] Modify product: UPF0145 protein YbjQ => hypothetical protein
+[21:49:20] Modify product: Probable hydrolase YcaC => putative hydrolase YcaC
+[21:49:20] Modify product: Uncharacterized MFS-type transporter YcaD => putative MFS-type transporter YcaD
+[21:49:20] Modify product: UPF0434 protein YcaR => hypothetical protein
+[21:49:20] Modify product: Probable L,D-transpeptidase YcbB => putative L,D-transpeptidase YcbB
+[21:49:20] Modify product: Uncharacterized protein YcbX => putative protein YcbX
+[21:49:20] Modify product: UPF0319 protein HI_1681 => hypothetical protein
+[21:49:20] Modify product: Uncharacterized protein YccU => putative protein YccU
+[21:49:20] Modify product: Probable Ni/Fe-hydrogenase 1 B-type cytochrome subunit => putative Ni/Fe-hydrogenase 1 B-type cytochrome subunit
+[21:49:20] Modify product: Uncharacterized protein YccJ => putative protein YccJ
+[21:49:20] Modify product: Probable malonic semialdehyde reductase RutE => putative malonic semialdehyde reductase RutE
+[21:49:20] Modify product: Uncharacterized protein YfeY => putative protein YfeY
+[21:49:20] Modify product: Uncharacterized protein Rv2575 => putative protein
+[21:49:20] Modify product: Uncharacterized protein YfgD => putative protein YfgD
+[21:49:20] Modify product: Uncharacterized fimbrial chaperone YcbF => putative fimbrial chaperone YcbF
+[21:49:20] Modify product: Probable major fimbrial subunit LpfA => putative major fimbrial subunit LpfA
+[21:49:20] Modify product: Probable outer membrane usher protein ElfC => putative outer membrane usher protein ElfC
+[21:49:20] Modify product: UPF0053 inner membrane protein YfjD => hypothetical protein
+[21:49:20] Modify product: Probable HTH-type transcriptional regulator YgaV => putative HTH-type transcriptional regulator YgaV
+[21:49:20] Modify product: Uncharacterized protein YgaM => putative protein YgaM
+[21:49:20] Modify product: Probable transporter SCO4007 => putative transporter
+[21:49:20] Modify product: Probable deoxycholate-binding periplasmic protein YgiS => putative deoxycholate-binding periplasmic protein YgiS
+[21:49:20] Modify product: Solute-binding protein Bpro_3107 => Solute-binding protein
+[21:49:20] Modify product: Uncharacterized oxidoreductase YjmC => putative oxidoreductase YjmC
+[21:49:20] Modify product: Uncharacterized oxidoreductase YghA => putative oxidoreductase YghA
+[21:49:20] Modify product: Probable Ni/Fe-hydrogenase 2 b-type cytochrome subunit => putative Ni/Fe-hydrogenase 2 b-type cytochrome subunit
+[21:49:20] Modify product: Uncharacterized protein YtfJ => putative protein YtfJ
+[21:49:20] Modify product: Uncharacterized FAD-linked oxidoreductase Rv2280 => putative FAD-linked oxidoreductase
+[21:49:20] Modify product: Uncharacterized protein YhhA => putative protein YhhA
+[21:49:20] Modify product: Uncharacterized protein YfgJ => putative protein YfgJ
+[21:49:20] Modify product: UPF0070 protein HI_0370 => hypothetical protein
+[21:49:20] Modify product: Uncharacterized protein Rv2307c => putative protein
+[21:49:20] Modify product: Probable 3-phenylpropionic acid transporter => putative 3-phenylpropionic acid transporter
+[21:49:20] Modify product: Uncharacterized protein YphB => putative protein YphB
+[21:49:20] Modify product: Uncharacterized tRNA/rRNA methyltransferase YfiF => putative tRNA/rRNA methyltransferase YfiF
+[21:49:20] Modify product: Probable cyclic di-GMP phosphodiesterase PdeK => putative cyclic di-GMP phosphodiesterase PdeK
+[21:49:20] Modify product: Probable fimbrial subunit LpfE => putative fimbrial subunit LpfE
+[21:49:20] Modify product: Probable minor fimbrial subunit LpfD => putative minor fimbrial subunit LpfD
+[21:49:20] Modify product: Probable fimbrial chaperone LpfB => putative fimbrial chaperone LpfB
+[21:49:20] Modify product: Probable major fimbrial subunit LpfA => putative major fimbrial subunit LpfA
+[21:49:20] Modify product: Uncharacterized MFS-type transporter YhjX => putative MFS-type transporter YhjX
+[21:49:20] Modify product: Probable lipoprotein YiaD => putative lipoprotein YiaD
+[21:49:20] Modify product: Uncharacterized protein HI_0227 => putative protein
+[21:49:20] Modify product: Uncharacterized protein YiaX1 => putative protein YiaX1
+[21:49:20] Modify product: Uncharacterized GST-like protein YibF => putative GST-like protein YibF
+[21:49:20] Modify product: Uncharacterized protein YibL => putative protein YibL
+[21:49:20] Modify product: Uncharacterized protein YibN => putative protein YibN
+[21:49:20] Modify product: Uncharacterized protein HI_0755 => putative protein
+[21:49:20] Modify product: UPF0758 protein SP_1088 => hypothetical protein
+[21:49:20] Modify product: UPF0701 protein YicC => hypothetical protein
+[21:49:20] Modify product: UPF0126 inner membrane protein YicG => hypothetical protein
+[21:49:20] Modify product: Probable fructose-bisphosphate aldolase => putative fructose-bisphosphate aldolase
+[21:49:20] Modify product: Uncharacterized protein YbiI => putative protein YbiI
+[21:49:20] Modify product: Probable cyclic di-GMP phosphodiesterase PdeI => putative cyclic di-GMP phosphodiesterase PdeI
+[21:49:20] Modify product: Uncharacterized ABC transporter ATP-binding protein YbiT => putative ABC transporter ATP-binding protein YbiT
+[21:49:20] Modify product: Probable L,D-transpeptidase YbiS => putative L,D-transpeptidase YbiS
+[21:49:20] Modify product: Uncharacterized protein McbA => putative protein McbA
+[21:49:20] Modify product: PKHD-type hydroxylase Sbal_3634 => PKHD-type hydroxylase
+[21:49:20] Modify product: Uncharacterized protein YbiI => putative protein YbiI
+[21:49:20] Modify product: Uncharacterized protein YbiB => putative protein YbiB
+[21:49:20] Modify product: UPF0194 membrane protein YbhG => hypothetical protein
+[21:49:20] Modify product: Probable multidrug ABC transporter ATP-binding protein YbhF => putative multidrug ABC transporter ATP-binding protein YbhF
+[21:49:20] Modify product: Probable multidrug ABC transporter permease YbhS => putative multidrug ABC transporter permease YbhS
+[21:49:20] Modify product: Probable multidrug ABC transporter permease YbhR => putative multidrug ABC transporter permease YbhR
+[21:49:20] Modify product: UPF0098 protein YbhB => hypothetical protein
+[21:49:20] Modify product: Probable GTP-binding protein EngB => putative GTP-binding protein EngB
+[21:49:20] Modify product: Uncharacterized protein YshB => putative protein YshB
+[21:49:20] Modify product: Uncharacterized zinc-type alcohol dehydrogenase-like protein YjmD => putative zinc-type alcohol dehydrogenase-like protein YjmD
+[21:49:20] Modify product: UPF0761 membrane protein YihY => hypothetical protein
+[21:49:21] Modify product: UPF0381 protein YiiS => hypothetical protein
+[21:49:21] Modify product: Probable cystine transporter YijE => putative cystine transporter YijE
+[21:49:21] Modify product: Probable L-galactonate transporter => putative L-galactonate transporter
+[21:49:21] Modify product: Uncharacterized N-acetyltransferase YafP => putative N-acetyltransferase YafP
+[21:49:21] Modify product: UPF0255 protein VV1_0328 => hypothetical protein
+[21:49:21] Modify product: Probable fimbrial chaperone EcpE => putative fimbrial chaperone EcpE
+[21:49:21] Modify product: Probable outer membrane usher protein EcpC => putative outer membrane usher protein EcpC
+[21:49:21] Modify product: Probable fimbrial chaperone EcpB => putative fimbrial chaperone EcpB
+[21:49:21] Modify product: Uncharacterized membrane protein YkgR => putative membrane protein YkgR
+[21:49:21] Modify product: GTP cyclohydrolase 1 type 2 homolog => GTP cyclohydrolase 1 type 2 
+[21:49:21] Modify product: Uncharacterized methyltransferase YcgJ => putative methyltransferase YcgJ
+[21:49:21] Modify product: Uncharacterized protein HI_0431 => putative protein
+[21:49:21] Modify product: Probable glutamate/gamma-aminobutyrate antiporter => putative glutamate/gamma-aminobutyrate antiporter
+[21:49:21] Modify product: Uncharacterized HTH-type transcriptional regulator YddM => putative HTH-type transcriptional regulator YddM
+[21:49:21] Modify product: Probable nitrate reductase molybdenum cofactor assembly chaperone NarW => putative nitrate reductase molybdenum cofactor assembly chaperone NarW
+[21:49:21] Modify product: Uncharacterized isomerase YddE => putative isomerase YddE
+[21:49:21] Modify product: Probable 9-O-acetyl-N-acetylneuraminic acid deacetylase => putative 9-O-acetyl-N-acetylneuraminic acid deacetylase
+[21:49:21] Modify product: Probable N-acetylneuraminic acid outer membrane channel protein NanC => putative N-acetylneuraminic acid outer membrane channel protein NanC
+[21:49:21] Modify product: UPF0056 inner membrane protein YhgN => hypothetical protein
+[21:49:21] Modify product: Uncharacterized oxidoreductase YhhX => putative oxidoreductase YhhX
+[21:49:21] Modify product: Uncharacterized protein YbfE => putative protein YbfE
+[21:49:21] Modify product: Uncharacterized lipoprotein ChiQ => putative lipoprotein ChiQ
+[21:49:21] Modify product: Probable fimbrial chaperone YraI => putative fimbrial chaperone YraI
+[21:49:21] Modify product: UPF0401 protein YkfF => hypothetical protein
+[21:49:21] Modify product: Probable acyltransferase YihG => putative acyltransferase YihG
+[21:49:21] Modify product: Probable bifunctional chitinase/lysozyme => putative bifunctional chitinase/lysozyme
+[21:49:21] Modify product: Uncharacterized HTH-type transcriptional regulator YahB => putative HTH-type transcriptional regulator YahB
+[21:49:21] Modify product: UPF0381 protein YiiS => hypothetical protein
+[21:49:21] Modify product: Uncharacterized protein HI_1410 => putative protein
+[21:49:21] Modify product: Uncharacterized HTH-type transcriptional regulator YbbH => putative HTH-type transcriptional regulator YbbH
+[21:49:21] Modify product: Uncharacterized HTH-type transcriptional regulator YahB => putative HTH-type transcriptional regulator YahB
+[21:49:21] Modify product: Probable 2-dehydro-3-deoxygalactonokinase DgoK1 => putative 2-dehydro-3-deoxygalactonokinase DgoK1
+[21:49:21] Modify product: Probable protein kinase UbiB => putative protein kinase UbiB
+[21:49:21] Modify product: Probable L,D-transpeptidase YcfS => putative L,D-transpeptidase YcfS
+[21:49:21] Modify product: UPF0098 protein YbcL => hypothetical protein
+[21:49:21] Modify product: Probable diguanylate cyclase DgcQ => putative diguanylate cyclase DgcQ
+[21:49:21] Modify product: Uncharacterized inner membrane transporter YedA => putative inner membrane transporter YedA
+[21:49:21] Modify product: Uncharacterized protein YedJ => putative protein YedJ
+[21:49:21] Modify product: Uncharacterized protein YcjY => putative protein YcjY
+[21:49:21] Modify product: Uncharacterized oxidoreductase YtbE => putative oxidoreductase YtbE
+[21:49:21] Modify product: Probable pyridine nucleotide-disulfide oxidoreductase RclA => putative pyridine nucleotide-disulfide oxidoreductase RclA
+[21:49:21] Modify product: UPF0265 protein YeeX => hypothetical protein
+[21:49:21] Modify product: Probable L,D-transpeptidase ErfK/SrfK => putative L,D-transpeptidase ErfK/SrfK
+[21:49:21] Modify product: Uncharacterized HTH-type transcriptional regulator YdjF => putative HTH-type transcriptional regulator YdjF
+[21:49:21] Modify product: Probable FMN/FAD exporter YeeO => putative FMN/FAD exporter YeeO
+[21:49:21] Modify product: Probable transcriptional regulatory protein YeeN => putative transcriptional regulatory protein YeeN
+[21:49:21] Modify product: Putative multidrug export ATP-binding/permease protein SAV1866 => Putative multidrug export ATP-binding/permease protein
+[21:49:21] Modify product: Uncharacterized inner membrane transporter YicL => putative inner membrane transporter YicL
+[21:49:21] Modify product: Uncharacterized symporter YidK => putative symporter YidK
+[21:49:21] Modify product: Probable 2-dehydro-3-deoxygalactonokinase DgoK1 => putative 2-dehydro-3-deoxygalactonokinase DgoK1
+[21:49:21] Modify product: Probable glucosamine-6-phosphate deaminase 2 => putative glucosamine-6-phosphate deaminase 2
+[21:49:21] Modify product: Probable transport protein HsrA => putative transport protein HsrA
+[21:49:21] Modify product: Protein SlyX homolog => Protein SlyX 
+[21:49:21] Modify product: Uncharacterized ABC transporter ATP-binding protein YheS => putative ABC transporter ATP-binding protein YheS
+[21:49:21] Modify product: UPF0270 protein PA3463 => hypothetical protein
+[21:49:21] Modify product: Probable protein adenylyltransferase Fic => putative protein adenylyltransferase Fic
+[21:49:21] Modify product: Uncharacterized protein YhfS => putative protein YhfS
+[21:49:21] Modify product: Uncharacterized protein YhfX => putative protein YhfX
+[21:49:21] Modify product: Putative membrane protein IgaA homolog => Putative membrane protein IgaA 
+[21:49:21] Modify product: Probable [Fe-S]-dependent transcriptional repressor FeoC => putative [Fe-S]-dependent transcriptional repressor FeoC
+[21:49:21] Modify product: Uncharacterized MFS-type transporter YhhS => putative MFS-type transporter YhhS
+[21:49:21] Modify product: Uncharacterized protein HI_0933 => putative protein
+[21:49:22] Modify product: UPF0438 protein YifE => hypothetical protein
+[21:49:22] Modify product: Probable D-xylose utilization operon transcriptional repressor => putative D-xylose utilization operon transcriptional repressor
+[21:49:22] Modify product: Probable ECA polymerase => putative ECA polymerase
+[21:49:22] Modify product: Probable transport protein YifK => putative transport protein YifK
+[21:49:22] Modify product: Probable diguanylate cyclase DgcT => putative diguanylate cyclase DgcT
+[21:49:22] Modify product: Probable phosphatase YcdX => putative phosphatase YcdX
+[21:49:22] Modify product: Uncharacterized protein YmdA => putative protein YmdA
+[21:49:22] Modify product: UPF0176 protein YceA => hypothetical protein
+[21:49:22] Modify product: Cytochrome b561 homolog 2 => Cytochrome b561 
+[21:49:22] Modify product: Uncharacterized protein YceO => putative protein YceO
+[21:49:22] Modify product: Uncharacterized lipoprotein YceB => putative lipoprotein YceB
+[21:49:22] Modify product: UPF0502 protein YceH => hypothetical protein
+[21:49:22] Modify product: Uncharacterized metal-dependent hydrolase YcfH => putative metal-dependent hydrolase YcfH
+[21:49:22] Modify product: UPF0227 protein YcfP => hypothetical protein
+[21:49:22] Modify product: Probable cyclic di-GMP phosphodiesterase PdeA => putative cyclic di-GMP phosphodiesterase PdeA
+[21:49:22] Modify product: Probable multidrug resistance protein EmrK => putative multidrug resistance protein EmrK
+[21:49:22] Modify product: Probable multidrug resistance protein EmrY => putative multidrug resistance protein EmrY
+[21:49:22] Modify product: Uncharacterized protein YncE => putative protein YncE
+[21:49:22] Modify product: Uncharacterized protein YdcY => putative protein YdcY
+[21:49:22] Modify product: 23S rRNA 5-hydroxycytidine C2501 synthase => 23S rRNA 5-hydroxycytidine synthase
+[21:49:22] Modify product: Uncharacterized protein Rv3292 => putative protein
+[21:49:22] Modify product: Uncharacterized protein YnbD => putative protein YnbD
+[21:49:22] Modify product: Uncharacterized protein YnbC => putative protein YnbC
+[21:49:22] Cleaned 347 /product names
+[21:49:22] Deleting unwanted file: PROKKA_03292020/PROKKA_03292020.sprot.tmp.30830.faa
+[21:49:22] Deleting unwanted file: PROKKA_03292020/PROKKA_03292020.sprot.tmp.30830.blast
+[21:49:22] There are still 1170 unannotated CDS left (started with 4731)
+[21:49:22] Will use hmmer3 to search against /home/anthonyw/anaconda3/db/hmm/HAMAP.hmm with 8 CPUs
+[21:49:22] Running: cat PROKKA_03292020\/PROKKA_03292020\.HAMAP\.hmm\.tmp\.30830\.faa | parallel --gnu --tmpdir /home/anthonyw/repo_personal/unh/repeatfs/experiments/mnt-replicate/tmp --plain -j 8 --block 19274 --recstart '>' --pipe hmmscan --noali --notextw --acc -E 1e-09 --cpu 1 /home/anthonyw/anaconda3/db/hmm/HAMAP.hmm /dev/stdin > PROKKA_03292020\/PROKKA_03292020\.HAMAP\.hmm\.tmp\.30830\.hmmer3 2> /dev/null
+[21:49:35] bls_name: PROKKA_03292020/PROKKA_03292020.HAMAP.hmm.tmp.30830.hmmer3
+[21:49:35] Modify product: Uncharacterized Nudix hydrolase NudL => putative Nudix hydrolase NudL
+[21:49:35] Cleaned 1 /product names
+[21:49:35] Deleting unwanted file: PROKKA_03292020/PROKKA_03292020.HAMAP.hmm.tmp.30830.faa
+[21:49:35] Deleting unwanted file: PROKKA_03292020/PROKKA_03292020.HAMAP.hmm.tmp.30830.hmmer3
+[21:49:35] Labelling remaining 1085 proteins as 'hypothetical protein'
+[21:49:35] Possible /pseudo 'Colicin-E7 immunity protein' at gnl|C|L_1 position 353770
+[21:49:35] Possible /pseudo 'Colicin-E7 immunity protein' at gnl|C|L_1 position 354468
+[21:49:35] Possible /pseudo 'Putative dimethyl sulfoxide reductase chain YnfE' at gnl|C|L_2 position 50085
+[21:49:35] Possible /pseudo 'putative protein YgcP' at gnl|C|L_3 position 71361
+[21:49:35] Possible /pseudo 'Energy-coupling factor transporter ATP-binding protein EcfA1' at gnl|C|L_3 position 300906
+[21:49:35] Possible /pseudo 'Formate dehydrogenase H' at gnl|C|L_5 position 203915
+[21:49:35] Possible /pseudo 'Manganese transport system membrane protein MntB' at gnl|C|L_7 position 16167
+[21:49:35] Possible /pseudo 'Small toxic polypeptide LdrD' at gnl|C|L_10 position 33067
+[21:49:35] Possible /pseudo 'Formate dehydrogenase-O major subunit' at gnl|C|L_12 position 30095
+[21:49:35] Possible /pseudo 'Mannosylglucosyl-3-phosphoglycerate phosphatase' at gnl|C|L_12 position 76071
+[21:49:35] Possible /pseudo 'HTH-type transcriptional regulator PgrR' at gnl|C|L_13 position 88190
+[21:49:35] Possible /pseudo 'ISL3 family transposase ISEc38' at gnl|C|L_29 position 32211
+[21:49:35] Possible /pseudo 'ISL3 family transposase ISEc38' at gnl|C|L_29 position 32766
+[21:49:35] Possible /pseudo 'Formate dehydrogenase, nitrate-inducible, major subunit' at gnl|C|L_36 position 15082
+[21:49:35] Possible /pseudo 'ISKra4 family transposase ISCep1' at gnl|C|L_38 position 23557
+[21:49:35] Possible /pseudo 'IS3 family transposase ISEc48' at gnl|C|L_47 position 4586
+[21:49:35] Possible /pseudo 'Alcohol dehydrogenase 2' at gnl|C|L_52 position 2390
+[21:49:35] Found 3122 unique /gene codes.
+[21:49:35] Fixed 2 duplicate /gene - lptG_1 lptG_2
+[21:49:35] Fixed 2 duplicate /gene - yrdA_1 yrdA_2
+[21:49:35] Fixed 2 duplicate /gene - argP_1 argP_2
+[21:49:35] Fixed 2 duplicate /gene - ytfJ_1 ytfJ_2
+[21:49:35] Fixed 2 duplicate /gene - fimD_1 fimD_2
+[21:49:35] Fixed 2 duplicate /gene - hin_1 hin_2
+[21:49:35] Fixed 2 duplicate /gene - yhhT_1 yhhT_2
+[21:49:35] Fixed 2 duplicate /gene - scrK_1 scrK_2
+[21:49:35] Fixed 2 duplicate /gene - deoB_1 deoB_2
+[21:49:35] Fixed 3 duplicate /gene - glnQ_1 glnQ_2 glnQ_3
+[21:49:35] Fixed 2 duplicate /gene - acs_1 acs_2
+[21:49:35] Fixed 2 duplicate /gene - rob_1 rob_2
+[21:49:35] Fixed 2 duplicate /gene - nadC_1 nadC_2
+[21:49:35] Fixed 3 duplicate /gene - fdrA_1 fdrA_2 fdrA_3
+[21:49:35] Fixed 2 duplicate /gene - umuD_1 umuD_2
+[21:49:35] Fixed 2 duplicate /gene - osmY_1 osmY_2
+[21:49:35] Fixed 3 duplicate /gene - potA_1 potA_2 potA_3
+[21:49:35] Fixed 2 duplicate /gene - fdhF_1 fdhF_2
+[21:49:35] Fixed 3 duplicate /gene - fixX_1 fixX_2 fixX_3
+[21:49:35] Fixed 2 duplicate /gene - ybhI_1 ybhI_2
+[21:49:35] Fixed 2 duplicate /gene - oppF_1 oppF_2
+[21:49:35] Fixed 3 duplicate /gene - tdh_1 tdh_2 tdh_3
+[21:49:35] Fixed 2 duplicate /gene - cutC_1 cutC_2
+[21:49:35] Fixed 2 duplicate /gene - por_1 por_2
+[21:49:35] Fixed 2 duplicate /gene - ygdR_1 ygdR_2
+[21:49:35] Fixed 4 duplicate /gene - hdfR_1 hdfR_2 hdfR_3 hdfR_4
+[21:49:35] Fixed 2 duplicate /gene - glxK_1 glxK_2
+[21:49:35] Fixed 2 duplicate /gene - flgF_1 flgF_2
+[21:49:35] Fixed 3 duplicate /gene - cysE_1 cysE_2 cysE_3
+[21:49:35] Fixed 3 duplicate /gene - imm_1 imm_2 imm_3
+[21:49:35] Fixed 2 duplicate /gene - leuC_1 leuC_2
+[21:49:35] Fixed 5 duplicate /gene - rhaS_1 rhaS_2 rhaS_3 rhaS_4 rhaS_5
+[21:49:35] Fixed 2 duplicate /gene - aes_1 aes_2
+[21:49:35] Fixed 2 duplicate /gene - gspK_1 gspK_2
+[21:49:35] Fixed 3 duplicate /gene - ydjF_1 ydjF_2 ydjF_3
+[21:49:35] Fixed 2 duplicate /gene - yqjE_1 yqjE_2
+[21:49:35] Fixed 3 duplicate /gene - norR_1 norR_2 norR_3
+[21:49:35] Fixed 2 duplicate /gene - tabA_1 tabA_2
+[21:49:35] Fixed 2 duplicate /gene - flhA_1 flhA_2
+[21:49:35] Fixed 3 duplicate /gene - lexA_1 lexA_2 lexA_3
+[21:49:35] Fixed 2 duplicate /gene - dhaK_1 dhaK_2
+[21:49:35] Fixed 2 duplicate /gene - xdhA_1 xdhA_2
+[21:49:35] Fixed 2 duplicate /gene - sucB_1 sucB_2
+[21:49:35] Fixed 2 duplicate /gene - ptsG_1 ptsG_2
+[21:49:35] Fixed 2 duplicate /gene - caiT_1 caiT_2
+[21:49:35] Fixed 2 duplicate /gene - fryA_1 fryA_2
+[21:49:35] Fixed 2 duplicate /gene - ybiI_1 ybiI_2
+[21:49:35] Fixed 2 duplicate /gene - bglA_1 bglA_2
+[21:49:35] Fixed 2 duplicate /gene - rutB_1 rutB_2
+[21:49:35] Fixed 2 duplicate /gene - ftsH_1 ftsH_2
+[21:49:35] Fixed 2 duplicate /gene - gnsA_1 gnsA_2
+[21:49:35] Fixed 3 duplicate /gene - glmU_1 glmU_2 glmU_3
+[21:49:35] Fixed 3 duplicate /gene - mntB_1 mntB_2 mntB_3
+[21:49:35] Fixed 2 duplicate /gene - fdnG_1 fdnG_2
+[21:49:35] Fixed 2 duplicate /gene - ynfE_1 ynfE_2
+[21:49:35] Fixed 2 duplicate /gene - dhaR_1 dhaR_2
+[21:49:35] Fixed 2 duplicate /gene - rlhA_1 rlhA_2
+[21:49:35] Fixed 2 duplicate /gene - mglA_1 mglA_2
+[21:49:35] Fixed 2 duplicate /gene - msbA_1 msbA_2
+[21:49:35] Fixed 2 duplicate /gene - frwD_1 frwD_2
+[21:49:35] Fixed 2 duplicate /gene - ybcO_1 ybcO_2
+[21:49:35] Fixed 2 duplicate /gene - gpFI_1 gpFI_2
+[21:49:35] Fixed 2 duplicate /gene - ldrD_1 ldrD_2
+[21:49:35] Fixed 2 duplicate /gene - malP_1 malP_2
+[21:49:35] Fixed 2 duplicate /gene - lgoD_1 lgoD_2
+[21:49:35] Fixed 2 duplicate /gene - ulaE_1 ulaE_2
+[21:49:35] Fixed 2 duplicate /gene - chbA_1 chbA_2
+[21:49:35] Fixed 2 duplicate /gene - flgI_1 flgI_2
+[21:49:35] Fixed 2 duplicate /gene - gspA_1 gspA_2
+[21:49:35] Fixed 2 duplicate /gene - flgH_1 flgH_2
+[21:49:35] Fixed 2 duplicate /gene - fliI_1 fliI_2
+[21:49:35] Fixed 2 duplicate /gene - aaeA_1 aaeA_2
+[21:49:35] Fixed 2 duplicate /gene - ygcP_1 ygcP_2
+[21:49:35] Fixed 2 duplicate /gene - agaC_1 agaC_2
+[21:49:35] Fixed 2 duplicate /gene - sucA_1 sucA_2
+[21:49:35] Fixed 2 duplicate /gene - yggP_1 yggP_2
+[21:49:35] Fixed 3 duplicate /gene - gatY_1 gatY_2 gatY_3
+[21:49:35] Fixed 2 duplicate /gene - tsx_1 tsx_2
+[21:49:35] Fixed 3 duplicate /gene - bhsA_1 bhsA_2 bhsA_3
+[21:49:35] Fixed 2 duplicate /gene - ubiJ_1 ubiJ_2
+[21:49:35] Fixed 2 duplicate /gene - ccmH_1 ccmH_2
+[21:49:35] Fixed 2 duplicate /gene - gcl_1 gcl_2
+[21:49:35] Fixed 2 duplicate /gene - fliR_1 fliR_2
+[21:49:35] Fixed 2 duplicate /gene - ecfA1_1 ecfA1_2
+[21:49:35] Fixed 3 duplicate /gene - rbsB_1 rbsB_2 rbsB_3
+[21:49:35] Fixed 2 duplicate /gene - prfA_1 prfA_2
+[21:49:35] Fixed 2 duplicate /gene - bglH_1 bglH_2
+[21:49:35] Fixed 2 duplicate /gene - lon_1 lon_2
+[21:49:35] Fixed 2 duplicate /gene - relE_1 relE_2
+[21:49:35] Fixed 2 duplicate /gene - abaF_1 abaF_2
+[21:49:35] Fixed 2 duplicate /gene - bioD1_1 bioD1_2
+[21:49:35] Fixed 2 duplicate /gene - fimC_1 fimC_2
+[21:49:35] Fixed 2 duplicate /gene - proQ_1 proQ_2
+[21:49:35] Fixed 2 duplicate /gene - melR_1 melR_2
+[21:49:35] Fixed 3 duplicate /gene - manZ_1 manZ_2 manZ_3
+[21:49:35] Fixed 2 duplicate /gene - codB_1 codB_2
+[21:49:35] Fixed 2 duplicate /gene - lolD_1 lolD_2
+[21:49:35] Fixed 2 duplicate /gene - acrR_1 acrR_2
+[21:49:35] Fixed 2 duplicate /gene - ycjY_1 ycjY_2
+[21:49:35] Fixed 2 duplicate /gene - acpP_1 acpP_2
+[21:49:35] Fixed 2 duplicate /gene - pitA_1 pitA_2
+[21:49:35] Fixed 2 duplicate /gene - gntK_1 gntK_2
+[21:49:35] Fixed 2 duplicate /gene - nlpD_1 nlpD_2
+[21:49:35] Fixed 3 duplicate /gene - fixB_1 fixB_2 fixB_3
+[21:49:35] Fixed 2 duplicate /gene - higB_1 higB_2
+[21:49:35] Fixed 2 duplicate /gene - dgoA_1 dgoA_2
+[21:49:35] Fixed 2 duplicate /gene - kduD_1 kduD_2
+[21:49:35] Fixed 2 duplicate /gene - trmH_1 trmH_2
+[21:49:35] Fixed 2 duplicate /gene - aspT_1 aspT_2
+[21:49:35] Fixed 2 duplicate /gene - tmk_1 tmk_2
+[21:49:35] Fixed 2 duplicate /gene - nanR_1 nanR_2
+[21:49:35] Fixed 2 duplicate /gene - fdnH_1 fdnH_2
+[21:49:35] Fixed 2 duplicate /gene - gadX_1 gadX_2
+[21:49:35] Fixed 2 duplicate /gene - cntO_1 cntO_2
+[21:49:35] Fixed 3 duplicate /gene - yahB_1 yahB_2 yahB_3
+[21:49:35] Fixed 2 duplicate /gene - ccmF_1 ccmF_2
+[21:49:35] Fixed 2 duplicate /gene - pduV_1 pduV_2
+[21:49:35] Fixed 2 duplicate /gene - dmsB_1 dmsB_2
+[21:49:35] Fixed 2 duplicate /gene - artM_1 artM_2
+[21:49:35] Fixed 2 duplicate /gene - higA_1 higA_2
+[21:49:35] Fixed 2 duplicate /gene - coaA_1 coaA_2
+[21:49:35] Fixed 2 duplicate /gene - pphA_1 pphA_2
+[21:49:35] Fixed 2 duplicate /gene - fimH_1 fimH_2
+[21:49:35] Fixed 3 duplicate /gene - ydeO_1 ydeO_2 ydeO_3
+[21:49:35] Fixed 2 duplicate /gene - psuK_1 psuK_2
+[21:49:35] Fixed 2 duplicate /gene - ttdT_1 ttdT_2
+[21:49:35] Fixed 2 duplicate /gene - sucC_1 sucC_2
+[21:49:35] Fixed 3 duplicate /gene - ydcV_1 ydcV_2 ydcV_3
+[21:49:35] Fixed 2 duplicate /gene - fdoG_1 fdoG_2
+[21:49:35] Fixed 2 duplicate /gene - fryB_1 fryB_2
+[21:49:35] Fixed 2 duplicate /gene - dadA_1 dadA_2
+[21:49:35] Fixed 3 duplicate /gene - intS_1 intS_2 intS_3
+[21:49:35] Fixed 2 duplicate /gene - bioF_1 bioF_2
+[21:49:35] Fixed 2 duplicate /gene - lysO_1 lysO_2
+[21:49:35] Fixed 2 duplicate /gene - lutA_1 lutA_2
+[21:49:35] Fixed 2 duplicate /gene - hcaR_1 hcaR_2
+[21:49:35] Fixed 2 duplicate /gene - pduA_1 pduA_2
+[21:49:35] Fixed 2 duplicate /gene - emrB_1 emrB_2
+[21:49:35] Fixed 2 duplicate /gene - ydjZ_1 ydjZ_2
+[21:49:35] Fixed 2 duplicate /gene - chbC_1 chbC_2
+[21:49:35] Fixed 2 duplicate /gene - ompX_1 ompX_2
+[21:49:35] Fixed 2 duplicate /gene - ydiV_1 ydiV_2
+[21:49:35] Fixed 2 duplicate /gene - slp_1 slp_2
+[21:49:35] Fixed 2 duplicate /gene - clpP_1 clpP_2
+[21:49:35] Fixed 2 duplicate /gene - clpV1_1 clpV1_2
+[21:49:35] Fixed 2 duplicate /gene - emrA_1 emrA_2
+[21:49:35] Fixed 2 duplicate /gene - fimG_1 fimG_2
+[21:49:35] Fixed 2 duplicate /gene - ydjE_1 ydjE_2
+[21:49:35] Fixed 4 duplicate /gene - rbsA_1 rbsA_2 rbsA_3 rbsA_4
+[21:49:35] Fixed 2 duplicate /gene - flgE_1 flgE_2
+[21:49:35] Fixed 2 duplicate /gene - rsxC_1 rsxC_2
+[21:49:35] Fixed 2 duplicate /gene - dmsC_1 dmsC_2
+[21:49:35] Fixed 2 duplicate /gene - hflC_1 hflC_2
+[21:49:35] Fixed 2 duplicate /gene - glpG_1 glpG_2
+[21:49:35] Fixed 2 duplicate /gene - mprA_1 mprA_2
+[21:49:35] Fixed 3 duplicate /gene - fruA_1 fruA_2 fruA_3
+[21:49:35] Fixed 2 duplicate /gene - mlc_1 mlc_2
+[21:49:35] Fixed 2 duplicate /gene - yvgN_1 yvgN_2
+[21:49:35] Fixed 4 duplicate /gene - hyfA_1 hyfA_2 hyfA_3 hyfA_4
+[21:49:35] Fixed 2 duplicate /gene - caiA_1 caiA_2
+[21:49:35] Fixed 2 duplicate /gene - mtlA_1 mtlA_2
+[21:49:35] Fixed 3 duplicate /gene - dctM_1 dctM_2 dctM_3
+[21:49:35] Fixed 2 duplicate /gene - dnaB_1 dnaB_2
+[21:49:35] Fixed 2 duplicate /gene - dnaK_1 dnaK_2
+[21:49:35] Fixed 4 duplicate /gene - hcpA_1 hcpA_2 hcpA_3 hcpA_4
+[21:49:35] Fixed 2 duplicate /gene - repB_1 repB_2
+[21:49:35] Fixed 2 duplicate /gene - adhE_1 adhE_2
+[21:49:35] Fixed 2 duplicate /gene - cra_1 cra_2
+[21:49:35] Fixed 2 duplicate /gene - mtlK_1 mtlK_2
+[21:49:35] Fixed 3 duplicate /gene - sorB_1 sorB_2 sorB_3
+[21:49:35] Fixed 2 duplicate /gene - yohK_1 yohK_2
+[21:49:35] Fixed 2 duplicate /gene - dinI_1 dinI_2
+[21:49:35] Fixed 3 duplicate /gene - fimF_1 fimF_2 fimF_3
+[21:49:35] Fixed 2 duplicate /gene - btuB_1 btuB_2
+[21:49:35] Fixed 2 duplicate /gene - cutD_1 cutD_2
+[21:49:35] Fixed 2 duplicate /gene - dgoK1_1 dgoK1_2
+[21:49:35] Fixed 2 duplicate /gene - COQ5_1 COQ5_2
+[21:49:35] Fixed 2 duplicate /gene - sgrR_1 sgrR_2
+[21:49:35] Fixed 5 duplicate /gene - rbsC_1 rbsC_2 rbsC_3 rbsC_4 rbsC_5
+[21:49:35] Fixed 2 duplicate /gene - fruK_1 fruK_2
+[21:49:35] Fixed 2 duplicate /gene - ligA_1 ligA_2
+[21:49:35] Fixed 2 duplicate /gene - prs_1 prs_2
+[21:49:35] Fixed 3 duplicate /gene - gatC_1 gatC_2 gatC_3
+[21:49:35] Fixed 2 duplicate /gene - fliD_1 fliD_2
+[21:49:35] Fixed 2 duplicate /gene - cspG_1 cspG_2
+[21:49:35] Fixed 2 duplicate /gene - malX_1 malX_2
+[21:49:35] Fixed 5 duplicate /gene - srlR_1 srlR_2 srlR_3 srlR_4 srlR_5
+[21:49:35] Fixed 2 duplicate /gene - dapA_1 dapA_2
+[21:49:35] Fixed 2 duplicate /gene - fliP_1 fliP_2
+[21:49:35] Fixed 2 duplicate /gene - epsF_1 epsF_2
+[21:49:35] Fixed 2 duplicate /gene - ftsA_1 ftsA_2
+[21:49:35] Fixed 2 duplicate /gene - sapB_1 sapB_2
+[21:49:35] Fixed 2 duplicate /gene - fbaA_1 fbaA_2
+[21:49:35] Fixed 2 duplicate /gene - fliE_1 fliE_2
+[21:49:35] Fixed 2 duplicate /gene - ompA_1 ompA_2
+[21:49:35] Fixed 4 duplicate /gene - arnC_1 arnC_2 arnC_3 arnC_4
+[21:49:35] Fixed 2 duplicate /gene - betI_1 betI_2
+[21:49:35] Fixed 2 duplicate /gene - lptB_1 lptB_2
+[21:49:35] Fixed 2 duplicate /gene - hxlB_1 hxlB_2
+[21:49:35] Fixed 3 duplicate /gene - rusA_1 rusA_2 rusA_3
+[21:49:35] Fixed 2 duplicate /gene - flhB_1 flhB_2
+[21:49:35] Fixed 2 duplicate /gene - cusC_1 cusC_2
+[21:49:35] Fixed 2 duplicate /gene - fliG_1 fliG_2
+[21:49:35] Fixed 2 duplicate /gene - nhaK_1 nhaK_2
+[21:49:35] Fixed 2 duplicate /gene - ampG_1 ampG_2
+[21:49:35] Fixed 2 duplicate /gene - nimR_1 nimR_2
+[21:49:35] Fixed 2 duplicate /gene - ompD_1 ompD_2
+[21:49:35] Fixed 2 duplicate /gene - dkgB_1 dkgB_2
+[21:49:35] Fixed 2 duplicate /gene - fliF_1 fliF_2
+[21:49:35] Fixed 2 duplicate /gene - flgL_1 flgL_2
+[21:49:35] Fixed 2 duplicate /gene - pncC_1 pncC_2
+[21:49:35] Fixed 2 duplicate /gene - higB-2_1 higB-2_2
+[21:49:35] Fixed 2 duplicate /gene - rspA_1 rspA_2
+[21:49:35] Fixed 3 duplicate /gene - btuD_1 btuD_2 btuD_3
+[21:49:35] Fixed 2 duplicate /gene - kefC_1 kefC_2
+[21:49:35] Fixed 2 duplicate /gene - yhaJ_1 yhaJ_2
+[21:49:35] Fixed 2 duplicate /gene - rhlE_1 rhlE_2
+[21:49:35] Fixed 2 duplicate /gene - dppB_1 dppB_2
+[21:49:35] Fixed 2 duplicate /gene - sbmC_1 sbmC_2
+[21:49:35] Fixed 2 duplicate /gene - fimA_1 fimA_2
+[21:49:35] Fixed 2 duplicate /gene - epsE_1 epsE_2
+[21:49:35] Fixed 3 duplicate /gene - gntR_1 gntR_2 gntR_3
+[21:49:35] Fixed 4 duplicate /gene - arcC1_1 arcC1_2 arcC1_3 arcC1_4
+[21:49:35] Fixed 2 duplicate /gene - fliS_1 fliS_2
+[21:49:35] Fixed 2 duplicate /gene - manX_1 manX_2
+[21:49:35] Fixed 3 duplicate /gene - proA_1 proA_2 proA_3
+[21:49:35] Fixed 4 duplicate /gene - fabG_1 fabG_2 fabG_3 fabG_4
+[21:49:35] Fixed 2 duplicate /gene - nagB_1 nagB_2
+[21:49:35] Fixed 3 duplicate /gene - ygcS_1 ygcS_2 ygcS_3
+[21:49:35] Fixed 2 duplicate /gene - astD_1 astD_2
+[21:49:35] Fixed 2 duplicate /gene - tktA_1 tktA_2
+[21:49:35] Fixed 2 duplicate /gene - kgtP_1 kgtP_2
+[21:49:35] Fixed 2 duplicate /gene - rdgC_1 rdgC_2
+[21:49:35] Fixed 2 duplicate /gene - pdeH_1 pdeH_2
+[21:49:35] Fixed 3 duplicate /gene - kdgK_1 kdgK_2 kdgK_3
+[21:49:35] Fixed 4 duplicate /gene - dmlR_1 dmlR_2 dmlR_3 dmlR_4
+[21:49:35] Fixed 2 duplicate /gene - dam_1 dam_2
+[21:49:35] Fixed 2 duplicate /gene - pal_1 pal_2
+[21:49:35] Fixed 2 duplicate /gene - lldR_1 lldR_2
+[21:49:35] Fixed 2 duplicate /gene - argE_1 argE_2
+[21:49:35] Fixed 2 duplicate /gene - ftnA_1 ftnA_2
+[21:49:35] Fixed 2 duplicate /gene - flgB_1 flgB_2
+[21:49:35] Fixed 3 duplicate /gene - lpfA_1 lpfA_2 lpfA_3
+[21:49:35] Fixed 2 duplicate /gene - flgG_1 flgG_2
+[21:49:35] Fixed 3 duplicate /gene - pdhR_1 pdhR_2 pdhR_3
+[21:49:35] Fixed 2 duplicate /gene - pncA_1 pncA_2
+[21:49:35] Fixed 2 duplicate /gene - glxR_1 glxR_2
+[21:49:35] Fixed 3 duplicate /gene - adhB_1 adhB_2 adhB_3
+[21:49:35] Fixed 2 duplicate /gene - malY_1 malY_2
+[21:49:35] Fixed 2 duplicate /gene - gspL_1 gspL_2
+[21:49:35] Fixed 2 duplicate /gene - oleD_1 oleD_2
+[21:49:35] Fixed 2 duplicate /gene - chuR_1 chuR_2
+[21:49:35] Fixed 3 duplicate /gene - gatA_1 gatA_2 gatA_3
+[21:49:35] Fixed 2 duplicate /gene - topA_1 topA_2
+[21:49:35] Fixed 2 duplicate /gene - hns_1 hns_2
+[21:49:35] Fixed 3 duplicate /gene - sorC_1 sorC_2 sorC_3
+[21:49:35] Fixed 2 duplicate /gene - aaeB_1 aaeB_2
+[21:49:35] Fixed 3 duplicate /gene - fixA_1 fixA_2 fixA_3
+[21:49:35] Fixed 2 duplicate /gene - argR_1 argR_2
+[21:49:35] Fixed 2 duplicate /gene - mdh_1 mdh_2
+[21:49:35] Fixed 2 duplicate /gene - hyi_1 hyi_2
+[21:49:35] Fixed 2 duplicate /gene - mggB_1 mggB_2
+[21:49:35] Fixed 2 duplicate /gene - narL_1 narL_2
+[21:49:35] Fixed 2 duplicate /gene - kdsD_1 kdsD_2
+[21:49:35] Fixed 2 duplicate /gene - ssuC_1 ssuC_2
+[21:49:35] Fixed 6 duplicate /gene - rhaR_1 rhaR_2 rhaR_3 rhaR_4 rhaR_5 rhaR_6
+[21:49:35] Fixed 2 duplicate /gene - exuT_1 exuT_2
+[21:49:35] Fixed 2 duplicate /gene - papC_1 papC_2
+[21:49:35] Fixed 3 duplicate /gene - ssb_1 ssb_2 ssb_3
+[21:49:35] Fixed 4 duplicate /gene - xerC_1 xerC_2 xerC_3 xerC_4
+[21:49:35] Fixed 3 duplicate /gene - pgrR_1 pgrR_2 pgrR_3
+[21:49:35] Fixed 2 duplicate /gene - bcr_1 bcr_2
+[21:49:35] Fixed 2 duplicate /gene - mepS_1 mepS_2
+[21:49:35] Fixed 2 duplicate /gene - ydgA_1 ydgA_2
+[21:49:35] Fixed 2 duplicate /gene - acrB_1 acrB_2
+[21:49:35] Fixed 2 duplicate /gene - rhtC_1 rhtC_2
+[21:49:35] Fixed 2 duplicate /gene - pspB_1 pspB_2
+[21:49:35] Fixed 4 duplicate /gene - intA_1 intA_2 intA_3 intA_4
+[21:49:35] Fixed 2 duplicate /gene - flgC_1 flgC_2
+[21:49:35] Fixed 2 duplicate /gene - rpe_1 rpe_2
+[21:49:35] Fixed 2 duplicate /gene - icd_1 icd_2
+[21:49:35] Fixed 2 duplicate /gene - dhaL_1 dhaL_2
+[21:49:35] Fixed 2 duplicate /gene - ydhX_1 ydhX_2
+[21:49:35] Fixed 2 duplicate /gene - glcR_1 glcR_2
+[21:49:35] Fixed 2 duplicate /gene - mak_1 mak_2
+[21:49:35] Fixed 3 duplicate /gene - oxyR_1 oxyR_2 oxyR_3
+[21:49:35] Fixed 2 duplicate /gene - ydiF_1 ydiF_2
+[21:49:35] Fixed 2 duplicate /gene - dppD_1 dppD_2
+[21:49:35] Fixed 2 duplicate /gene - arcA_1 arcA_2
+[21:49:35] Fixed 2 duplicate /gene - sucD_1 sucD_2
+[21:49:35] Fixed 2 duplicate /gene - rtcB_1 rtcB_2
+[21:49:35] Fixed 291 colliding /gene names.
+[21:49:35] Adding /locus_tag identifiers
+[21:49:35] Assigned 4818 locus_tags to CDS and RNA features.
+[21:49:35] Writing outputs to PROKKA_03292020/
+[21:49:44] Generating annotation statistics file
+[21:49:44] Generating Genbank and Sequin files
+[21:49:44] Running: tbl2asn -V b -a r10k -l paired-ends -M n -N 1 -y 'Annotated using prokka 1.14.6 from https://github.com/tseemann/prokka' -Z PROKKA_03292020\/PROKKA_03292020\.err -i PROKKA_03292020\/PROKKA_03292020\.fsa 2> /dev/null
+[21:49:55] Deleting unwanted file: PROKKA_03292020/errorsummary.val
+[21:49:55] Deleting unwanted file: PROKKA_03292020/PROKKA_03292020.dr
+[21:49:55] Deleting unwanted file: PROKKA_03292020/PROKKA_03292020.fixedproducts
+[21:49:55] Deleting unwanted file: PROKKA_03292020/PROKKA_03292020.ecn
+[21:49:55] Deleting unwanted file: PROKKA_03292020/PROKKA_03292020.val
+[21:49:55] Repairing broken .GBK output that tbl2asn produces...
+[21:49:55] Running: sed 's/COORDINATES: profile/COORDINATES:profile/' < PROKKA_03292020\/PROKKA_03292020\.gbf > PROKKA_03292020\/PROKKA_03292020\.gbk
+[21:49:56] Deleting unwanted file: PROKKA_03292020/PROKKA_03292020.gbf
+[21:49:56] Output files:
+[21:49:56] PROKKA_03292020/PROKKA_03292020.ffn
+[21:49:56] PROKKA_03292020/PROKKA_03292020.tsv
+[21:49:56] PROKKA_03292020/PROKKA_03292020.fna
+[21:49:56] PROKKA_03292020/PROKKA_03292020.faa
+[21:49:56] PROKKA_03292020/PROKKA_03292020.err
+[21:49:56] PROKKA_03292020/PROKKA_03292020.gbk
+[21:49:56] PROKKA_03292020/PROKKA_03292020.tbl
+[21:49:56] PROKKA_03292020/PROKKA_03292020.gff
+[21:49:56] PROKKA_03292020/PROKKA_03292020.fsa
+[21:49:56] PROKKA_03292020/PROKKA_03292020.log
+[21:49:56] PROKKA_03292020/PROKKA_03292020.sqn
+[21:49:56] PROKKA_03292020/PROKKA_03292020.txt
+[21:49:56] Annotation finished successfully.
+[21:49:56] Walltime used: 2.60 minutes
+[21:49:56] If you use this result please cite the Prokka paper:
+[21:49:56] Seemann T (2014) Prokka: rapid prokaryotic genome annotation. Bioinformatics. 30(14):2068-9.
+[21:49:56] Type 'prokka --citation' for more details.
+[21:49:56] Thank you, come again.
+[info] Replication complete
+[info] Starting verification
+[ok] Process 28486 (mkdir reads) executed
+[ok] Process 28490 (fastq-dump --split-files SRR9847874) executed
+[ok] Process 28528 (python /home/anthonyw/anaconda3/bin/trimmomatic PE SRR9847874_1.fastq SRR9847874_2.fastq out_fwd_paired.fq out_fwd_unpaired.fq out_rev_paired.fq out_rev_unpaired.fq ILLUMINACLIP:TruSeq3-PE.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36 -threads 6) executed
+[ok] Process 28601 (mkdir assembly) executed
+[ok] Process 28605 (python /home/anthonyw/anaconda3/bin/spades.py --pe1-1 ../reads/out_fwd_paired.fq --pe1-2 ../reads/out_rev_paired.fq --pe1-s ../reads/out_fwd_unpaired.fq --pe1-s ../reads/out_rev_unpaired.fq -k 77 --tmp-dir /tmp/spades -o output) executed
+[ok] Process 30826 (mkdir annotation) executed
+[ok] Process 30830 (perl /home/anthonyw/anaconda3/bin/prokka ../assembly/output/scaffolds.fasta --centre C --locustag L --force) executed
+[ok] Process 28532 (java -Xms512m -Xmx1g -jar /home/anthonyw/anaconda3/share/trimmomatic-0.39-1/trimmomatic.jar PE SRR9847874_1.fastq SRR9847874_2.fastq out_fwd_paired.fq out_fwd_unpaired.fq out_rev_paired.fq out_rev_unpaired.fq ILLUMINACLIP:TruSeq3-PE.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36 -threads 6) executed
+[ok] Process 28533 (java -Xms512m -Xmx1g -jar /home/anthonyw/anaconda3/share/trimmomatic-0.39-1/trimmomatic.jar PE SRR9847874_1.fastq SRR9847874_2.fastq out_fwd_paired.fq out_fwd_unpaired.fq out_rev_paired.fq out_rev_unpaired.fq ILLUMINACLIP:TruSeq3-PE.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36 -threads 6) executed
+[ok] Process 28555 (java -Xms512m -Xmx1g -jar /home/anthonyw/anaconda3/share/trimmomatic-0.39-1/trimmomatic.jar PE SRR9847874_1.fastq SRR9847874_2.fastq out_fwd_paired.fq out_fwd_unpaired.fq out_rev_paired.fq out_rev_unpaired.fq ILLUMINACLIP:TruSeq3-PE.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36 -threads 6) executed
+[ok] Process 28556 (java -Xms512m -Xmx1g -jar /home/anthonyw/anaconda3/share/trimmomatic-0.39-1/trimmomatic.jar PE SRR9847874_1.fastq SRR9847874_2.fastq out_fwd_paired.fq out_fwd_unpaired.fq out_rev_paired.fq out_rev_unpaired.fq ILLUMINACLIP:TruSeq3-PE.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36 -threads 6) executed
+[ok] Process 28557 (java -Xms512m -Xmx1g -jar /home/anthonyw/anaconda3/share/trimmomatic-0.39-1/trimmomatic.jar PE SRR9847874_1.fastq SRR9847874_2.fastq out_fwd_paired.fq out_fwd_unpaired.fq out_rev_paired.fq out_rev_unpaired.fq ILLUMINACLIP:TruSeq3-PE.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36 -threads 6) executed
+[ok] Process 28558 (java -Xms512m -Xmx1g -jar /home/anthonyw/anaconda3/share/trimmomatic-0.39-1/trimmomatic.jar PE SRR9847874_1.fastq SRR9847874_2.fastq out_fwd_paired.fq out_fwd_unpaired.fq out_rev_paired.fq out_rev_unpaired.fq ILLUMINACLIP:TruSeq3-PE.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36 -threads 6) executed
+[ok] Process 28611 (/home/anthonyw/anaconda3/share/spades-3.13.1-0/bin/spades-hammer $$$/assembly/output/corrected/configs/config.info) executed
+[ok] Process 29254 (python /home/anthonyw/anaconda3/bin/spades.py --pe1-1 ../reads/out_fwd_paired.fq --pe1-2 ../reads/out_rev_paired.fq --pe1-s ../reads/out_fwd_unpaired.fq --pe1-s ../reads/out_rev_unpaired.fq -k 77 --tmp-dir /tmp/spades -o output) executed
+[ok] Process 29255 (python /home/anthonyw/anaconda3/bin/spades.py --pe1-1 ../reads/out_fwd_paired.fq --pe1-2 ../reads/out_rev_paired.fq --pe1-s ../reads/out_fwd_unpaired.fq --pe1-s ../reads/out_rev_unpaired.fq -k 77 --tmp-dir /tmp/spades -o output) executed
+[ok] Process 29256 (python /home/anthonyw/anaconda3/bin/spades.py --pe1-1 ../reads/out_fwd_paired.fq --pe1-2 ../reads/out_rev_paired.fq --pe1-s ../reads/out_fwd_unpaired.fq --pe1-s ../reads/out_rev_unpaired.fq -k 77 --tmp-dir /tmp/spades -o output) executed
+[ok] Process 29257 (python /home/anthonyw/anaconda3/bin/spades.py --pe1-1 ../reads/out_fwd_paired.fq --pe1-2 ../reads/out_rev_paired.fq --pe1-s ../reads/out_fwd_unpaired.fq --pe1-s ../reads/out_rev_unpaired.fq -k 77 --tmp-dir /tmp/spades -o output) executed
+[ok] Process 29258 (python /home/anthonyw/anaconda3/bin/spades.py --pe1-1 ../reads/out_fwd_paired.fq --pe1-2 ../reads/out_rev_paired.fq --pe1-s ../reads/out_fwd_unpaired.fq --pe1-s ../reads/out_rev_unpaired.fq -k 77 --tmp-dir /tmp/spades -o output) executed
+[ok] Process 29318 (/home/anthonyw/anaconda3/share/spades-3.13.1-0/bin/spades-core $$$/assembly/output/K77/configs/config.info) executed
+[ok] Process 30835 (mkdir -p PROKKA_03292020) executed
+[ok] Process 30969 (sh -c cat PROKKA_03292020\/PROKKA_03292020\.IS\.tmp\.30830\.faa | parallel --gnu --tmpdir $$$/tmp --plain -j 8 --block 94265 --recstart '>' --pipe blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/IS -evalue 1e-30 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no > PROKKA_03292020\/PROKKA_03292020\.IS\.tmp\.30830\.blast 2> /dev/null) executed
+[ok] Process 31083 (sh -c cat PROKKA_03292020\/PROKKA_03292020\.AMR\.tmp\.30830\.faa | parallel --gnu --tmpdir $$$/tmp --plain -j 8 --block 93546 --recstart '>' --pipe blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/AMR -evalue 9.99999999999999e-301 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no > PROKKA_03292020\/PROKKA_03292020\.AMR\.tmp\.30830\.blast 2> /dev/null) executed
+[ok] Process 31197 (sh -c cat PROKKA_03292020\/PROKKA_03292020\.sprot\.tmp\.30830\.faa | parallel --gnu --tmpdir $$$/tmp --plain -j 8 --block 93546 --recstart '>' --pipe blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/sprot -evalue 1e-09 -qcov_hsp_perc 80 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no > PROKKA_03292020\/PROKKA_03292020\.sprot\.tmp\.30830\.blast 2> /dev/null) executed
+[ok] Process 31340 (sh -c cat PROKKA_03292020\/PROKKA_03292020\.HAMAP\.hmm\.tmp\.30830\.faa | parallel --gnu --tmpdir $$$/tmp --plain -j 8 --block 19274 --recstart '>' --pipe hmmscan --noali --notextw --acc -E 1e-09 --cpu 1 /home/anthonyw/anaconda3/db/hmm/HAMAP.hmm /dev/stdin > PROKKA_03292020\/PROKKA_03292020\.HAMAP\.hmm\.tmp\.30830\.hmmer3 2> /dev/null) executed
+[ok] Process 32632 (sh -c tbl2asn -V b -a r10k -l paired-ends -M n -N 1 -y 'Annotated using prokka 1.14.6 from https://github.com/tseemann/prokka' -Z PROKKA_03292020\/PROKKA_03292020\.err -i PROKKA_03292020\/PROKKA_03292020\.fsa 2> /dev/null) executed
+[ok] Process 29263 (gzip -f -7 $$$/assembly/output/corrected/out_fwd_paired.00.0_0.cor.fastq) executed
+[ok] Process 29262 (gzip -f -7 $$$/assembly/output/corrected/out_rev_paired.00.0_0.cor.fastq) executed
+[ok] Process 29264 (gzip -f -7 $$$/assembly/output/corrected/out__unpaired.00.0_0.cor.fastq) executed
+[ok] Process 29266 (gzip -f -7 $$$/assembly/output/corrected/out_fwd_unpaired.00.0_1.cor.fastq) executed
+[ok] Process 29265 (gzip -f -7 $$$/assembly/output/corrected/out_rev_unpaired.00.0_2.cor.fastq) executed
+[ok] Process 30970 (cat PROKKA_03292020/PROKKA_03292020.IS.tmp.30830.faa) executed
+[ok] Process 30971 (perl /home/anthonyw/anaconda3/bin/parallel --gnu --tmpdir $$$/tmp --plain -j 8 --block 94265 --recstart > --pipe blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/IS -evalue 1e-30 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31084 (cat PROKKA_03292020/PROKKA_03292020.AMR.tmp.30830.faa) executed
+[ok] Process 31085 (perl /home/anthonyw/anaconda3/bin/parallel --gnu --tmpdir $$$/tmp --plain -j 8 --block 93546 --recstart > --pipe blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/AMR -evalue 9.99999999999999e-301 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31198 (cat PROKKA_03292020/PROKKA_03292020.sprot.tmp.30830.faa) executed
+[ok] Process 31199 (perl /home/anthonyw/anaconda3/bin/parallel --gnu --tmpdir $$$/tmp --plain -j 8 --block 93546 --recstart > --pipe blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/sprot -evalue 1e-09 -qcov_hsp_perc 80 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31341 (cat PROKKA_03292020/PROKKA_03292020.HAMAP.hmm.tmp.30830.faa) executed
+[ok] Process 31342 (perl /home/anthonyw/anaconda3/bin/parallel --gnu --tmpdir $$$/tmp --plain -j 8 --block 19274 --recstart > --pipe hmmscan --noali --notextw --acc -E 1e-09 --cpu 1 /home/anthonyw/anaconda3/db/hmm/HAMAP.hmm /dev/stdin) executed
+[ok] Process 32633 (tbl2asn -V b -a r10k -l paired-ends -M n -N 1 -y Annotated using prokka 1.14.6 from https://github.com/tseemann/prokka -Z PROKKA_03292020/PROKKA_03292020.err -i PROKKA_03292020/PROKKA_03292020.fsa) executed
+[ok] Process 30983 (/bin/sh -c perl -e 'if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)}' /bin/sh -c 'blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/IS -evalue 1e-30 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no') executed
+[ok] Process 30985 (/bin/sh -c perl -e 'if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)}' /bin/sh -c 'blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/IS -evalue 1e-30 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no') executed
+[ok] Process 30987 (/bin/sh -c perl -e 'if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)}' /bin/sh -c 'blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/IS -evalue 1e-30 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no') executed
+[ok] Process 30989 (/bin/sh -c perl -e 'if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)}' /bin/sh -c 'blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/IS -evalue 1e-30 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no') executed
+[ok] Process 30991 (/bin/sh -c perl -e 'if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)}' /bin/sh -c 'blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/IS -evalue 1e-30 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no') executed
+[ok] Process 30993 (/bin/sh -c perl -e 'if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)}' /bin/sh -c 'blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/IS -evalue 1e-30 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no') executed
+[ok] Process 30995 (/bin/sh -c perl -e 'if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)}' /bin/sh -c 'blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/IS -evalue 1e-30 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no') executed
+[ok] Process 30997 (/bin/sh -c perl -e 'if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)}' /bin/sh -c 'blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/IS -evalue 1e-30 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no') executed
+[ok] Process 31031 (/bin/sh -c perl -e 'if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)}' /bin/sh -c 'blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/IS -evalue 1e-30 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no') executed
+[ok] Process 31036 (/bin/sh -c perl -e 'if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)}' /bin/sh -c 'blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/IS -evalue 1e-30 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no') executed
+[ok] Process 31038 (/bin/sh -c perl -e 'if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)}' /bin/sh -c 'blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/IS -evalue 1e-30 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no') executed
+[ok] Process 31043 (/bin/sh -c perl -e 'if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)}' /bin/sh -c 'blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/IS -evalue 1e-30 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no') executed
+[ok] Process 31048 (/bin/sh -c perl -e 'if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)}' /bin/sh -c 'blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/IS -evalue 1e-30 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no') executed
+[ok] Process 31050 (/bin/sh -c perl -e 'if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)}' /bin/sh -c 'blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/IS -evalue 1e-30 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no') executed
+[ok] Process 31055 (/bin/sh -c perl -e 'if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)}' /bin/sh -c 'blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/IS -evalue 1e-30 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no') executed
+[ok] Process 31066 (/bin/sh -c perl -e 'if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)}' /bin/sh -c 'blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/IS -evalue 1e-30 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no') executed
+[ok] Process 31075 (/bin/sh -c perl -e 'if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)}' /bin/sh -c 'blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/IS -evalue 1e-30 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no') executed
+[ok] Process 31097 (/bin/sh -c perl -e 'if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)}' /bin/sh -c 'blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/AMR -evalue 9.99999999999999e-301 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no') executed
+[ok] Process 31099 (/bin/sh -c perl -e 'if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)}' /bin/sh -c 'blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/AMR -evalue 9.99999999999999e-301 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no') executed
+[ok] Process 31101 (/bin/sh -c perl -e 'if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)}' /bin/sh -c 'blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/AMR -evalue 9.99999999999999e-301 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no') executed
+[ok] Process 31103 (/bin/sh -c perl -e 'if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)}' /bin/sh -c 'blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/AMR -evalue 9.99999999999999e-301 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no') executed
+[ok] Process 31105 (/bin/sh -c perl -e 'if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)}' /bin/sh -c 'blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/AMR -evalue 9.99999999999999e-301 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no') executed
+[ok] Process 31107 (/bin/sh -c perl -e 'if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)}' /bin/sh -c 'blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/AMR -evalue 9.99999999999999e-301 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no') executed
+[ok] Process 31109 (/bin/sh -c perl -e 'if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)}' /bin/sh -c 'blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/AMR -evalue 9.99999999999999e-301 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no') executed
+[ok] Process 31111 (/bin/sh -c perl -e 'if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)}' /bin/sh -c 'blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/AMR -evalue 9.99999999999999e-301 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no') executed
+[ok] Process 31145 (/bin/sh -c perl -e 'if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)}' /bin/sh -c 'blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/AMR -evalue 9.99999999999999e-301 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no') executed
+[ok] Process 31150 (/bin/sh -c perl -e 'if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)}' /bin/sh -c 'blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/AMR -evalue 9.99999999999999e-301 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no') executed
+[ok] Process 31153 (/bin/sh -c perl -e 'if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)}' /bin/sh -c 'blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/AMR -evalue 9.99999999999999e-301 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no') executed
+[ok] Process 31161 (/bin/sh -c perl -e 'if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)}' /bin/sh -c 'blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/AMR -evalue 9.99999999999999e-301 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no') executed
+[ok] Process 31163 (/bin/sh -c perl -e 'if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)}' /bin/sh -c 'blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/AMR -evalue 9.99999999999999e-301 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no') executed
+[ok] Process 31165 (/bin/sh -c perl -e 'if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)}' /bin/sh -c 'blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/AMR -evalue 9.99999999999999e-301 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no') executed
+[ok] Process 31170 (/bin/sh -c perl -e 'if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)}' /bin/sh -c 'blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/AMR -evalue 9.99999999999999e-301 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no') executed
+[ok] Process 31178 (/bin/sh -c perl -e 'if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)}' /bin/sh -c 'blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/AMR -evalue 9.99999999999999e-301 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no') executed
+[ok] Process 31189 (/bin/sh -c perl -e 'if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)}' /bin/sh -c 'blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/AMR -evalue 9.99999999999999e-301 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no') executed
+[ok] Process 31211 (/bin/sh -c perl -e 'if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)}' /bin/sh -c 'blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/sprot -evalue 1e-09 -qcov_hsp_perc 80 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no') executed
+[ok] Process 31213 (/bin/sh -c perl -e 'if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)}' /bin/sh -c 'blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/sprot -evalue 1e-09 -qcov_hsp_perc 80 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no') executed
+[ok] Process 31215 (/bin/sh -c perl -e 'if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)}' /bin/sh -c 'blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/sprot -evalue 1e-09 -qcov_hsp_perc 80 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no') executed
+[ok] Process 31217 (/bin/sh -c perl -e 'if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)}' /bin/sh -c 'blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/sprot -evalue 1e-09 -qcov_hsp_perc 80 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no') executed
+[ok] Process 31219 (/bin/sh -c perl -e 'if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)}' /bin/sh -c 'blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/sprot -evalue 1e-09 -qcov_hsp_perc 80 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no') executed
+[ok] Process 31221 (/bin/sh -c perl -e 'if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)}' /bin/sh -c 'blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/sprot -evalue 1e-09 -qcov_hsp_perc 80 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no') executed
+[ok] Process 31223 (/bin/sh -c perl -e 'if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)}' /bin/sh -c 'blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/sprot -evalue 1e-09 -qcov_hsp_perc 80 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no') executed
+[ok] Process 31225 (/bin/sh -c perl -e 'if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)}' /bin/sh -c 'blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/sprot -evalue 1e-09 -qcov_hsp_perc 80 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no') executed
+[ok] Process 31270 (/bin/sh -c perl -e 'if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)}' /bin/sh -c 'blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/sprot -evalue 1e-09 -qcov_hsp_perc 80 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no') executed
+[ok] Process 31275 (/bin/sh -c perl -e 'if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)}' /bin/sh -c 'blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/sprot -evalue 1e-09 -qcov_hsp_perc 80 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no') executed
+[ok] Process 31280 (/bin/sh -c perl -e 'if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)}' /bin/sh -c 'blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/sprot -evalue 1e-09 -qcov_hsp_perc 80 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no') executed
+[ok] Process 31288 (/bin/sh -c perl -e 'if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)}' /bin/sh -c 'blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/sprot -evalue 1e-09 -qcov_hsp_perc 80 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no') executed
+[ok] Process 31290 (/bin/sh -c perl -e 'if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)}' /bin/sh -c 'blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/sprot -evalue 1e-09 -qcov_hsp_perc 80 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no') executed
+[ok] Process 31295 (/bin/sh -c perl -e 'if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)}' /bin/sh -c 'blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/sprot -evalue 1e-09 -qcov_hsp_perc 80 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no') executed
+[ok] Process 31300 (/bin/sh -c perl -e 'if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)}' /bin/sh -c 'blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/sprot -evalue 1e-09 -qcov_hsp_perc 80 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no') executed
+[ok] Process 31302 (/bin/sh -c perl -e 'if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)}' /bin/sh -c 'blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/sprot -evalue 1e-09 -qcov_hsp_perc 80 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no') executed
+[ok] Process 31329 (/bin/sh -c perl -e 'if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)}' /bin/sh -c 'blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/sprot -evalue 1e-09 -qcov_hsp_perc 80 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no') executed
+[ok] Process 31354 (/bin/sh -c perl -e 'if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)}' /bin/sh -c 'hmmscan --noali --notextw --acc -E 1e-09 --cpu 1 /home/anthonyw/anaconda3/db/hmm/HAMAP.hmm /dev/stdin') executed
+[ok] Process 31356 (/bin/sh -c perl -e 'if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)}' /bin/sh -c 'hmmscan --noali --notextw --acc -E 1e-09 --cpu 1 /home/anthonyw/anaconda3/db/hmm/HAMAP.hmm /dev/stdin') executed
+[ok] Process 31358 (/bin/sh -c perl -e 'if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)}' /bin/sh -c 'hmmscan --noali --notextw --acc -E 1e-09 --cpu 1 /home/anthonyw/anaconda3/db/hmm/HAMAP.hmm /dev/stdin') executed
+[ok] Process 31360 (/bin/sh -c perl -e 'if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)}' /bin/sh -c 'hmmscan --noali --notextw --acc -E 1e-09 --cpu 1 /home/anthonyw/anaconda3/db/hmm/HAMAP.hmm /dev/stdin') executed
+[ok] Process 31362 (/bin/sh -c perl -e 'if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)}' /bin/sh -c 'hmmscan --noali --notextw --acc -E 1e-09 --cpu 1 /home/anthonyw/anaconda3/db/hmm/HAMAP.hmm /dev/stdin') executed
+[ok] Process 31364 (/bin/sh -c perl -e 'if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)}' /bin/sh -c 'hmmscan --noali --notextw --acc -E 1e-09 --cpu 1 /home/anthonyw/anaconda3/db/hmm/HAMAP.hmm /dev/stdin') executed
+[ok] Process 31366 (/bin/sh -c perl -e 'if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)}' /bin/sh -c 'hmmscan --noali --notextw --acc -E 1e-09 --cpu 1 /home/anthonyw/anaconda3/db/hmm/HAMAP.hmm /dev/stdin') executed
+[ok] Process 31368 (/bin/sh -c perl -e 'if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)}' /bin/sh -c 'hmmscan --noali --notextw --acc -E 1e-09 --cpu 1 /home/anthonyw/anaconda3/db/hmm/HAMAP.hmm /dev/stdin') executed
+[ok] Process 31879 (/bin/sh -c perl -e 'if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)}' /bin/sh -c 'hmmscan --noali --notextw --acc -E 1e-09 --cpu 1 /home/anthonyw/anaconda3/db/hmm/HAMAP.hmm /dev/stdin') executed
+[ok] Process 31910 (/bin/sh -c perl -e 'if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)}' /bin/sh -c 'hmmscan --noali --notextw --acc -E 1e-09 --cpu 1 /home/anthonyw/anaconda3/db/hmm/HAMAP.hmm /dev/stdin') executed
+[ok] Process 31945 (/bin/sh -c perl -e 'if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)}' /bin/sh -c 'hmmscan --noali --notextw --acc -E 1e-09 --cpu 1 /home/anthonyw/anaconda3/db/hmm/HAMAP.hmm /dev/stdin') executed
+[ok] Process 31978 (/bin/sh -c perl -e 'if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)}' /bin/sh -c 'hmmscan --noali --notextw --acc -E 1e-09 --cpu 1 /home/anthonyw/anaconda3/db/hmm/HAMAP.hmm /dev/stdin') executed
+[ok] Process 31989 (/bin/sh -c perl -e 'if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)}' /bin/sh -c 'hmmscan --noali --notextw --acc -E 1e-09 --cpu 1 /home/anthonyw/anaconda3/db/hmm/HAMAP.hmm /dev/stdin') executed
+[ok] Process 32007 (/bin/sh -c perl -e 'if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)}' /bin/sh -c 'hmmscan --noali --notextw --acc -E 1e-09 --cpu 1 /home/anthonyw/anaconda3/db/hmm/HAMAP.hmm /dev/stdin') executed
+[ok] Process 32027 (/bin/sh -c perl -e 'if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)}' /bin/sh -c 'hmmscan --noali --notextw --acc -E 1e-09 --cpu 1 /home/anthonyw/anaconda3/db/hmm/HAMAP.hmm /dev/stdin') executed
+[ok] Process 32047 (/bin/sh -c perl -e 'if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)}' /bin/sh -c 'hmmscan --noali --notextw --acc -E 1e-09 --cpu 1 /home/anthonyw/anaconda3/db/hmm/HAMAP.hmm /dev/stdin') executed
+[ok] Process 32265 (/bin/sh -c perl -e 'if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)}' /bin/sh -c 'hmmscan --noali --notextw --acc -E 1e-09 --cpu 1 /home/anthonyw/anaconda3/db/hmm/HAMAP.hmm /dev/stdin') executed
+[ok] Process 30984 (perl -e if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)} /bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/IS -evalue 1e-30 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 30986 (perl -e if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)} /bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/IS -evalue 1e-30 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 30988 (perl -e if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)} /bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/IS -evalue 1e-30 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 30990 (perl -e if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)} /bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/IS -evalue 1e-30 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 30992 (perl -e if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)} /bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/IS -evalue 1e-30 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 30994 (perl -e if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)} /bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/IS -evalue 1e-30 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 30996 (perl -e if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)} /bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/IS -evalue 1e-30 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31019 (perl -e if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)} /bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/IS -evalue 1e-30 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31033 (perl -e if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)} /bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/IS -evalue 1e-30 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31040 (perl -e if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)} /bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/IS -evalue 1e-30 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31044 (perl -e if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)} /bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/IS -evalue 1e-30 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31051 (perl -e if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)} /bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/IS -evalue 1e-30 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31057 (perl -e if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)} /bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/IS -evalue 1e-30 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31060 (perl -e if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)} /bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/IS -evalue 1e-30 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31063 (perl -e if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)} /bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/IS -evalue 1e-30 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31068 (perl -e if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)} /bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/IS -evalue 1e-30 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31077 (perl -e if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)} /bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/IS -evalue 1e-30 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31098 (perl -e if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)} /bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/AMR -evalue 9.99999999999999e-301 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31100 (perl -e if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)} /bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/AMR -evalue 9.99999999999999e-301 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31102 (perl -e if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)} /bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/AMR -evalue 9.99999999999999e-301 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31104 (perl -e if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)} /bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/AMR -evalue 9.99999999999999e-301 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31106 (perl -e if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)} /bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/AMR -evalue 9.99999999999999e-301 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31108 (perl -e if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)} /bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/AMR -evalue 9.99999999999999e-301 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31110 (perl -e if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)} /bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/AMR -evalue 9.99999999999999e-301 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31135 (perl -e if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)} /bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/AMR -evalue 9.99999999999999e-301 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31147 (perl -e if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)} /bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/AMR -evalue 9.99999999999999e-301 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31155 (perl -e if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)} /bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/AMR -evalue 9.99999999999999e-301 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31158 (perl -e if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)} /bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/AMR -evalue 9.99999999999999e-301 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31167 (perl -e if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)} /bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/AMR -evalue 9.99999999999999e-301 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31171 (perl -e if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)} /bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/AMR -evalue 9.99999999999999e-301 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31175 (perl -e if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)} /bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/AMR -evalue 9.99999999999999e-301 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31180 (perl -e if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)} /bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/AMR -evalue 9.99999999999999e-301 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31183 (perl -e if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)} /bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/AMR -evalue 9.99999999999999e-301 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31191 (perl -e if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)} /bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/AMR -evalue 9.99999999999999e-301 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31212 (perl -e if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)} /bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/sprot -evalue 1e-09 -qcov_hsp_perc 80 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31214 (perl -e if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)} /bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/sprot -evalue 1e-09 -qcov_hsp_perc 80 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31216 (perl -e if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)} /bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/sprot -evalue 1e-09 -qcov_hsp_perc 80 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31218 (perl -e if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)} /bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/sprot -evalue 1e-09 -qcov_hsp_perc 80 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31220 (perl -e if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)} /bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/sprot -evalue 1e-09 -qcov_hsp_perc 80 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31222 (perl -e if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)} /bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/sprot -evalue 1e-09 -qcov_hsp_perc 80 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31224 (perl -e if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)} /bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/sprot -evalue 1e-09 -qcov_hsp_perc 80 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31249 (perl -e if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)} /bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/sprot -evalue 1e-09 -qcov_hsp_perc 80 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31272 (perl -e if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)} /bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/sprot -evalue 1e-09 -qcov_hsp_perc 80 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31277 (perl -e if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)} /bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/sprot -evalue 1e-09 -qcov_hsp_perc 80 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31285 (perl -e if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)} /bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/sprot -evalue 1e-09 -qcov_hsp_perc 80 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31292 (perl -e if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)} /bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/sprot -evalue 1e-09 -qcov_hsp_perc 80 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31297 (perl -e if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)} /bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/sprot -evalue 1e-09 -qcov_hsp_perc 80 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31303 (perl -e if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)} /bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/sprot -evalue 1e-09 -qcov_hsp_perc 80 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31307 (perl -e if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)} /bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/sprot -evalue 1e-09 -qcov_hsp_perc 80 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31309 (perl -e if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)} /bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/sprot -evalue 1e-09 -qcov_hsp_perc 80 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31334 (perl -e if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)} /bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/sprot -evalue 1e-09 -qcov_hsp_perc 80 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31355 (perl -e if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)} /bin/sh -c hmmscan --noali --notextw --acc -E 1e-09 --cpu 1 /home/anthonyw/anaconda3/db/hmm/HAMAP.hmm /dev/stdin) executed
+[ok] Process 31357 (perl -e if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)} /bin/sh -c hmmscan --noali --notextw --acc -E 1e-09 --cpu 1 /home/anthonyw/anaconda3/db/hmm/HAMAP.hmm /dev/stdin) executed
+[ok] Process 31359 (perl -e if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)} /bin/sh -c hmmscan --noali --notextw --acc -E 1e-09 --cpu 1 /home/anthonyw/anaconda3/db/hmm/HAMAP.hmm /dev/stdin) executed
+[ok] Process 31361 (perl -e if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)} /bin/sh -c hmmscan --noali --notextw --acc -E 1e-09 --cpu 1 /home/anthonyw/anaconda3/db/hmm/HAMAP.hmm /dev/stdin) executed
+[ok] Process 31363 (perl -e if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)} /bin/sh -c hmmscan --noali --notextw --acc -E 1e-09 --cpu 1 /home/anthonyw/anaconda3/db/hmm/HAMAP.hmm /dev/stdin) executed
+[ok] Process 31365 (perl -e if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)} /bin/sh -c hmmscan --noali --notextw --acc -E 1e-09 --cpu 1 /home/anthonyw/anaconda3/db/hmm/HAMAP.hmm /dev/stdin) executed
+[ok] Process 31367 (perl -e if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)} /bin/sh -c hmmscan --noali --notextw --acc -E 1e-09 --cpu 1 /home/anthonyw/anaconda3/db/hmm/HAMAP.hmm /dev/stdin) executed
+[ok] Process 31401 (perl -e if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)} /bin/sh -c hmmscan --noali --notextw --acc -E 1e-09 --cpu 1 /home/anthonyw/anaconda3/db/hmm/HAMAP.hmm /dev/stdin) executed
+[ok] Process 31948 (perl -e if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)} /bin/sh -c hmmscan --noali --notextw --acc -E 1e-09 --cpu 1 /home/anthonyw/anaconda3/db/hmm/HAMAP.hmm /dev/stdin) executed
+[ok] Process 31952 (perl -e if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)} /bin/sh -c hmmscan --noali --notextw --acc -E 1e-09 --cpu 1 /home/anthonyw/anaconda3/db/hmm/HAMAP.hmm /dev/stdin) executed
+[ok] Process 31968 (perl -e if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)} /bin/sh -c hmmscan --noali --notextw --acc -E 1e-09 --cpu 1 /home/anthonyw/anaconda3/db/hmm/HAMAP.hmm /dev/stdin) executed
+[ok] Process 32056 (perl -e if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)} /bin/sh -c hmmscan --noali --notextw --acc -E 1e-09 --cpu 1 /home/anthonyw/anaconda3/db/hmm/HAMAP.hmm /dev/stdin) executed
+[ok] Process 32098 (perl -e if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)} /bin/sh -c hmmscan --noali --notextw --acc -E 1e-09 --cpu 1 /home/anthonyw/anaconda3/db/hmm/HAMAP.hmm /dev/stdin) executed
+[ok] Process 32128 (perl -e if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)} /bin/sh -c hmmscan --noali --notextw --acc -E 1e-09 --cpu 1 /home/anthonyw/anaconda3/db/hmm/HAMAP.hmm /dev/stdin) executed
+[ok] Process 32168 (perl -e if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)} /bin/sh -c hmmscan --noali --notextw --acc -E 1e-09 --cpu 1 /home/anthonyw/anaconda3/db/hmm/HAMAP.hmm /dev/stdin) executed
+[ok] Process 32185 (perl -e if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)} /bin/sh -c hmmscan --noali --notextw --acc -E 1e-09 --cpu 1 /home/anthonyw/anaconda3/db/hmm/HAMAP.hmm /dev/stdin) executed
+[ok] Process 32368 (perl -e if(sysread(STDIN,$buf,1)){open($fh,"|-",@ARGV)||die;syswrite($fh,$buf);if($read=sysread(STDIN,$buf,131071)){syswrite($fh,$buf);}while($read=sysread(STDIN,$buf,131072)){syswrite($fh,$buf);}close$fh;exit($?&127?128+($?&127):1+$?>>8)} /bin/sh -c hmmscan --noali --notextw --acc -E 1e-09 --cpu 1 /home/anthonyw/anaconda3/db/hmm/HAMAP.hmm /dev/stdin) executed
+[ok] Process 30999 (/bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/IS -evalue 1e-30 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31001 (/bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/IS -evalue 1e-30 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31004 (/bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/IS -evalue 1e-30 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31009 (/bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/IS -evalue 1e-30 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31018 (/bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/IS -evalue 1e-30 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31011 (/bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/IS -evalue 1e-30 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31014 (/bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/IS -evalue 1e-30 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31021 (/bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/IS -evalue 1e-30 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31034 (/bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/IS -evalue 1e-30 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31041 (/bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/IS -evalue 1e-30 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31046 (/bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/IS -evalue 1e-30 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31053 (/bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/IS -evalue 1e-30 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31058 (/bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/IS -evalue 1e-30 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31061 (/bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/IS -evalue 1e-30 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31064 (/bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/IS -evalue 1e-30 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31069 (/bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/IS -evalue 1e-30 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31078 (/bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/IS -evalue 1e-30 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31113 (/bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/AMR -evalue 9.99999999999999e-301 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31115 (/bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/AMR -evalue 9.99999999999999e-301 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31119 (/bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/AMR -evalue 9.99999999999999e-301 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31130 (/bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/AMR -evalue 9.99999999999999e-301 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31123 (/bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/AMR -evalue 9.99999999999999e-301 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31125 (/bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/AMR -evalue 9.99999999999999e-301 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31128 (/bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/AMR -evalue 9.99999999999999e-301 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31136 (/bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/AMR -evalue 9.99999999999999e-301 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31148 (/bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/AMR -evalue 9.99999999999999e-301 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31156 (/bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/AMR -evalue 9.99999999999999e-301 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31159 (/bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/AMR -evalue 9.99999999999999e-301 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31168 (/bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/AMR -evalue 9.99999999999999e-301 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31173 (/bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/AMR -evalue 9.99999999999999e-301 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31176 (/bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/AMR -evalue 9.99999999999999e-301 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31181 (/bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/AMR -evalue 9.99999999999999e-301 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31184 (/bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/AMR -evalue 9.99999999999999e-301 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31192 (/bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/AMR -evalue 9.99999999999999e-301 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31227 (/bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/sprot -evalue 1e-09 -qcov_hsp_perc 80 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31229 (/bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/sprot -evalue 1e-09 -qcov_hsp_perc 80 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31232 (/bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/sprot -evalue 1e-09 -qcov_hsp_perc 80 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31237 (/bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/sprot -evalue 1e-09 -qcov_hsp_perc 80 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31246 (/bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/sprot -evalue 1e-09 -qcov_hsp_perc 80 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31239 (/bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/sprot -evalue 1e-09 -qcov_hsp_perc 80 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31241 (/bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/sprot -evalue 1e-09 -qcov_hsp_perc 80 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31250 (/bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/sprot -evalue 1e-09 -qcov_hsp_perc 80 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31273 (/bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/sprot -evalue 1e-09 -qcov_hsp_perc 80 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31278 (/bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/sprot -evalue 1e-09 -qcov_hsp_perc 80 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31286 (/bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/sprot -evalue 1e-09 -qcov_hsp_perc 80 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31293 (/bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/sprot -evalue 1e-09 -qcov_hsp_perc 80 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31298 (/bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/sprot -evalue 1e-09 -qcov_hsp_perc 80 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31305 (/bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/sprot -evalue 1e-09 -qcov_hsp_perc 80 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31308 (/bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/sprot -evalue 1e-09 -qcov_hsp_perc 80 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31310 (/bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/sprot -evalue 1e-09 -qcov_hsp_perc 80 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31335 (/bin/sh -c blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/sprot -evalue 1e-09 -qcov_hsp_perc 80 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31370 (/bin/sh -c hmmscan --noali --notextw --acc -E 1e-09 --cpu 1 /home/anthonyw/anaconda3/db/hmm/HAMAP.hmm /dev/stdin) executed
+[ok] Process 31372 (/bin/sh -c hmmscan --noali --notextw --acc -E 1e-09 --cpu 1 /home/anthonyw/anaconda3/db/hmm/HAMAP.hmm /dev/stdin) executed
+[ok] Process 31376 (/bin/sh -c hmmscan --noali --notextw --acc -E 1e-09 --cpu 1 /home/anthonyw/anaconda3/db/hmm/HAMAP.hmm /dev/stdin) executed
+[ok] Process 31378 (/bin/sh -c hmmscan --noali --notextw --acc -E 1e-09 --cpu 1 /home/anthonyw/anaconda3/db/hmm/HAMAP.hmm /dev/stdin) executed
+[ok] Process 31381 (/bin/sh -c hmmscan --noali --notextw --acc -E 1e-09 --cpu 1 /home/anthonyw/anaconda3/db/hmm/HAMAP.hmm /dev/stdin) executed
+[ok] Process 31383 (/bin/sh -c hmmscan --noali --notextw --acc -E 1e-09 --cpu 1 /home/anthonyw/anaconda3/db/hmm/HAMAP.hmm /dev/stdin) executed
+[ok] Process 31385 (/bin/sh -c hmmscan --noali --notextw --acc -E 1e-09 --cpu 1 /home/anthonyw/anaconda3/db/hmm/HAMAP.hmm /dev/stdin) executed
+[ok] Process 31402 (/bin/sh -c hmmscan --noali --notextw --acc -E 1e-09 --cpu 1 /home/anthonyw/anaconda3/db/hmm/HAMAP.hmm /dev/stdin) executed
+[ok] Process 31949 (/bin/sh -c hmmscan --noali --notextw --acc -E 1e-09 --cpu 1 /home/anthonyw/anaconda3/db/hmm/HAMAP.hmm /dev/stdin) executed
+[ok] Process 31953 (/bin/sh -c hmmscan --noali --notextw --acc -E 1e-09 --cpu 1 /home/anthonyw/anaconda3/db/hmm/HAMAP.hmm /dev/stdin) executed
+[ok] Process 31969 (/bin/sh -c hmmscan --noali --notextw --acc -E 1e-09 --cpu 1 /home/anthonyw/anaconda3/db/hmm/HAMAP.hmm /dev/stdin) executed
+[ok] Process 32058 (/bin/sh -c hmmscan --noali --notextw --acc -E 1e-09 --cpu 1 /home/anthonyw/anaconda3/db/hmm/HAMAP.hmm /dev/stdin) executed
+[ok] Process 32100 (/bin/sh -c hmmscan --noali --notextw --acc -E 1e-09 --cpu 1 /home/anthonyw/anaconda3/db/hmm/HAMAP.hmm /dev/stdin) executed
+[ok] Process 32129 (/bin/sh -c hmmscan --noali --notextw --acc -E 1e-09 --cpu 1 /home/anthonyw/anaconda3/db/hmm/HAMAP.hmm /dev/stdin) executed
+[ok] Process 32169 (/bin/sh -c hmmscan --noali --notextw --acc -E 1e-09 --cpu 1 /home/anthonyw/anaconda3/db/hmm/HAMAP.hmm /dev/stdin) executed
+[ok] Process 32186 (/bin/sh -c hmmscan --noali --notextw --acc -E 1e-09 --cpu 1 /home/anthonyw/anaconda3/db/hmm/HAMAP.hmm /dev/stdin) executed
+[ok] Process 32370 (/bin/sh -c hmmscan --noali --notextw --acc -E 1e-09 --cpu 1 /home/anthonyw/anaconda3/db/hmm/HAMAP.hmm /dev/stdin) executed
+[ok] Process 31003 (blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/IS -evalue 1e-30 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31006 (blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/IS -evalue 1e-30 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31005 (blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/IS -evalue 1e-30 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31013 (blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/IS -evalue 1e-30 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31020 (blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/IS -evalue 1e-30 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31016 (blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/IS -evalue 1e-30 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31017 (blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/IS -evalue 1e-30 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31022 (blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/IS -evalue 1e-30 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31035 (blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/IS -evalue 1e-30 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31042 (blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/IS -evalue 1e-30 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31047 (blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/IS -evalue 1e-30 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31054 (blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/IS -evalue 1e-30 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31059 (blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/IS -evalue 1e-30 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31062 (blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/IS -evalue 1e-30 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31065 (blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/IS -evalue 1e-30 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31070 (blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/IS -evalue 1e-30 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31079 (blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/IS -evalue 1e-30 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31116 (blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/AMR -evalue 9.99999999999999e-301 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31118 (blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/AMR -evalue 9.99999999999999e-301 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31121 (blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/AMR -evalue 9.99999999999999e-301 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31132 (blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/AMR -evalue 9.99999999999999e-301 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31129 (blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/AMR -evalue 9.99999999999999e-301 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31133 (blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/AMR -evalue 9.99999999999999e-301 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31131 (blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/AMR -evalue 9.99999999999999e-301 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31137 (blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/AMR -evalue 9.99999999999999e-301 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31149 (blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/AMR -evalue 9.99999999999999e-301 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31157 (blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/AMR -evalue 9.99999999999999e-301 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31160 (blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/AMR -evalue 9.99999999999999e-301 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31169 (blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/AMR -evalue 9.99999999999999e-301 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31174 (blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/AMR -evalue 9.99999999999999e-301 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31177 (blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/AMR -evalue 9.99999999999999e-301 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31182 (blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/AMR -evalue 9.99999999999999e-301 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31185 (blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/AMR -evalue 9.99999999999999e-301 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31193 (blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/AMR -evalue 9.99999999999999e-301 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31230 (blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/sprot -evalue 1e-09 -qcov_hsp_perc 80 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31233 (blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/sprot -evalue 1e-09 -qcov_hsp_perc 80 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31236 (blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/sprot -evalue 1e-09 -qcov_hsp_perc 80 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31245 (blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/sprot -evalue 1e-09 -qcov_hsp_perc 80 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31247 (blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/sprot -evalue 1e-09 -qcov_hsp_perc 80 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31243 (blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/sprot -evalue 1e-09 -qcov_hsp_perc 80 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31244 (blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/sprot -evalue 1e-09 -qcov_hsp_perc 80 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31251 (blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/sprot -evalue 1e-09 -qcov_hsp_perc 80 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31274 (blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/sprot -evalue 1e-09 -qcov_hsp_perc 80 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31279 (blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/sprot -evalue 1e-09 -qcov_hsp_perc 80 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31287 (blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/sprot -evalue 1e-09 -qcov_hsp_perc 80 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31294 (blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/sprot -evalue 1e-09 -qcov_hsp_perc 80 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31299 (blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/sprot -evalue 1e-09 -qcov_hsp_perc 80 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31306 (blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/sprot -evalue 1e-09 -qcov_hsp_perc 80 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31311 (blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/sprot -evalue 1e-09 -qcov_hsp_perc 80 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31312 (blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/sprot -evalue 1e-09 -qcov_hsp_perc 80 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31336 (blastp -query - -db /home/anthonyw/anaconda3/db/kingdom/Bacteria/sprot -evalue 1e-09 -qcov_hsp_perc 80 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no) executed
+[ok] Process 31374 (hmmscan --noali --notextw --acc -E 1e-09 --cpu 1 /home/anthonyw/anaconda3/db/hmm/HAMAP.hmm /dev/stdin) executed
+[ok] Process 31379 (hmmscan --noali --notextw --acc -E 1e-09 --cpu 1 /home/anthonyw/anaconda3/db/hmm/HAMAP.hmm /dev/stdin) executed
+[ok] Process 31387 (hmmscan --noali --notextw --acc -E 1e-09 --cpu 1 /home/anthonyw/anaconda3/db/hmm/HAMAP.hmm /dev/stdin) executed
+[ok] Process 31396 (hmmscan --noali --notextw --acc -E 1e-09 --cpu 1 /home/anthonyw/anaconda3/db/hmm/HAMAP.hmm /dev/stdin) executed
+[ok] Process 31390 (hmmscan --noali --notextw --acc -E 1e-09 --cpu 1 /home/anthonyw/anaconda3/db/hmm/HAMAP.hmm /dev/stdin) executed
+[ok] Process 31389 (hmmscan --noali --notextw --acc -E 1e-09 --cpu 1 /home/anthonyw/anaconda3/db/hmm/HAMAP.hmm /dev/stdin) executed
+[ok] Process 31393 (hmmscan --noali --notextw --acc -E 1e-09 --cpu 1 /home/anthonyw/anaconda3/db/hmm/HAMAP.hmm /dev/stdin) executed
+[ok] Process 31403 (hmmscan --noali --notextw --acc -E 1e-09 --cpu 1 /home/anthonyw/anaconda3/db/hmm/HAMAP.hmm /dev/stdin) executed
+[ok] Process 31950 (hmmscan --noali --notextw --acc -E 1e-09 --cpu 1 /home/anthonyw/anaconda3/db/hmm/HAMAP.hmm /dev/stdin) executed
+[ok] Process 31954 (hmmscan --noali --notextw --acc -E 1e-09 --cpu 1 /home/anthonyw/anaconda3/db/hmm/HAMAP.hmm /dev/stdin) executed
+[ok] Process 31970 (hmmscan --noali --notextw --acc -E 1e-09 --cpu 1 /home/anthonyw/anaconda3/db/hmm/HAMAP.hmm /dev/stdin) executed
+[ok] Process 32059 (hmmscan --noali --notextw --acc -E 1e-09 --cpu 1 /home/anthonyw/anaconda3/db/hmm/HAMAP.hmm /dev/stdin) executed
+[ok] Process 32101 (hmmscan --noali --notextw --acc -E 1e-09 --cpu 1 /home/anthonyw/anaconda3/db/hmm/HAMAP.hmm /dev/stdin) executed
+[ok] Process 32130 (hmmscan --noali --notextw --acc -E 1e-09 --cpu 1 /home/anthonyw/anaconda3/db/hmm/HAMAP.hmm /dev/stdin) executed
+[ok] Process 32170 (hmmscan --noali --notextw --acc -E 1e-09 --cpu 1 /home/anthonyw/anaconda3/db/hmm/HAMAP.hmm /dev/stdin) executed
+[ok] Process 32187 (hmmscan --noali --notextw --acc -E 1e-09 --cpu 1 /home/anthonyw/anaconda3/db/hmm/HAMAP.hmm /dev/stdin) executed
+[ok] Process 32373 (hmmscan --noali --notextw --acc -E 1e-09 --cpu 1 /home/anthonyw/anaconda3/db/hmm/HAMAP.hmm /dev/stdin) executed
+[info] Verification complete

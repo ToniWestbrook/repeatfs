@@ -1,0 +1,8 @@
+Command List
+[turing|1585512174.59|19403] mkdir reference
+[turing|1585512174.6|19404] wget https://www.arb-silva.de/fileadmin/silva_databases/current/Exports/SILVA_138_SSURef_NR99_tax_silva.fasta.gz
+[turing|1585512199.12|19421] gzip -d SILVA_138_SSURef_NR99_tax_silva.fasta.gz
+[turing|1585512245.94|19457] bioawk -c fastx '$comment ~ /;Yersinia;/ { print ">" $name " " $comment "\n" $seq  }' SILVA_138_SSURef_NR99_tax_silva.fasta > /home/anthonyw/repo_personal/unh/repeatfs/experiments/mnt-replicate/reference/yersinia.fasta
+[turing|1585512249.33|19459] mkdir tree
+[turing|1585512249.34|19460] /bin/sh /home/anthonyw/.linuxbrew/bin/mafft --thread 8 ../reference/yersinia.fasta > /home/anthonyw/repo_personal/unh/repeatfs/experiments/mnt-replicate/tree/aligned.fasta
+[turing|1585512261.18|19554] raxmlHPC-PTHREADS -s aligned.fasta -n yersinia -m GTRCAT -T 8 -p 1
