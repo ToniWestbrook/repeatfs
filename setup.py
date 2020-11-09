@@ -21,6 +21,7 @@ setuptools.setup(
     author_email='anthony.westbrook@unh.edu',
     packages=setuptools.find_packages(),
     scripts=['scripts/repeatfs'],
+    include_package_data=True,
     url='http://github.com/ToniWestbrook/repeatfs',
     license='LICENSE',
     description='File system providing reproducibility through provenance and automation',
