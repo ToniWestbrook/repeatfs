@@ -9,6 +9,7 @@
 #
 
 
+import io
 import os
 from collections import deque
 from repeatfs.descriptor_entry import DescriptorEntry
@@ -38,3 +39,10 @@ class RenderBase:
 
     def virt_render(self, process, handle, options=None):
         handle.write(b"Not implemented\n")
+
+    def render_bytes(self, process, options=None):
+        """ Get render as bytes """
+        handle = io.BytesIO()
+        self.virt_render(process, handle, options)
+
+        return handle.getvalue()

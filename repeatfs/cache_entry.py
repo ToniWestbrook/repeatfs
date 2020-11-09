@@ -11,6 +11,7 @@
 
 import hashlib
 import io
+import json
 import operator
 import os
 import queue
@@ -29,6 +30,41 @@ class CacheEntry:
     entries = dict()
     block_history = queue.Queue()
 
+    @classmethod
+    def api_config(cls, api_out):
+        """ API: Receive configure command """
+        # Attempt to configure VDF
+        try:
+            # Check and clean path
+            for field in ("path", "options"):
+                if field not in api_out.cmd_info:
+                    api_out.respond(status="error", message="{} not specified".format(field))
+                    return
+
+            path = api_out.cmd_info["path"].replace("|", "/")
+            if path not in CacheEntry.entries:
+                    api_out.respond(status="error", message="invalid path specified")
+                    return
+
+            # Check, clean, and update configuration
+            options = api_out.cmd_info["options"]
+            if "expand_procs" in options:
+                options["expand_procs"] = [tuple(val.split("|")) for val in options["expand_procs"]]
+
+            cache_entry = CacheEntry.entries[path]
+            cache_entry.update_config(api_out.cmd_info["options"])
+
+            # Clear cache
+            cache_entry.io(CacheEntry.IO_RESET, 0, None, 1, api_out.desc_id)
+
+            api_out.respond(status="ok", message="", final=True)
+
+        except json.decoder.JSONDecodeError:
+            api_out.respond(status="malformed", message=api_out.cmd_info["options"])
+
+        except Exception as e:
+            api_out.respond(status="error", message=e)
+
     def __init__(self, core, entry):
         self.core = core
 
@@ -36,6 +72,7 @@ class CacheEntry:
         self.lock = threading.Condition()
         self.blocks = dict()
         self.waiting = dict()
+        self.config = dict()
         self.descriptors = set()
         self.process_io = ProcessIO(self)
 
@@ -392,3 +429,8 @@ class CacheEntry:
             if process_data:
                 with self.lock:
                     self._io_write(process_block, process_start, process_data, True, 0)
+
+    def update_config(self, options):
+        """ Update cache entry configuration """
+        with self.lock:
+            self.config.update(options)

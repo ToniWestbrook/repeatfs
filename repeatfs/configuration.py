@@ -56,19 +56,19 @@ class Configuration:
         "cache_path": (False, False, "/tmp/repeatfs.cache", cast_path, "cache path"),
         "io_epsilon": (False, False, "7.0", float, "provenance IO is considered simultaneous within this epsilon (seconds)"),
         "api": (False, False, ".repeatfs-api", str, "file for RepeatFS API and control"),
+        "api_size": (False, False, "1048576", int, "reported size of RepeatFS API and control"),
         "match": (True, True, None, str, ""),
         "ext": (True, True, None, str, ""),
         "cmd": (True, True, None, str, ""),
         "output": (True, False, "stdout", str, ""),
         "append": (True, False, None, str, ""),
         "disk_cache": (True, False, "True", cast_bool, ""),
+        "init_size": (True, False, "0", int, ""),
         "internal": (True, False, None, cast_list, "")}
 
     SYSTEM_ENTRIES = [
-            {"match": ".*", "ext": ".provenance.html", "cmd": "cat {temp}", "internal": ["self.cache_entry.core.provenance.render_graphviz.virt_render", {"collapse": False}]},
-            {"match": ".*", "ext": ".provenance-collapsed.html", "cmd": "cat {temp}", "internal": ["self.cache_entry.core.provenance.render_graphviz.virt_render", {"collapse": True}]},
-            {"match": ".*", "ext": ".provenance.json", "cmd": "cat {temp}", "internal": ["self.cache_entry.core.provenance.render_json.virt_render"]},
-            {"match": ".*", "ext": ".repeat.sh", "cmd": "cat {temp}", "internal": ["self.cache_entry.core.provenance.repeat_test"]}]
+            {"match": ".*", "ext": ".provenance.html", "cmd": "cat {temp}", "internal": ["self.cache_entry.core.provenance.render_graphviz.virt_render", {"collapse": False}], "init_size": "10485760"},
+            {"match": ".*", "ext": ".provenance.json", "cmd": "cat {temp}", "internal": ["self.cache_entry.core.provenance.render_json.virt_render"]}]
 
     @classmethod
     def write_template(cls, path):

@@ -9,7 +9,7 @@
 #
 
 
-import fuse
+import fuse as fuse
 
 
 class Fuse(fuse.Operations):
@@ -95,11 +95,11 @@ class Fuse(fuse.Operations):
         return self.core.open(path, info, mode=mode)
 
     def read(self, path, length, offset, info=None):
-        # print(".", end="", flush=True)
+        self.core.log("IO: read ({0}, {1}, {2}, {3})".format(path, length, offset, info.fh), self.core.LOG_IO)
         return self.core.read(path, length, offset, info)
 
     def write(self, path, buf, offset, info=None):
-        # print("!", end="", flush=True)
+        self.core.log("IO: write ({0}, {1}, {2}, {3})".format(path, offset, info.fh, info.writepage), self.core.LOG_IO)
         return self.core.write(path, buf, offset, info)
 
     def truncate(self, path, length, info=None):

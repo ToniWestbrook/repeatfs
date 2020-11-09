@@ -16,11 +16,14 @@ import os
 import threading
 from multiprocessing import Process
 from repeatfs.provenance.replication import Replication
+from repeatfs.cache_entry import CacheEntry
+from repeatfs.descriptor_entry import DescriptorEntry
 
 
 class API:
     """ Provides API information """
     STATE_START, STATE_EXEC = range(2)
+    API_BARE, API_SIMPLE, API_FULL = range(3)
 
     _session_lookup = dict()
     _lock = threading.RLock()
@@ -75,6 +78,11 @@ class API:
         with self._lock:
             self._session_lookup[self.desc_id] = self
 
+        # Immediately execute inline commands
+        file_entry = DescriptorEntry.get(self.desc_id).file_entry
+        if file_entry.inline_cmd:
+            self.write("{}\n".format(file_entry.inline_cmd).encode("utf-8"))
+
     def __str__(self):
         return "id {0} input {1} {2} output {3} {4}".format(
             self.desc_id, self.input[0], self.input[1], self.output[0], self.output[1])
@@ -82,8 +90,9 @@ class API:
     def get_commands(self):
         """ API command lookup """
         ret_commands = {
-            "shutdown": (fuse.fuse_exit, False),
-            "replicate": (Replication.api_receive, True)}
+            "shutdown": (fuse.fuse_exit, self.API_BARE),
+            "config_vdf": (CacheEntry.api_config, self.API_SIMPLE),
+            "replicate": (Replication.api_receive, self.API_FULL)}
 
         return ret_commands
 
@@ -119,16 +128,17 @@ class API:
 
                 try:
                     self.cmd_info = json.loads(self.input.readline())
-
                     cmd_info = cmd_lookup.get(self.cmd_info["command"], None)
                     if cmd_info:
-                        if cmd_info[1]:
-                            # Full API command
-                            # threading.Thread(target=cmd_info[0], args=(self, )).start()
-                            Process(target=cmd_info[0], args=(self, )).start()
-                        else:
-                            # Simple API command
+                        if cmd_info[1] == self.API_BARE:
+                            # Immediate API with no arg
                             cmd_info[0]()
+                        elif cmd_info[1] == self.API_SIMPLE:
+                            # Immediate API with arg
+                            cmd_info[0](self)
+                        else:
+                            # Full API command
+                            Process(target=cmd_info[0], args=(self, )).start()
                     else:
                         self.respond(status="unknown", message=self.cmd_info["command"])
 

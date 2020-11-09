@@ -25,11 +25,11 @@ from repeatfs.provenance.management import Management as Provenance
 
 class Core:
     """ Implements core RepeatFS FS functionality """
-    LOG_OUTPUT, LOG_CALL, LOG_DEBUG = range(3)
-    LOG_MAX = LOG_OUTPUT
-    VERSION = "0.9.3"
+    LOG_OUTPUT, LOG_CALL, LOG_DEBUG, LOG_IO = range(4)
+    VERSION = "0.10.0"
 
     log_lock = threading.RLock()
+    log_level = LOG_OUTPUT
 
     # Is open flag a read
     @staticmethod
@@ -54,7 +54,7 @@ class Core:
     @classmethod
     def log(cls, message, level, end="\n", file=sys.stderr):
         """ Conditionally print output """
-        if level <= Core.LOG_MAX:
+        if level <= cls.log_level:
             with cls.log_lock:
                 print(message, end=end, file=file)
 
@@ -224,20 +224,22 @@ class Core:
         if file_entry.api:
             stats = {}
             stats['st_mode'] = stat.S_IFREG | 0o777
-            stats['st_size'] = 0
+            stats['st_size'] = self.configuration.values["api_size"]
             stats['st_mtime'] = 0
+            stats['st_nlink'] = 1
 
         elif file_entry.derived_source:
             stats = self.fuse.getattr(file_entry.derived_source.paths["abs_virt"], info)
             stats['st_mode'] &= 0x01FF
             stats['st_mode'] |= file_entry.file_type
-            stats['st_size'] = 0
+            stats['st_size'] = file_entry.init_size
             stats['st_mtime'] = 0
             if file_entry.file_type == stat.S_IFREG:
-                # If file is cached, report correct file size
+                # If file is cached, report correct file size (continue to override init size if in reset state)
                 if file_entry.paths["abs_real"] in CacheEntry.entries:
                     cache_entry = CacheEntry.entries[file_entry.paths["abs_real"]]
-                    stats['st_size'] = cache_entry.size
+                    if cache_entry.size > 0 or cache_entry.final:
+                        stats['st_size'] = cache_entry.size
                     stats['st_mtime'] = cache_entry.mtime
 
         else:
@@ -477,20 +479,19 @@ class Core:
         else:
             # TODO: TESTING
             info.direct_io = False
-            # info.keep_cache = True
+            info.keep_cache = True
 
         # Create descriptor
         info.fh = self.create_descriptor(file_entry, info.flags)
 
-        # Register provenance after create (links to previous versions through get_attr call)
+        # Register provenance after create (links to previous versions through get_attr call), initial read for cached files
         if file_entry.provenance:
-            self.provenance.register_open(info.fh, write=create, update_last=create)
+            self.provenance.register_open(info.fh, read=True, write=create, update_last=create)
 
         return 0
 
     def read(self, path, length, offset, info):
         """ Perform file read operation """
-        self.log("READ {} ({}):{}:{}".format(info.fh, path, offset, length), self.LOG_DEBUG)
         desc_entry = DescriptorEntry.get(info.fh)
 
         # Register provenance
@@ -517,7 +518,6 @@ class Core:
 
     def write(self, path, buf, offset, info):
         """ Perform file write operation """
-        self.log("WRITE {}:{}:{}".format(info.fh, offset, len(buf)), self.LOG_DEBUG)
         desc_entry = DescriptorEntry.get(info.fh)
 
         # Register provenance
@@ -595,7 +595,7 @@ class Core:
 
         # Register provenance
         if desc_entry.file_entry.provenance:
-            self.provenance.register_close(info.fh)
+           self.provenance.register_close(info.fh)
 
         # Close and remove descriptor
         ret_code = self.remove_descriptor(info.fh)

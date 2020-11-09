@@ -1,0 +1,234 @@
+<html>
+    <head>
+        <title>Provenance for [python-target]</title>
+        <style>.sidebar{height:100%;width:450px;background-color:#c4c8d5;position:fixed!important;z-index:1;overflow:hidden}
+               .main-title{text-align:center;font-size:26px;padding:20px}
+               table{border-collapse: collapse;}
+               td,th{border: 1px solid black;text-align:left;padding:8px;}
+               tr:nth-child(even){background-color:#DDDDDD}
+               tr:nth-child(odd){background-color:#CCCCCC}
+        </style>
+    </head>
+    <body style='padding:0;margin:0;font-family:Arial,sans-serif;'>
+        <div class='sidebar' style='right:0'>
+            <div id='sidebar-title' style='text-align:center;padding-top:10px'></div>
+            <div id='sidebar-body' style='padding:20px;text-align:center;'>
+                <b>Information Display</b><br /><br />
+                Select a file, process, or IO for full details
+            </div>
+            <div style='text-align:center;'>
+                <hr />
+                <div id='sidebar-status'></div>
+            </div>
+        </div>
+        <div style='margin-right:400px'>
+            <div class='main-title'>Provenance for [python-target]</div>
+            <div style='text-align:center'>
+                [python-svg]
+            </div>
+        </div>
+        <iframe style="display:none;" id='api-frame'></iframe> 
+        <script type="text/javascript">
+
+var graph = JSON.parse("[python-graph]");
+var expanded = JSON.parse("[python-expanded]");
+var apiFile = "[python-api]";
+var apiSuffix = "[python-suffix]";
+var apiSession = "[python-session]";
+var apiConnected = false;
+
+checkAPI();
+
+// Check connection to API
+function checkAPI() {
+    if (!sessionStorage.sessionID) {
+        sessionStorage.sessionID = (Math.floor(Math.random() * Number.MAX_SAFE_INTEGER)).toString();
+
+        // Build API JSON command
+        var apiCmd = {
+            "command": "config_vdf",
+            "path": "[python-path]",
+            "options": {
+                "session": sessionStorage.sessionID
+            }
+        }
+        apiJSON = JSON.stringify(apiCmd);
+
+        document.getElementById('api-frame').onload = location.reload();
+        document.getElementById('api-frame').src = `${apiFile}${apiSuffix}${apiJSON}`;
+    }
+    else {
+        apiConnected = (sessionStorage.sessionID == apiSession);
+    }
+
+    var statusLookup = [["Snapshot", "red"], ["Live", "green"]];
+    var statusVals = statusLookup[apiConnected | 0];
+
+    document.getElementById('sidebar-status').innerHTML = `View Mode: <span style="color:${statusVals[1]};">${statusVals[0]}</span>`;
+}
+
+
+function activate_file(ids) {
+    if (ids.length > 1) {
+        // Multiple files
+        var titleHTML = "<b>Files in Group</b>";
+        var bodyHTML = "<table style=\"width:100%\">";
+
+        for (const [idx, file_id] of ids.entries()) {
+            var file = graph['file'][file_id];
+            var file_link = `<a href="javascript:activate_file(['${file_id}'])">${file['paths']['abs_real']}</a>`;
+            bodyHTML += `<tr><td>File ${idx}</td><td>${file_link}</td></tr>`;
+        }
+
+        bodyHTML += "</table>";
+    }
+    else {
+        // Single file
+        var file = graph['file'][ids[0]];
+
+        var titleHTML = "<b>File Information</b>";
+        var bodyHTML = `
+            <table style="width:100%">
+                <tr><td>Path</td><td>${file['paths']['abs_real']}</td></tr>
+            </table>`;
+    }
+
+    document.getElementById('sidebar-title').innerHTML = titleHTML;
+    document.getElementById('sidebar-body').innerHTML = bodyHTML;
+}
+
+function activate_process(id) {
+    var process = graph['process'][id];
+    var startTime = new Date(process["pstart"] * 1000);
+
+    // Build parent link
+    var parent_id = `${process['phost']}|${process['parent_start']}|${process['parent_pid']}`;
+    var parent_link = `<a href="javascript:activate_process('${parent_id}')">${process['parent_pid']}</a>`;
+
+    // Build child links
+    var child_links = "";
+    for (const child_id in graph['process']) {
+        var child = graph['process'][child_id]
+        var cparent_id = `${child['phost']}|${child['parent_start']}|${child['parent_pid']}`;
+        console.log(`${cparent_id} vs ${id}`);
+        if (cparent_id == id) {
+            child_links += `<a href="javascript:activate_process('${child_id}')">${child['pid']}</a><br />`;
+        }
+    }
+
+    // Body
+    var bodyHTML = `
+        <div style="overflow:auto;border: 1px solid black;">
+            <table style="width:100%;border-style:hidden;">
+                <tr><td>Host Name</td><td>${process['phost']}</td></tr>
+                <tr><td>Start Time</td><td>${startTime.toLocaleString()}</td></tr>
+                <tr><td>Process ID</td><td>${process['pid']}</td></tr>
+                <tr><td>Parent</td><td>${parent_link}</td></tr>
+                <tr><td>Command</td><td>${process['cmd'].join(" ")}</td></tr>
+                <tr><td>Executable</td><td>${process['exe']}</td></tr>
+                <tr><td>Hash</td><td>${process['hash']}</td></tr>
+                <tr><td>Working Dir</td><td>${process['cwd']['orig']}</td></tr>
+                <tr><td>Children</td><td>${child_links}</td></tr>
+                <tr><td>Environment</td><td>${process['env']}</td></tr>
+            </table>
+        </div>`;
+
+    if (child_links && apiConnected) {
+        if (expanded.includes(id)) {
+            bodyHTML += `<div style="margin-top:10px;text-align:center"><a href="javascript:expandProc('${id}', false)">Collapse Process</a></div>`;
+        }
+        else {
+            bodyHTML += `<div style="margin-top:10px;text-align:center"><a href="javascript:expandProc('${id}', true)">Expand Process</a></div>`;
+        }
+    }
+
+    document.getElementById('sidebar-title').innerHTML = "<b>Process Information</b>";
+    document.getElementById('sidebar-body').innerHTML = bodyHTML;
+}
+
+function activate_io(direction, ids) {
+    var dirStr = direction ? "write" : "read";
+    if (ids.length > 1) {
+        // Multiple IO
+        var titleHTML = "<b>IO in Group</b>";
+        var bodyHTML = "<table style=\"width:100%\">";
+
+        for (const [idx, io_id] of ids.entries()) {
+            // var file = graph['file'][file_id];
+            var io_link = `<a href="javascript:activate_io(${direction}, ['${io_id}'])">test</a>`;
+            bodyHTML += `<tr><td>IO ${idx}</td><td>${io_link}</td></tr>`;
+        }
+
+        bodyHTML += "</table>";
+    }
+    else {
+        // Single IO
+        console.log(graph[dirStr]);
+        var io = graph[dirStr][ids[0]];
+        var startTime = new Date(io["start"] * 1000);
+        var endTime = new Date(io["stop"] * 1000);
+
+        var titleHTML =  "<b>IO Information</b>";
+        var bodyHTML = `
+            <table style="width:100%">
+                <tr><td>Path</td><td>${dirStr}</td></tr>
+                <tr><td>Start</td><td>${startTime.toLocaleString()}</td></tr>
+                <tr><td>End</td><td>${endTime.toLocaleString()}</td></tr>
+            </table>`;
+
+    }
+
+    document.getElementById('sidebar-title').innerHTML = titleHTML;
+    document.getElementById('sidebar-body').innerHTML = bodyHTML;
+}
+
+function activate_fork(parent_id, child_id) {
+    var parent = graph['process'][parent_id];
+    var child = graph['process'][child_id];
+    var parent_link = `<a href="javascript:activate_process('${parent_id}')">${parent['pid']}</a>`;
+    var child_link = `<a href="javascript:activate_process('${child_id}')">${child['pid']}</a>`;
+    var parentTime = new Date(parent["pstart"] * 1000);
+    var childTime = new Date(child["pstart"] * 1000);
+
+    // Body
+    var bodyHTML = `
+        <table style="width:100%">
+            <tr><td>Parent PID</td><td>${parent_link}</td></tr>
+            <tr><td>Parent Start</td><td>${parentTime.toLocaleString()}</td></tr>
+            <tr><td>Child PID</td><td>${child_link}</td></tr>
+            <tr><td>Child Start</td><td>${childTime.toLocaleString()}</td></tr>
+        </table>`;
+
+    document.getElementById('sidebar-title').innerHTML = "<b>IO Information</b>";
+    document.getElementById('sidebar-body').innerHTML = bodyHTML;
+}
+
+// Expand/Collapse process
+function expandProc(id, expand) {
+    if (expand) {
+        expanded.push(id);
+    }
+    else {
+        var id_idx = expanded.indexOf(id)
+        if (id_idx != -1) {
+            expanded.splice(id_idx, 1);
+        }
+    }
+
+    // Build API JSON command
+    var apiCmd = {
+        "command": "config_vdf",
+        "path": "[python-path]",
+        "options": {
+            "expand_procs": expanded
+        }
+    }
+    apiJSON = JSON.stringify(apiCmd);
+
+    // Send to API
+    document.getElementById('api-frame').onload = location.reload();
+    document.getElementById('api-frame').src = `${apiFile}${apiSuffix}${apiJSON}`;
+}
+        </script>
+    </body>
+</html>

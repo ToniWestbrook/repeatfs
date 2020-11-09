@@ -33,6 +33,7 @@ class Management:
 
     def __init__(self, core):
         self.core = core
+        self.enable = True
         self.lock = threading.RLock()
 
         # Setup graphing and renderers
@@ -142,8 +143,11 @@ class Management:
         return {row["mid"]: (row["root"], row["mount"]) for row in cursor}
 
     # TODO: write and update_last are separate because of pipes, but pipes should eventually be recorded in last time, and params combined to "create"
-    def register_open(self, descriptor, pid=None, write=False, record_file=True, record_process=True, update_last=False):
+    def register_open(self, descriptor, pid=None, read=False, write=False, record_file=True, record_process=True, update_last=False):
         """ Cache process, file, and IO """
+        if not self.enable:
+            return
+
         pid = self.core.get_pid(pid)
 
         # Start new version of file
@@ -155,19 +159,25 @@ class Management:
         if record_file:
             FileRecord(descriptor, self)
 
-        # Record IO
+        # Record IO 
         IORecord(descriptor, pid, self)
 
         # Record process
         if record_process:
             ProcessRecord.update(pid, self)
 
-        # Record initial write
+        # Record initial read/write
+        if read:
+            self.register_read(descriptor, op_type=self.OP_IO, pid=pid, update_process=False)
+
         if write:
             self.register_write(descriptor, op_type=(self.OP_IO | self.OP_TRUNCATE), pid=pid, update_process=False)
 
     def register_close(self, descriptor, write_process=True):
         """ Write IO records if IO occurred """
+        if not self.enable:
+            return
+
         with self.lock:
             # Write file record
             FileRecord.get(descriptor, self).write()
@@ -185,6 +195,9 @@ class Management:
 
     def register_read(self, descriptor, op_type=OP_IO, pid=None, update_process=True, io_time=None):
         """ Update read end time """
+        if not self.enable:
+            return
+
         pid = self.core.get_pid(pid)
 
         # Ensure pid recorded to this descriptor (for descriptors passed to child processes)
@@ -198,6 +211,9 @@ class Management:
 
     def register_write(self, descriptor, op_type=OP_IO, pid=None, update_process=True, io_time=None):
         """ Update write end time """
+        if not self.enable:
+            return
+
         pid = self.core.get_pid(pid)
 
         # Ensure pid recorded to this descriptor (for descriptors passed to child processes)
@@ -216,6 +232,9 @@ class Management:
 
     def register_op_read(self, file_entry, op_type):
         """ Register an ephemeral read operation """
+        if not self.enable:
+            return
+
         with DescriptorEntry(file_entry, None, self.core) as desc_entry:
             self.register_open(desc_entry.id)
             self.register_read(desc_entry.id, op_type)
@@ -223,6 +242,9 @@ class Management:
 
     def register_op_write(self, file_entry, op_type, create=False):
         """ Register an ephemeral write operation """
+        if not self.enable:
+            return
+
         with DescriptorEntry(file_entry, None, self.core) as desc_entry:
             self.register_open(desc_entry.id, update_last=create)
             self.register_write(desc_entry.id, op_type)

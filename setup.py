@@ -16,7 +16,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name='RepeatFS',
-    version='0.9.3',
+    version='0.10.0',
     author='Anthony Westbrook',
     author_email='anthony.westbrook@unh.edu',
     packages=setuptools.find_packages(),
@@ -30,7 +30,6 @@ setuptools.setup(
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
         "Operating System :: POSIX :: Linux",
-        "Operating System :: MacOS :: MacOS X",
     ],
     install_requires=[
         "fusepy >= 3.0.1",

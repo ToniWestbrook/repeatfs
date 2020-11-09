@@ -62,6 +62,7 @@ class FileEntry:
     def __init__(self, virt_path, core):
         self.core = core
         self.virt_mtime = 0
+        self.init_size = 0
         self.valid = False
         self.api = False
         self.file_type = None
@@ -70,11 +71,18 @@ class FileEntry:
         self.derived_source = None
         self.derived_actions = dict()
 
+        # Check for inline commands
+        inline_sep = self.core.configuration.values["suffix"] * 2
+        inline_fields = virt_path.split(inline_sep)
+        self.inline_cmd = "".join(inline_fields[1:])
+
         # Build paths
+        virt_path = inline_fields[0]
         self.paths = FileEntry.get_paths(virt_path.lstrip(os.sep), self.core.root, self.core.mount)
 
         # Check for API
         api_file = os.path.join(os.sep, self.core.configuration.values["api"])
+
         if self.paths["abs_virt"].endswith(api_file):
             self.file_type = stat.S_IFREG
             self.provenance = False
@@ -145,6 +153,10 @@ class FileEntry:
                 # If potential virtual file, ensure action defined for destination (Dirs are already valid)
                 if virt_base not in derived_source.derived_actions:
                     return
+
+                # Set VDF configuration options
+                derived_action = derived_source.derived_actions[virt_base][:2]
+                self.init_size = self.core.configuration.actions[derived_action]["init_size"]
 
             self.valid = True
             self._populate_time()
