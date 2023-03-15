@@ -12,6 +12,6 @@ family-names: "Thomas"
   orcid: "https://orcid.org/0000-0002-0945-5269"  
 title: "RepeatFS: a file system providing reproducibility through provenance and automation"
 version: 1.0.0
-doi: 10.1093/bioinformatics/btaa950 
+doi: https://doi.org/10.1093/bioinformatics/btaa950
 date-released: 2021-06-09
 url: "https://github.com/ToniWestbrook/repeatfs"
