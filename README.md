@@ -83,8 +83,8 @@ tar -cvf results.tar headers.txt count.txt
 To visualize the provenance of the `results.tar` file within our browser:
 
 ```
-cd results.txt+
-firefox results.txt.provenance.html
+cd results.tar+
+firefox results.tar.provenance.html
 ````
 
 ![Example 1](https://raw.githubusercontent.com/ToniWestbrook/repeatfs/master/images/example1.png)
@@ -95,7 +95,7 @@ RepeatFS can also replicate these steps to recreate `results.tar` using the `res
 repeatfs mount ~/replicate ~/mnt
 cd ~/mnt
 
-repeatfs replicate ~/results.txt.provenance.json --stdout stdout.log --stderr stderr.log
+repeatfs replicate ~/results.tar.provenance.json --stdout stdout.log --stderr stderr.log
 ```
 
 RepeatFS will execute and verify each step. Version mismatches or other errors will be reported:
@@ -116,7 +116,7 @@ RepeatFS will execute and verify each step. Version mismatches or other errors w
 RepeatFS can also simply list the commands that would be used during replication (using the `-l` argument):
 
 ```
-repeatfs replicate ~/results.txt.provenance.json -l
+repeatfs replicate ~/results.tar.provenance.json -l
 ```
 
 This will list each command that will be run, in order.  It will also list ID(s) next to each command, which can be used during replication (using the `-e` argument) to reconstruct a missing shell script.
