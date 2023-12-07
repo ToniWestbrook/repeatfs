@@ -40,7 +40,7 @@ class IORecord:
         """ Remove IO for a descriptor """
         with management.lock:
             cls._lookup.pop(descriptor, None)
-    
+
     def __init__(self, descriptor, pid, management, io_time=None):
         """ Process related provenance information """
         self.management = management

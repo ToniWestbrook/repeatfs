@@ -27,6 +27,7 @@ class CacheEntry:
     BLOCK_DATA, BLOCK_DIRTY = range(2)
     IO_READ, IO_WRITE, IO_TRUNCATE, IO_RESET = range(4)
 
+    _entries_lock = threading.RLock()
     entries = dict()
     block_history = queue.Queue()
 
@@ -64,6 +65,17 @@ class CacheEntry:
 
         except Exception as e:
             api_out.respond(status="error", message=e)
+
+    @classmethod
+    def register(cls, core, entry):
+        """ Register entry if necessary """
+        abs_real = entry.paths["abs_real"]
+
+        with cls._entries_lock:
+            if abs_real not in cls.entries:
+                cls.entries[abs_real] = CacheEntry(core, entry)
+
+        return cls.entries[abs_real]
 
     def __init__(self, core, entry):
         self.core = core

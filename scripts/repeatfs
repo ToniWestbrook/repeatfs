@@ -15,6 +15,7 @@ import sys
 import repeatfs.client
 from repeatfs.core import Core
 from repeatfs.configuration import Configuration
+from repeatfs.plugins.plugins import PluginBase as Plugins
 
 # Third party modules
 import daemon
@@ -34,24 +35,33 @@ def parse_args():
         "-c": {"dest": "config_path", "default": config_dir, "help": "config and database directory"},
         "-f": {"dest": "foreground", "action": "store_true", "help": "keep daemon in foreground"},
         "-a": {"dest": "access", "action": "store_true", "help": "allow other accounts to access your mount"},
+        "-p": {"dest": "enable", "action": "store_false", "help": "disable provenance recording"},
         "-r": {"dest": "replication_path", "type": str, "default": "./", "help": "replication directory"},
         "-m": {"dest": "mount_path", "type": str, "default": "./", "help": "mount directory"},
         "-l": {"dest": "list_cmds", "action": "store_true", "help": "list replication commands"},
         "-e": {"dest": "expand", "type": str, "nargs": "*", "default": [], "help": "expand and recreate specified command IDs"},
+        "-v": {"dest": "verbosity", "action": "count", "default": 0, "help": "level of verbosity"},
         "--stdout": {"type": str, "help": "redirect execution stdout to file"},
         "--stderr": {"type": str, "help": "redirect execution stderr to file"}}
 
     arg_cmds = {
-        "mount": ["target", "mount", "-c", "-f", "-a"],
-        "generate": ["-c"],
-        "replicate": ["provenance", "-r", "-c", "-l", "-e", "--stdout", "--stderr"],
-        "shutdown": ["-m", "-c"],
-        "version": []}
+        "mount": ["target", "mount", "-c", "-f", "-a", "-p", "-v"],
+        "generate": ["-c", "-v"],
+        "replicate": ["provenance", "-r", "-c", "-l", "-e", "--stdout", "--stderr", "-v"],
+        "shutdown": ["-m", "-c", "-v"],
+        "plugins": ["-v"],
+        "version": ["-v"]}
+
+    command_help = ["mount\t\tMount a directory under RepeatFS",
+                    "replicate\t\tReplicate RepeatFS provenance",
+                    "generate\t\tGenerate a config template",
+                    "shutdown\t\tShutdown RepeatFS",
+                    "plugins\t\tList available plugins",
+                    "version\t\tReport RepeatFS version"]
 
     # Parse commands arguments
     argparser = argparse.ArgumentParser(formatter_class=argparse.RawTextHelpFormatter)
-    command_help = ["mount\t\tMount a directory under RepeatFS", "replicate\t\tReplicate RepeatFS provenance", "generate\t\tGenerate a config template"]
-    argparser.add_argument("command", choices=["mount", "replicate", "shutdown", "generate", "version"], metavar="command", help="\n".join(command_help))
+    argparser.add_argument("command", choices=["mount", "replicate", "shutdown", "generate", "plugins", "version"], metavar="command", help="\n".join(command_help))
     argparser.add_argument("options", nargs=argparse.REMAINDER, help="Command options")
     arguments = argparser.parse_args()
 
@@ -68,10 +78,16 @@ def main():
     """ Main entry """
     # Parse arguments
     arguments = parse_args()
+    Core.log_level = min(arguments.verbosity, Core.LOG_IO)
 
     # Report version
     if arguments.command == "version":
-        print("Program: RepeatFS\nVersion: {}\nContact: Toni Westbrook (UNH) <anthony.westbrook@unh.edu>".format(Core.VERSION))
+        Core.log("Program: RepeatFS\nVersion: {}\nContact: Toni Westbrook (UNH) <anthony.westbrook@unh.edu>".format(Core.VERSION), Core.LOG_OUTPUT)
+        sys.exit(0)
+
+    # Report installed plugins
+    if arguments.command == "plugins":
+        Core.log("Available plugins: {}".format(", ".join(Plugins.avail_plugins())), Core.LOG_OUTPUT)
         sys.exit(0)
 
     # Generate configuration if requested, otherwise read configuration
@@ -91,6 +107,11 @@ def main():
         with daemon.DaemonContext(**daemon_opts):
             # Setup core
             core = Core(arguments.target, arguments.mount, configuration)
+            core.provenance.enable = arguments.enable
+
+            # Notify all plugins of mount
+            for plugin in core.plugins:
+                plugin.mount()
 
             # Mount
             FUSE(core.fuse, arguments.mount, raw_fi=True, nothreads=False, foreground=True, allow_other=arguments.access)

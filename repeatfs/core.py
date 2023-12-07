@@ -21,12 +21,12 @@ from repeatfs.descriptor_entry import DescriptorEntry
 from repeatfs.file_entry import FileEntry
 from repeatfs.fuse import Fuse
 from repeatfs.provenance.management import Management as Provenance
-
+from repeatfs.plugins.plugins import PluginBase as Plugins
 
 class Core:
     """ Implements core RepeatFS FS functionality """
     LOG_OUTPUT, LOG_CALL, LOG_DEBUG, LOG_IO = range(4)
-    VERSION = "0.10.0"
+    VERSION = "0.11.0"
 
     log_lock = threading.RLock()
     log_level = LOG_OUTPUT
@@ -40,6 +40,12 @@ class Core:
     @staticmethod
     def is_flag_write(flag):
         return (flag & 0x3) > 0
+
+    # Filter for compatible flags
+    @staticmethod
+    def filter_flags(flag):
+        filtered = flag & ~os.O_DIRECT
+        return filtered
 
     @staticmethod
     def cast_bool(val):
@@ -71,9 +77,10 @@ class Core:
         os.makedirs(self.configuration.values["cache_path"], exist_ok=True)
         os.makedirs(self.configuration.path, exist_ok=True)
 
-        # Setup FUSE and provenance systems
+        # Setup FUSE, provenance, and plugins
         self.fuse = Fuse(self)
         self.provenance = Provenance(self)
+        self.plugins = Plugins.load_plugins(self)
 
     def get_pid(self, pid=None):
         """ Get PID of calling or requested process """
@@ -117,11 +124,9 @@ class Core:
 
         if desc_entry.file_entry.derived_source:
             # Create block cache entry
-            if entry.paths["abs_real"] not in CacheEntry.entries:
-                CacheEntry.entries[entry.paths["abs_real"]] = CacheEntry(self, entry)
+            cache_entry = CacheEntry.register(self, entry)
 
             # Clear block cache if modified dates mismatch
-            cache_entry = CacheEntry.entries[entry.paths["abs_real"]]
             if entry.virt_mtime != cache_entry.file_entry.virt_mtime:
                 cache_entry.io(CacheEntry.IO_RESET, 0, None, 1, desc_entry.id)
 
@@ -151,6 +156,47 @@ class Core:
         desc_entry.remove()
 
         return ret_code
+
+    def route1(self, func, arg1, pidx=0):
+        """ Route system call with 1 argument """
+        for plugin in self.plugins[pidx:]:
+            retval = plugin.syscalls[func](arg1)
+            if plugin.intercept:
+                return retval
+
+        return func(arg1)
+
+    def route2(self, func, arg1, arg2, pidx=0):
+        """ Route system call with 2 arguments """
+        for plugin in self.plugins[pidx:]:
+            retval = plugin.syscalls[func](arg1, arg2)
+            if plugin.intercept:
+                return retval
+
+        return func(arg1, arg2)
+
+    def route3(self, func, arg1, arg2, arg3, pidx=0):
+        """ Route system call with 3 arguments """
+        for plugin in self.plugins[pidx:]:
+            retval = plugin.syscalls[func](arg1, arg2, arg3)
+            if plugin.intercept:
+                return retval
+
+        return func(arg1, arg2, arg3)
+
+    def route4(self, func, arg1, arg2, arg3, arg4, pidx=0):
+        """ Route system call with 4 arguments """
+        for plugin in self.plugins[pidx:]:
+            retval = plugin.syscalls[func](arg1, arg2, arg3, arg4)
+            if plugin.intercept:
+                return retval
+
+        return func(arg1, arg2, arg3, arg4)
+
+    def unmount(self, data):
+        """ Unmount processing """
+        for plugin in self.plugins:
+            plugin.unmount()
 
     def get_access(self, path, mode):
         """ Check if access mode is granted for path """
@@ -460,29 +506,30 @@ class Core:
             raise self.fuse.fuse_error(errno.ENOENT)
 
         # Do not allow writes from non-owner to derived files
+        cache_entry = None
         if self.is_flag_write(info.flags) and file_entry.derived_source:
             if file_entry.paths["abs_real"] not in CacheEntry.entries:
                 raise self.fuse.fuse_error(errno.EACCES)
 
             pid = self.fuse.fuse_get_context()[2]
-            if not CacheEntry.entries[file_entry.paths["abs_real"]].process_io.context_owner(pid=pid):
+            cache_entry = CacheEntry.entries[file_entry.paths["abs_real"]]
+            if not cache_entry.process_io.context_owner(pid=pid):
                 raise self.fuse.fuse_error(errno.EACCES)
 
         # Propagate read access for derived files
         if file_entry.derived_source:
             self.get_access(path, os.R_OK)
 
-        # Disable caches for derived/api files
-        if file_entry.derived_source or file_entry.api:
+        # Disable caches for derived/api/o_direct files
+        if file_entry.derived_source or file_entry.api or (info.flags & os.O_DIRECT > 0):
             info.direct_io = True
             info.keep_cache = False
         else:
-            # TODO: TESTING
             info.direct_io = False
             info.keep_cache = True
 
         # Create descriptor
-        info.fh = self.create_descriptor(file_entry, info.flags)
+        info.fh = self.create_descriptor(file_entry, self.filter_flags(info.flags))
 
         # Register provenance after create (links to previous versions through get_attr call), initial read for cached files
         if file_entry.provenance:
@@ -531,7 +578,7 @@ class Core:
             file_path = desc_entry.file_entry.paths["abs_real"]
             cache_entry = CacheEntry.entries[file_path]
 
-            # Write stream buffer portion first, then direct memory
+            # Write stream buffer portion first, then direct memory for writes positions before stream
             direct_size = cache_entry.process_io.write(buf, offset, info.fh)
             if direct_size > 0:
                 CacheEntry.entries[file_path].io(CacheEntry.IO_WRITE, offset, buf, direct_size, info.fh)

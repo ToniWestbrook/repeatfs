@@ -12,7 +12,7 @@
 import os
 import re
 import sys
-
+from repeatfs.plugins.plugins import PluginBase as Plugins
 
 class Configuration:
     """ Storages global and per-file configurations """
@@ -57,6 +57,7 @@ class Configuration:
         "io_epsilon": (False, False, "7.0", float, "provenance IO is considered simultaneous within this epsilon (seconds)"),
         "api": (False, False, ".repeatfs-api", str, "file for RepeatFS API and control"),
         "api_size": (False, False, "1048576", int, "reported size of RepeatFS API and control"),
+        "plugins": (False, False, "", str, "plugins to load (comma separated and ordered)"),
         "match": (True, True, None, str, ""),
         "ext": (True, True, None, str, ""),
         "cmd": (True, True, None, str, ""),
@@ -102,15 +103,15 @@ class Configuration:
         if not self.read_config(os.path.join(path, self.CONFIG_FILE)):
             sys.exit(1)
 
-    def _add_entry(self, entry_mode, values):
+    def _add_entry(self, config_fields, entry_mode, values):
         # Check for required fields and set default values
-        for field in self.CONFIG_FIELDS:
-            if self.CONFIG_FIELDS[field][self.FIELD_MODE] == entry_mode:
-                if self.CONFIG_FIELDS[field][self.FIELD_REQ] and field not in values:
+        for field in config_fields:
+            if config_fields[field][self.FIELD_MODE] == entry_mode:
+                if config_fields[field][self.FIELD_REQ] and field not in values:
                     return "required field '{0}' missing".format(field)
 
-                if not self.CONFIG_FIELDS[field][self.FIELD_REQ] and field not in values:
-                    values[field] = self.CONFIG_FIELDS[field][self.FIELD_DEF]
+                if not config_fields[field][self.FIELD_REQ] and field not in values:
+                    values[field] = config_fields[field][self.FIELD_DEF]
 
         # Check for conflicts
         if "output" in values and "cmd" in values:
@@ -121,14 +122,14 @@ class Configuration:
         for field in values:
             value = None
             if values[field] is not None:
-                value = Configuration.CONFIG_FIELDS[field][Configuration.FIELD_TYPE](values[field])
+                value = config_fields[field][Configuration.FIELD_TYPE](values[field])
 
             if entry_mode:
                 entry_key = (values['match'], values['ext'])
                 self.actions.setdefault(entry_key, dict())
                 self.actions[entry_key][field] = value
             else:
-                self.values[field] = Configuration.CONFIG_FIELDS[field][Configuration.FIELD_TYPE](values[field])
+                self.values[field] = config_fields[field][Configuration.FIELD_TYPE](values[field])
 
         return None
 
@@ -137,6 +138,10 @@ class Configuration:
         values = {}
 
         invalid = None
+
+        # Join core config fields with all plugin config fields
+        config_fields = dict(Configuration.CONFIG_FIELDS)
+        config_fields.update(Plugins.config_fields())
 
         try:
             with open(path, "r") as handle:
@@ -153,7 +158,7 @@ class Configuration:
                     # Process entry header
                     if re.match("^[ \t]*\[entry\][ \t]*(#.*)*$", line):
                         # Complete the previous entry
-                        invalid = self._add_entry(entry_mode, values)
+                        invalid = self._add_entry(config_fields, entry_mode, values)
                         if invalid: break
 
                         # Start new entry
@@ -164,13 +169,13 @@ class Configuration:
                     # Check field validity
                     match = re.search("^[ \t]*([^= \t]+)[ \t]*=[ \t]*([^#]+)(#.*)*$", line)
 
-                    if not match or match.groups(1)[0] not in Configuration.CONFIG_FIELDS:
+                    if not match or match.groups(1)[0] not in config_fields:
                         invalid = "Invalid line in configuration"
                         break
-                    if entry_mode and not Configuration.CONFIG_FIELDS[match.groups(1)[0]][Configuration.FIELD_MODE]:
+                    if entry_mode and not config_fields[match.groups(1)[0]][Configuration.FIELD_MODE]:
                         invalid = "Global attribute in entry section"
                         break
-                    if not entry_mode and Configuration.CONFIG_FIELDS[match.groups(1)[0]][Configuration.FIELD_MODE]:
+                    if not entry_mode and config_fields[match.groups(1)[0]][Configuration.FIELD_MODE]:
                         invalid = "Entry attribute in global section"
                         break
 
@@ -179,7 +184,7 @@ class Configuration:
 
             # Add final entry
             if not invalid:
-                invalid = self._add_entry(entry_mode, values)
+                invalid = self._add_entry(config_fields, entry_mode, values)
 
             # Check for errors
             if invalid:
@@ -188,7 +193,7 @@ class Configuration:
 
             # Add system entries
             for entry in Configuration.SYSTEM_ENTRIES:
-                self._add_entry(True, entry)
+                self._add_entry(config_fields, True, entry)
 
             return True
 

@@ -245,7 +245,7 @@ class ProcessIO():
                 self.read_active = False
                 self.lock.notifyAll()
 
-    # Perform a stream write if available, and return length not sent to stream
+    # Perform a stream write if available, and return length not sent to stream (writes before stream pos in block)
     def write(self, data, pos, descriptor):
         sys_config = self.cache_entry.core.configuration.values
         block_size = sys_config["block_size"]
@@ -342,8 +342,8 @@ class ProcessIO():
     # Close the stream
     def close(self, read, write):
         with self.lock:
-            # If no more open reads, end the process
-            if read:
+            # If no more open reads or writes, end the process
+            if read and write:
                 self.end_process()
 
             # If no more open owner writes, close the stream

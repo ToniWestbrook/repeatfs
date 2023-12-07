@@ -1,0 +1,116 @@
+#! /usr/bin/env python3
+
+#
+#   This file is part of RepeatFS
+#
+#   SPDX-FileCopyrightText: 2023  Anthony Westbrook, University of New Hampshire <anthony.westbrook@unh.edu>
+#
+#   SPDX-License-Identifier: GPL-3.0-only WITH LicenseRef-repeatfs-graphviz-linking-source-exception
+#
+
+# Name this file the name of your plugin with a ".py" extension. Avoid spaces or special characters.
+
+from repeatfs.plugins.plugins import PluginBase
+
+# Class must be named "Plugin" and extend "PluginBase"
+class Plugin(PluginBase):
+    # Define any configuration options available in the RepeatFS config file here. These options will be specified in the config
+    # file using the format PLUGIN.FIELD=VALUE, where PLUGIN is the name of the plugin (ie the file name) and FIELD is the
+    # name of the configuration option.  E.g. "dfs.port=50000".
+    # The dictionary must be named CONFIG_FIELDS, and the keys correspond to the FIELD value above.  The dictionary values are
+    # in the following format: (False, False, DEFAULT, TYPE, DESCRIPTION), where DEFAULT is the default value used if the
+    # option is not configured by the user, TYPE is the Python data type, and DESC is the description. Supported types:
+    # str, int, float, and bool (for boolean types, use "cast_bool" as the type). Regardless of type, DEFAULT should
+    # be specified in string format. Values are then available to the plugin through the "self.configuration" attribute,
+    # which is a dictionary where the key corresponds to FIELD and the value corresponds to the option's configured value.
+    CONFIG_FIELDS = {
+        "port": (False, False, "50000", int, "server port")
+    }
+
+    # Init is called when the plugin is loaded. Plugins are loaded when specified in the config file using the "plugins" option
+    # (comma separated for multiple plugins, loaded in the order specified).
+    def init(self):
+        # When set to true, intercept mode will stop relaying a system call to remaining plugins and/or RepeatFS core. Plugins in
+        # intercept mode are responsible for calling core routing and/or system call handlers manually if desired.  Note, each
+        # plugin is automatically assigned a plugin index in the "self.pidx" attribute. This can be used when calling the 
+        # core routing methods to relay the system call to the next plugin by specifying "self.pidx + 1" as the next plugin index.
+        # When set to false, core routing will automatically route the system call to the next plugin and/or the RepeatFS core
+        # as applicable when this plugin has completed processing the system call.
+        self.intercept = True
+        print(f"Port: {self.configuration['port']}")
+
+    # Called when a RepeatFS file system is mounted
+    def mount(self):
+        pass
+
+    # Called when a RepeatFS file system is unmounted
+    def unmount(self):
+        pass
+
+    # The remaining methods correspond to each system call handler
+    def get_access(self, path, mode):
+        pass
+
+    def change_mode(self, path, mode):
+        pass
+
+    def change_owner(self, path, uid, gid):
+        pass
+
+    def get_attributes(self, path, info):
+        pass
+
+    def open_directory(self, path):
+        pass
+
+    def get_directory(self, path, fh):
+        pass
+
+    def get_link(self, path):
+        pass
+
+    def create_node(self, path, mode, dev):
+        pass
+
+    def remove_directory(self, path):
+        pass
+
+    def create_directory(self, path, mode):
+        pass
+
+    def fs_stats(self, path):
+        pass
+
+    def unlink(self, path):
+        pass
+
+    def make_symlink(self, src, link):
+        pass
+
+    def make_hardlink(self, src, link):
+        pass
+
+    def rename(self, old, new):
+        pass
+
+    def update_time(self, path, times):
+        pass
+
+    def open(self, path, info, mode):
+        pass
+
+    def read(self, path, length, offset, info):
+        pass
+
+    def write(self, path, buf, offset, info):
+        pass
+
+    def truncate(self, path, length, info):
+        pass
+
+    def close(self, info):
+        pass
+
+    def sync(self, path, info):
+        pass
+
