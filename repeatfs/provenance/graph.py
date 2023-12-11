@@ -124,6 +124,10 @@ class Graph:
                     cursor.execute(statement, file_id)
                     ret_graph["file"][file_id] = self._get_graph_vals(cursor.fetchone(), "file")
 
+                    # Add plugin file info
+                    ret_graph["file"][file_id]["plugins"] = {}
+                    self.management.core.routing.p_build_graph_file(ret_graph["file"][file_id])
+
                     # Retrieve write/process data (read stop happened after write start)
                     statement = ("SELECT * FROM file NATURAL JOIN write NATURAL JOIN process "
                                  "WHERE path=? AND fcreate = ? AND (write.ops & ?) > 0 ")
@@ -134,7 +138,7 @@ class Graph:
                     else:
                         statement += " ORDER BY write.start DESC"
                         cursor.execute(statement, file_id + (op_filter, ))
-                        
+
                     for write_row in cursor:
                         # Start with primary process
                         write_process_id = self._get_graph_id(write_row, "process")

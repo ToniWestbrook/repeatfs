@@ -88,69 +88,80 @@ class PluginBase:
     def unmount(self):
         pass
 
-    def get_access(self, path, mode):
+    def s_get_access(self, path, mode):
         pass
 
-    def change_mode(self, path, mode):
+    def s_change_mode(self, path, mode):
         pass
 
-    def change_owner(self, path, uid, gid):
+    def s_change_owner(self, path, uid, gid):
         pass
 
-    def get_attributes(self, path, info):
+    def s_get_attributes(self, path, info):
         pass
 
-    def open_directory(self, path):
+    def s_open_directory(self, path):
         pass
 
-    def get_directory(self, path, fh):
+    def s_get_directory(self, path, fh):
         pass
 
-    def get_link(self, path):
+    def s_get_link(self, path):
         pass
 
-    def create_node(self, path, mode, dev):
+    def s_create_node(self, path, mode, dev):
         pass
 
-    def remove_directory(self, path):
+    def s_remove_directory(self, path):
         pass
 
-    def create_directory(self, path, mode):
+    def s_create_directory(self, path, mode):
         pass
 
-    def fs_stats(self, path):
+    def s_fs_stats(self, path):
         pass
 
-    def unlink(self, path):
+    def s_unlink(self, path):
         pass
 
-    def make_symlink(self, src, link):
+    def s_make_symlink(self, src, link):
         pass
 
-    def make_hardlink(self, src, link):
+    def s_make_hardlink(self, src, link):
         pass
 
-    def rename(self, old, new):
+    def s_rename(self, old, new):
         pass
 
-    def update_time(self, path, times):
+    def s_update_time(self, path, times):
         pass
 
-    def open(self, path, info, mode):
+    def s_open(self, path, info, mode):
         pass
 
-    def read(self, path, length, offset, info):
+    def s_read(self, path, length, offset, info):
         pass
 
-    def write(self, path, buf, offset, info):
+    def s_write(self, path, buf, offset, info):
         pass
 
-    def truncate(self, path, length, info):
+    def s_truncate(self, path, length, info):
         pass
 
-    def close(self, info):
+    def s_close(self, info):
         pass
 
-    def sync(self, path, info):
+    def s_sync(self, path, info):
         pass
 
+    def p_register_open(self, descriptor, pid, read, write, record_file, record_process, update_last):
+        pass
+
+    def p_register_close(self, descriptor, write_process):
+        pass
+
+    def p_build_graph_file(self, file_info):
+        pass
+
+    def p_render_file(self, graph, files):
+        pass

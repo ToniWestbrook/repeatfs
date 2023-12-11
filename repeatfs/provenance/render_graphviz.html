@@ -31,6 +31,7 @@
         <script type="text/javascript">
 
 var graph = JSON.parse("[python-graph]");
+var pluginFiles = JSON.parse("[python-plugin-files]");
 var expanded = JSON.parse("[python-expanded]");
 var apiFile = "[python-api]";
 var apiSuffix = "[python-suffix]";
@@ -90,6 +91,7 @@ function activate_file(ids) {
         var bodyHTML = `
             <table style="width:100%">
                 <tr><td>Path</td><td>${file['paths']['abs_real']}</td></tr>
+                ${pluginFiles[ids[0]]}
             </table>`;
     }
 

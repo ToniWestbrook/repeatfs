@@ -175,6 +175,10 @@ class RenderGraphviz(RenderBase):
         svg_handle = io.BytesIO()
         svg.draw(path=svg_handle, format="svg")
 
+        # Load plugin rendering
+        plugin_file_html = { "|".join(x): "" for x in graph["file"] }
+        self.management.core.routing.p_render_file(graph, plugin_file_html)
+
         # Load template
         fields = {}
         fields["python-target"] = os.path.basename(graph["file"][graph["target"][(0,)]]["paths"]["abs_real"]).encode("utf-8")
@@ -185,6 +189,7 @@ class RenderGraphviz(RenderBase):
         fields["python-api"] = self.management.core.configuration.values["api"].encode("utf-8")
         fields["python-suffix"] = (self.management.core.configuration.values["suffix"] * 2).encode("utf-8")
         fields["python-session"] = process.cache_entry.config.get("session", "0").encode("utf-8")
+        fields["python-plugin-files"] = json.dumps(plugin_file_html).encode("utf-8").replace(b"\"", b"\\\"")
 
         template_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), "render_graphviz.html")
 

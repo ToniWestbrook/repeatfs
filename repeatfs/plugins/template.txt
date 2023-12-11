@@ -30,14 +30,17 @@ class Plugin(PluginBase):
     # Init is called when the plugin is loaded. Plugins are loaded when specified in the config file using the "plugins" option
     # (comma separated for multiple plugins, loaded in the order specified).
     def init(self):
-        # When set to true, intercept mode will stop relaying a system call to remaining plugins and/or RepeatFS core. Plugins in
+        # When set to true, intercept mode will stop relaying a system call to remaining plugins and/or RepeatFS core. System
+        # call methods are the ones below starting with "s_". Other methods are unaffected by intercept mode. Plugins in
         # intercept mode are responsible for calling core routing and/or system call handlers manually if desired.  Note, each
         # plugin is automatically assigned a plugin index in the "self.pidx" attribute. This can be used when calling the 
         # core routing methods to relay the system call to the next plugin by specifying "self.pidx + 1" as the next plugin index.
         # When set to false, core routing will automatically route the system call to the next plugin and/or the RepeatFS core
         # as applicable when this plugin has completed processing the system call.
         self.intercept = True
-        print(f"Port: {self.configuration['port']}")
+        print(f"Example config value: {self.configuration['port']}")
+        print(f"Plugin name: {self.name}")
+        print(f"Plugin pidx: {self.pidx}")
 
     # Called when a RepeatFS file system is mounted
     def mount(self):
@@ -47,70 +50,84 @@ class Plugin(PluginBase):
     def unmount(self):
         pass
 
-    # The remaining methods correspond to each system call handler
-    def get_access(self, path, mode):
+    # System call handlers begin with "s_" and are affected by intercept mode. When in intercept mode, you may call
+    # routing methods manually if desired.
+    def s_get_access(self, path, mode):
         pass
 
-    def change_mode(self, path, mode):
+    def s_change_mode(self, path, mode):
         pass
 
-    def change_owner(self, path, uid, gid):
+    def s_change_owner(self, path, uid, gid):
         pass
 
-    def get_attributes(self, path, info):
+    def s_get_attributes(self, path, info):
         pass
 
-    def open_directory(self, path):
+    def s_open_directory(self, path):
         pass
 
-    def get_directory(self, path, fh):
+    def s_get_directory(self, path, fh):
         pass
 
-    def get_link(self, path):
+    def s_get_link(self, path):
         pass
 
-    def create_node(self, path, mode, dev):
+    def s_create_node(self, path, mode, dev):
         pass
 
-    def remove_directory(self, path):
+    def s_remove_directory(self, path):
         pass
 
-    def create_directory(self, path, mode):
+    def s_create_directory(self, path, mode):
         pass
 
-    def fs_stats(self, path):
+    def s_fs_stats(self, path):
         pass
 
-    def unlink(self, path):
+    def s_unlink(self, path):
         pass
 
-    def make_symlink(self, src, link):
+    def s_make_symlink(self, src, link):
         pass
 
-    def make_hardlink(self, src, link):
+    def s_make_hardlink(self, src, link):
         pass
 
-    def rename(self, old, new):
+    def s_rename(self, old, new):
         pass
 
-    def update_time(self, path, times):
+    def s_update_time(self, path, times):
         pass
 
-    def open(self, path, info, mode):
+    def s_open(self, path, info, mode):
         pass
 
-    def read(self, path, length, offset, info):
+    def s_read(self, path, length, offset, info):
         pass
 
-    def write(self, path, buf, offset, info):
+    def s_write(self, path, buf, offset, info):
         pass
 
-    def truncate(self, path, length, info):
+    def s_truncate(self, path, length, info):
         pass
 
-    def close(self, info):
+    def s_close(self, info):
         pass
 
-    def sync(self, path, info):
+    def s_sync(self, path, info):
         pass
 
+    # Handlers beginning with "p_" are provenance related. They are not affected by intercept mode, and you should not manually
+    # call routing methods from these handlers as all core and plugin methods are automatically called by RepeatFS.
+    def p_register_open(self, descriptor, pid, read, write, record_file, record_process, update_last):
+        pass
+
+    def p_register_close(self, descriptor, write_process):
+        pass
+
+    def p_build_graph_file(self, file_info):
+        pass
+
+    def p_render_file(self, graph, files):
+        pass

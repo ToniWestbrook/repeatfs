@@ -20,13 +20,14 @@ from repeatfs.configuration import Configuration
 from repeatfs.descriptor_entry import DescriptorEntry
 from repeatfs.file_entry import FileEntry
 from repeatfs.fuse import Fuse
+from repeatfs.routing import Routing
 from repeatfs.provenance.management import Management as Provenance
 from repeatfs.plugins.plugins import PluginBase as Plugins
 
 class Core:
     """ Implements core RepeatFS FS functionality """
     LOG_OUTPUT, LOG_CALL, LOG_DEBUG, LOG_IO = range(4)
-    VERSION = "0.11.0"
+    VERSION = "0.12.0"
 
     log_lock = threading.RLock()
     log_level = LOG_OUTPUT
@@ -77,9 +78,10 @@ class Core:
         os.makedirs(self.configuration.values["cache_path"], exist_ok=True)
         os.makedirs(self.configuration.path, exist_ok=True)
 
-        # Setup FUSE, provenance, and plugins
+        # Setup FUSE, provenance, routing, and plugins
         self.fuse = Fuse(self)
         self.provenance = Provenance(self)
+        self.routing = Routing(self)
         self.plugins = Plugins.load_plugins(self)
 
     def get_pid(self, pid=None):
@@ -156,42 +158,6 @@ class Core:
         desc_entry.remove()
 
         return ret_code
-
-    def route1(self, func, arg1, pidx=0):
-        """ Route system call with 1 argument """
-        for plugin in self.plugins[pidx:]:
-            retval = plugin.syscalls[func](arg1)
-            if plugin.intercept:
-                return retval
-
-        return func(arg1)
-
-    def route2(self, func, arg1, arg2, pidx=0):
-        """ Route system call with 2 arguments """
-        for plugin in self.plugins[pidx:]:
-            retval = plugin.syscalls[func](arg1, arg2)
-            if plugin.intercept:
-                return retval
-
-        return func(arg1, arg2)
-
-    def route3(self, func, arg1, arg2, arg3, pidx=0):
-        """ Route system call with 3 arguments """
-        for plugin in self.plugins[pidx:]:
-            retval = plugin.syscalls[func](arg1, arg2, arg3)
-            if plugin.intercept:
-                return retval
-
-        return func(arg1, arg2, arg3)
-
-    def route4(self, func, arg1, arg2, arg3, arg4, pidx=0):
-        """ Route system call with 4 arguments """
-        for plugin in self.plugins[pidx:]:
-            retval = plugin.syscalls[func](arg1, arg2, arg3, arg4)
-            if plugin.intercept:
-                return retval
-
-        return func(arg1, arg2, arg3, arg4)
 
     def unmount(self, data):
         """ Unmount processing """
@@ -533,7 +499,7 @@ class Core:
 
         # Register provenance after create (links to previous versions through get_attr call), initial read for cached files
         if file_entry.provenance:
-            self.provenance.register_open(info.fh, read=True, write=create, update_last=create)
+            self.routing.p_register_open(info.fh, read=True, write=create, update_last=create)
 
         return 0
 
@@ -642,7 +608,7 @@ class Core:
 
         # Register provenance
         if desc_entry.file_entry.provenance:
-           self.provenance.register_close(info.fh)
+            self.routing.p_register_close(info.fh)
 
         # Close and remove descriptor
         ret_code = self.remove_descriptor(info.fh)
