@@ -15,6 +15,7 @@ import sys
 import repeatfs.client
 from repeatfs.core import Core
 from repeatfs.configuration import Configuration
+from repeatfs.provenance.management import Management as Provenance
 from repeatfs.plugins.plugins import PluginBase as Plugins
 
 # Third party modules
@@ -107,7 +108,7 @@ def main():
         with daemon.DaemonContext(**daemon_opts):
             # Setup core
             core = Core(arguments.target, arguments.mount, configuration)
-            core.provenance.enable = arguments.enable
+            core.provenance.enable = Provenance.supported() and arguments.enable
 
             # Notify all plugins of mount
             for plugin in core.plugins:

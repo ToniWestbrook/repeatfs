@@ -1,5 +1,9 @@
 # Change Log
 
+## [0.12.1] - 2023-12-12
+### Added
+- Support for systems without procfs support (BSD/MacOS) to run without provenance (ie VDF only mode)
+
 ## [0.12.0] - 2023-12-10
 ### Added
 - Snapshot plugin for capturing file contents during read/write operations

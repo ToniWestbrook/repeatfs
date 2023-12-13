@@ -27,7 +27,7 @@ from repeatfs.plugins.plugins import PluginBase as Plugins
 class Core:
     """ Implements core RepeatFS FS functionality """
     LOG_OUTPUT, LOG_CALL, LOG_DEBUG, LOG_IO = range(4)
-    VERSION = "0.12.0"
+    VERSION = "0.12.1"
 
     log_lock = threading.RLock()
     log_level = LOG_OUTPUT
@@ -41,12 +41,6 @@ class Core:
     @staticmethod
     def is_flag_write(flag):
         return (flag & 0x3) > 0
-
-    # Filter for compatible flags
-    @staticmethod
-    def filter_flags(flag):
-        filtered = flag & ~os.O_DIRECT
-        return filtered
 
     @staticmethod
     def cast_bool(val):
@@ -73,6 +67,7 @@ class Core:
         # Control
         self.configuration = configuration
         self.configuration.core = self
+        self.direct_support = hasattr(os, "O_DIRECT")
 
         # Create temp and database directories
         os.makedirs(self.configuration.values["cache_path"], exist_ok=True)
@@ -487,15 +482,16 @@ class Core:
             self.get_access(path, os.R_OK)
 
         # Disable caches for derived/api/o_direct files
-        if file_entry.derived_source or file_entry.api or (info.flags & os.O_DIRECT > 0):
-            info.direct_io = True
+        if file_entry.derived_source or file_entry.api or (self.direct_support and (info.flags & os.O_DIRECT > 0)):
+            info.direct_io = self.direct_support
             info.keep_cache = False
         else:
             info.direct_io = False
             info.keep_cache = True
 
         # Create descriptor
-        info.fh = self.create_descriptor(file_entry, self.filter_flags(info.flags))
+        flags = info.flags & ~os.O_DIRECT if self.direct_support else info.flags
+        info.fh = self.create_descriptor(file_entry, flags)
 
         # Register provenance after create (links to previous versions through get_attr call), initial read for cached files
         if file_entry.provenance:

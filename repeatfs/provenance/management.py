@@ -31,6 +31,11 @@ class Management:
      OP_MKDIR, OP_STATS, OP_UNLINK, OP_MKSYM, OP_MKHARD, OP_MOVE, OP_TIME, OP_CD, OP_TRUNCATE) = [2**x for x in range(18)]
     OP_ALL = 2**19 - 1
 
+    @classmethod
+    def supported(cls):
+        """ Check if system supports recording provenance """
+        return os.path.exists("/proc/stat")
+
     def __init__(self, core):
         self.core = core
         self.enable = True
@@ -108,6 +113,9 @@ class Management:
 
     def _get_boot(self):
         """ Get system boot time """
+        if not self.supported():
+            return 0
+
         with open("/proc/stat", "r") as handle:
             for line in handle:
                 if line.startswith("btime"):
