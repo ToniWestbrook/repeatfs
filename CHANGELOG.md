@@ -1,6 +1,6 @@
 # Change Log
 
-## [0.12.1] - 2023-12-12
+## [0.13.0] - 2023-12-12
 ### Added
 - Support for systems without procfs support (BSD/MacOS) to run without provenance (ie VDF only mode)
 
