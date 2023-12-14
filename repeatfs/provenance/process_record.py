@@ -45,18 +45,21 @@ class ProcessRecord:
     @classmethod
     def get_stat_info(cls, pid, management):
         """ Get basic process stat info """
-        stat_info = {}
+        stat_info = {"pstart": 0, "parent_pid": 0, "session_id": 0}
 
-        with open("/proc/{0}/stat".format(pid), "r") as handle:
-            stat_fields = handle.readline().split(" ")
+        try:
+            with open("/proc/{0}/stat".format(pid), "r") as handle:
+                stat_fields = handle.readline().split(" ")
 
-            # Find end of process name
-            for field_mod in range(len(stat_fields) - 1):
-                if stat_fields[1 + field_mod].endswith(")"): break
+                # Find end of process name
+                for field_mod in range(len(stat_fields) - 1):
+                    if stat_fields[1 + field_mod].endswith(")"): break
 
-            stat_info["pstart"] = round(int(management.system_boot) + int(stat_fields[21 + field_mod]) / management.hz, 3)
-            stat_info["parent_pid"] = int(stat_fields[3 + field_mod])
-            stat_info["session_id"] = int(stat_fields[5 + field_mod])
+                stat_info["pstart"] = round(int(management.system_boot) + int(stat_fields[21 + field_mod]) / management.hz, 3)
+                stat_info["parent_pid"] = int(stat_fields[3 + field_mod])
+                stat_info["session_id"] = int(stat_fields[5 + field_mod])
+        except:
+            pass
 
         return stat_info
 
@@ -148,11 +151,14 @@ class ProcessRecord:
             setattr(self, field, stat_info[field])
 
         # Retrieve thread group ID
-        with open("/proc/{0}/status".format(self.pid), "r") as handle:
-            for line in handle:
-                if line.startswith("Tgid:"):
-                    self.tgid = int(line.rstrip().split()[1])
-                    break
+        try:
+            with open("/proc/{0}/status".format(self.pid), "r") as handle:
+                for line in handle:
+                    if line.startswith("Tgid:"):
+                        self.tgid = int(line.rstrip().split()[1])
+                        break
+        except:
+            self.tgid = 0
 
         # Retrieve parent info
         if self.parent_pid > 0:

@@ -1,4 +1,7 @@
 # Change Log
+## [0.13.1] - 2023-12-13
+### Fixed
+- Issue where certain terminal emulators (such as Konsole) would cause an error during the first operation
 
 ## [0.13.0] - 2023-12-12
 ### Added
