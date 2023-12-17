@@ -181,11 +181,14 @@ plugins=snapshot
 
 Currently, the `snapshot` plugin is the only publicly available plugin, although others are planned. The snapshot plugin will capture the contents of specific files and file types when those files are accessed. The file contents are saved into the provenance database and can be viewed/downloaded using the provenance web interface noted above. After selecting the file node in the provenance graph, the info window on the right will display links for the dates and times of each available snapshot. This is especially useful when multiple modifications were made to an analysis script, and you want to verify what particular version of a script was used to generate a result file.
 
-To configure which files you'd like to snapshot, include the `snapshot.select` option in the configuration file, specifying a regular expression of all the file names/types you'd like to capture:
+To configure which files you'd like to snapshot, include the `snapshot.select` option in the configuration file, specifying a regular expression of all the file names/types you'd like to capture.
 
 ```
 snapshot.select=\.(py|sh|txt|r|m)$
 ```
+> [!CAUTION]
+> Be careful not to select file types that may be very large, as this may significantly slow down processing while capturing the snapshot and will cause the database size to grow quickly.
+
 If you wish to develop your own plugin, see the `template.txt` in the `plugins` subdirectory for further instructions.
 
 QUESTIONS
