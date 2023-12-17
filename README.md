@@ -179,7 +179,7 @@ RepeatFS supports expanding its functionality through the use of plugins. Plugin
 plugins=snapshot
 ```
 
-Currently, the snapshot plugin is the only publicly available plugin, although others are planned. The snapshot plugin will capture the contents of specific files and file types when those files are accessed. The file contents are saved into the provenance database and can be viewed/downloaded using the provenance web interface noted above. After selecting the file node in the provenance graph, the info window on the right will display links for the dates and times of each available snapshot.
+Currently, the `snapshot` plugin is the only publicly available plugin, although others are planned. The snapshot plugin will capture the contents of specific files and file types when those files are accessed. The file contents are saved into the provenance database and can be viewed/downloaded using the provenance web interface noted above. After selecting the file node in the provenance graph, the info window on the right will display links for the dates and times of each available snapshot.
 
 To configure which files you'd like to snapshot, include the `snapshot.select` option in the configuration file, specifying a regular expression of all the file names/types you'd like to capture:
 
