@@ -1,11 +1,11 @@
 # RepeatFS
 RepeatFS: a file system providing reproducibility through provenance and automation
 
-RepeatFS is a Python, FUSE-based file system with the goal of promoting scientific informatics reproducibility by recording all file and IO operations during analysis.  This provenance record can then be exported and used to replicate the analysis on other systems.  During replication, RepeatFS will verify that all software versions, command line parameters, and other relevant attributes match, and will report out any deviation from the original record.  While other provenance software often involves learning scripting languages or migrating your workflow to a confined platform, RepeatFS operates invisibily at the file system level, and is compatible with virtually all Linux command-line software.
+RepeatFS is a Python, FUSE-based file system with the goal of promoting scientific informatics reproducibility by recording all file and IO operations during analysis.  This provenance record can then be exported and used to replicate the analysis on other systems.  During replication, RepeatFS will verify that all software versions, command line parameters, and other relevant attributes match, and will report any deviation from the original record.  While other provenance software often involves learning scripting languages or migrating your workflow to a confined platform, RepeatFS operates invisibly at the file system level and is compatible with virtually all Linux command-line software.
 
 In addition to replication and verification, RepeatFS also provides provenance visualization.  It is capable of generating a webpage visualizing the complete provenance history, including all programs that wrote to that file, all files read by those programs, all programs that wrote to those programs, etc.
 
-Lastly, RepeatFS provides Virtual Dynamic Files (VDFs).  These VDFs automatically execute commonly performed tasks (such as converting file types) in a systematic and uniform fashion.  Each supported file will have a corresponding VDF presented on disk.  Upon accessing this file, RepeatFS will run the appropriate task, and populate the file on the fly with the correct information.  These files are then cached in memory, so subsequently accessing them does not require the process to run a second time.  VDFs may be chained together for combining operations, and may be copied to turn them into normal files.
+Lastly, RepeatFS provides Virtual Dynamic Files (VDFs).  These VDFs automatically execute commonly performed tasks (such as converting file types) in a systematic and uniform fashion.  Each supported file will have a corresponding VDF presented on disk.  Upon accessing this file, RepeatFS will run the appropriate task, and populate the file on the fly with the correct information.  These files are then cached in memory, so subsequently accessing them does not require the process to run a second time.  VDFs may be chained together for combining operations and may be copied to turn them into normal files.
 
 INSTALLATION
 --
@@ -58,7 +58,7 @@ The most powerful feature of RepeatFS is the ability to record provenance and re
 repeatfs replicate -r <replication destination> <provenance file>
 ```
 
-**Path to a file's provenance graph** - like the provenance record, this is also a VDF.  RepeatFS visualizes provenance by generating an HTML file that can be vieweed in any browser:
+**Path to a file's provenance graph** - like the provenance record, this is also a VDF.  RepeatFS visualizes provenance by generating an HTML file that can be viewed in any browser:
 ```
 <RepeatFS mount directory>/<any sub directories>/<file name>+/<file name>.provenance.html
 ```
@@ -131,7 +131,7 @@ This will list each command that will be run, in order.  It will also list ID(s)
 
 VIRTUAL DYNAMIC FILES
 --
-Provenance and replication are only a part of RepeatFS's capabilities.  RepeatFS can also automate commonly performed tasks using VDFs. VDFs are special files that represent the output of some operation, such as converting file formats, extracting text, indexing a reference, etc.  Whenver RepeatFS detects a file that is a valid input for one of these types of operations, it will also show a corresponding output file.  When this output file is accessed (opened, copied, read), RepeatFS will automatically run the program necessary to perform the action, and populate the output file in realtime.  These VDFs look and act just like normal files, though they are stored in memory.  VDFs may be converted into normal files simply by copying them to another directory.
+Provenance and replication are only a part of RepeatFS's capabilities.  RepeatFS can also automate commonly performed tasks using VDFs. VDFs are special files representing the output of some operation, such as converting file formats, extracting text, indexing a reference, etc.  Whenever RepeatFS detects a file that is a valid input for one of these types of operations, it will also show a corresponding output file.  When this output file is accessed (opened, copied, read), RepeatFS will automatically run the program necessary to perform the action, and populate the output file in realtime.  These VDFs look and act just like normal files, though they are stored in memory.  VDFs may be converted into normal files simply by copying them to another directory.
 
 VDFs are configured within the RepeatFS configuration file as follows:
 
@@ -169,7 +169,24 @@ This would create a corresponding `.count` for every file in the RepeatFS mount,
 less ~/mnt/example.fastq+/example.fastq.fasta+/example.fastq.fasta.count
 ```
 
-While VDFs are not required to record provenance in RepeatFS, they do represent a powerful tool to aid in improving reproducibilty by performing common tasks in a uniform, documented fashion.
+While VDFs are not required to record provenance in RepeatFS, they do represent a powerful tool to aid in improving reproducibility by performing common tasks in a uniform, documented fashion.
+
+PLUGINS
+--
+RepeatFS supports expanding its functionality through the use of plugins. Plugins are enabled by including the `plugins` option in the configuration file and specifying the names, comma delimited, of the plugins you wish to enable:
+
+```
+plugins=snapshot
+```
+
+Currently, the snapshot plugin is the only publicly available plugin, although others are planned. The snapshot plugin will capture the contents of specific files and file types when those files are accessed. The file contents are saved into the provenance database and can be viewed/downloaded using the provenance web interface noted above. After selecting the file node in the provenance graph, the info window on the right will display links for the dates and times of each available snapshot.
+
+To configure which files you'd like to snapshot, include the `snapshot.select` option in the configuration file, specifying a regular expression of all the file names/types you'd like to capture:
+
+```
+snapshot.select=\.(py|sh|txt|r|m)$
+```
+If you wish to develop your own plugin, see the `template.txt` in the `plugins` subdirectory for further instructions.
 
 QUESTIONS
 --
