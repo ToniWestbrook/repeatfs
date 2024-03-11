@@ -1,4 +1,8 @@
 # Change Log
+## [0.14.0] - 2024-03-10
+### Added
+- Kafka plugin for streaming intercepted system calls to Kafka server (producer only)
+
 ## [0.13.1] - 2023-12-13
 ### Fixed
 - Issue where certain terminal emulators (such as Konsole) would cause an error during the first operation

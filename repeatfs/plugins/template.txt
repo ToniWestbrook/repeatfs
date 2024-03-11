@@ -35,8 +35,8 @@ class Plugin(PluginBase):
         # intercept mode are responsible for calling core routing and/or system call handlers manually if desired.  Note, each
         # plugin is automatically assigned a plugin index in the "self.pidx" attribute. This can be used when calling the 
         # core routing methods to relay the system call to the next plugin by specifying "self.pidx + 1" as the next plugin index.
-        # When set to false, core routing will automatically route the system call to the next plugin and/or the RepeatFS core
-        # as applicable when this plugin has completed processing the system call.
+        # (See "kafka" plugin for an example). When set to false, core routing will automatically route the system call to the
+        # next plugin and/or the RepeatFS core as applicable when this plugin has completed processing the system call.
         self.intercept = True
         print(f"Example config value: {self.configuration['port']}")
         print(f"Plugin name: {self.name}")
