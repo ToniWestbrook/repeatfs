@@ -27,7 +27,7 @@ from repeatfs.plugins.plugins import PluginBase as Plugins
 class Core:
     """ Implements core RepeatFS FS functionality """
     LOG_OUTPUT, LOG_CALL, LOG_DEBUG, LOG_IO = range(4)
-    VERSION = "0.14.0"
+    VERSION = "0.14.1"
 
     log_lock = threading.RLock()
     log_level = LOG_OUTPUT

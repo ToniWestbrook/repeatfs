@@ -219,13 +219,20 @@ class Replication:
             run_procs.append(run_proc)
 
             # Show stdout/stderr if not redirected
-            for stdio in ("stdout", "stderr"):
+            stdio_threads = {stdio: None for stdio in ("stdout", "stderr")}
+            for stdio in stdio_threads:
                 if (stdio_handles[stdio] == subprocess.PIPE) and (not process[stdio].startswith("pipe:")):
-                    threading.Thread(target=self._send_stream, args=[getattr(run_proc, stdio), stdio]).start()
+                    stdio_threads[stdio] = threading.Thread(target=self._send_stream, args=[getattr(run_proc, stdio), stdio])
+                    stdio_threads[stdio].start()
 
         # Wait for completion of all processes
         for run_proc in run_procs:
             run_proc.wait()
+
+        # Wait for completion of stdio handling
+        for thread in stdio_threads.values():
+            if thread is not None:
+                thread.join()
 
         # Close handles
         for run_proc in run_procs:

@@ -35,9 +35,12 @@ class PluginBase:
         plugins = cls.avail_plugins()
 
         for plugin in plugins:
-            module = importlib.import_module("repeatfs.plugins.{}".format(plugin.strip()))
-            name = module.__name__.split(".")[-1]
-            options.update({ f"{name}.{key}": value for key, value in getattr(module, "Plugin").CONFIG_FIELDS.items() })
+            try:
+                module = importlib.import_module("repeatfs.plugins.{}".format(plugin.strip()))
+                name = module.__name__.split(".")[-1]
+                options.update({ f"{name}.{key}": value for key, value in getattr(module, "Plugin").CONFIG_FIELDS.items() })
+            except:
+                pass
 
         return options
 
@@ -56,8 +59,9 @@ class PluginBase:
                 module = importlib.import_module("repeatfs.plugins.{}".format(plugin.strip()))
                 plugin_insts.append(getattr(module, "Plugin")(core, pidx))
                 plugin_insts[-1].init()
-            except:
-                core.log("Error: Could not load plugin '{}'".format(plugin.strip()), core.LOG_OUTPUT)
+            except Exception as e:
+                core.log("Error: Could not load plugin '{}' ({})".format(plugin.strip(), e), core.LOG_OUTPUT)
+                sys.exit(1)
 
         return plugin_insts
 

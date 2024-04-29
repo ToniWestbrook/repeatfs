@@ -136,8 +136,7 @@ class Configuration:
     # Read configuration
     def read_config(self, path):
         values = {}
-
-        invalid = None
+        error = None
 
         # Join core config fields with all plugin config fields
         config_fields = dict(Configuration.CONFIG_FIELDS)
@@ -158,8 +157,8 @@ class Configuration:
                     # Process entry header
                     if re.match("^[ \t]*\[entry\][ \t]*(#.*)*$", line):
                         # Complete the previous entry
-                        invalid = self._add_entry(config_fields, entry_mode, values)
-                        if invalid: break
+                        error = self._add_entry(config_fields, entry_mode, values)
+                        if error: break
 
                         # Start new entry
                         values = {}
@@ -170,25 +169,26 @@ class Configuration:
                     match = re.search("^[ \t]*([^= \t]+)[ \t]*=[ \t]*([^#]+)(#.*)*$", line)
 
                     if not match or match.groups(1)[0] not in config_fields:
-                        invalid = "Invalid line in configuration"
-                        break
+                        print("Configuration warning: Invalid line in configuration ({0})".format(line_num))
+                        continue
+
                     if entry_mode and not config_fields[match.groups(1)[0]][Configuration.FIELD_MODE]:
-                        invalid = "Global attribute in entry section"
+                        error = "Global attribute in entry section"
                         break
                     if not entry_mode and config_fields[match.groups(1)[0]][Configuration.FIELD_MODE]:
-                        invalid = "Entry attribute in global section"
+                        error = "Entry attribute in global section"
                         break
 
                     # Save field value
                     values[match.groups(1)[0]] = match.groups(1)[1]
 
             # Add final entry
-            if not invalid:
-                invalid = self._add_entry(config_fields, entry_mode, values)
+            if not error:
+                error = self._add_entry(config_fields, entry_mode, values)
 
             # Check for errors
-            if invalid:
-                print("Configuration error: {0} ({1})".format(invalid, line_num))
+            if error:
+                print("Configuration error: {0} ({1})".format(error, line_num))
                 return False
 
             # Add system entries
