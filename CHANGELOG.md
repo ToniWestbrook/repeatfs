@@ -2,7 +2,7 @@
 ## [0.14.1] - 2024-04-28
 ### Fixed
 - Plugin system will not load modules associated with inactive plugins
-- Replication will stream the remaining contents of the stdio/stderr buffer after the replicated process completes
+- Replication will stream the remaining contents of the stdout/stderr buffer after the replicated process completes
 
 ## [0.14.0] - 2024-03-10
 ### Added
