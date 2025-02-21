@@ -34,7 +34,7 @@ class ProcessRecord:
             if pid in cls._lookup:
                 # Update entry
                 process_record = cls._lookup[pid]
-                process_record._update(ignore_pipes)
+                process_record._update(ignore_pipes=ignore_pipes)
             else:
                 # Create and register new entry
                 process_record = ProcessRecord(pid, management, ignore_pipes)

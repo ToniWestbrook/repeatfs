@@ -207,9 +207,12 @@ class Management:
             return
 
         pid = self.core.get_pid(pid)
-
+        pids = IORecord.get(descriptor, self)
+        # check for None
+        if pids is None:
+            self.register_open(descriptor, pid=pid, record_file=False)
         # Ensure pid recorded to this descriptor (for descriptors passed to child processes)
-        if pid not in IORecord.get(descriptor, self):
+        elif pid not in pids:
             self.register_open(descriptor, pid=pid, record_file=False)
 
         IORecord.get(descriptor, self, pid=pid).update(IORecord.IO_READ, op_type, io_time=io_time)
@@ -223,9 +226,12 @@ class Management:
             return
 
         pid = self.core.get_pid(pid)
-
+        pids = IORecord.get(descriptor, self)
+        # check for None
+        if pids is None:
+            self.register_open(descriptor, pid=pid, record_file=False)
         # Ensure pid recorded to this descriptor (for descriptors passed to child processes)
-        if pid not in IORecord.get(descriptor, self):
+        elif pid not in pids:
             self.register_open(descriptor, pid=pid, record_file=False)
 
         IORecord.get(descriptor, self, pid=pid).update(IORecord.IO_WRITE, op_type, io_time=io_time)
