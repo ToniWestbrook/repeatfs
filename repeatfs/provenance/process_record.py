@@ -185,9 +185,10 @@ class ProcessRecord:
         try:
             self.exe = os.readlink("/proc/{0}/exe".format(self.pid)) if self.pid > 1 else ""
             # re-direction to the real path
-            if self.management.core.mount == os.path.commonpath([self.exe, self.management.core.mount]):
-                relative = os.path.relpath(self.exe, self.management.core.mount)
-                self.exe = os.path.join(self.management.core.root, relative)
+            if self.exe is not None and self.exe!="":
+                if self.management.core.mount == os.path.commonpath([self.exe, self.management.core.mount]):
+                    relative = os.path.relpath(self.exe, self.management.core.mount)
+                    self.exe = os.path.join(self.management.core.root, relative)
             try:
                 self.md5 = self.management._calculate_hash(self.exe)
             except (PermissionError, FileNotFoundError):
