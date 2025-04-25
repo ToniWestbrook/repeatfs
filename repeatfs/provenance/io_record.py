@@ -28,7 +28,7 @@ class IORecord:
         """ Get IO for a descriptor and pid """
         with management.lock:
             if descriptor not in cls._lookup:
-                return
+                return {} if pid is None else None
 
             if not pid:
                 return cls._lookup[descriptor]

@@ -34,7 +34,7 @@ class ProcessRecord:
             if pid in cls._lookup:
                 # Update entry
                 process_record = cls._lookup[pid]
-                process_record._update(ignore_pipes)
+                process_record._update(ignore_pipes=ignore_pipes)
             else:
                 # Create and register new entry
                 process_record = ProcessRecord(pid, management, ignore_pipes)
@@ -181,15 +181,17 @@ class ProcessRecord:
         else:
             self.session_start = 0
 
-        # Record executable
-        try:
-            self.exe = os.readlink("/proc/{0}/exe".format(self.pid)) if self.pid > 1 else ""
-            try:
-                self.md5 = self.management._calculate_hash(self.exe)
-            except (PermissionError, FileNotFoundError):
-                self.md5 = ""
-        except PermissionError:
-            self.exe = ""
+        # Record executable                                                                                                                                                                                           
+        try:                                                                                                                                                                                                          
+            self.exe = os.readlink("/proc/{0}/exe".format(self.pid))                                                                                                                                                  
+            try:                                                                                                                                                                                                      
+                # Use real path to avoid deadlocking kernel exes with virtual path                                                                                                                                    
+                paths = FileEntry.get_paths(self.exe, self.management.core.root, self.management.core.mount)                                                                                                          
+                self.md5 = self.management._calculate_hash(paths["abs_real"])                                                                                                                                         
+            except (PermissionError, FileNotFoundError, OSError):                                                                                                                                                     
+                self.md5 = ""                                                                                                                                                                                         
+        except (PermissionError, FileNotFoundError, OSError):                                                                                                                                                         
+            self.exe = ""                                                                                                                                                                                             
             self.md5 = ""
 
         # Record CWD
