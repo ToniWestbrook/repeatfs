@@ -185,7 +185,7 @@ class ProcessRecord:
         try:                                                                                                                                                                                                          
             self.exe = os.readlink("/proc/{0}/exe".format(self.pid))                                                                                                                                                  
             try:                                                                                                                                                                                                      
-                # Use real path to avoid deadlocking kernel exes with virtual path                                                                                                                                    
+                # Use real path to avoid deadlocking kernel for exes with virtual path                                                                                                                                    
                 exe_paths = FileEntry.get_paths(self.exe, self.management.core.root, self.management.core.mount)                                                                                                          
                 self.md5 = self.management._calculate_hash(exe_paths["abs_real"])                                                                                                                                         
             except (PermissionError, FileNotFoundError, OSError):                                                                                                                                                     
