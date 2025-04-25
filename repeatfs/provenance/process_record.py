@@ -196,7 +196,7 @@ class ProcessRecord:
 
         # Record CWD
         try:
-            self.cwd = os.readlink("/proc/{0}/cwd".format(self.pid)) if self.pid > 1 else ""
+            self.cwd = os.readlink("/proc/{0}/cwd".format(self.pid))
         except (PermissionError, FileNotFoundError, OSError):
             self.cwd = ""
 
