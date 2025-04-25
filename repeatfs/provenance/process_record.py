@@ -186,8 +186,8 @@ class ProcessRecord:
             self.exe = os.readlink("/proc/{0}/exe".format(self.pid))                                                                                                                                                  
             try:                                                                                                                                                                                                      
                 # Use real path to avoid deadlocking kernel exes with virtual path                                                                                                                                    
-                paths = FileEntry.get_paths(self.exe, self.management.core.root, self.management.core.mount)                                                                                                          
-                self.md5 = self.management._calculate_hash(paths["abs_real"])                                                                                                                                         
+                exe_paths = FileEntry.get_paths(self.exe, self.management.core.root, self.management.core.mount)                                                                                                          
+                self.md5 = self.management._calculate_hash(exe_paths["abs_real"])                                                                                                                                         
             except (PermissionError, FileNotFoundError, OSError):                                                                                                                                                     
                 self.md5 = ""                                                                                                                                                                                         
         except (PermissionError, FileNotFoundError, OSError):                                                                                                                                                         
@@ -197,7 +197,7 @@ class ProcessRecord:
         # Record CWD
         try:
             self.cwd = os.readlink("/proc/{0}/cwd".format(self.pid)) if self.pid > 1 else ""
-        except PermissionError:
+        except (PermissionError, FileNotFoundError, OSError):
             self.cwd = ""
 
         # Remove previous CWD descriptor and provenance
