@@ -181,20 +181,17 @@ class ProcessRecord:
         else:
             self.session_start = 0
 
-        # Record executable
-        try:
-            self.exe = os.readlink("/proc/{0}/exe".format(self.pid)) if self.pid > 1 else ""
-            # re-direction to the real path
-            if self.exe is not None and self.exe!="":
-                path=FileEntry.get_paths(self.exe, self.management.core.root, self.management.core.mount)
-                if path is not None and path['abs_real'] is not None:
-                    self.exe=path['abs_real']
-            try:
-                self.md5 = self.management._calculate_hash(self.exe)
-            except (PermissionError, FileNotFoundError):
-                self.md5 = ""
-        except PermissionError:
-            self.exe = ""
+        # Record executable                                                                                                                                                                                           
+        try:                                                                                                                                                                                                          
+            self.exe = os.readlink("/proc/{0}/exe".format(self.pid))                                                                                                                                                  
+            try:                                                                                                                                                                                                      
+                # Use real path to avoid deadlocking kernel exes with virtual path                                                                                                                                    
+                paths = FileEntry.get_paths(self.exe, self.management.core.root, self.management.core.mount)                                                                                                          
+                self.md5 = self.management._calculate_hash(paths["abs_real"])                                                                                                                                         
+            except (PermissionError, FileNotFoundError, OSError):                                                                                                                                                     
+                self.md5 = ""                                                                                                                                                                                         
+        except (PermissionError, FileNotFoundError, OSError):                                                                                                                                                         
+            self.exe = ""                                                                                                                                                                                             
             self.md5 = ""
 
         # Record CWD
