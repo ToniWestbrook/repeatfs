@@ -215,10 +215,13 @@ class CacheEntry:
                     self.lock.notify_all()
 
             # Phase 2 (Fetch from stream/disk into memory cache)
+            # Flag to check owner read
+            is_owner = False
             if req_block:
                 self.core.log("IO loop phase 2", self.core.LOG_DEBUG)
                 self.check_expired()
-                self.req_mem_block(block, descriptor, operation)
+                # Record if it is owner read or not
+                is_owner = self.req_mem_block(block, descriptor, operation)
 
             # Phase 3 (Perform partial and full IO to/from memory cache)
             self.core.log("IO loop phase 3", self.core.LOG_DEBUG)
@@ -229,7 +232,8 @@ class CacheEntry:
                     # Handle partial blocks
                     if operation == self.IO_READ:
                         # For reads, return available data if past EOF
-                        if self.final and (pos + ret_size) >= self.size:
+                        # For owner reads, return partial data if available
+                        if ((self.final and (pos + ret_size) >= self.size) or (is_owner and ret_size < size)):
                             return bytes(ret_data[:ret_size])
 
                     if operation == self.IO_WRITE or operation == self.IO_TRUNCATE:
@@ -433,14 +437,21 @@ class CacheEntry:
                 if len(disk_data) == block_size:
                     return
 
-        # For read operations from non-owner, if not in the disk cache, fetch more from process
-        if not self.process_io.context_owner(descriptor=descriptor) and operation == self.IO_READ:
-            process_info = self.process_io.read(req_block)
+        # Check if this is owner request
+        is_owner = self.process_io.context_owner(descriptor=descriptor)
+    
+        # For read operations, if not in the disk cache, fetch more from process
+        if operation == self.IO_READ:
+            process_info = self.process_io.read(req_block, is_owner)
             process_block, process_start, process_data = process_info
+            print(f"[CACHE_ENTRY] req_mem_block: process_data len={len(process_data) if process_data else 0}")
 
             if process_data:
                 with self.lock:
                     self._io_write(process_block, process_start, process_data, True, 0)
+
+        # Return whether this was an owner read
+        return is_owner
 
     def update_config(self, options):
         """ Update cache entry configuration """
