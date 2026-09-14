@@ -96,6 +96,44 @@ class Graph:
             # Split cmd arguments
             entry["cmd"] = entry["cmd"].split("\0")
 
+    def _fix_missing_session_leaders(self, graph):
+        # Sort all processes in asc order by pstart (earliest first)
+        sorted_processes = sorted(graph["process"].items(), key=lambda x: x[1].get("pstart", 0))
+        
+        # Build a lookup for existing process IDs
+        existing_pids = set()
+        for process_id, entry in graph["process"].items():
+            existing_pids.add(entry["pid"])
+        
+        # Track which missing session_ids have been resolved
+        resolved_sessions = {}
+        
+        for process_id, entry in sorted_processes:
+            if entry.get("session_start") == 0:
+                # This process has a missing session leader
+                missing_session_id = entry.get("session_id")
+                
+                # Check if this missing session_id has already been resolved
+                if missing_session_id in resolved_sessions:
+                    # Use the already resolved session leader
+                    leader_pid, leader_pstart = resolved_sessions[missing_session_id]
+                    entry["session_id"] = leader_pid
+                    entry["session_start"] = leader_pstart
+                    continue
+                
+                # Check if the session_id process entry exists
+                if missing_session_id not in existing_pids:
+                    # Session leader doesn't exist - use this process as the session leader
+                    entry["session_id"] = entry["pid"]
+                    entry["session_start"] = entry["pstart"]
+                    
+                    # Mark it as resolved for this session_id
+                    resolved_sessions[missing_session_id] = (entry["pid"], entry["pstart"])
+                    
+                    # Add to graph["session"]
+                    graph["session"][process_id] = self._get_graph_vals(entry, "session")
+
+
     def build_graph(self, target_id, op_filter=None):
         """ Build graph info """
         sections = ("file", "process", "read", "write", "session", "target")
@@ -151,6 +189,7 @@ class Graph:
                         # Check primary and all parent processes for prior reads
                         lineage_id = write_process_id
                         session_closed = False
+                        
 
                         while True:
                             # Get current process in lineage full info (won't match write's row for parent processes)
@@ -229,6 +268,9 @@ class Graph:
                     cursor.execute(statement, read_process_id + file_id)
                     read_row = cursor.fetchone()
                     ret_graph["read"][self._get_graph_id(read_row, "read")] = self._get_graph_vals(read_row, "read")
+
+        # Fix missing session leaders before finalizing graph
+        self._fix_missing_session_leaders(ret_graph)
 
         # Finalize graph
         self._finalize_graph(ret_graph)
