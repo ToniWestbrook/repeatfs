@@ -33,7 +33,7 @@ class ProcessIO():
         self.read_active = False
         self.write_active = False
 
-    def _read_buffer(self, size):
+    def _read_buffer(self, size, is_owner):
         # Must be called with lock
         block_size = self.cache_entry.core.configuration.values["block_size"]
 
@@ -43,10 +43,11 @@ class ProcessIO():
                 ret_data = self.stream_buffer.read(size)
                 return ret_data
 
-            # Block until buffer filled or all write modes from source process are (currently) closed
+            # Non Owners, block until buffer filled or all write modes from source process are (currently) closed
+            # Owner breaks early with available partial data 
             while True:
                 current_size = len(self.stream_buffer.getbuffer())
-                if current_size >= block_size or not self.write_open: break
+                if current_size >= block_size or not self.write_open or (is_owner and current_size >= 0): break
                 self.lock.wait()
 
             # Reset to end of last read
@@ -214,12 +215,13 @@ class ProcessIO():
         return self.pid_auth[context_pid]
 
     # Perform a stream read if available
-    def read(self, req_block):
+    def read(self, req_block, is_owner):
         sys_config = self.cache_entry.core.configuration.values
         block_size = sys_config["block_size"]
 
         with self.lock:
-            while self.read_active:
+            # Owner bypass read_active check, non-owners wait
+            while self.read_active and not is_owner:
                 self.lock.wait()
 
             try:
@@ -232,7 +234,7 @@ class ProcessIO():
 
                 # If process is still running and requested block is at or after process position, read stream up to end of block
                 if self.process and req_block >= process_block:
-                    process_data = bytearray(self._read_buffer(block_size - process_start))
+                    process_data = bytearray(self._read_buffer(block_size - process_start, is_owner))
                     self.blocks_byte_pos += len(process_data)
 
                     # If that was the final byte in stream, check if process complete
