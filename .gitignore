@@ -1,3 +1,5 @@
 # Ignore build directory
 build/
 *.egg-info/
+# macOS
+.DS_Store

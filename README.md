@@ -201,9 +201,9 @@ For further understanding of RepeatFS, please refer to the following publication
 
 ### Conference Proceedings (To Appear)
 
-* Anthony Westbrook, Bocheng Cui, Lakshmi Ongolu, & Elizabeth Varki (2026). *Active Reproducibility for File-Based Exploratory Science*. **Proceedings of the ACM Conference on Reproducibility and Replicability (ACM REP '26).** (Accepted.)
+* Anthony Westbrook, Bocheng Cui, Lakshmi Ongolu, & Elizabeth Varki (2026). *Active Reproducibility for File-Based Exploratory Science*. **Proceedings of the ACM Conference on Reproducibility and Replicability (ACM REP '26).** [PDF](supplemental/acmrep2026/ACToR.pdf)
 
-* Anthony Westbrook, Lakshmi Ongolu, Bocheng Cui, & Elizabeth Varki (2026). *Point-and-Click Reproducibility for Command-Line Data Analysis*. **Proceedings of the ACM Conference on Reproducibility and Replicability (ACM REP '26).** (Accepted.)
+* Anthony Westbrook, Lakshmi Ongolu, Bocheng Cui, & Elizabeth Varki (2026). *Point-and-Click Reproducibility for Command-Line Data Analysis*. **Proceedings of the ACM Conference on Reproducibility and Replicability (ACM REP '26).** [PDF](supplemental/acmrep2026/VDF.pdf)
 
 ### Journal Articles
 
