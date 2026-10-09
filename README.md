@@ -199,11 +199,57 @@ PUBLICATIONS
 --
 For further understanding of RepeatFS, please refer to the following publications:
 
-### Conference Proceedings (To Appear)
+### Conference Proceedings
 
-* Anthony Westbrook, Bocheng Cui, Lakshmi Ongolu, & Elizabeth Varki (2026). *Active Reproducibility for File-Based Exploratory Science*. **Proceedings of the ACM Conference on Reproducibility and Replicability (ACM REP '26).** [PDF](supplemental/acmrep2026/ACToR.pdf)
+* Anthony Westbrook, Bocheng Cui, Lakshmi Ongolu, & Elizabeth Varki (2026). *Active Reproducibility for File-Based Exploratory Science*. **Proceedings of the ACM Conference on Reproducibility and Replicability (ACM REP '26).** [PDF](supplemental/acmrep2026/ACToR.pdf) [[source]](https://dl.acm.org/doi/10.1145/3820002.3828580)
 
-* Anthony Westbrook, Lakshmi Ongolu, Bocheng Cui, & Elizabeth Varki (2026). *Point-and-Click Reproducibility for Command-Line Data Analysis*. **Proceedings of the ACM Conference on Reproducibility and Replicability (ACM REP '26).** [PDF](supplemental/acmrep2026/VDF.pdf)
+  <details><summary>BibTeX</summary>
+
+  ```bibtex
+  @inproceedings{10.1145/3820002.3828580,
+  author = {Westbrook, Anthony and Cui, Bocheng and Ongolu, Lakshmi and Varki, Elizabeth},
+  title = {Active Reproducibility for File-Based Exploratory Science},
+  year = {2026},
+  isbn = {9798400727788},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  url = {https://doi.org/10.1145/3820002.3828580},
+  doi = {10.1145/3820002.3828580},
+  abstract = {Computational reproducibility is commonly understood as regenerating a file’s exact contents by re-executing the workflow that produced it. In exploratory science, however, workflows are rarely explicit: computation evolves through backtracking, parameter tuning, and abandoned execution paths, so the operations that produce a final result are often not represented in any single, coherent workflow description. As a result, irreproducibility is not merely a failure of documentation or user discipline, but a systems problem of recovering the correct workflow from unconstrained execution. We introduce Active Reproducibility, a model that generalizes this goal beyond byte-identical output, defining reproducibility through three complementary guarantees: exact replay in the original environment, semantic equivalence across environments, and computational fidelity under changing inputs. We realize this model in RepeatFS, a file system that records unconstrained computational activity and reconstructs a minimal causal workflow for each output file. It then replays this workflow across machines by automatically resolving duplicate processes and translating hardcoded local paths, without containers or manual setup. In a multi-day bioinformatics experiment, RepeatFS isolates 18 relevant processes from 579 exploratory tasks while bypassing more than 114,000 concurrent system processes. Across a benchmark of 18 published experiments, it successfully replicates 13 of 14 viable workflows from their recorded lineage, including on machines other than the one where they were recorded. Its overhead is concentrated in I/O-intensive workloads, while compute-bound tasks experience minimal slowdown.},
+  booktitle = {Proceedings of the 4th ACM Conference on Reproducibility and Replicability},
+  pages = {21–32},
+  numpages = {12},
+  keywords = {Computational Reproducibility, Replicability, Active Reproducibility, Data Provenance, Causal Lineage, User-Space File Systems, Workflow Reconstruction, Exploratory Science},
+  location = {Delft, Netherlands},
+  series = {ACM REP '26}
+  }
+  ```
+  </details>
+
+* Anthony Westbrook, Lakshmi Ongolu, Bocheng Cui, & Elizabeth Varki (2026). *Point-and-Click Reproducibility for Command-Line Data Analysis*. **Proceedings of the ACM Conference on Reproducibility and Replicability (ACM REP '26).** [PDF](supplemental/acmrep2026/VDF.pdf) [[source]](https://dl.acm.org/doi/10.1145/3820002.3828586)
+
+  <details><summary>BibTeX</summary>
+
+  ```bibtex
+  @inproceedings{10.1145/3820002.3828586,
+  author = {Westbrook, Anthony and Ongolu, Lakshmi and Cui, Bocheng and Varki, Elizabeth},
+  title = {Point-and-Click Reproducibility for Command-Line Data Analysis},
+  year = {2026},
+  isbn = {9798400727788},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  url = {https://doi.org/10.1145/3820002.3828586},
+  doi = {10.1145/3820002.3828586},
+  abstract = {In data-intensive research, a file rarely exists in isolation: a single source file typically implies a lineage of derived files, from processing raw satellite imagery to analyzing brain scans. While point-and-click consumer applications maintain these relationships automatically (e.g., photo software generating thumbnails), exploratory scientific computing is primarily command-line driven, and the dependencies between source and derived files are managed by the researcher. Build systems and workflow managers can automate this, but only once dependencies are explicitly declared, a step such analysis rarely takes, leaving the manual loop prone to error and state drift, where derived files become stale relative to their source. To address this, we introduce point-and-click reproducibility for exploratory command-line data analysis, and implement it in RepeatFS, a file system where derived files are Virtual Dynamic Files (VDFs). By constraining derivation to a predefined set of valid operations and recording it in the file path, the model makes any accessible file the consistent, reproducible output of a valid workflow. A VDF is a transient store kept consistent with its source and the computations that produced it; its lineage is scaffolded as a virtual directory tree, so standard shell commands become menu actions: listing a directory opens a menu, reading a file clicks an item, and traversal chains them. The structure of the path is the structure of the workflow, executed just-in-time whenever the accessed file is missing or stale. By bringing this automation to the command line, VDFs make the reproducibility of single-source derived files an intrinsic, transparent property of the file system rather than an afterthought. Our evaluation shows that RepeatFS’s in-memory streaming architecture avoids repeated disk materialization, achieving up to a 4.5 {\texttimes} speedup over traditional file-based workflows.},
+  booktitle = {Proceedings of the 4th ACM Conference on Reproducibility and Replicability},
+  pages = {100–111},
+  numpages = {12},
+  keywords = {Point-and-Click Reproducibility, File Systems, Virtual Dynamic Files, Provenance, Data Lineage, Reproducibility, Exploratory Data Analysis},
+  location = {Delft, Netherlands},
+  series = {ACM REP '26}
+  }
+  ```
+  </details>
 
 ### Journal Articles
 
