@@ -32,6 +32,11 @@ class RenderGraphviz(RenderBase):
     def __init__(self, management):
         self.management = management
 
+    @staticmethod
+    def _js_string(data):
+        """ Escape bytes for a JavaScript double-quoted string literal (also </ which would end the script) """
+        return data.replace(b"\\", b"\\\\").replace(b"\"", b"\\\"").replace(b"</", b"<\\/")
+
     def _build_elements(self, graph, expand_procs, collapse_files):
         """ Build elements given session chains """
         # Note target file
@@ -182,14 +187,14 @@ class RenderGraphviz(RenderBase):
         # Load template
         fields = {}
         fields["python-target"] = os.path.basename(graph["file"][graph["target"][(0,)]]["paths"]["abs_real"]).encode("utf-8")
-        fields["python-path"] = process.cache_entry.file_entry.paths["abs_real"].replace("/", "|").encode("utf-8")
+        fields["python-path"] = self._js_string(process.cache_entry.file_entry.paths["abs_real"].replace("/", "|").encode("utf-8"))
         fields["python-svg"] = svg_handle.getvalue()
-        fields["python-graph"] =  self.management.render_json.render_bytes(process).replace(b"\"", b"\\\"")
-        fields["python-expanded"] = json.dumps(["|".join(val) for val in options["expand_procs"]]).encode("utf-8").replace(b"\"", b"\\\"")
+        fields["python-graph"] = self._js_string(self.management.render_json.render_bytes(process))
+        fields["python-expanded"] = self._js_string(json.dumps(["|".join(val) for val in options["expand_procs"]]).encode("utf-8"))
         fields["python-api"] = self.management.core.configuration.values["api"].encode("utf-8")
         fields["python-suffix"] = (self.management.core.configuration.values["suffix"] * 2).encode("utf-8")
         fields["python-session"] = process.cache_entry.config.get("session", "0").encode("utf-8")
-        fields["python-plugin-files"] = json.dumps(plugin_file_html).encode("utf-8").replace(b"\"", b"\\\"")
+        fields["python-plugin-files"] = self._js_string(json.dumps(plugin_file_html).encode("utf-8"))
 
         template_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), "render_graphviz.html")
 

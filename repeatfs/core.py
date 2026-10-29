@@ -10,6 +10,7 @@
 
 
 import os
+import types
 import stat
 import sys
 import threading
@@ -243,17 +244,33 @@ class Core:
             stats['st_mtime'] = 0
             if file_entry.file_type == stat.S_IFREG:
                 # If file is cached, report correct file size (continue to override init size if in reset state)
-                if file_entry.paths["abs_real"] in CacheEntry.entries:
+                cache_entry = CacheEntry.entries.get(file_entry.paths["abs_real"])
+                if cache_entry is None or not cache_entry.final or cache_entry.file_entry.virt_mtime != file_entry.virt_mtime:
+                    # No current render: produce it now so the reported size is exact (cp, tar, rsync and scp copy st_size bytes)
+                    self._render_derived(path)
                     cache_entry = CacheEntry.entries[file_entry.paths["abs_real"]]
-                    if cache_entry.size > 0 or cache_entry.final:
-                        stats['st_size'] = cache_entry.size
-                    stats['st_mtime'] = cache_entry.mtime
+                stats['st_size'] = cache_entry.size
+                stats['st_mtime'] = cache_entry.mtime
 
         else:
             lstats = os.lstat(file_entry.paths["abs_real"])
             stats = {key: getattr(lstats, key) for key in dir(lstats) if "st_" in key}
 
         return stats
+
+    def _render_derived(self, path):
+        """ Read a derived file through the normal open/read/close path, which renders and caches it """
+        info = types.SimpleNamespace(flags=os.O_RDONLY, fh=0, direct_io=False, keep_cache=False)
+        self.routing.s_open(path, info, None)
+        try:
+            offset = 0
+            while True:
+                data = self.routing.s_read(path, self.configuration.values["block_size"], offset, info)
+                if not data:
+                    break
+                offset += len(data)
+        finally:
+            self.routing.s_close(info)
 
     def open_directory(self, path):
         """ Open directory by checking read access """
